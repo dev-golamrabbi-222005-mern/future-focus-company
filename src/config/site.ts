@@ -3,13 +3,13 @@ export const siteConfig = {
   description: 'Premier government-approved manpower recruitment agency connecting Bangladeshi talent with top employers across Dubai & the Middle East.',
   license: 'RL-1428',
   navLinks: [
-    { href: '#home', key: 'home' },
-    { href: '#about', key: 'about' },
-    { href: '#sectors', key: 'sectors' },
-    { href: '#process', key: 'process' },
-    { href: '#vacancies', key: 'vacancies' },
-    { href: '#gallery', key: 'gallery' },
-    { href: '#contact', key: 'contact' },
+    { href: '', key: 'home' },
+    { href: '/about', key: 'about' },
+    { href: '/services', key: 'services' },
+    { href: '/manpower', key: 'manpower' },
+    { href: '/jobs', key: 'jobs' },
+    { href: '/gallery', key: 'gallery' },
+    { href: '/contact', key: 'contact' },
   ],
   offices: {
     dubai: {
