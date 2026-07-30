@@ -2,8 +2,9 @@
 
 import * as React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
-import { Building2, MapPin, Phone, Mail, ShieldCheck, Share2, Globe, Send, MessageSquare } from 'lucide-react';
+import { MapPin, Phone, Mail, ShieldCheck, Globe, MessageSquare } from 'lucide-react';
 import { siteConfig } from '@/config/site';
 
 export function Footer() {
@@ -12,8 +13,8 @@ export function Footer() {
   const locale = useLocale();
 
   return (
-    <footer className="border-t border-border bg-card text-card-foreground pt-16 pb-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="border-t border-border bg-card text-card-foreground pt-12 md:pt-16 pb-8">
+      <div className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8">
         
         {/* 4 Columns Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-border/60">
@@ -21,8 +22,13 @@ export function Footer() {
           {/* Column 1: Agency Brand & Govt License */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-xl bg-primary flex items-center justify-center text-primary-foreground font-bold shadow-md">
-                <Building2 className="h-5 w-5" />
+              <div className="relative h-10 w-10 rounded-xl overflow-hidden shadow-md border border-border shrink-0">
+                <Image
+                  src="/logo.jpg"
+                  alt={siteConfig.name}
+                  fill
+                  className="object-cover"
+                />
               </div>
               <span className="font-extrabold text-xl tracking-tight text-foreground">
                 {siteConfig.name}
@@ -58,7 +64,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Contact Info (Dubai & Bangladesh Offices) */}
+          {/* Column 3: Contact Info */}
           <div className="space-y-4">
             <h3 className="text-base font-bold text-foreground tracking-wide uppercase">
               {t('dubaiOffice')}
@@ -106,7 +112,6 @@ export function Footer() {
               Follow our official channels for the latest recruitment drives and job announcements.
             </p>
             <div className="flex items-center gap-3">
-              {/* Facebook */}
               <a
                 href={siteConfig.socials.facebook}
                 target="_blank"
@@ -119,7 +124,6 @@ export function Footer() {
                 </svg>
               </a>
 
-              {/* LinkedIn */}
               <a
                 href={siteConfig.socials.linkedin}
                 target="_blank"
@@ -132,20 +136,6 @@ export function Footer() {
                 </svg>
               </a>
 
-              {/* Twitter / X */}
-              <a
-                href={siteConfig.socials.twitter}
-                target="_blank"
-                rel="noreferrer"
-                className="p-2.5 rounded-lg border border-border bg-muted/50 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all"
-                aria-label="Twitter"
-              >
-                <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                </svg>
-              </a>
-
-              {/* WhatsApp */}
               <a
                 href="https://wa.me/97141234567"
                 target="_blank"
@@ -156,7 +146,6 @@ export function Footer() {
                 <MessageSquare className="h-4 w-4" />
               </a>
 
-              {/* Website */}
               <a
                 href="https://globalmanpower.com"
                 target="_blank"
@@ -171,7 +160,7 @@ export function Footer() {
 
         </div>
 
-        {/* Bottom Copyright & Legal Links */}
+        {/* Bottom Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
           <p>© {new Date().getFullYear()} {siteConfig.name}. {t('rights')}</p>
           <div className="flex items-center gap-6">
