@@ -1,0 +1,200 @@
+"use client";
+
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight, Zap, MapPin } from "lucide-react";
+
+const slides = [
+  {
+    id: 1,
+    role: "SAUDI ARABIA",
+    title: "WITNESS",
+    highlight: "SKILLED WORKERS",
+    desc: "Skilled Workers for Every Industry in Riyadh. Welders, electricians, cleaners, kitchen staff — we deliver the right person for every job, on time.",
+    img: "https://i.postimg.cc/k5K41hnC/Hero-1.png",
+    icon: <MapPin size={24} />,
+    joinLink: "/contact",
+    learnMoreLink: "/",
+  },
+  {
+    id: 2,
+    role: "SAUDI ARABIA",
+    title: "EVOLVE",
+    highlight: "TRUSTED MANPOWER",
+    desc: "Trusted Manpower Solutions in Saudi Arabia. Connecting ambitious businesses with reliable workers —  from Bangladesh to the heart of the Kingdom.",
+    img: "https://i.postimg.cc/g08JSBYY/Hero-2.jpg",
+    icon: <MapPin size={24} />,
+    joinLink: "/contact",
+    learnMoreLink: "/exercises",
+  },
+  {
+    id: 3,
+    role: "SAUDI ARABIA",
+    title: "LEAD",
+    highlight: "RELIABILITY",
+    desc: "5+ Years of Reliable Recruitment Across the Gulf. Over 10,000 Bangladeshi workers successfully placed in Saudi Arabia, UAE, Qatar, and beyond.",
+    img: "https://i.postimg.cc/43VdLFJc/Hero-3.png",
+    icon: <MapPin size={24} />,
+    joinLink: "/contact",
+    learnMoreLink: "/coaches",
+  },
+  {
+    id: 4,
+    role: "SAUDI ARABIA",
+    title: "LEAD",
+    highlight: "PARTNERSHIP",
+    desc: "Your Manpower Partner for Vision 2030 Projects. From Aramco sites to metro stations — we supply dependable labor for Saudi Arabia's biggest growth projects.",
+    img: "https://i.postimg.cc/3wmRSbKv/Hero-4.png",
+    icon: <MapPin size={24} />,
+    joinLink: "/contact",
+    learnMoreLink: "/coaches",
+  },
+];
+
+export default function FFCHero() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <section className="relative min-h-[380px] pt-7 pb-4 w-full bg-[var(--bg-primary)] overflow-hidden transition-colors duration-700 font-sans flex items-center">
+      <div className="absolute inset-0 z-0">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, scale: 1.1 }}
+            animate={{ opacity: 0.5, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+            className="w-full h-full"
+          >
+            <img
+              src={slides[index].img}
+              className="object-cover w-full h-full grayscale"
+              alt="Background"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-[var(--bg-primary)] via-transparent to-[var(--bg-primary)]" />
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      <div className="relative z-10 flex flex-col items-center justify-center w-full gap-12 px-6 mx-auto mb-8 max-w-7xl md:mb-12 md:flex-row md:gap-16">
+        <div className="w-full md:w-1/2">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: -40 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 40 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            >
+              <div className="flex items-center gap-3 mb-8 bg-[var(--card-bg)] w-fit px-3 py-2.5 rounded-2xl backdrop-blur-md border border-[var(--border-color)]">
+                <div className="text-[var(--primary)]">
+                  {slides[index].icon}
+                </div>
+                <span className="text-[var(--text-primary)] font-bold tracking-[0.25em] text-[11px] uppercase">
+                  {slides[index].role}
+                </span>
+              </div>
+
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-black text-[var(--text-primary)] leading-[0.8] mb-10 tracking-[ -0.05em] uppercase">
+                Future Focus <br />
+                <span className="text-[var(--primary)]">
+                  {slides[index].highlight}
+                </span>
+              </h2>
+
+              <p className="text-[var(--text-secondary)] text-xl md:text-2xl max-w-lg mb-12 leading-relaxed font-medium opacity-90">
+                {slides[index].desc}
+              </p>
+
+              <div className="flex flex-col gap-6 lg:flex-row">
+                <button
+                  onClick={() =>
+                    (window.location.href = slides[index].joinLink)
+                  }
+                  className="bg-[var(--primary)] text-white font-black px-8 py-4 md:py-6 w-full rounded-2xl flex items-center justify-center gap-4 transition-all hover:scale-105 shadow-2xl shadow-(--primary) uppercase text-lg"
+                >
+                  Book Now <ArrowRight size={24} />
+                </button>
+                <button
+                  onClick={() =>
+                    (window.location.href = slides[index].learnMoreLink)
+                  }
+                  className="px-8 py-4 md:py-6 rounded-2xl border-2 w-full border-[var(--border-color)] text-[var(--text-primary)] hover:border-[var(--primary)] hover:text-[var(--primary)] transition-all bg-transparent backdrop-blur-sm flex items-center justify-center gap-3 font-bold uppercase tracking-tight text-center"
+                >
+                  Learn More <Zap size={22} className="fill-current" />
+                </button>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        <div className="relative flex items-center justify-center w-full h-full md:w-1/2 md:justify-end">
+          <div className="relative w-full aspect-[3/2]  rounded-2xl overflow-hidden bg-[var(--bg-secondary)] border border-[var(--border-color)] shadow-[0_10px_40px_-5px_rgba(0,0,0,0.2)]">
+            <AnimatePresence initial={false} mode="popLayout">
+              <motion.div
+                key={index}
+                initial={{
+                  clipPath: "circle(0% at 50% 50%)",
+                  filter: "blur(15px)",
+                  scale: 1.1,
+                }}
+                animate={{
+                  clipPath: "circle(150% at 50% 50%)",
+                  filter: "blur(0px)",
+                  scale: 1,
+                }}
+                exit={{ opacity: 0, filter: "blur(10px)", scale: 1.05 }}
+                transition={{ duration: 3
+                  , ease: [0.4, 0, 0.2, 1] }}
+                className="absolute inset-0 w-full h-full"
+              >
+                <img
+                  src={slides[index].img}
+                  className="object-cover w-full h-full"
+                  alt="Fitness Performance"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent" />
+
+                <div className="absolute z-20 flex items-end justify-between bottom-12 left-10 right-10">
+                  <div className="space-y-4">
+                    <div className="flex gap-2">
+                      {slides.map((_, i) => (
+                        <div
+                          key={i}
+                          className={`h-2 rounded-full transition-all duration-700 ${
+                            index === i
+                              ? "w-12 bg-[var(--primary)]"
+                              : "w-5 bg-white/20"
+                          }`}
+                        />
+                      ))}
+                    </div>
+                    <p className="text-4xl font-black tracking-tighter text-white uppercase md:text-5xl drop-shadow-2xl">
+                      {slides[index].highlight}
+                    </p>
+                  </div>
+                  <div className="p-5 bg-[var(--primary)] rounded-2xl shadow-xl">
+                    <Zap
+                      className="w-6 h-6 text-white md:w-8 md:h-8 lg:w-10 lg:h-10"
+                      fill="white"
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        </div>
+
+        
+      </div>
+    </section>
+  );
+}

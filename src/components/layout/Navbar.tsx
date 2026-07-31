@@ -2,12 +2,12 @@
 
 import * as React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
-import { Building2, Menu, X, ShieldCheck } from 'lucide-react';
+import { Menu, X, ShieldCheck } from 'lucide-react';
 import { siteConfig } from '@/config/site';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher';
-import { cn } from '@/lib/utils';
 
 export function Navbar() {
   const t = useTranslations('Navigation');
@@ -16,7 +16,7 @@ export function Navbar() {
 
   return (
     <header className="glass-nav">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
           {/* Logo */}
@@ -24,8 +24,13 @@ export function Navbar() {
             href={`/${locale}`}
             className="flex items-center gap-3 group"
           >
-            <div className="h-10 w-10 rounded-xl bg-primary flex items-center justify-center text-primary-foreground shadow-md shadow-primary/25 transition-transform group-hover:scale-105">
-              <Building2 className="h-5 w-5" />
+            <div className="relative h-10 w-10 rounded-xl overflow-hidden shadow-md shadow-primary/25 transition-transform group-hover:scale-105 border border-border shrink-0">
+              <Image
+                src="/logo.jpg"
+                alt={siteConfig.name}
+                fill
+                className="object-cover"
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-extrabold text-lg sm:text-xl tracking-tight text-foreground flex items-center gap-1.5">
