@@ -22,6 +22,39 @@
     "statsExperience": "Years Experience",
     "statsCountries": "Partner Countries"
   },
+  
+  "Hero1": {
+    "bookNow": "Book Now",
+    "learnMore": "Learn More",
+
+    "slides": [
+      {
+        "role": "Saudi Arabia",
+        "title": "Witness",
+        "highlight": "Skilled Workers",
+        "desc": "Skilled workers for every industry in Riyadh. Welders, electricians, cleaners, kitchen staff—we deliver the right person for every job, on time."
+      },
+      {
+        "role": "Saudi Arabia",
+        "title": "Evolve",
+        "highlight": "Trusted Manpower",
+        "desc": "Trusted manpower solutions in Saudi Arabia. Connecting ambitious businesses with reliable workers from Bangladesh to the Kingdom."
+      },
+      {
+        "role": "Saudi Arabia",
+        "title": "Lead",
+        "highlight": "Reliability",
+        "desc": "More than 15 years of reliable recruitment across the Gulf. Thousands of Bangladeshi workers have successfully been placed in Saudi Arabia, UAE, Qatar, Oman and Kuwait."
+      },
+      {
+        "role": "Saudi Arabia",
+        "title": "Lead",
+        "highlight": "Partnership",
+        "desc": "Your trusted manpower partner for Saudi Vision 2030 projects. We supply dependable workers for construction, hospitality, healthcare and industrial sectors."
+      }
+    ]
+  },
+
   "StatsSection": {
     "tagline": "Impact in Numbers",
     "heading": "Empowering Talent, Driving Overseas Growth",
@@ -50,6 +83,28 @@
     "point3Desc": "On-ground support team in Business Bay, Dubai for direct employer liaison.",
     "cta": "Learn More About Us"
   },
+
+  
+  "HomeAbout": {
+    "tag": "Who We Are",
+    "title": "A Workforce Partner You Can Actually Rely On",
+    "description1": "Pardeshi Global Services is a government-approved manpower recruitment agency serving Saudi Arabia, UAE, Qatar, Oman, Kuwait and Malaysia with skilled and reliable Bangladeshi workers.",
+
+    "description2": "From recruitment and documentation to visa processing and deployment, we manage every step professionally so your business gets the right workforce on time.",
+
+    "experience": "Years Trusted",
+
+    "button": "Work With Us",
+
+    "feature1": "On-Time Deployment",
+    "feature2": "Visa & Documentation",
+    "feature3": "Skilled & Unskilled Labour",
+    "feature4": "24/7 Employer Support",
+    "feature5": "Transparent Pricing",
+    "feature6": "Flexible Contract Terms"
+  },
+
+
   "SectorsGrid": {
     "tagline": "Industries We Serve",
     "heading": "Specialized Talent Across Core Sectors",
@@ -194,9 +249,9 @@
     "tagline": "Leading government-approved manpower recruitment agency specializing in skilled workforce deployment across the Middle East.",
     "license": "Government License: RL-1428 | Ministry of Expatriates' Welfare & Overseas Employment",
     "quickLinks": "Quick Links",
-    "dubaiOffice": "Dubai Office (UAE)",
+    "saudiOffice": "Riyadh Office (KSA)",
     "bdOffice": "Bangladesh Office (Dhaka)",
-    "dubaiAddress": "Suite 402, Business Bay Tower, Al A'amal St, Business Bay, Dubai, UAE",
+    "saudiAddress": "Suite 402, Business Bay Tower, Al A'amal St, Business Bay, Riyadh, KSA",
     "bdAddress": "House 12, Road 04, Block B, Banani, Dhaka-1213, Bangladesh",
     "phone": "Phone",
     "email": "Email",

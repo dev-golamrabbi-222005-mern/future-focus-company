@@ -4,6 +4,7 @@ import { AboutSnippet } from '@/components/sections/AboutSnippet';
 import { SectorsGrid } from '@/components/sections/SectorsGrid';
 import { ProcessTimeline } from '@/components/sections/ProcessTimeline';
 import Hero1 from '@/components/features/Hero1';
+import AboutSection from '../aboutSection/page';
 
 interface HomePageProps {
   params: Promise<{ locale: string }>;
@@ -18,6 +19,7 @@ export default async function HomePage({ params }: HomePageProps) {
       {/* Hero Section */}
       <Hero1 />
       <Hero />
+      <AboutSection />
 
       {/* Agency Impact Stats Section */}
       <StatsSection />

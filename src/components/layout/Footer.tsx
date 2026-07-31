@@ -67,20 +67,20 @@ export function Footer() {
           {/* Column 3: Contact Info */}
           <div className="space-y-4">
             <h3 className="text-base font-bold text-foreground tracking-wide uppercase">
-              {t('dubaiOffice')}
+              {t('saudiOffice')}
             </h3>
             <div className="space-y-2 text-xs sm:text-sm text-muted-foreground">
               <p className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                <span>{t('dubaiAddress')}</span>
+                <span>{t('saudiAddress')}</span>
               </p>
               <p className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-primary shrink-0" />
-                <span>{siteConfig.offices.dubai.phone}</span>
+                <span>{siteConfig.offices.saudi.phone}</span>
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-primary shrink-0" />
-                <span>{siteConfig.offices.dubai.email}</span>
+                <span>{siteConfig.offices.saudi.email}</span>
               </p>
             </div>
 
