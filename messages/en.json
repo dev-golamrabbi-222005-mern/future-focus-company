@@ -1,5 +1,6 @@
 {
   "Navigation": {
+    "companyName": "Future Focus Company",
     "home": "Home",
     "about": "About Us",
     "services": "Services",
@@ -14,13 +15,43 @@
     "titlePrefix": "Connecting",
     "titleHighlight": "Global Opportunities",
     "titleSuffix": "with Top Talent",
-    "subtitle": "Premier manpower recruitment bridging skilled Bangladeshi talent with prestigious employers across Dubai & the Middle East. Trusted, transparent, and certified recruitment solutions.",
-    "ctaHire": "Hire Manpower (Dubai)",
+    "subtitle": "Premier manpower recruitment bridging skilled Bangladeshi talent with prestigious employers across Saudi Arabia & the Middle East. Trusted, transparent, and certified recruitment solutions.",
+    "ctaHire": "Hire Manpower (Saudi Arabia)",
     "ctaApply": "Apply for Jobs (Bangladesh)",
     "statsPlacements": "Placements Completed",
     "statsSatisfaction": "Employer Satisfaction",
     "statsExperience": "Years Experience",
     "statsCountries": "Partner Countries"
+  },
+  "Hero1": {
+    "brandName": "Future Focus",
+    "ctaHire": "Hire Manpower (Saudi Arabia)",
+    "ctaApply": "Apply for Jobs (Bangladesh)",
+    "badgeRole": "SAUDI ARABIA & GCC",
+    "slide1": {
+      "role": "SAUDI ARABIA",
+      "title": "WITNESS",
+      "highlight": "SKILLED WORKERS",
+      "desc": "Skilled Workers for Every Industry in Riyadh & Jeddah. Welders, electricians, masons, kitchen staff — we deliver the right person for every job, on time."
+    },
+    "slide2": {
+      "role": "SAUDI ARABIA",
+      "title": "EVOLVE",
+      "highlight": "TRUSTED MANPOWER",
+      "desc": "Trusted Manpower Solutions in Saudi Arabia. Connecting ambitious businesses with reliable workers — from Bangladesh to the heart of the Kingdom."
+    },
+    "slide3": {
+      "role": "MIDDLE EAST",
+      "title": "LEAD",
+      "highlight": "RELIABILITY",
+      "desc": "15+ Years of Reliable Recruitment Across the Gulf. Over 15,000 Bangladeshi workers successfully placed in Saudi Arabia, UAE, Qatar, and beyond."
+    },
+    "slide4": {
+      "role": "VISION 2030",
+      "title": "PARTNER",
+      "highlight": "GROWTH PROJECTS",
+      "desc": "Your Manpower Partner for Vision 2030 Projects. From Aramco sites to infrastructure developments — we supply dependable labor for major growth projects."
+    }
   },
   "StatsSection": {
     "tagline": "Impact in Numbers",
@@ -37,8 +68,13 @@
   },
   "AboutSnippet": {
     "badge": "Government License RL-1428",
-    "title": "Bridging Opportunities Between Bangladesh & Dubai",
-    "subtitle": "Global Manpower is a premier, government-certified recruitment agency dedicated to matching top Bangladeshi professionals with high-growth industries in the UAE and Middle East.",
+    "bmetBadge": "BMET Certified Agency",
+    "pipelineBadge": "Dhaka ⇄ Middle East Pipeline",
+    "cardTitle": "Overseas Recruitment Excellence",
+    "ministryApproved": "Ministry Approved",
+    "rlLicense": "RL-1428 License",
+    "title": "Bridging Opportunities Between Bangladesh & Saudi Arabia",
+    "subtitle": "Future Focus Company is a premier, government-certified recruitment agency dedicated to matching top Bangladeshi professionals with high-growth industries in Saudi Arabia and the Middle East.",
     "ceoQuote": "\"Our mission is rooted in transparency, candidate welfare, and delivering uncompromised quality to our Middle Eastern enterprise partners.\"",
     "ceoName": "Md. Rafiqul Islam",
     "ceoTitle": "Managing Director & Founder",
@@ -46,9 +82,54 @@
     "point1Desc": "Full BMET registration and ministry approvals for safe, ethical recruitment.",
     "point2Title": "End-to-End Logistics",
     "point2Desc": "Trade testing, medical screening, visa processing, and air ticketing managed under one roof.",
-    "point3Title": "Dedicated Dubai Desk",
-    "point3Desc": "On-ground support team in Business Bay, Dubai for direct employer liaison.",
+    "point3Title": "Dedicated Saudi Desk",
+    "point3Desc": "On-ground support team in Riyadh, KSA for direct employer liaison.",
     "cta": "Learn More About Us"
+  },
+  "HomeAbout": {
+    "tag": "Who We Are",
+    "title": "A Workforce Partner You Can Actually Rely On",
+    "description1": "Pardeshi Global Services is a government-approved manpower recruitment agency serving Saudi Arabia, UAE, Qatar, Oman, Kuwait and Malaysia with skilled and reliable Bangladeshi workers.",
+    "description2": "From recruitment and documentation to visa processing and deployment, we manage every step professionally so your business gets the right workforce on time.",
+    "experience": "Years Trusted",
+    "button": "Work With Us",
+    "feature1": "On-Time Deployment",
+    "feature2": "Visa & Documentation",
+    "feature3": "Skilled & Unskilled Labour",
+    "feature4": "24/7 Employer Support",
+    "feature5": "Transparent Pricing",
+    "feature6": "Flexible Contract Terms"
+  },
+  "WhyChooseUs": {
+    "tagline": "Why Choose Us",
+    "heading": "Why Middle Eastern Enterprises Trust Future Focus",
+    "subheading": "Built on strict ministry compliance, ethical recruitment practices, and unmatched speed in workforce deployment.",
+    "guaranteedStandard": "Guaranteed Standard",
+    "card1Title": "Zero Candidate Exploitation",
+    "card1Desc": "100% BMET compliant recruitment with transparent fee structures and ethical candidate treatment.",
+    "card2Title": "Rigorous Trade Testing",
+    "card2Desc": "Practical technical evaluation in government-certified centers ensuring only vetted, qualified workers get selected.",
+    "card3Title": "Direct Embassy Fast-Track",
+    "card3Desc": "Authorized visa stamping and document processing with KSA, UAE & GCC consulates.",
+    "card4Title": "90-Day Probation Guarantee",
+    "card4Desc": "Full free replacement guarantee if any worker fails to meet specified job requirements within 90 days."
+  },
+  "GlobalReachMap": {
+    "tagline": "Regional Presence",
+    "heading": "Active Deployment Network Across the GCC",
+    "subheading": "Supplying thousands of skilled professionals to leading mega-projects in Saudi Arabia, UAE, Qatar, Kuwait, and Oman.",
+    "saudiLabel": "Saudi Arabia (Riyadh & Jeddah)",
+    "saudiCount": "8,500+ Workers Placed",
+    "uaeLabel": "United Arab Emirates (Dubai & Abu Dhabi)",
+    "uaeCount": "4,200+ Workers Placed",
+    "qatarLabel": "Qatar (Doha)",
+    "qatarCount": "1,800+ Workers Placed",
+    "kuwaitLabel": "Kuwait & Oman",
+    "kuwaitCount": "1,500+ Workers Placed",
+    "testimonialTitle": "What Enterprise Clients Say",
+    "quote": "\"Future Focus supplied over 200 MEP technicians for our Riyadh expansion project on short notice. Their trade testing accuracy and speed were remarkable.\"",
+    "author": "Eng. Tariq Al-Mansoor",
+    "role": "Project Director, Al-Rashid Construction (Saudi Arabia)"
   },
   "SectorsGrid": {
     "tagline": "Industries We Serve",
@@ -80,28 +161,28 @@
     "step2Desc": "Candidates are shortlisted, interviewed, and skill-tested at government-certified centers.",
     "step3Num": "03",
     "step3Title": "Medical & Visa Processing",
-    "step3Desc": "GAMCA medical clearance, BMET smart card issuance, and UAE employment visa stamping.",
+    "step3Desc": "GAMCA medical clearance, BMET smart card issuance, and employment visa stamping.",
     "step4Num": "04",
     "step4Title": "Pre-Departure & Deployment",
-    "step4Desc": "Cultural orientation, flight booking, and smooth airport reception by our Dubai team."
+    "step4Desc": "Cultural orientation, flight booking, and smooth airport reception by our local team."
   },
   "AboutPage": {
-    "tagline": "About Global Manpower",
+    "tagline": "About Future Focus Company",
     "title": "Empowering Talent, Building Bridges Across Borders",
     "subtitle": "Discover our journey, mission, values, and government certifications as Bangladesh's trusted manpower recruitment partner.",
     "missionTitle": "Our Mission",
-    "missionDesc": "To empower Bangladeshi workers through ethical, transparent overseas recruitment while delivering world-class workforce solutions to enterprise employers in Dubai and the GCC.",
+    "missionDesc": "To empower Bangladeshi workers through ethical, transparent overseas recruitment while delivering world-class workforce solutions to enterprise employers in Saudi Arabia and the GCC.",
     "visionTitle": "Our Vision",
     "visionDesc": "To remain the benchmark recruiting agency recognized across the Middle East for integrity, candidate welfare, and operational speed.",
     "licenseTitle": "Government License & Accreditation",
     "licenseDesc": "Operating under Ministry License RL-1428 with full BMET compliance, ISO quality certifications, and GAMCA medical affiliation.",
     "mdTitle": "Managing Director's Statement",
-    "mdMessage": "Over the past 14 years, we have placed over 15,000 workers in life-changing careers across Dubai. We believe ethical recruitment is not just good policy—it is our core duty."
+    "mdMessage": "Over the past 15 years, we have placed over 15,000 workers in life-changing careers across Saudi Arabia and the GCC. We believe ethical recruitment is not just good policy—it is our core duty."
   },
   "ServicesPage": {
     "tagline": "Comprehensive Solutions",
     "heading": "End-to-End Recruitment & Overseas Logistics",
-    "subheading": "From candidate sourcing to flight ticketing and Dubai reception, we manage every detail with complete precision.",
+    "subheading": "From candidate sourcing to flight ticketing and GCC reception, we manage every detail with complete precision.",
     "service1Title": "Executive & Skilled Sourcing",
     "service1Desc": "Rigorous recruitment drives matching candidate skills with exact employer job specifications.",
     "service2Title": "Trade Testing & Skill Certification",
@@ -111,13 +192,13 @@
     "service4Title": "Visa Stamping & BMET Smart Card",
     "service4Desc": "Official embassy visa processing and BMET smart card issuance under ministry supervision.",
     "service5Title": "Air Ticketing & Pre-Departure Briefing",
-    "service5Desc": "Group flight reservations, cultural orientation, and UAE labor law briefings.",
-    "service6Title": "Dubai Reception & On-Ground Liaison",
-    "service6Desc": "Airport pickup in Dubai, transport to employer quarters, and continuous client liaison."
+    "service5Desc": "Group flight reservations, cultural orientation, and GCC labor law briefings.",
+    "service6Title": "On-Ground Reception & Liaison",
+    "service6Desc": "Airport pickup, transport to employer quarters, and continuous client liaison."
   },
   "ManpowerPage": {
     "tagline": "Workforce Solutions",
-    "heading": "Certified Manpower Supply for Dubai & GCC",
+    "heading": "Certified Manpower Supply for Saudi Arabia & GCC",
     "subheading": "Supplying vetted, experienced, and disciplined workforce categories across major Middle Eastern economic sectors.",
     "categoryTitle": "Available Skilled Trades",
     "cat1Title": "Civil Construction",
@@ -132,12 +213,12 @@
     "guaranteeDesc": "3-Month probationary replacement guarantee for any worker not meeting client skill standards."
   },
   "GalleryPage": {
-    "tagline": "Life at Global Manpower",
+    "tagline": "Life at Future Focus Company",
     "heading": "Visual Journey & Deployment Highlights",
-    "subheading": "Explore photos of candidate trade testing, flight departures from Dhaka, and candidate arrivals in Dubai.",
+    "subheading": "Explore photos of candidate trade testing, flight departures from Dhaka, and candidate arrivals in Saudi Arabia.",
     "item1Title": "Trade Test Center - Dhaka",
     "item2Title": "Group Departure at HSIA Airport",
-    "item3Title": "Dubai Office Liaison Team",
+    "item3Title": "Riyadh Office Liaison Team",
     "item4Title": "Hospitality Training Seminar",
     "item5Title": "Construction Safety Workshop",
     "item6Title": "Client Delegates Interviewing Candidates"
@@ -145,7 +226,7 @@
   "ContactPage": {
     "tagline": "Get in Touch",
     "heading": "We'd Love to Hear From You",
-    "subheading": "Whether you are a Dubai employer seeking workforce or a candidate looking for a job, reach out to us today.",
+    "subheading": "Whether you are a Middle East employer seeking workforce or a candidate looking for a job, reach out to us today.",
     "formTitle": "Send Us a Message",
     "nameLabel": "Full Name",
     "emailLabel": "Email Address",
@@ -154,31 +235,32 @@
     "messageLabel": "Your Message",
     "submitBtn": "Submit Inquiry",
     "successMsg": "Thank you! Your message has been sent successfully. Our team will contact you within 24 hours.",
-    "dubaiTitle": "Dubai Office (UAE)",
+    "saudiTitle": "Riyadh Office (Saudi Arabia)",
+    "dubaiTitle": "Riyadh Office (Saudi Arabia)",
     "bdTitle": "Dhaka Office (Bangladesh)"
   },
   "JobsPage": {
     "tagline": "Latest Vacancies",
-    "heading": "Current Dubai & UAE Job Openings",
+    "heading": "Current Saudi Arabia & GCC Job Openings",
     "subheading": "Explore verified job vacancies with competitive salaries, free accommodation, and medical insurance.",
     "applyBtn": "Apply Now",
     "job1Title": "Senior MEP Electrician",
-    "job1Company": "Al Habtoor Group • Dubai",
-    "job1Salary": "AED 2,200 - 2,800 / month",
+    "job1Company": "Al-Rashid Construction • Riyadh",
+    "job1Salary": "SAR 2,500 - 3,200 / month",
     "job2Title": "Heavy Trailer Driver",
-    "job2Company": "Emirates Logistics • Abu Dhabi",
-    "job2Salary": "AED 3,000 - 3,500 / month",
+    "job2Company": "Saudi Logistics • Jeddah",
+    "job2Salary": "SAR 3,200 - 4,000 / month",
     "job3Title": "Hotel Line Cook / Commis",
-    "job3Company": "Marriott Dubai • Dubai",
-    "job3Salary": "AED 2,500 + Duty Meals",
+    "job3Company": "Riyadh Hotel • Riyadh",
+    "job3Salary": "SAR 2,800 + Duty Meals",
     "job4Title": "Facility Maintenance Technician",
-    "job4Company": "Emaar Properties • Dubai",
-    "job4Salary": "AED 2,400 - 3,000 / month"
+    "job4Company": "Red Sea Global • KSA",
+    "job4Salary": "SAR 2,600 - 3,500 / month"
   },
   "SubmitCvPage": {
     "tagline": "Candidate Application",
     "heading": "Submit Your Resume & Passport",
-    "subheading": "Take the first step towards an exciting career in Dubai. Upload your documents for instant review by our recruiters.",
+    "subheading": "Take the first step towards an exciting career in Saudi Arabia and the GCC. Upload your documents for instant review by our recruiters.",
     "formTitle": "Application Form",
     "fullName": "Full Name (As per Passport)",
     "phone": "Mobile Number / WhatsApp",
@@ -191,13 +273,15 @@
     "successMessage": "Application Submitted! Our recruitment officers will call you for trade testing."
   },
   "Footer": {
-    "tagline": "Leading government-approved manpower recruitment agency specializing in skilled workforce deployment across the Middle East.",
+    "tagline": "Leading government-approved manpower recruitment agency specializing in skilled workforce deployment across Saudi Arabia and the Middle East.",
     "license": "Government License: RL-1428 | Ministry of Expatriates' Welfare & Overseas Employment",
     "quickLinks": "Quick Links",
-    "dubaiOffice": "Dubai Office (UAE)",
+    "saudiOffice": "Riyadh Office (KSA)",
     "bdOffice": "Bangladesh Office (Dhaka)",
-    "dubaiAddress": "Suite 402, Business Bay Tower, Al A'amal St, Business Bay, Dubai, UAE",
+    "saudiAddress": "Suite 402, Business Bay Tower, Al A'amal St, Business Bay, Riyadh, KSA",
     "bdAddress": "House 12, Road 04, Block B, Banani, Dhaka-1213, Bangladesh",
+    "connectTitle": "Connect With Us",
+    "connectDesc": "Follow our official channels for the latest recruitment drives and job announcements.",
     "phone": "Phone",
     "email": "Email",
     "rights": "All rights reserved.",

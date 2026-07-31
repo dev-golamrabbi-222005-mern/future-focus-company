@@ -1,6 +1,6 @@
 export const siteConfig = {
-  name: 'Global Manpower',
-  description: 'Premier government-approved manpower recruitment agency connecting Bangladeshi talent with top employers across Dubai & the Middle East.',
+  name: 'Future Focus Company',
+  description: 'Premier government-approved manpower recruitment agency connecting Bangladeshi talent with top employers across Saudi Arabia & the Middle East.',
   license: 'RL-1428',
   navLinks: [
     { href: '', key: 'home' },
@@ -12,10 +12,10 @@ export const siteConfig = {
     { href: '/contact', key: 'contact' },
   ],
   offices: {
-    dubai: {
-      address: 'Suite 402, Business Bay Tower, Al A\'amal St, Business Bay, Dubai, UAE',
+    saudi: {
+      address: 'Suite 402, Business Bay Tower, Al A\'amal St, Business Bay, Riyadh, KSA',
       phone: '+971 4 123 4567',
-      email: 'dubai@globalmanpower.com'
+      email: 'saudi@futurefocus.com'
     },
     bangladesh: {
       address: 'House 12, Road 04, Block B, Banani, Dhaka-1213, Bangladesh',

@@ -12,8 +12,8 @@ import '@/styles/globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Global Manpower | Government Approved Recruitment Agency',
-  description: 'Connecting Skilled Bangladeshi Talent with Top Employers in Dubai & the Middle East. Govt. License RL-1428.',
+  title: ' Future Focus Company | Government Approved Recruitment Agency',
+  description: 'Connecting Skilled Bangladeshi Talent with Top Employers in Saudi Arabia & the Middle East. Govt. License RL-1428.',
 };
 
 export function generateStaticParams() {

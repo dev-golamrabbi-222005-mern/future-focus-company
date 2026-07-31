@@ -31,7 +31,7 @@ export function Footer() {
                 />
               </div>
               <span className="font-extrabold text-xl tracking-tight text-foreground">
-                {siteConfig.name}
+                {tNav('companyName')}
               </span>
             </div>
             
@@ -67,20 +67,20 @@ export function Footer() {
           {/* Column 3: Contact Info */}
           <div className="space-y-4">
             <h3 className="text-base font-bold text-foreground tracking-wide uppercase">
-              {t('dubaiOffice')}
+              {t('saudiOffice')}
             </h3>
             <div className="space-y-2 text-xs sm:text-sm text-muted-foreground">
               <p className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                <span>{t('dubaiAddress')}</span>
+                <span>{t('saudiAddress')}</span>
               </p>
               <p className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-primary shrink-0" />
-                <span>{siteConfig.offices.dubai.phone}</span>
+                <span>{siteConfig.offices.saudi.phone}</span>
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-primary shrink-0" />
-                <span>{siteConfig.offices.dubai.email}</span>
+                <span>{siteConfig.offices.saudi.email}</span>
               </p>
             </div>
 
@@ -106,10 +106,10 @@ export function Footer() {
           {/* Column 4: Social Media */}
           <div className="space-y-4">
             <h3 className="text-base font-bold text-foreground tracking-wide uppercase">
-              Connect With Us
+              {t('connectTitle')}
             </h3>
             <p className="text-sm text-muted-foreground">
-              Follow our official channels for the latest recruitment drives and job announcements.
+              {t('connectDesc')}
             </p>
             <div className="flex items-center gap-3">
               <a
@@ -162,7 +162,7 @@ export function Footer() {
 
         {/* Bottom Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} {siteConfig.name}. {t('rights')}</p>
+          <p>© {new Date().getFullYear()} {tNav('companyName')}. {t('rights')}</p>
           <div className="flex items-center gap-6">
             <Link href={`/${locale}#privacy`} className="hover:text-foreground transition-colors">
               {t('privacy')}
