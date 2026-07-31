@@ -78,16 +78,16 @@ export function AboutSnippet() {
                   </div>
                   <div className="px-4 py-2 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 font-semibold text-xs flex items-center gap-1.5 backdrop-blur-md">
                     <ShieldCheck className="h-4 w-4" />
-                    <span>BMET Certified Agency</span>
+                    <span>{t('bmetBadge')}</span>
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <span className="text-xs uppercase tracking-widest text-sky-400 font-bold">
-                    Dhaka ⇄ Dubai Pipeline
+                    {t('pipelineBadge')}
                   </span>
                   <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
-                    Overseas Recruitment Excellence
+                    {t('cardTitle')}
                   </h3>
                 </div>
               </div>
@@ -98,8 +98,8 @@ export function AboutSnippet() {
                 <ShieldCheck className="h-6 w-6" />
               </div>
               <div className="space-y-0.5">
-                <span className="text-xs font-bold text-primary block uppercase">Ministry Approved</span>
-                <span className="text-sm font-extrabold text-foreground">RL-1428 License</span>
+                <span className="text-xs font-bold text-primary block uppercase">{t('ministryApproved')}</span>
+                <span className="text-sm font-extrabold text-foreground">{t('rlLicense')}</span>
               </div>
             </div>
           </div>
