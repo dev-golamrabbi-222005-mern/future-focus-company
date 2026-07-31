@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: 'Global Manpower',
+  name: 'Future Focus Company',
   description: 'Premier government-approved manpower recruitment agency connecting Bangladeshi talent with top employers across Dubai & the Middle East.',
   license: 'RL-1428',
   navLinks: [
@@ -15,7 +15,7 @@ export const siteConfig = {
     dubai: {
       address: 'Suite 402, Business Bay Tower, Al A\'amal St, Business Bay, Dubai, UAE',
       phone: '+971 4 123 4567',
-      email: 'dubai@globalmanpower.com'
+      email: 'dubai@futurefocus.com'
     },
     bangladesh: {
       address: 'House 12, Road 04, Block B, Banani, Dhaka-1213, Bangladesh',
