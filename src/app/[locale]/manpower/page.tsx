@@ -6,6 +6,9 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { HardHat, Wrench, Utensils, Truck, ShieldCheck } from 'lucide-react';
+import AboutIntro from '@/components/manpower/AboutIntro';
+import WhatIsManpower from '@/components/manpower/WhatIsManpower';
+import CompanyHighlights from '@/components/manpower/CompanyHighlights';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
@@ -43,7 +46,11 @@ export default function ManpowerPage() {
   );
 
   return (
-    <div ref={containerRef} className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8 pt-8 md:pt-10 lg:pt-12 pb-8 md:pb-10 lg:pb-12 space-y-12 md:space-y-16 lg:space-y-20">
+    <div>
+      <AboutIntro />
+      <CompanyHighlights />
+
+      <div ref={containerRef} className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8 pt-8 md:pt-10 lg:pt-12 pb-8 md:pb-10 lg:pb-12 space-y-12 md:space-y-16 lg:space-y-20">
       <div className="text-center space-y-4 gsap-fade-up">
         <div className="mb-6 flex justify-center">
           <span className="text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20">{t('tagline')}</span>
@@ -84,6 +91,9 @@ export default function ManpowerPage() {
           <span className="text-xs uppercase tracking-wider opacity-90">Free Replacement</span>
         </div>
       </div>
+    </div>
+
+    <WhatIsManpower />
     </div>
   );
 }
