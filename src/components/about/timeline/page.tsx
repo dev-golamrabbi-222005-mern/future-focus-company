@@ -12,7 +12,6 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-
 type TimelineItem = {
   year: string;
   badge: string;
@@ -29,180 +28,157 @@ export default function CompanyTimeline() {
   const lineRef = React.useRef<HTMLDivElement>(null);
 
   const cardsRef = React.useRef<(HTMLDivElement | null)[]>([]);
-  
+
   React.useEffect(() => {
-  const section = sectionRef.current;
+    const section = sectionRef.current;
 
-  if (!section) return;
+    if (!section) return;
 
-  const handleMove = (e: MouseEvent) => {
-    const cards = cardsRef.current;
+    const handleMove = (e: MouseEvent) => {
+      const cards = cardsRef.current;
 
-    const x =
-      (e.clientX / window.innerWidth - 0.5) * 12;
+      const x = (e.clientX / window.innerWidth - 0.5) * 12;
 
-    const y =
-      (e.clientY / window.innerHeight - 0.5) * 12;
+      const y = (e.clientY / window.innerHeight - 0.5) * 12;
 
-    cards.forEach((card) => {
-      if (!card) return;
+      cards.forEach((card) => {
+        if (!card) return;
 
-      gsap.to(card, {
-        x,
-        y,
-        duration: 1,
-        ease: "power3.out",
+        gsap.to(card, {
+          x,
+          y,
+          duration: 1,
+          ease: "power3.out",
+        });
       });
-    });
-  };
+    };
 
-  section.addEventListener("mousemove", handleMove);
+    section.addEventListener("mousemove", handleMove);
 
-  return () =>
-    section.removeEventListener(
-      "mousemove",
-      handleMove
-    );
-}, []);
+    return () => section.removeEventListener("mousemove", handleMove);
+  }, []);
 
   const timeline = [
-  {
-    year: "2022",
-    badge: t("timeline2022.badge"),
-    title: t("timeline2022.title"),
-    description: t("timeline2022.description"),
-    icon: Building2,
-  },
-  {
-    year: "2023",
-    badge: t("timeline2023.badge"),
-    title: t("timeline2023.title"),
-    description: t("timeline2023.description"),
-    icon: Globe2,
-  },
-  {
-    year: "2024",
-    badge: t("timeline2024.badge"),
-    title: t("timeline2024.title"),
-    description: t("timeline2024.description"),
-    icon: CalendarDays,
-  },
-  {
-    year: "2025",
-    badge: t("timeline2025.badge"),
-    title: t("timeline2025.title"),
-    description: t("timeline2025.description"),
-    icon: Trophy,
-  },
-  {
-    year: "2026",
-    badge: t("timeline2026.badge"),
-    title: t("timeline2026.title"),
-    description: t("timeline2026.description"),
-    icon: Rocket,
-  },
-];
+    {
+      year: "2022",
+      badge: t("timeline2022.badge"),
+      title: t("timeline2022.title"),
+      description: t("timeline2022.description"),
+      icon: Building2,
+    },
+    {
+      year: "2023",
+      badge: t("timeline2023.badge"),
+      title: t("timeline2023.title"),
+      description: t("timeline2023.description"),
+      icon: Globe2,
+    },
+    {
+      year: "2024",
+      badge: t("timeline2024.badge"),
+      title: t("timeline2024.title"),
+      description: t("timeline2024.description"),
+      icon: CalendarDays,
+    },
+    {
+      year: "2025",
+      badge: t("timeline2025.badge"),
+      title: t("timeline2025.title"),
+      description: t("timeline2025.description"),
+      icon: Trophy,
+    },
+    {
+      year: "2026",
+      badge: t("timeline2026.badge"),
+      title: t("timeline2026.title"),
+      description: t("timeline2026.description"),
+      icon: Rocket,
+    },
+  ];
 
+  useGSAP(
+    () => {
+      if (!sectionRef.current) return;
 
-      useGSAP(
-        () => {
-          if (!sectionRef.current) return;
+      const header = sectionRef.current.querySelector("h2");
+      const description = sectionRef.current.querySelector("p");
 
-          // ===========================
-          // Section Header Animation
-          // ===========================
-
-          const header = sectionRef.current.querySelector("h2");
-          const description = sectionRef.current.querySelector("p");
-
-          gsap.from(header, {
-            y: 60,
-            opacity: 0,
-            duration: 1,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: header,
-              start: "top 85%",
-            },
-          });
-
-          gsap.from(description, {
-            y: 40,
-            opacity: 0,
-            duration: 1,
-            delay: 0.2,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: description,
-              start: "top 85%",
-            },
-          });
-
-          // ===========================
-          // Timeline Vertical Line
-          // ===========================
-
-          if (lineRef.current) {
-            gsap.set(lineRef.current, {
-              transformOrigin: "top center",
-              scaleY: 0,
-            });
-
-            gsap.to(lineRef.current, {
-              scaleY: 1,
-              ease: "none",
-              scrollTrigger: {
-                trigger: sectionRef.current,
-                start: "top 75%",
-                end: "bottom 80%",
-                scrub: true,
-              },
-            });
-          }
-
-          // ===========================
-          // Timeline Cards
-          // ===========================
-
-          cardsRef.current.forEach((card, index) => {
-            if (!card) return;
-
-            gsap.from(card, {
-              opacity: 0,
-              x: index % 2 === 0 ? -80 : 80,
-              y: 40,
-              duration: 1,
-              ease: "power3.out",
-              scrollTrigger: {
-                trigger: card,
-                start: "top 85%",
-                toggleActions: "play none none reverse",
-              },
-            });
-          });
-
-          // ===========================
-          // Timeline Dots
-          // ===========================
-
-          gsap.utils.toArray<HTMLElement>(".timeline-dot").forEach((dot) => {
-            gsap.from(dot, {
-              scale: 0,
-              rotate: 180,
-              duration: 0.6,
-              ease: "back.out(2)",
-              scrollTrigger: {
-                trigger: dot,
-                start: "top 90%",
-              },
-            });
-          });
+      gsap.from(header, {
+        y: 60,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: header,
+          start: "top 85%",
         },
-        { scope: sectionRef },
-      );
-    // },
-    // { scope: sectionRef },
-//   );
+      });
+
+      gsap.from(description, {
+        y: 40,
+        opacity: 0,
+        duration: 1,
+        delay: 0.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: description,
+          start: "top 85%",
+        },
+      });
+      // Timeline Vertical Line
+
+      if (lineRef.current) {
+        gsap.set(lineRef.current, {
+          transformOrigin: "top center",
+          scaleY: 0,
+        });
+
+        gsap.to(lineRef.current, {
+          scaleY: 1,
+          ease: "none",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 75%",
+            end: "bottom 80%",
+            scrub: true,
+          },
+        });
+      }
+      // Timeline Cards
+
+      cardsRef.current.forEach((card, index) => {
+        if (!card) return;
+
+        gsap.from(card, {
+          opacity: 0,
+          x: index % 2 === 0 ? -80 : 80,
+          y: 40,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          },
+        });
+      });
+      // Timeline Dots
+  
+      gsap.utils.toArray<HTMLElement>(".timeline-dot").forEach((dot) => {
+        gsap.from(dot, {
+          scale: 0,
+          rotate: 180,
+          duration: 0.6,
+          ease: "back.out(2)",
+          scrollTrigger: {
+            trigger: dot,
+            start: "top 90%",
+          },
+        });
+      });
+    },
+    { scope: sectionRef },
+  );
 
   return (
     <section
@@ -219,9 +195,6 @@ export default function CompanyTimeline() {
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header Part-1A-2 এ */}
-        {/* =========================
-        SECTION HEADER
-========================= */}
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -259,9 +232,7 @@ export default function CompanyTimeline() {
           </p>
         </motion.div>
 
-        {/* =========================
         TIMELINE WRAPPER
-========================= */}
 
         <div className="relative">
           {/* Vertical Line */}
@@ -284,14 +255,6 @@ export default function CompanyTimeline() {
                   key={item.year}
                   ref={(el) => {
                     cardsRef.current[index] = el;
-                  }}
-                  initial={{
-                    opacity: 0,
-                    x: isEven ? -80 : 80,
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    x: 0,
                   }}
                   transition={{
                     duration: 0.8,

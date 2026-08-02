@@ -6,10 +6,6 @@ import { AboutSnippet } from '@/components/sections/AboutSnippet';
 import { SectorsGrid } from '@/components/sections/SectorsGrid';
 import { GlobalReachMap } from '@/components/sections/GlobalReachMap';
 import { ProcessTimeline } from '@/components/sections/ProcessTimeline';
-// import AboutCompany from '../aboutUs/page';
-// import Timeline from '../aboutUs/timeline/page';
-// import WhyChoose from '../../../components/about/WhyChooseUs';
-// import CallToAction from '../../../components/about/CallToAction';
 
 interface HomePageProps {
   params: Promise<{ locale: string }>;
@@ -34,11 +30,6 @@ export default async function HomePage({ params }: HomePageProps) {
 
       {/* About Agency & CEO Snippet Section */}
       <AboutSnippet />
-
-      {/* <AboutCompany />
-      <Timeline />
-      <WhyChoose />
-      <CallToAction /> */}
 
       {/* Industry Sectors Grid Section */}
       <SectorsGrid />

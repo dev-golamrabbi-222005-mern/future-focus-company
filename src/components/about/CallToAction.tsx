@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
-
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -71,12 +70,17 @@ export default function CallToAction() {
         {/* Title */}
 
         <motion.h2
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 1 }}
-          className="cta-reveal text-4xl font-black leading-tight md:text-6xl lg:text-7xl"
-          
+          initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{
+    once: true,
+    amount: 0.4,
+  }}
+  transition={{
+    duration: 0.8,
+    ease: "easeOut",
+  }}
+  className="text-4xl font-black leading-tight md:text-6xl lg:text-7xl"
         >
           <span className="mx-auto max-w-5xl text-4xl font-black leading-tight text-foreground md:text-6xl">
             {t("title1")}
@@ -114,7 +118,6 @@ export default function CallToAction() {
           </motion.div>
 
           {/* WhatsApp */}
-          
 
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
             <Link
@@ -130,7 +133,6 @@ export default function CallToAction() {
         </div>
 
         {/* Bottom Trust Bar */}
-    
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
