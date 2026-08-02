@@ -396,6 +396,30 @@
     }
   ]
 },
+"CompanyHighlights": {
+  "items": [
+    {
+      "title": "Govt. Approved",
+      "subtitle": "BD & KSA Licensed"
+    },
+    {
+      "title": "2–4 Weeks",
+      "subtitle": "Deployment Timeline"
+    },
+    {
+      "title": "21+ Job Roles",
+      "subtitle": "All Industries Covered"
+    },
+    {
+      "title": "6+ Countries",
+      "subtitle": "Gulf & Asia Pacific"
+    },
+    {
+      "title": "24 / 7",
+      "subtitle": "Employer Support"
+    }
+  ]
+},
 
   "GalleryPage": {
     "tagline": "Life at Future Focus Company",

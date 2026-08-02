@@ -19,6 +19,7 @@ export default function AboutIntro() {
 
   const sectionRef = React.useRef<HTMLDivElement>(null);
   const imageGroupRef = React.useRef<HTMLDivElement>(null);
+  const glowRef = React.useRef<HTMLDivElement>(null);
 
   useGSAP(
     () => {
@@ -73,8 +74,7 @@ export default function AboutIntro() {
   return (
     <section
       ref={sectionRef}
-        className="relative overflow-visible bg-background py-12 lg:py-12"
-    >
+        className="relative overflow-hidden bg-background py-24 lg:py-32">
       {/* Animated Grid Background */}
 
       <motion.div
@@ -153,8 +153,7 @@ export default function AboutIntro() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
-            className="intro-reveal max-w-3xl font-serif text-4xl font-bold uppercase leading-[0.95] text-white md:text-6xl xl:text-7xl"
-          >
+            className="max-w-3xl font-serif text-4xl font-bold uppercase leading-[0.95] text-foreground md:text-6xl xl:text-7xl">
             <span className="block">{t("title1")}</span>
 
             <span className="block">{t("title2")}</span>
@@ -181,7 +180,7 @@ export default function AboutIntro() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.35 }}
-            className="intro-reveal mt-10 max-w-2xl text-lg leading-9 text-white/70"
+            className="intro-reveal mt-10 max-w-2xl text-lg leading-9 text-muted-foreground"
           >
             {t("description")}
           </motion.p>
@@ -193,24 +192,24 @@ export default function AboutIntro() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.45 }}
-            className="intro-reveal mt-14 inline-flex overflow-hidden rounded-full border border-primary/30 bg-white/5 backdrop-blur-xl"
+            className="intro-reveal mt-14 inline-flex overflow-hidden rounded-full border border-border bg-card backdrop-blur-xl"
           >
             <div className="flex items-center gap-3 px-8 py-5">
               <span className="text-lg">🇧🇩</span>
 
-              <span className="font-semibold uppercase tracking-[0.2em] text-white">
+              <span className="font-semibold uppercase tracking-[0.2em] text-foreground">
                 {t("bangladesh")}
               </span>
             </div>
 
             <div className="flex items-center justify-center bg-primary px-7">
-              <ArrowRight className="h-5 w-5 text-black" />
+              <ArrowRight className="h-5 w-5 text-primary-foreground" />
             </div>
 
             <div className="flex items-center gap-3 px-8 py-5">
               <span className="text-lg">🇸🇦</span>
 
-              <span className="font-semibold uppercase tracking-[0.2em] text-primary">
+              <span className="font-semibold uppercase tracking-[0.2em] text-foreground">
                 {t("saudi")}
               </span>
             </div>
@@ -237,7 +236,7 @@ export default function AboutIntro() {
             <Link
               href="https://wa.me/966500000000"
               target="_blank"
-              className="inline-flex items-center gap-3 bg-green-500 px-8 py-5 font-bold uppercase tracking-[0.18em] text-white transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center gap-3 bg-green-500 px-8 py-5 font-bold uppercase tracking-[0.18em] text-foreground transition-all duration-300 hover:scale-105"
             >
               <MessageCircle size={18} />
 
@@ -246,15 +245,13 @@ export default function AboutIntro() {
 
             <Link
               href="/services"
-              className="inline-flex items-center border border-white/20 px-8 py-5 font-bold uppercase tracking-[0.18em] text-white transition-all duration-300 hover:border-primary hover:bg-white/5"
+              className="inline-flex items-center border border-border px-8 py-5 font-bold uppercase tracking-[0.18em] text-foreground transition-all duration-300 hover:border-primary hover:bg-muted"
             >
               {t("browse")}
             </Link>
           </motion.div>
         </div>
 
-        {/* =====================
-            RIGHT SIDE
         {/* ================= RIGHT IMAGE SECTION ================= */}
 
         <div
@@ -317,7 +314,7 @@ export default function AboutIntro() {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="floating-image parallax-item absolute bottom-20 left-0 w-[350px] border border-border bg-background/95 p-8 shadow-2xl backdrop-blur-xl"
+            className="floating-image parallax-item absolute bottom-20 left-0 w-[350px] border border-border bg-card/90 p-8 shadow-2xl backdrop-blur-xl"
           >
             <p className="text-xs font-bold uppercase tracking-[0.35em] text-primary">
               {t("market")}
@@ -348,9 +345,9 @@ export default function AboutIntro() {
             className="floating-image absolute right-[-35px] top-16 flex h-36 w-36 items-center justify-center rounded-full bg-primary shadow-[0_0_50px_rgba(255,205,0,.45)]"
           >
             <div className="text-center">
-              <h4 className="text-5xl font-black text-black">15+</h4>
+              <h4 className="text-5xl font-black text-primary-foreground">15+</h4>
 
-              <p className="mt-2 text-xs font-bold uppercase tracking-[0.2em] text-black">
+              <p className="mt-2 text-xs font-bold uppercase tracking-[0.2em] text-primary-foreground">
                 {t("experience")}
               </p>
             </div>
