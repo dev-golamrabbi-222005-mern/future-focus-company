@@ -338,6 +338,65 @@
     "guaranteeTitle": "Our Recruitment Guarantee",
     "guaranteeDesc": "3-Month probationary replacement guarantee for any worker not meeting client skill standards."
   },
+
+  "AboutIntro": {
+  "tag": "Manpower Supply",
+
+  "title1": "Bangladesh",
+  "title2": "To",
+  "title3": "Saudi Arabia",
+
+  "subtitle": "Skilled, semi-skilled & unskilled workers — vetted, documented, and deployed on time.",
+
+  "description": "Future Focus Company is a government-approved international manpower recruitment agency headquartered in Riyadh, Saudi Arabia. We connect Bangladesh’s skilled workforce with employers across Saudi Arabia by providing reliable recruitment, documentation, visa processing, and workforce deployment services.",
+
+  "bangladesh": "Bangladesh",
+  "saudi": "Saudi Arabia",
+
+  "request": "Request Manpower",
+  "whatsapp": "WhatsApp Now",
+  "browse": "Browse Workers",
+
+  "market": "Primary Market",
+  "country": "Saudi Arabia",
+  "cities": "Riyadh • Jeddah • Dammam • Eastern Province",
+
+  "experience": "Years Trusted"
+},
+"WhatIsManpower": {
+  "tag": "What We Do",
+
+  "title": "What Is International Manpower Supply?",
+
+  "subtitle": "It is the process of sourcing qualified workers in one country and deploying them to employers in another — legally, safely, and with full documentation support from start to finish.",
+
+  "description1": "Future Focus Company manages the complete manpower supply chain from Bangladesh to Saudi Arabia. We identify workers who match your exact role requirements, conduct thorough screening and medical tests, process visas and travel documentation, and coordinate deployment to your worksite—so you receive work-ready professionals, not paperwork headaches.",
+
+  "description2": "Our manpower supply service covers three major worker categories: skilled professionals (welders, electricians, plumbers), semi-skilled workers (kitchen helpers, factory assistants, baristas), and unskilled labor (general cleaners, site laborers, garden workers). Every worker goes through strict recruitment, verification, and pre-deployment training.",
+
+  "quoteTitle": "Future Focus Company — In One Sentence",
+
+  "quote": "We are a government-approved manpower supply company connecting Bangladesh's workforce with employers across Saudi Arabia through ethical recruitment, complete documentation, and reliable deployment.",
+
+  "cards": [
+    {
+      "title": "Skilled Workers",
+      "jobs": "Welders • Electricians • Steel Fixers • Plumbers • Painters",
+      "description": "Trade-qualified professionals with verified practical experience for construction, oil & gas, industrial, and technical projects across Saudi Arabia."
+    },
+    {
+      "title": "Semi-skilled Workers",
+      "jobs": "Kitchen Helpers • Factory Assistants • Baristas • Car Wash • Fast Food",
+      "description": "Workers with role-specific training and hands-on experience for hospitality, food production, retail, logistics, and manufacturing sectors."
+    },
+    {
+      "title": "Unskilled Labor",
+      "jobs": "General Labor • Cleaners • Garden Workers • Site Helpers",
+      "description": "Reliable and hardworking laborers ready for municipal, commercial, industrial, warehouse, and residential projects with fast deployment."
+    }
+  ]
+},
+
   "GalleryPage": {
     "tagline": "Life at Future Focus Company",
     "heading": "Visual Journey & Deployment Highlights",
