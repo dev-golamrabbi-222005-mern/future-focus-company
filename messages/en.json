@@ -365,6 +365,49 @@
     "dubaiTitle": "Riyadh Office (Saudi Arabia)",
     "bdTitle": "Dhaka Office (Bangladesh)"
   },
+
+  "FAQ": {
+  "tag": "Quick Answers",
+  "title": "Before You Contact Us",
+  "subtitle": "Answers to the questions we receive most often — so you know exactly what to expect.",
+
+  "items": [
+    {
+      "question": "How quickly do you respond to enquiries?",
+      "answer": "Our team usually responds within 2–3 business hours during Saudi office hours. WhatsApp inquiries receive the fastest response."
+    },
+    {
+      "question": "How long does it take to deploy workers?",
+      "answer": "Deployment generally takes 15–30 days depending on visa approval, documentation, and the required profession."
+    },
+    {
+      "question": "What information should I include in my enquiry?",
+      "answer": "Please mention the job category, number of workers required, project location, expected joining date, and your contact information."
+    },
+    {
+      "question": "Can I visit your Riyadh office?",
+      "answer": "Yes. We welcome employers to visit our Riyadh office by appointment during business hours."
+    },
+    {
+      "question": "Is there a minimum order for manpower supply?",
+      "answer": "No. We can provide a single worker or hundreds of workers depending on your business requirements."
+    },
+    {
+      "question": "Which industries do you supply workers for?",
+      "answer": "We provide manpower for construction, hospitality, cleaning, logistics, security, healthcare, factories, supermarkets, offices, restaurants and many more."
+    }
+  ]
+},
+
+  "GoogleMap": {
+  "tag": "OUR LOCATION",
+  "title": "Visit Our Office",
+  "description": "Future Focus Company proudly serves clients across Saudi Arabia from our Riyadh office. We are ready to assist you with reliable manpower recruitment solutions.",
+  "office": "Head Office",
+  "time": "Sunday - Thursday : 9:00 AM - 6:00 PM",
+  "button": "Open in Google Maps"
+},
+
   "JobsPage": {
     "tagline": "Latest Vacancies",
     "heading": "Current Saudi Arabia & GCC Job Openings",
@@ -409,6 +452,7 @@
     "connectTitle": "Connect With Us",
     "connectDesc": "Follow our official channels for the latest recruitment drives and job announcements.",
     "phone": "Phone",
+    "whatsapp": "WhatsApp",
     "email": "Email",
     "rights": "All rights reserved.",
     "privacy": "Privacy Policy",
