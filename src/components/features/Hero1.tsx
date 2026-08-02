@@ -1,199 +1,209 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Zap, MapPin } from "lucide-react";
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { useTranslations, useLocale } from 'next-intl';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, MapPin, Users, Briefcase } from 'lucide-react';
 
-const slides = [
-  {
-    id: 1,
-    role: "SAUDI ARABIA",
-    title: "WITNESS",
-    highlight: "SKILLED WORKERS",
-    desc: "Skilled Workers for Every Industry in Riyadh. Welders, electricians, cleaners, kitchen staff — we deliver the right person for every job, on time.",
-    img: "https://i.postimg.cc/k5K41hnC/Hero-1.png",
-    icon: <MapPin size={24} />,
-    joinLink: "/contact",
-    learnMoreLink: "/",
-  },
-  {
-    id: 2,
-    role: "SAUDI ARABIA",
-    title: "EVOLVE",
-    highlight: "TRUSTED MANPOWER",
-    desc: "Trusted Manpower Solutions in Saudi Arabia. Connecting ambitious businesses with reliable workers —  from Bangladesh to the heart of the Kingdom.",
-    img: "https://i.postimg.cc/g08JSBYY/Hero-2.jpg",
-    icon: <MapPin size={24} />,
-    joinLink: "/contact",
-    learnMoreLink: "/exercises",
-  },
-  {
-    id: 3,
-    role: "SAUDI ARABIA",
-    title: "LEAD",
-    highlight: "RELIABLE RECRUITMENT",
-    desc: "5+ Years of Reliable Recruitment Across the Gulf. Over 10,000 Bangladeshi workers successfully placed in Saudi Arabia, UAE, Qatar, and beyond.",
-    img: "https://i.postimg.cc/43VdLFJc/Hero-3.png",
-    icon: <MapPin size={24} />,
-    joinLink: "/contact",
-    learnMoreLink: "/coaches",
-  },
-  {
-    id: 4,
-    role: "SAUDI ARABIA",
-    title: "LEAD",
-    highlight: "MANPOWER PARTNERSHIP",
-    desc: "Your Manpower Partner for Vision 2030 Projects. From Aramco sites to metro stations — we supply dependable labor for Saudi Arabia's biggest growth projects.",
-    img: "https://i.postimg.cc/3wmRSbKv/Hero-4.png",
-    icon: <MapPin size={24} />,
-    joinLink: "/contact",
-    learnMoreLink: "/coaches",
-  },
-];
-
-export default function FFCHero() {
+export default function Hero1() {
+  const t = useTranslations('Hero1');
+  const locale = useLocale();
   const [index, setIndex] = useState(0);
+
+  const slideImages = [
+    'https://i.postimg.cc/k5K41hnC/Hero-1.png',
+    'https://i.postimg.cc/g08JSBYY/Hero-2.jpg',
+    'https://i.postimg.cc/43VdLFJc/Hero-3.png',
+    'https://i.postimg.cc/3wmRSbKv/Hero-4.png',
+  ];
+
+  const slides = [
+    {
+      id: 1,
+      role: t('slide1.role'),
+      title: t('slide1.title'),
+      highlight: t('slide1.highlight'),
+      desc: t('slide1.desc'),
+      img: slideImages[0],
+    },
+    {
+      id: 2,
+      role: t('slide2.role'),
+      title: t('slide2.title'),
+      highlight: t('slide2.highlight'),
+      desc: t('slide2.desc'),
+      img: slideImages[1],
+    },
+    {
+      id: 3,
+      role: t('slide3.role'),
+      title: t('slide3.title'),
+      highlight: t('slide3.highlight'),
+      desc: t('slide3.desc'),
+      img: slideImages[2],
+    },
+    {
+      id: 4,
+      role: t('slide4.role'),
+      title: t('slide4.title'),
+      highlight: t('slide4.highlight'),
+      desc: t('slide4.desc'),
+      img: slideImages[3],
+    },
+  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, 6000);
     return () => clearInterval(timer);
-  }, []);
+  }, [slides.length]);
 
   return (
-    <section className="relative min-h-[380px] pt-7 pb-4 w-full bg-[var(--bg-primary)] overflow-hidden transition-colors duration-700 font-sans flex items-center">
+    <section className="relative min-h-[calc(100vh-80px)] pt-8 md:pt-10 lg:pt-12 pb-12 md:pb-16 lg:pb-20 w-full bg-background overflow-hidden flex items-center justify-center">
+      {/* Dynamic Background Image */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence mode="wait">
           <motion.div
             key={index}
             initial={{ opacity: 0, scale: 1.1 }}
-            animate={{ opacity: 0.5, scale: 1 }}
+            animate={{ opacity: 0.25, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 1.5, ease: "easeInOut" }}
+            transition={{ duration: 1.5, ease: 'easeInOut' }}
             className="w-full h-full"
           >
             <img
               src={slides[index].img}
-              className="object-cover w-full h-full grayscale"
+              className="object-cover w-full h-full min-h-[calc(100vh-80px)]"
               alt="Background"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-[var(--bg-primary)] via-transparent to-[var(--bg-primary)]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background via-background/50 to-background" />
           </motion.div>
         </AnimatePresence>
       </div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center w-full gap-12 px-6 mx-auto mb-8 max-w-7xl md:mb-12 md:flex-row md:gap-16">
-        <div className="w-full md:w-1/2">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: -40 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 40 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-            >
-              <div className="flex items-center gap-3 mb-8 bg-[var(--card-bg)] w-fit px-3 py-2.5 rounded-2xl backdrop-blur-md border border-[var(--border-color)]">
-                <div className="text-[var(--primary)]">
-                  {slides[index].icon}
-                </div>
-                <span className="text-[var(--text-primary)] font-bold tracking-[0.25em] text-[11px] uppercase">
-                  {slides[index].role}
-                </span>
-              </div>
-
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-black text-[var(--text-primary)] leading-[0.8] mb-10 tracking-[ -0.05em] uppercase">
-                Future Focus <br />
-                <span className="text-[var(--primary)]">
-                  {slides[index].highlight}
-                </span>
-              </h2>
-
-              <p className="text-[var(--text-secondary)] text-xl md:text-2xl max-w-lg mb-12 leading-relaxed font-medium opacity-90">
-                {slides[index].desc}
-              </p>
-
-              <div className="flex flex-col gap-6 lg:flex-row">
-                <button
-                  onClick={() =>
-                    (window.location.href = slides[index].joinLink)
-                  }
-                  className="bg-[var(--primary)] text-white font-black px-8 py-4 md:py-6 w-full rounded-2xl flex items-center justify-center gap-4 transition-all hover:scale-105 shadow-2xl shadow-(--primary) uppercase text-lg"
-                >
-                  Book Now <ArrowRight size={24} />
-                </button>
-                <button
-                  onClick={() =>
-                    (window.location.href = slides[index].learnMoreLink)
-                  }
-                  className="px-8 py-4 md:py-6 rounded-2xl border-2 w-full border-[var(--border-color)] text-[var(--text-primary)] hover:border-[var(--primary)] hover:text-[var(--primary)] transition-all bg-transparent backdrop-blur-sm flex items-center justify-center gap-3 font-bold uppercase tracking-tight text-center"
-                >
-                  Learn More <Zap size={22} className="fill-current" />
-                </button>
-              </div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
-
-        <div className="relative flex items-center justify-center w-full h-full md:w-1/2 md:justify-end">
-          <div className="relative w-full aspect-[3/2]  rounded-2xl overflow-hidden bg-[var(--bg-secondary)] border border-[var(--border-color)] shadow-[0_10px_40px_-5px_rgba(0,0,0,0.2)]">
-            <AnimatePresence initial={false} mode="popLayout">
+      <div className="relative z-10 w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8 my-auto">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
+          
+          {/* Left Column Text Content */}
+          <div className="w-full lg:w-1/2 space-y-6">
+            <AnimatePresence mode="wait">
               <motion.div
                 key={index}
-                initial={{
-                  clipPath: "circle(0% at 50% 50%)",
-                  filter: "blur(15px)",
-                  scale: 1.1,
-                }}
-                animate={{
-                  clipPath: "circle(150% at 50% 50%)",
-                  filter: "blur(0px)",
-                  scale: 1,
-                }}
-                exit={{ opacity: 0, filter: "blur(10px)", scale: 1.05 }}
-                transition={{ duration: 3
-                  , ease: [0.4, 0, 0.2, 1] }}
-                className="absolute inset-0 w-full h-full"
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 30 }}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
+                className="space-y-6"
               >
-                <img
-                  src={slides[index].img}
-                  className="object-cover w-full h-full"
-                  alt="Fitness Performance"
-                />
+                {/* Badge */}
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 backdrop-blur-md">
+                  <MapPin className="h-4 w-4 text-primary" />
+                  <span className="text-primary font-bold tracking-widest text-xs uppercase">
+                    {slides[index].role}
+                  </span>
+                </div>
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent" />
+                {/* Main Headline */}
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-foreground leading-[1.15] tracking-tight">
+                  {t('brandName')} <br />
+                  <span className="bg-gradient-to-r from-sky-500 via-primary to-cyan-400 bg-clip-text text-transparent">
+                    {slides[index].highlight}
+                  </span>
+                </h1>
 
-                <div className="absolute z-20 flex items-end justify-between bottom-12 left-10 right-10">
-                  <div className="space-y-4">
-                    <div className="flex gap-2">
-                      {slides.map((_, i) => (
-                        <div
-                          key={i}
-                          className={`h-2 rounded-full transition-all duration-700 ${
-                            index === i
-                              ? "w-12 bg-[var(--primary)]"
-                              : "w-5 bg-white/20"
-                          }`}
-                        />
-                      ))}
-                    </div>
-                    <p className="text-4xl font-black tracking-tighter text-white uppercase md:text-5xl drop-shadow-2xl">
-                      {slides[index].highlight}
-                    </p>
-                  </div>
-                  <div className="p-5 bg-[var(--primary)] rounded-2xl shadow-xl">
-                    <Zap
-                      className="w-6 h-6 text-white md:w-8 md:h-8 lg:w-10 lg:h-10"
-                      fill="white"
-                    />
-                  </div>
+                {/* Subtitle / Description */}
+                <p className="text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed">
+                  {slides[index].desc}
+                </p>
+
+                {/* Dual CTAs */}
+                <div className="pt-4 flex flex-col sm:flex-row items-center gap-4">
+                  {/* Primary CTA (Employers) */}
+                  <Link
+                    href={`/${locale}/contact`}
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-primary text-primary-foreground font-bold text-base shadow-lg shadow-primary/30 hover:bg-primary/90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+                  >
+                    <Briefcase className="h-5 w-5" />
+                    <span>{t('ctaHire')}</span>
+                    <ArrowRight className="h-4 w-4 rtl-flip" />
+                  </Link>
+
+                  {/* Secondary CTA (Candidates) */}
+                  <Link
+                    href={`/${locale}/jobs`}
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl border-2 border-primary/40 bg-card/80 backdrop-blur-md text-foreground font-bold text-base hover:bg-muted hover:border-primary/60 transition-all duration-200"
+                  >
+                    <Users className="h-5 w-5 text-primary" />
+                    <span>{t('ctaApply')}</span>
+                  </Link>
                 </div>
               </motion.div>
             </AnimatePresence>
           </div>
-        </div>
 
-        
+          {/* Right Column Slide Showcase Card */}
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-xl aspect-[4/3] rounded-3xl overflow-hidden border border-border/80 shadow-2xl bg-card">
+              <AnimatePresence initial={false} mode="popLayout">
+                <motion.div
+                  key={index}
+                  initial={{
+                    clipPath: 'circle(0% at 50% 50%)',
+                    filter: 'blur(10px)',
+                    scale: 1.1,
+                  }}
+                  animate={{
+                    clipPath: 'circle(150% at 50% 50%)',
+                    filter: 'blur(0px)',
+                    scale: 1,
+                  }}
+                  exit={{ opacity: 0, filter: 'blur(8px)', scale: 1.05 }}
+                  transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
+                  className="absolute inset-0 w-full h-full"
+                >
+                  <img
+                    src={slides[index].img}
+                    className="object-cover w-full h-full min-h-full"
+                    alt={slides[index].highlight}
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
+
+                  {/* Indicators & Active Highlight Banner */}
+                  <div className="absolute z-20 flex items-end justify-between bottom-6 left-6 right-6">
+                    <div className="space-y-2">
+                      <div className="flex gap-2">
+                        {slides.map((_, i) => (
+                          <button
+                            key={i}
+                            type="button"
+                            onClick={() => setIndex(i)}
+                            aria-label={`Go to slide ${i + 1}`}
+                            className={`h-2 rounded-full transition-all duration-500 ${
+                              index === i
+                                ? 'w-10 bg-primary'
+                                : 'w-4 bg-white/30 hover:bg-white/50'
+                            }`}
+                          />
+                        ))}
+                      </div>
+                      <p className="text-xl sm:text-2xl font-black text-white uppercase tracking-tight drop-shadow-md">
+                        {slides[index].highlight}
+                      </p>
+                    </div>
+
+                    <div className="p-3 rounded-2xl bg-primary/90 text-primary-foreground shadow-lg backdrop-blur-md">
+                      <MapPin className="h-6 w-6" />
+                    </div>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
   );

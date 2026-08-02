@@ -14,13 +14,13 @@ export const siteConfig = {
   offices: {
     saudi: {
       address: 'Suite 402, Business Bay Tower, Al A\'amal St, Business Bay, Riyadh, KSA',
-      phone: '+971 4 123 4567',
-      email: 'saudi@futurefocus.com'
+      phone: '+966 56 616 7562',
+      email: 'operations@ffccom.net'
     },
     bangladesh: {
       address: 'House 12, Road 04, Block B, Banani, Dhaka-1213, Bangladesh',
-      phone: '+880 2 987 6543',
-      email: 'dhaka@globalmanpower.com'
+      phone: '+966 56 616 7562',
+      email: 'Operations@ffccom.net'
     }
   },
   socials: {

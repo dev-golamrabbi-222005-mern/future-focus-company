@@ -31,7 +31,7 @@ export function Footer() {
                 />
               </div>
               <span className="font-extrabold text-xl tracking-tight text-foreground">
-                {siteConfig.name}
+                {tNav('companyName')}
               </span>
             </div>
             
@@ -106,10 +106,10 @@ export function Footer() {
           {/* Column 4: Social Media */}
           <div className="space-y-4">
             <h3 className="text-base font-bold text-foreground tracking-wide uppercase">
-              Connect With Us
+              {t('connectTitle')}
             </h3>
             <p className="text-sm text-muted-foreground">
-              Follow our official channels for the latest recruitment drives and job announcements.
+              {t('connectDesc')}
             </p>
             <div className="flex items-center gap-3">
               <a
@@ -162,7 +162,7 @@ export function Footer() {
 
         {/* Bottom Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} {siteConfig.name}. {t('rights')}</p>
+          <p>© {new Date().getFullYear()} {tNav('companyName')}. {t('rights')}</p>
           <div className="flex items-center gap-6">
             <Link href={`/${locale}#privacy`} className="hover:text-foreground transition-colors">
               {t('privacy')}

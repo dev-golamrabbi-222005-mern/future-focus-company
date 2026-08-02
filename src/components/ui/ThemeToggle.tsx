@@ -24,10 +24,11 @@ export function ThemeToggle() {
   return (
     <button
       type="button"
+      dir="ltr"
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
       aria-label="Toggle theme"
       className={cn(
-        'relative inline-flex h-8 w-16 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-300 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2',
+        'relative inline-flex h-8 w-16 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-300 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 select-none',
         isDark ? 'bg-slate-800' : 'bg-slate-200'
       )}
     >
@@ -42,7 +43,7 @@ export function ThemeToggle() {
       {/* Slider Button */}
       <span
         className={cn(
-          'pointer-events-none relative inline-block h-6 w-6 transform rounded-full bg-white dark:bg-slate-950 shadow-md ring-0 transition duration-300 ease-in-out flex items-center justify-center',
+          'pointer-events-none relative inline-block h-7 w-7 transform rounded-full bg-white dark:bg-slate-950 shadow-md ring-0 transition duration-300 ease-in-out flex items-center justify-center',
           isDark ? 'translate-x-8' : 'translate-x-0'
         )}
       >
