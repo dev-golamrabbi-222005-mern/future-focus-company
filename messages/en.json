@@ -420,6 +420,43 @@
     }
   ]
 },
+"Process": {
+  "tag": "The Process",
+
+  "title1": "How We Supply",
+  "title2": "Manpower to Saudi Arabia",
+
+  "subtitle": "A transparent and efficient recruitment process designed to deliver the right workforce with speed, quality, and full legal compliance.",
+
+  "description": "From the first enquiry to the final deployment, every step is carefully managed by our experienced recruitment team to ensure a smooth hiring experience for employers across Saudi Arabia.",
+
+  "steps": [
+    {
+      "title": "Enquiry",
+      "description": "We understand your workforce requirements, project scope, job roles, quantity, qualifications, and deployment schedule."
+    },
+    {
+      "title": "Strategy",
+      "description": "Our recruitment specialists prepare a customized hiring strategy and timeline tailored to your business needs."
+    },
+    {
+      "title": "Sourcing",
+      "description": "Qualified candidates are sourced, interviewed, trade-tested, medically examined, and carefully shortlisted."
+    },
+    {
+      "title": "Clearance",
+      "description": "Government approvals, employer verification, medical clearance, and recruitment compliance are completed."
+    },
+    {
+      "title": "Documentation",
+      "description": "Employment contracts, visas, passports, insurance, and all required legal documentation are processed."
+    },
+    {
+      "title": "Deployment",
+      "description": "Workers travel to Saudi Arabia and are deployed safely to the employer with complete post-arrival support."
+    }
+  ]
+},
 
   "GalleryPage": {
     "tagline": "Life at Future Focus Company",
