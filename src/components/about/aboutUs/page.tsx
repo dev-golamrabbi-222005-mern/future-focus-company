@@ -179,7 +179,7 @@ export default function AboutCompany() {
               viewport={{ once: true }}
               transition={{ duration: 0.85 }}
               whileHover={{ scale: 1.015 }}
-              className="relative w-full max-w-[520px]"
+              className="relative w-full max-w-[740px]"
             >
               {/* Decorative blobs */}
               <div className="absolute -top-8 -left-8 h-48 w-48 rounded-full bg-primary/10 blur-3xl" />
@@ -192,10 +192,10 @@ export default function AboutCompany() {
                 <Image
                   src="/images/about/we-are-photo2.png"
                   alt="Future Focus Company — Our Team"
-                  width={700}
-                  height={840}
+                  width={900}
+                  height={1060}
                   priority
-                  className="h-auto w-full max-h-[680px] object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  className="h-auto w-full min-h-[520px] md:min-h-[720px] object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
 
