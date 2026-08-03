@@ -5,7 +5,7 @@
     "about": "About Us",
     "services": "Services",
     "manpower": "Manpower Supply",
-    "jobs": "Available Jobs",
+    "careers": "Careers",
     "gallery": "Gallery",
     "contact": "Contact Us",
     "submitCv": "Submit CV"
@@ -44,7 +44,7 @@
       "role": "MIDDLE EAST",
       "title": "LEAD",
       "highlight": "RELIABILITY",
-      "desc": "15+ Years of Reliable Recruitment Across the Gulf. Over 15,000 Bangladeshi workers successfully placed in Saudi Arabia, UAE, Qatar, and beyond."
+      "desc": "05+ Years of Reliable Recruitment Across the Gulf. Over 5,000 Bangladeshi workers successfully placed in Saudi Arabia, UAE, Qatar, and beyond."
     },
     "slide4": {
       "role": "VISION 2030",
@@ -297,13 +297,22 @@
     "title": "Empowering Talent, Building Bridges Across Borders",
     "subtitle": "Discover our journey, mission, values, and government certifications as Bangladesh's trusted manpower recruitment partner.",
     "missionTitle": "Our Mission",
-    "missionDesc": "To empower Bangladeshi workers through ethical, transparent overseas recruitment while delivering world-class workforce solutions to enterprise employers in Saudi Arabia and the GCC.",
+    "missionDesc": "To empower businesses across Saudi Arabia by delivering exceptional, reliable, and tailored manpower solutions. At Future Focus Company (FFC), we bridge the gap between industries and top-tier support staff—ranging from specialized airport operations and corporate hospitality to essential technical services. We are dedicated to nurturing workforce excellence that helps our clients achieve operational efficiency and long-term success.",
     "visionTitle": "Our Vision",
-    "visionDesc": "To remain the benchmark recruiting agency recognized across the Middle East for integrity, candidate welfare, and operational speed.",
+    "visionDesc": "To be recognized as the premier and most trusted HR & Manpower solutions partner in Saudi Arabia, driving innovation and service excellence in workforce management. As we scale to support international landmarks like Saudi Arabia's major aviation hubs, our vision is to set the gold standard in staffing across the Middle East—fostering growth, diversity, and unwavering operational support for every sector we serve.",
     "licenseTitle": "Government License & Accreditation",
+    "licenseNumber": "Government License: RL-1428",
     "licenseDesc": "Operating under Ministry License RL-1428 with full BMET compliance, ISO quality certifications, and GAMCA medical affiliation.",
+    "licenseCheck1": "BMET Smart Card Authorized",
+    "licenseCheck2": "GAMCA Medical Affiliated",
+    "licenseCheck3": "Ministry License RL-1428",
+    "licenseCheck4": "Saudi Embassy Verified",
     "mdTitle": "Managing Director's Statement",
-    "mdMessage": "Over the past 05 years, we have placed over 5,000 workers in life-changing careers across Saudi Arabia and the GCC. We believe ethical recruitment is not just good policy—it is our core duty."
+    "mdMessage": "Over the past 05 years, we have placed over 5,000 workers in life-changing careers across Saudi Arabia and the GCC. We believe ethical recruitment is not just good policy—it is our core duty.",
+    "mdName": "Anowar Hossain",
+    "mdRole": "Chief Executive Officer & Founder",
+    "ctaHire": "Request Manpower",
+    "ctaServices": "Explore Services"
   },
   "ServicesPage": {
     "tagline": "Comprehensive Solutions",
@@ -420,17 +429,114 @@
     }
   ]
 },
+"Process": {
+  "tag": "The Process",
+
+  "title1": "How We Supply",
+  "title2": "Manpower to Saudi Arabia",
+
+  "subtitle": "A transparent and efficient recruitment process designed to deliver the right workforce with speed, quality, and full legal compliance.",
+
+  "description": "From the first enquiry to the final deployment, every step is carefully managed by our experienced recruitment team to ensure a smooth hiring experience for employers across Saudi Arabia.",
+
+  "steps": [
+    {
+      "title": "Enquiry",
+      "description": "We understand your workforce requirements, project scope, job roles, quantity, qualifications, and deployment schedule."
+    },
+    {
+      "title": "Strategy",
+      "description": "Our recruitment specialists prepare a customized hiring strategy and timeline tailored to your business needs."
+    },
+    {
+      "title": "Sourcing",
+      "description": "Qualified candidates are sourced, interviewed, trade-tested, medically examined, and carefully shortlisted."
+    },
+    {
+      "title": "Clearance",
+      "description": "Government approvals, employer verification, medical clearance, and recruitment compliance are completed."
+    },
+    {
+      "title": "Documentation",
+      "description": "Employment contracts, visas, passports, insurance, and all required legal documentation are processed."
+    },
+    {
+      "title": "Deployment",
+      "description": "Workers travel to Saudi Arabia and are deployed safely to the employer with complete post-arrival support."
+    }
+  ]
+},
 
   "GalleryPage": {
-    "tagline": "Life at Future Focus Company",
-    "heading": "Visual Journey & Deployment Highlights",
-    "subheading": "Explore photos of candidate trade testing, flight departures from Dhaka, and candidate arrivals in Saudi Arabia.",
-    "item1Title": "Trade Test Center - Dhaka",
+    "heroTagline": "Life at Future Focus Company",
+    "heroHeading": "Visual Journey of",
+    "heroHeadingHighlight": "Global Deployment",
+    "heroSubheading": "Explore authentic moments from candidate trade testing, flight departures from Dhaka, and successful arrivals across Saudi Arabia.",
+    "heroCta": "View All Moments",
+    "heroStat1Num": "5000+",
+    "heroStat1Label": "Workers Deployed",
+    "heroStat2Num": "14+",
+    "heroStat2Label": "Years of Trust",
+    "heroStat3Num": "150+",
+    "heroStat3Label": "Partner Clients",
+
+    "filterTagline": "Our Moments",
+    "filterHeading": "Behind the Scenes at Future Focus",
+    "filterSubheading": "From trade testing halls in Dhaka to reception in Riyadh — every photo tells a story of trust, hard work, and new beginnings.",
+    "filterAll": "All",
+    "filterTraining": "Training",
+    "filterDeparture": "Departure",
+    "filterOffice": "Office",
+    "filterEvent": "Events",
+
+    "item1Title": "Trade Test Center – Dhaka",
+    "item1Category": "Training",
+    "item1Desc": "Candidates undergoing practical trade testing at government-certified centers in Dhaka.",
     "item2Title": "Group Departure at HSIA Airport",
+    "item2Category": "Departure",
+    "item2Desc": "A proud moment as our workers depart Hazrat Shahjalal International Airport for Saudi Arabia.",
     "item3Title": "Riyadh Office Liaison Team",
+    "item3Category": "Office",
+    "item3Desc": "Our Riyadh-based team ensuring smooth on-ground coordination for every arriving worker.",
     "item4Title": "Hospitality Training Seminar",
+    "item4Category": "Training",
+    "item4Desc": "Hotel and hospitality workers receiving specialized training before deployment.",
     "item5Title": "Construction Safety Workshop",
-    "item6Title": "Client Delegates Interviewing Candidates"
+    "item5Category": "Training",
+    "item5Desc": "Pre-departure safety orientation for construction workers heading to Saudi worksites.",
+    "item6Title": "Client Interview Session",
+    "item6Category": "Events",
+    "item6Desc": "Saudi employer delegates conducting live candidate selection interviews in Dhaka.",
+    "item7Title": "Medical Clearance Day",
+    "item7Category": "Events",
+    "item7Desc": "GAMCA-certified medical checkups completed — workers cleared and visa-ready.",
+    "item8Title": "Airport Farewell Gathering",
+    "item8Category": "Departure",
+    "item8Desc": "Families and FFC staff seeing off workers bound for Riyadh and Jeddah.",
+    "item9Title": "Riyadh Welcome Reception",
+    "item9Category": "Office",
+    "item9Desc": "Workers arriving at King Khalid International Airport, received by our Saudi team.",
+
+    "statsTagline": "Our Impact in Numbers",
+    "statsHeading": "Milestones That Define Our Journey",
+    "stat1Num": "5000",
+    "stat1Suffix": "+",
+    "stat1Label": "Workers Successfully Deployed",
+    "stat2Num": "150",
+    "stat2Suffix": "+",
+    "stat2Label": "Corporate Clients Served",
+    "stat3Num": "14",
+    "stat3Suffix": "+",
+    "stat3Label": "Years of Trusted Service",
+    "stat4Num": "6",
+    "stat4Suffix": "+",
+    "stat4Label": "Countries Covered",
+
+    "ctaTagline": "Ready to Partner With Us?",
+    "ctaHeading": "Start Your Manpower Journey Today",
+    "ctaSubheading": "Whether you are an employer in Saudi Arabia looking for reliable workers, or a skilled professional seeking overseas opportunities — we are ready for you.",
+    "ctaHire": "Hire Manpower",
+    "ctaApply": "Apply for a Job"
   },
   "ContactPage": {
     "tagline": "Get in Touch",
@@ -491,6 +597,105 @@
   "button": "Open in Google Maps"
 },
 
+  "CareersPage": {
+    "heroTag": "Now Hiring",
+    "heroTitle1": "Find Your Dream Job",
+    "heroTitle2": "in Saudi Arabia",
+    "heroSubtitle": "Explore verified job vacancies in Riyadh, Jeddah & across the Kingdom. Free visa, accommodation, and medical insurance included.",
+    "heroCta": "Browse All Jobs",
+    "heroStatJobs": "Open Positions",
+    "heroStatPlaced": "Workers Placed",
+    "heroStatSalary": "Avg. Monthly Salary",
+    "heroStatDays": "Avg. Deploy Time",
+
+    "filterTag": "Job Listings",
+    "filterTitle": "Current Openings in Saudi Arabia",
+    "filterSubtitle": "All positions include free visa, free accommodation, GAMCA medical clearance, and BMET documentation support.",
+    "searchPlaceholder": "Search job title or location...",
+    "filterAll": "All",
+    "filterHospitality": "Hospitality",
+    "filterSecurity": "Security",
+    "filterSupport": "Support Staff",
+    "filterTransport": "Transport",
+    "filterCleaning": "Cleaning",
+    "noJobs": "No jobs found for this filter.",
+
+    "salaryLabel": "Monthly Salary",
+    "locationLabel": "Location",
+    "typeLabel": "Job Type",
+    "applyBtn": "Apply Now",
+    "freeVisa": "Free Visa",
+    "freeAccom": "Free Accommodation",
+    "freeMedical": "Medical Insurance",
+    "verified": "Verified Demand",
+    "fullTime": "Full-Time",
+    "urgent": "Urgent",
+
+    "job1Title": "Hotel Receptionist",
+    "job1Location": "Riyadh, KSA",
+    "job1Salary": "SAR 2,200 – 2,800 / month",
+    "job1Category": "Hospitality",
+    "job1Desc": "Welcoming guests, managing front-desk operations, handling check-in/check-out, and coordinating with hotel departments.",
+
+    "job2Title": "Housekeeper (Male / Female)",
+    "job2Location": "Riyadh & Jeddah, KSA",
+    "job2Salary": "SAR 1,800 – 2,400 / month",
+    "job2Category": "Cleaning",
+    "job2Desc": "Cleaning and maintaining rooms, common areas, and facilities in hotels, hospitals, and residential compounds.",
+
+    "job3Title": "Security Guard",
+    "job3Location": "Multiple Cities, KSA",
+    "job3Salary": "SAR 2,000 – 2,600 / month",
+    "job3Category": "Security",
+    "job3Desc": "Securing premises, monitoring CCTV, controlling access points, and ensuring safety of buildings and personnel.",
+
+    "job4Title": "Driver (Car / Van / Bus)",
+    "job4Location": "Riyadh, KSA",
+    "job4Salary": "SAR 2,500 – 3,500 / month",
+    "job4Category": "Transport",
+    "job4Desc": "Transporting staff, guests, or goods across the city and intercity with valid KSA driving license.",
+
+    "job5Title": "Office Boy / Tea Boy",
+    "job5Location": "Riyadh, KSA",
+    "job5Salary": "SAR 1,600 – 2,000 / month",
+    "job5Category": "Support Staff",
+    "job5Desc": "Serving tea/coffee, maintaining office cleanliness, photocopying, running errands, and assisting staff.",
+
+    "job6Title": "Gardener / Landscape Worker",
+    "job6Location": "Jeddah & Riyadh, KSA",
+    "job6Salary": "SAR 1,800 – 2,200 / month",
+    "job6Category": "Support Staff",
+    "job6Desc": "Maintaining gardens, trimming hedges, watering plants, and keeping outdoor spaces clean and presentable.",
+
+    "job7Title": "General Helper / Laborer",
+    "job7Location": "Multiple Cities, KSA",
+    "job7Salary": "SAR 1,500 – 2,000 / month",
+    "job7Category": "Support Staff",
+    "job7Desc": "Assisting in day-to-day operations, loading/unloading, cleaning, and general support across various industries.",
+
+    "job8Title": "Event Staff / Support",
+    "job8Location": "Riyadh, KSA",
+    "job8Salary": "SAR 2,000 – 2,800 / month",
+    "job8Category": "Hospitality",
+    "job8Desc": "Supporting event setups, guest services, crowd management, and behind-the-scenes logistics during events.",
+
+    "job9Title": "Golf Cart Driver",
+    "job9Location": "Riyadh Golf Clubs, KSA",
+    "job9Salary": "SAR 2,200 – 2,800 / month",
+    "job9Category": "Transport",
+    "job9Desc": "Driving golf carts within resorts, golf clubs, and compounds to transport guests safely.",
+
+    "ctaTag": "Ready to Apply?",
+    "ctaTitle1": "Start Your Saudi Arabia",
+    "ctaTitle2": "Career Journey Today",
+    "ctaDesc": "Submit your CV and passport copy to our recruitment team. We handle your visa, medical, BMET smart card, and flight — you focus on your new career.",
+    "ctaSubmit": "Submit Your CV",
+    "ctaContact": "Talk to a Recruiter",
+    "ctaBenefit1": "Free Visa Processing",
+    "ctaBenefit2": "BMET Smart Card",
+    "ctaBenefit3": "Free Medical Test",
+    "ctaBenefit4": "Airport Assistance"
+  },
   "JobsPage": {
     "tagline": "Latest Vacancies",
     "heading": "Current Saudi Arabia & GCC Job Openings",

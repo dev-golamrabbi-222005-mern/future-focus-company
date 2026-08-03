@@ -9,6 +9,7 @@ import { HardHat, Wrench, Utensils, Truck, ShieldCheck } from 'lucide-react';
 import AboutIntro from '@/components/manpower/AboutIntro';
 import WhatIsManpower from '@/components/manpower/WhatIsManpower';
 import CompanyHighlights from '@/components/manpower/CompanyHighlights';
+import ProcessSection from '@/components/manpower/ProcessSection';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
@@ -94,6 +95,7 @@ export default function ManpowerPage() {
     </div>
 
     <WhatIsManpower />
+    <ProcessSection />
     </div>
   );
 }
