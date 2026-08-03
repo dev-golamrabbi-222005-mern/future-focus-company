@@ -6,7 +6,6 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ContactFormSection } from "@/components/features/contact/ContactFormSection";
-import { SubmitCvSection } from "@/components/features/contact/SubmitCvSection";
 import GoogleMapSection from "@/components/contact/GoogleMapSection";
 import FAQSection from "@/components/contact/FAQSection";
 
@@ -67,8 +66,6 @@ export default function ContactPage() {
         {/* Main Contact Form & Dual Office Info Component */}
         <ContactFormSection />
 
-        {/* Merged Candidate Application & Submit CV Component */}
-        <SubmitCvSection />
       </div>
       <FAQSection />
       <GoogleMapSection />

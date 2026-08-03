@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import CareersJobsSection from "@/components/careers/CareersJobsSection";
 import CareersCTA from "@/components/careers/CareersCTA";
+import { SubmitCvSection } from "@/components/features/contact/SubmitCvSection";
 
 export default function CareersPage() {
   const t = useTranslations("CareersPage");
@@ -102,6 +103,8 @@ export default function CareersPage() {
 
       {/* ══════════ CTA ══════════ */}
       <CareersCTA />
+
+      <SubmitCvSection />
 
     </div>
   );

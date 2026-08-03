@@ -95,7 +95,7 @@ export default function WhatIsManpower() {
         <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-primary/5 blur-[140px]" />
       </div>
 
-      <div className="mx-auto max-w-[1400px] px-6">
+      <div className="mx-auto max-w-[1380px] px-4 md:px-6 lg:px-8">
         <div className="grid gap-20 lg:grid-cols-2 lg:items-start">
           {/* ===========================
                 LEFT SIDE

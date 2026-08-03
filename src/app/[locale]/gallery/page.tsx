@@ -493,7 +493,7 @@ export default function GalleryPage() {
             </motion.div>
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Link
-                href={`/${locale}/jobs`}
+                href={`/${locale}/careers`}
                 className="inline-flex items-center gap-2.5 px-9 py-4 rounded-xl border border-border bg-card text-foreground font-bold text-sm hover:border-primary/50 hover:text-primary transition-all"
               >
                 {t('ctaApply')}

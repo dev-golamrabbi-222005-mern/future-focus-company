@@ -79,7 +79,7 @@ export function SectorsGrid() {
   );
 
   return (
-    <section ref={containerRef} className="py-12 md:py-16">
+    <section ref={containerRef} className="max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-16">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {sectors.map((sector) => {
           const Icon = sector.icon;
