@@ -126,7 +126,7 @@ export default function AboutIntro() {
 
       {/* Main Container */}
 
-      <div className="relative z-10 mx-auto grid max-w-[1450px] grid-cols-1 items-center gap-20 px-6 lg:grid-cols-2">
+      <div className="relative z-10 mx-auto grid max-w-[1380px] px-4 md:px-6 lg:px-8 grid-cols-1 items-center gap-20 px-6 lg:grid-cols-2">
         {/* ================= LEFT CONTENT ================= */}
 
         <div className="relative z-10">

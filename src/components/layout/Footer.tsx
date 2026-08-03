@@ -30,9 +30,14 @@ export function Footer() {
                   className="object-cover"
                 />
               </div>
-              <span className="font-extrabold text-xl tracking-tight text-foreground">
-                {tNav('companyName')}
-              </span>
+              <div className="flex flex-col">
+                <span className="font-extrabold text-xl tracking-tight text-foreground">
+                  {tNav('companyName')}
+                </span>
+                <span className="text-xs font-semibold text-primary">
+                  Your HR partner and solutions
+                </span>
+              </div>
             </div>
             
             <p className="text-sm text-muted-foreground leading-relaxed">

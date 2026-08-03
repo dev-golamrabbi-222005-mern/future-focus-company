@@ -48,9 +48,8 @@ export function Navbar() {
               <span className="font-extrabold text-lg sm:text-xl tracking-tight text-foreground flex items-center gap-1.5">
                 {t('companyName')}
               </span>
-              <span className="text-[10px] font-semibold tracking-wider uppercase text-primary flex items-center gap-1">
-                <ShieldCheck className="h-3 w-3 text-sky-500" />
-                Govt. Lic: {siteConfig.license}
+              <span className="text-[10px] font-semibold tracking-wider text-muted-foreground">
+                Your HR partner and solutions
               </span>
             </div>
           </Link>
