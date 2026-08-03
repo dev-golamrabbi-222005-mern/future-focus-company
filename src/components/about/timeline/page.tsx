@@ -239,7 +239,7 @@ export default function CompanyTimeline() {
 
           <div
             ref={lineRef}
-            className="absolute left-6 top-0 hidden h-full w-[3px] rounded-full bg-border lg:block"
+            className="absolute left-1/2 top-0 hidden h-full w-[3px] -translate-x-1/2 rounded-full bg-border lg:block"
           />
 
           {/* Timeline Cards */}

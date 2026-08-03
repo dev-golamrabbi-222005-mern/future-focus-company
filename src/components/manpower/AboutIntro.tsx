@@ -272,7 +272,7 @@ export default function AboutIntro() {
             className="floating-image parallax-item absolute right-10 top-0 overflow-hidden rounded-none shadow-[0_40px_80px_rgba(0,0,0,.35)]"
           >
             <Image
-              src="/images/about/about-home.jpg"
+              src="/images/about/manpower.jpg"
               alt="Future Focus Company"
               width={560}
               height={640}
@@ -283,7 +283,7 @@ export default function AboutIntro() {
 
           {/* Secondary Image */}
 
-          <motion.div
+          {/* <motion.div
             animate={{
               y: [0, 15, 0],
             }}
@@ -301,7 +301,7 @@ export default function AboutIntro() {
               height={450}
               className="h-[360px] w-[330px] object-cover transition-transform duration-700 hover:scale-105"
             />
-          </motion.div>
+          </motion.div> */}
 
           {/* Market Card */}
 
@@ -345,7 +345,7 @@ export default function AboutIntro() {
             className="floating-image absolute right-[-35px] top-16 flex h-36 w-36 items-center justify-center rounded-full bg-primary shadow-[0_0_50px_rgba(255,205,0,.45)]"
           >
             <div className="text-center">
-              <h4 className="text-5xl font-black text-primary-foreground">15+</h4>
+              <h4 className="text-5xl font-black text-primary-foreground">05+</h4>
 
               <p className="mt-2 text-xs font-bold uppercase tracking-[0.2em] text-primary-foreground">
                 {t("experience")}

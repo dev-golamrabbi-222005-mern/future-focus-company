@@ -5,7 +5,14 @@ import { useTranslations } from "next-intl";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import {ShieldCheck, Target, Eye, Quote, CheckCircle2, Timeline,} from "lucide-react";
+import {
+  ShieldCheck,
+  Target,
+  Eye,
+  Quote,
+  CheckCircle2,
+  Timeline,
+} from "lucide-react";
 
 import WhyChoose from "../../../components/about/WhyChoose";
 import AboutCompany from "@/components/about/aboutUs/page";
@@ -47,10 +54,10 @@ export default function AboutPage() {
 
   return (
     <div>
-      <AboutCompany/>
-      <CompanyTimeline/>
-        <WhyChoose />
-        
+      <AboutCompany />
+      <CompanyTimeline />
+      <WhyChoose />
+
       <div
         ref={containerRef}
         className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8 pt-8 md:pt-10 lg:pt-12 pb-8 md:pb-10 lg:pb-12 space-y-12 md:space-y-16 lg:space-y-20"
@@ -72,9 +79,19 @@ export default function AboutPage() {
 
         {/* Mission & Vision Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="gsap-fade-up p-8 rounded-3xl border border-border bg-card shadow-sm hover:shadow-xl transition-all space-y-4">
+          <div
+            className="gsap-fade-up p-8 group overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl space-y-4">
             <div className="p-3.5 rounded-2xl bg-primary/10 text-primary w-fit">
-              <Target className="h-7 w-7" />
+              {/* <Target className="h-7 w-7" /> */}
+              <div className="relative overflow-hidden rounded-2xl">
+                <img
+                  src="/images/about/mission.jpg"
+                  alt="Our Mission"
+                  className="h-80 w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+              </div>
             </div>
             <h2 className="text-2xl font-extrabold text-foreground">
               {t("missionTitle")}
@@ -84,9 +101,18 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="gsap-fade-up p-8 rounded-3xl border border-border bg-card shadow-sm hover:shadow-xl transition-all space-y-4">
+          <div className="gsap-fade-up p-8 group overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl space-y-4">
             <div className="p-3.5 rounded-2xl bg-accent/10 text-accent w-fit">
-              <Eye className="h-7 w-7" />
+              {/* <Eye className="h-7 w-7" /> */}
+              <div className="relative overflow-hidden rounded-2xl">
+                <img
+                  src="/images/about/vision2.jpg"
+                  alt="Our Vision"
+                  className="h-80 w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+              </div>
             </div>
             <h2 className="text-2xl font-extrabold text-foreground">
               {t("visionTitle")}
@@ -149,8 +175,6 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-
-        
       </div>
       <CallToAction />
     </div>

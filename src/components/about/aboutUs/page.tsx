@@ -38,12 +38,12 @@ export default function AboutCompany() {
   const stats = [
     {
       icon: Building2,
-      value: "15+",
+      value: "05+",
       title: t("experience"),
     },
     {
       icon: Users,
-      value: "10K+",
+      value: "5K+",
       title: t("workers"),
     },
     {
@@ -222,16 +222,8 @@ export default function AboutCompany() {
               {/* Image */}
 
               <div className="group relative overflow-hidden rounded-[32px] border border-border bg-card shadow-2xl">
-                {/* <Image
-                  src="/images/about/we-are-photo.png"
-                  alt="Future Focus Company"
-                  width={700}
-                  height={900}
-                  priority
-                  className="h-[700px] w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                /> */}
                 <MotionImage
-                    src="/images/about/we-are-photo.png"
+                    src="/images/about/we-are-photo2.png"
                     alt="Future Focus Company"
                     width={700}
                     height={900}
@@ -244,7 +236,7 @@ export default function AboutCompany() {
                         repeat: Infinity,
                         ease: "easeInOut",
                     }}
-                    className="h-[700px] w-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    className="h-[700px] w-full group-hover:scale-110 transition-transform duration-700"
                     />
 
                 {/* Overlay */}
@@ -285,7 +277,7 @@ export default function AboutCompany() {
                 className="absolute -left-8 top-16"
               >
                 <div className="flex h-36 w-36 flex-col items-center justify-center rounded-full border-[6px] border-background bg-primary text-primary-foreground shadow-2xl">
-                  <h2 className="text-4xl font-black">15+</h2>
+                  <h2 className="text-4xl font-black">05+</h2>
 
                   <p className="mt-1 text-center text-xs uppercase tracking-[0.2em]">
                     {t("experience")}
