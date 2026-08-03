@@ -7,7 +7,7 @@ export const siteConfig = {
     { href: '/about', key: 'about' },
     { href: '/services', key: 'services' },
     { href: '/manpower', key: 'manpower' },
-    { href: '/jobs', key: 'jobs' },
+    { href: '/careers', key: 'careers' },
     { href: '/gallery', key: 'gallery' },
     { href: '/contact', key: 'contact' },
   ],
