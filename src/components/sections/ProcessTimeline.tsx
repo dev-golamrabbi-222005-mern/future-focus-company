@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -45,43 +46,22 @@ export function ProcessTimeline() {
 
   useGSAP(
     () => {
-      if (!containerRef.current) return;
+      if (!containerRef.current || !lineRef.current) return;
 
-      if (lineRef.current) {
-        gsap.fromTo(
-          lineRef.current,
-          { scaleY: 0 },
-          {
-            scaleY: 1,
-            ease: 'none',
-            scrollTrigger: {
-              trigger: containerRef.current,
-              start: 'top 70%',
-              end: 'bottom 80%',
-              scrub: 1,
-            },
-          }
-        );
-      }
-
-      const stepItems = containerRef.current.querySelectorAll('.timeline-step');
-      stepItems.forEach((step) => {
-        gsap.fromTo(
-          step,
-          { opacity: 0, scale: 0.85, y: 30 },
-          {
-            opacity: 1,
-            scale: 1,
-            y: 0,
-            duration: 0.7,
-            ease: 'back.out(1.5)',
-            scrollTrigger: {
-              trigger: step,
-              start: 'top 80%',
-            },
-          }
-        );
-      });
+      gsap.fromTo(
+        lineRef.current,
+        { scaleY: 0 },
+        {
+          scaleY: 1,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: 'top 70%',
+            end: 'bottom 80%',
+            scrub: 1,
+          },
+        }
+      );
     },
     { scope: containerRef }
   );
@@ -89,7 +69,6 @@ export function ProcessTimeline() {
   return (
     <section ref={containerRef} className="pt-12 md:pt-16 lg:pt-20 pb-8 md:pb-10 lg:pb-12 relative overflow-hidden">
       <div className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8">
-        
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
           <div className="mb-6 flex justify-center">
@@ -107,9 +86,8 @@ export function ProcessTimeline() {
 
         {/* Timeline Layout */}
         <div className="relative max-w-4xl mx-auto">
-          
           <div className="absolute left-6 md:left-1/2 top-4 bottom-4 w-1 bg-border/60 -translate-x-1/2 rounded-full" />
-          
+
           <div
             ref={lineRef}
             className="absolute left-6 md:left-1/2 top-4 bottom-4 w-1 bg-gradient-to-b from-primary via-sky-400 to-accent -translate-x-1/2 rounded-full origin-top"
@@ -121,13 +99,22 @@ export function ProcessTimeline() {
               const isEven = idx % 2 === 0;
 
               return (
-                <div
+                <motion.div
                   key={idx}
+                  initial={{ opacity: 0, scale: 0.65, y: 70 }}
+                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2, margin: '0px 0px -80px 0px' }}
+                  transition={{
+                    duration: 0.6,
+                    type: 'spring',
+                    stiffness: 110,
+                    damping: 14,
+                    delay: idx * 0.05,
+                  }}
                   className={`timeline-step flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12 ${
                     isEven ? 'md:flex-row-reverse' : ''
                   }`}
                 >
-                  
                   <div className="w-full md:w-1/2 pl-14 md:pl-0">
                     <div className="p-6 sm:p-8 rounded-3xl border border-border bg-card shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 space-y-3">
                       <div className="flex items-center justify-between">
@@ -156,14 +143,11 @@ export function ProcessTimeline() {
                   </div>
 
                   <div className="hidden md:block w-1/2" />
-
-                </div>
+                </motion.div>
               );
             })}
           </div>
-
         </div>
-
       </div>
     </section>
   );

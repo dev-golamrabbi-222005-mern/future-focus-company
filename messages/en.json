@@ -261,19 +261,201 @@
     "tagline": "Industries We Serve",
     "heading": "Specialized Talent Across Core Sectors",
     "description": "We supply trained, screened, and motivated workforces tailored to the rigorous demands of Middle Eastern markets.",
-    "sector1Title": "Construction & Infrastructure",
-    "sector1Desc": "Engineers, masons, carpenters, steel fixers, heavy equipment operators, and site supervisors.",
-    "sector2Title": "Hospitality & Catering",
-    "sector2Desc": "Chefs, waitstaff, housekeepers, kitchen stewards, and hotel operations personnel.",
-    "sector3Title": "Transport & Logistics",
-    "sector3Desc": "Heavy vehicle drivers, forklift operators, warehouse handlers, and logistics coordinators.",
-    "sector4Title": "Healthcare & Nursing",
-    "sector4Desc": "Registered nurses, lab technicians, male/female caregivers, and clinic assistants.",
-    "sector5Title": "Facility Management & Security",
-    "sector5Desc": "Security guards, HVAC technicians, electricians, plumbers, and cleaning crews.",
-    "sector6Title": "IT & Corporate Staffing",
-    "sector6Desc": "Administrative assistants, IT technicians, accountants, and customer service reps.",
-    "learnMore": "Explore Sector Details"
+    "targetSector": "Target Sector",
+    "viewDetails": "View Details ->",
+    "home": "Home",
+    "services": "Services",
+    "availableRolesTitle": "Available Trade Categories & Roles",
+    "availableRolesSubtitle": "Every category undergoes 1-on-1 practical trade testing & GAMCA medical clearance.",
+    "tradeTested": "100% Trade Tested",
+    "requestRole": "Hire Category",
+    "sectors": {
+      "construction": {
+        "title": "Construction & Engineering",
+        "deployed": "5,000+ DEPLOYED",
+        "description": "Certified structural welders, high-rise masons, MEP electricians, scaffolders, and heavy equipment operators for Saudi megaprojects.",
+        "roles": {
+          "role1": {
+            "title": "Certified Structural Welders & Fabricators",
+            "badge": "6G Certified • TUV Standard",
+            "desc": "Expert 3G/6G SMAW, MIG, and TIG welders for high-rise steel frames, oil pipelines, and industrial plants."
+          },
+          "role2": {
+            "title": "High-Rise Building Masons & Plasterers",
+            "badge": "Trade Tested",
+            "desc": "Skilled block masons, plasterers, tile fixers, and marble finishers with multi-story project experience."
+          },
+          "role3": {
+            "title": "MEP Electricians & Cable Pullers",
+            "badge": "Industrial & Commercial",
+            "desc": "High/low voltage electricians, cable tray installers, panel board assemblers, and conduit wiremen."
+          },
+          "role4": {
+            "title": "Plumbers & Pipefitters",
+            "badge": "Piping Specialist",
+            "desc": "Sanitary plumbers, fire-fighting pipefitters, and high-pressure water supply network technicians."
+          },
+          "role5": {
+            "title": "Scaffolders & Steel Fixers",
+            "badge": "TUV Safety Certified",
+            "desc": "Heavy scaffolding erectors, rebar fixers, shuttering carpenters, and formwork specialists."
+          },
+          "role6": {
+            "title": "HVAC Technicians & Ductmen",
+            "badge": "Chiller & Ducting",
+            "desc": "Commercial AC technicians, chiller plant operators, insulation specialists, and sheet metal duct fabricators."
+          }
+        }
+      },
+      "hospitality": {
+        "title": "Hospitality & Catering",
+        "deployed": "2,200+ DEPLOYED",
+        "description": "Pre-trained 5-star hotel line cooks, waiters, room attendants, baristas, and kitchen stewards for top KSA properties.",
+        "roles": {
+          "role1": {
+            "title": "5-Star Hotel Line Cooks & Chefs",
+            "badge": "HACCP Certified",
+            "desc": "Experienced Arabic, International, and Asian cuisine cooks trained in food safety and kitchen management."
+          },
+          "role2": {
+            "title": "Waiters & Banquet Servers",
+            "badge": "English / Arabic Speaking",
+            "desc": "Groomed, hospitable service staff for luxury hotels, fine dining restaurants, and royal banquet halls."
+          },
+          "role3": {
+            "title": "Housekeeping & Room Attendants",
+            "badge": "Luxury Hotel Trained",
+            "desc": "Detailed room attendants, floor supervisors, and public area cleaners for resort properties."
+          },
+          "role4": {
+            "title": "Baristas & Beverage Specialists",
+            "badge": "Specialty Coffee",
+            "desc": "Skilled coffee baristas and beverage artisans trained in espresso extraction, latte art, and customer service."
+          },
+          "role5": {
+            "title": "Kitchen Stewards & Dishwashers",
+            "badge": "Sanitation Certified",
+            "desc": "Hardworking kitchen utility staff managing dishwashing machinery and hygiene standards."
+          },
+          "role6": {
+            "title": "Front Desk & Concierge Staff",
+            "badge": "Opera PMS Trained",
+            "desc": "Fluent receptionists and concierge staff handling guest check-ins, reservations, and VIP services."
+          }
+        }
+      },
+      "it": {
+        "title": "IT & Technology",
+        "deployed": "850+ DEPLOYED",
+        "description": "Full-stack software developers, network infrastructure engineers, cybersecurity analysts, and IT helpdesk personnel.",
+        "roles": {
+          "role1": {
+            "title": "Full-Stack Software Engineers",
+            "badge": "React / Node / Python",
+            "desc": "Modern web and mobile application developers experienced in cloud architecture and API integrations."
+          },
+          "role2": {
+            "title": "Network & System Engineers",
+            "badge": "CCNA / CCNP Certified",
+            "desc": "Cisco certified network administrators managing enterprise routers, switches, firewalls, and VPNs."
+          },
+          "role3": {
+            "title": "Cybersecurity Analysts",
+            "badge": "CEH / Security+",
+            "desc": "SOC analysts protecting corporate digital assets, monitoring threat alerts, and performing vulnerability audits."
+          },
+          "role4": {
+            "title": "Helpdesk & IT Support Technicians",
+            "badge": "Tier 1 & 2 Support",
+            "desc": "On-site IT support specialists resolving hardware, software, printer, and Active Directory user issues."
+          },
+          "role5": {
+            "title": "Database Administrators (DBA)",
+            "badge": "SQL / Oracle / Mongo",
+            "desc": "Database specialists managing high-availability clusters, backup strategies, and query performance tuning."
+          },
+          "role6": {
+            "title": "Cloud & DevOps Engineers",
+            "badge": "AWS / Azure / Docker",
+            "desc": "DevOps specialists managing CI/CD pipelines, Kubernetes clusters, and cloud server provisioning."
+          }
+        }
+      },
+      "healthcare": {
+        "title": "Healthcare & Medical Support",
+        "deployed": "1,400+ DEPLOYED",
+        "description": "Prometric-passed registered nurses, medical laboratory technicians, physiotherapy assistants, and medical staff.",
+        "roles": {
+          "role1": {
+            "title": "Registered ICU & Ward Nurses",
+            "badge": "Saudi Prometric Passed",
+            "desc": "BSc & Diploma registered nurses qualified for Saudi Commission for Health Specialties (SCFHS) licensing."
+          },
+          "role2": {
+            "title": "Medical Laboratory Technicians",
+            "badge": "Diagnostic Specialist",
+            "desc": "Pathology lab technicians operating automated blood analyzers, hematology gear, and diagnostic kits."
+          },
+          "role3": {
+            "title": "Physiotherapy Assistants",
+            "badge": "Rehabilitation Care",
+            "desc": "Rehabilitation aides assisting senior physical therapists with patient exercises and electrotherapy."
+          },
+          "role4": {
+            "title": "Patient Care Orderlies & Aides",
+            "badge": "Patient Transport",
+            "desc": "Compassionate ward attendants assisting with patient transfer, mobility, hygiene, and wheelchair assistance."
+          },
+          "role5": {
+            "title": "Pharmacy Assistants",
+            "badge": "Medication Dispensing",
+            "desc": "Hospital and retail pharmacy helpers managing drug inventory, packaging, and prescription sorting."
+          },
+          "role6": {
+            "title": "Hospital Disinfection Technicians",
+            "badge": "Biohazard Hygiene",
+            "desc": "Sterilization technicians maintaining operating theater cleanliness, autoclave gear, and infection control."
+          }
+        }
+      },
+      "driving": {
+        "title": "Transport & Heavy Driving",
+        "deployed": "3,100+ DEPLOYED",
+        "description": "Heavy trailer drivers with KSA licenses, bus drivers, forklift operators, and logistics warehouse handlers.",
+        "roles": {
+          "role1": {
+            "title": "Heavy Trailer & Flatbed Drivers",
+            "badge": "Saudi Heavy License",
+            "desc": "Long-haul trailer drivers experienced with Mercedes Actros, Volvo FH, and flatbed container transport."
+          },
+          "role2": {
+            "title": "Passenger Bus & Coach Drivers",
+            "badge": "Public Transport",
+            "desc": "Safety-conscious drivers operating 50-seater buses for corporate employee transport and pilgrimage routes."
+          },
+          "role3": {
+            "title": "Forklift & Reach Truck Operators",
+            "badge": "TUV Safety Certified",
+            "desc": "Warehouse forklift drivers certified in high-rack stacking, pallet loading, and inventory handling."
+          },
+          "role4": {
+            "title": "Bulldozer & Excavator Operators",
+            "badge": "Heavy Earthmoving",
+            "desc": "Heavy machinery operators for site clearing, trenching, road grading, and quarry operations."
+          },
+          "role5": {
+            "title": "Light Delivery Drivers",
+            "badge": "KSA Light License",
+            "desc": "Courier and commercial van drivers operating logistics routes in Riyadh, Jeddah, and Dammam."
+          },
+          "role6": {
+            "title": "Mobile Crane Operators",
+            "badge": "Third-Party Certified",
+            "desc": "Certified hydraulic crane operators handling 25T to 100T lifts safely on industrial construction sites."
+          }
+        }
+      }
+    }
   },
   "ProcessTimeline": {
     "tagline": "Step-by-Step Excellence",
@@ -315,21 +497,128 @@
     "ctaServices": "Explore Services"
   },
   "ServicesPage": {
-    "tagline": "Comprehensive Solutions",
-    "heading": "End-to-End Recruitment & Overseas Logistics",
-    "subheading": "From candidate sourcing to flight ticketing and GCC reception, we manage every detail with complete precision.",
-    "service1Title": "Executive & Skilled Sourcing",
-    "service1Desc": "Rigorous recruitment drives matching candidate skills with exact employer job specifications.",
-    "service2Title": "Trade Testing & Skill Certification",
-    "service2Desc": "Practical evaluation in government-approved technical centers for welding, electrical, masonry, and driving.",
-    "service3Title": "Medical Screening & Clearance",
-    "service3Desc": "GAMCA medical checkups guaranteeing 100% health fitness prior to visa stamping.",
-    "service4Title": "Visa Stamping & BMET Smart Card",
-    "service4Desc": "Official embassy visa processing and BMET smart card issuance under ministry supervision.",
-    "service5Title": "Air Ticketing & Pre-Departure Briefing",
-    "service5Desc": "Group flight reservations, cultural orientation, and GCC labor law briefings.",
-    "service6Title": "On-Ground Reception & Liaison",
-    "service6Desc": "Airport pickup, transport to employer quarters, and continuous client liaison."
+    "hero": {
+      "badge": "Government Approved Manpower Agency • License RL-1428",
+      "title": "Manpower Solutions Across Saudi Arabia",
+      "subtitle": "Government-licensed workforce supply bridging top Bangladeshi talent with Vision 2030 megaprojects across Riyadh, Jeddah, Dammam & Neom.",
+      "ctaRequest": "Request Workers",
+      "ctaDownload": "Download Profile (PDF)",
+      "trust1": "MHRSD License RL-1428",
+      "trust2": "QIWA & Musaned Compliant",
+      "trust3": "GAMCA Medical Cleared",
+      "trust4": "90-Day Free Replacement"
+    },
+    "bento": {
+      "sectionTitle": "Explore Our Specialized Workforce Sectors",
+      "sectionSubtitle": "From large-scale infrastructure to 5-star hospitality and tech teams, we supply trade-tested manpower tailored for Saudi KSA projects.",
+      "exploreSector": "Target Sector",
+      "viewDetails": "View Details",
+      "sectors": {
+        "construction": {
+          "title": "Construction & Engineering",
+          "shortDesc": "Certified welders, high-rise masons, MEP electricians, scaffolders & heavy equipment operators for Saudi megaprojects.",
+          "stats": "5,000+ Deployed"
+        },
+        "hospitality": {
+          "title": "Hospitality & Catering",
+          "shortDesc": "Pre-trained line cooks, stewards, room attendants, baristas & front office staff for hotels across KSA.",
+          "stats": "2,200+ Deployed"
+        },
+        "it": {
+          "title": "IT & Technology",
+          "shortDesc": "Full-stack developers, network engineers, cybersecurity experts & helpdesk support personnel.",
+          "stats": "850+ Deployed"
+        },
+        "healthcare": {
+          "title": "Healthcare & Medical Support",
+          "shortDesc": "Prometric-cleared nurses, lab technicians, physiotherapy assistants & medical facility support staff.",
+          "stats": "1,400+ Deployed"
+        },
+        "driving": {
+          "title": "Transport & Heavy Driving",
+          "shortDesc": "Heavy trailer drivers with KSA licenses, bus drivers, forklift operators & logistics handlers.",
+          "stats": "3,100+ Deployed"
+        },
+        "cleaning": {
+          "title": "Facility Management & Cleaning",
+          "shortDesc": "Janitorial teams, commercial cleaners, window specialists & hospital disinfection technicians.",
+          "stats": "4,500+ Deployed"
+        }
+      }
+    },
+    "compliance": {
+      "tagline": "Saudi Regulatory Standards",
+      "heading": "100% MHRSD Compliant & 90-Day Replacement Guarantee",
+      "subheading": "We strictly adhere to Ministry of Human Resources and Social Development (MHRSD) regulations, Musaned contracts, and GAMCA medical protocols.",
+      "badge1Title": "QIWA & Musaned Direct",
+      "badge1Sub": "Digital contract transfer & official work permit issuance under KSA law.",
+      "badge2Title": "90-Day Free Replacement",
+      "badge2Sub": "If candidate performance falls short, we replace them at zero extra cost.",
+      "badge3Title": "Government License RL-1428",
+      "badge3Sub": "Officially approved recruitment agency by the Ministry of Expatriates Welfare.",
+      "badge4Title": "GAMCA Medical Fitness",
+      "badge4Sub": "Guaranteed fit for duty medical clearance prior to embassy visa stamping."
+    },
+    "process": {
+      "tagline": "How We Deploy Talent",
+      "heading": "Our 5-Step Turnkey Deployment Workflow",
+      "subheading": "A seamless, compliant mobilization pipeline delivering trade-tested workforce to your KSA project site within 14-21 days.",
+      "stepLabel": "Step",
+      "steps": {
+        "step1": {
+          "title": "Quota & Requirement Analysis",
+          "desc": "We review your visa quota, job specifications, wage agreements, and project mobilization timeline in KSA."
+        },
+        "step2": {
+          "title": "Global Sourcing & Candidate Vetting",
+          "desc": "Our recruiters screen thousands of candidates in Bangladesh against your specific trade requirements."
+        },
+        "step3": {
+          "title": "Practical Trade Testing",
+          "desc": "Candidates undergo rigorous practical trade tests at certified technical institutes supervised by engineers."
+        },
+        "step4": {
+          "title": "KSA Visa & GAMCA Medical Clearance",
+          "desc": "Full GAMCA medical screening, embassy visa stamping, and BMET smart card issuance under official oversight."
+        },
+        "step5": {
+          "title": "Mobilization & On-Ground Reception",
+          "desc": "Flight bookings, pre-departure orientation, KSA airport reception, and transport to your project site."
+        }
+      }
+    },
+    "details": {
+      "home": "Home",
+      "services": "Services",
+      "overviewTitle": "Sector Overview & Capabilities",
+      "overviewP1": "Future Focus Company supplies high-performing, certified workforce solutions tailored specifically for Saudi Arabia’s expanding industrial and urban development landscape. With over a decade of recruitment experience, we ensure every worker deployed is fully equipped, safety-trained, and medically fit.",
+      "overviewP2": "Our candidate selection involves rigorous trade evaluations, background checks, and orientation on Saudi Vision 2030 site compliance standards. From initial visa quota processing to on-site reception in KSA, we deliver end-to-end recruitment management.",
+      "rolesTitle": "Key Roles We Supply",
+      "vettingTitle": "Technical Vetting & Trade Test Assurance",
+      "vettingDesc": "We do not rely on paper CVs alone. Every candidate undergoes mandatory 1-on-1 practical trade testing at certified technical facilities in Dhaka and Chittagong before visa submission.",
+      "sidebar": {
+        "formTitle": "Request Proposal for",
+        "formSubtitle": "Submit your workforce headcount requirement and get a custom quote within 24 hours.",
+        "nameLabel": "Full Name",
+        "namePlaceholder": "e.g. Abdullah Al-Otaibi",
+        "emailLabel": "Corporate Email",
+        "emailPlaceholder": "e.g. a.otaibi@company.sa",
+        "phoneLabel": "Phone / WhatsApp",
+        "phonePlaceholder": "e.g. +966 50 123 4567",
+        "countLabel": "Required Workforce Headcount",
+        "selectCount": "Select worker count",
+        "submit": "Submit Headcount Request",
+        "submitting": "Processing Request...",
+        "successTitle": "Headcount Request Submitted!",
+        "successDesc": "Our Riyadh workforce consultant will review your quota request and reach out within 24 hours.",
+        "sendAnother": "Submit Another Request",
+        "whyTitle": "Why Hire Through Us",
+        "point1": "100% Practical Trade Tested",
+        "point2": "GAMCA Medical Cleared",
+        "point3": "90-Day Free Replacement Guarantee",
+        "point4": "MHRSD & Musaned Compliant"
+      }
+    }
   },
   "ManpowerPage": {
     "tagline": "Workforce Solutions",
@@ -745,6 +1034,114 @@
     "rights": "All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"
+  },
+  "Testimonials": {
+    "tagline": "Client Success Stories",
+    "heading": "Trusted by Leading Enterprises Across Dubai & UAE",
+    "subheading": "See how our reliable manpower solutions have powered major construction, hospitality, and facility management projects across the GCC.",
+    "verifiedClient": "Verified Partner",
+    "items": {
+      "item1": {
+        "quote": "Future Focus Company provided us with 150+ certified welders and fabricators for our Dubai Marina project on short notice. Their vetting process and visa speed are unmatched in the region.",
+        "name": "Tariq Al-Mansoor",
+        "role": "HR Director, Emaar Contracting Partner",
+        "location": "Dubai, UAE",
+        "project": "Dubai Marina Development"
+      },
+      "item2": {
+        "quote": "Sourcing skilled hospitality and facility management staff used to take months. Future Focus deployed 80+ pre-trained staff to our 5-star hotel property within 18 days. Exceptional service!",
+        "name": "Sarah Jenkins",
+        "role": "Head of People & Culture",
+        "location": "Abu Dhabi, UAE",
+        "project": "Luxury Resort Group"
+      },
+      "item3": {
+        "quote": "Their compliance with UAE labor laws and transparent recruitment standards give us total peace of mind. Every technician supplied passed our technical trade test on day one.",
+        "name": "Engineer Rashid Al-Hassan",
+        "role": "Operations Vice President",
+        "location": "Riyadh & Dubai",
+        "project": "Industrial Infrastructure"
+      }
+    }
+  },
+  "FAQ": {
+    "tagline": "Got Questions?",
+    "heading": "Frequently Asked Questions",
+    "subheading": "Everything you need to know about our recruitment process, visa compliance, worker deployment, and service guarantees in Dubai & Saudi Arabia.",
+    "stillHaveQuestions": "Have a specific workforce requirement not answered here?",
+    "contactSupport": "Speak with Our Manpower Advisor",
+    "items": {
+      "item1": {
+        "question": "How quickly can Future Focus deploy workers to our Dubai project?",
+        "answer": "Standard deployment takes between 14 to 21 days from visa quota approval. For pre-vetted candidates already in our talent pipeline, mobilization can occur in as few as 7 business days."
+      },
+      "item2": {
+        "question": "Are all supplied candidates trade-tested and medical-checked?",
+        "answer": "Yes. Every candidate undergoes rigorous practical trade testing at certified centers in Bangladesh, followed by GAMCA medical screening, background checks, and embassy document attestation before arrival."
+      },
+      "item3": {
+        "question": "What happens if a deployed worker does not meet our performance standards?",
+        "answer": "We offer a 90-day performance and medical guarantee. If any candidate fails to meet your agreed skill level or medical compliance during this window, we replace them at zero extra recruitment fee."
+      },
+      "item4": {
+        "question": "Which industries and manpower categories do you specialize in?",
+        "answer": "We specialize in Construction & Civil Engineering, MEP (Mechanical, Electrical, Plumbing), Hospitality & Catering, Facility Management, Logistics, Security Services, and Heavy Equipment Operation."
+      },
+      "item5": {
+        "question": "Do you handle visa processing, flights, and government clearance?",
+        "answer": "Yes, we manage end-to-end mobilization including MOHRE work permits, employment visa processing, flight bookings, pre-departure orientation, and airport reception upon arrival in the UAE/KSA."
+      }
+    }
+  },
+  "GetInTouch": {
+    "tagline": "Let's Talk Business",
+    "heading": "Ready to Scale Your Workforce with Premier Talent?",
+    "subheading": "Reach out to our Dubai business team today. Whether you need 10 specialist tradesmen or a 500-strong turnkey project crew, we deliver on time and fully compliant.",
+    "contactInfo": {
+      "addressTitle": "Headquarters & Office",
+      "address": "Level 18, Commercial Tower, Business Bay, Dubai, UAE",
+      "phoneTitle": "Direct Phone / WhatsApp",
+      "phone": "+971 4 388 9200 / +971 50 123 4567",
+      "emailTitle": "Corporate Inquiries",
+      "email": "manpower@futurefocus.ae",
+      "hoursTitle": "Operating Hours",
+      "hours": "Monday - Saturday: 8:00 AM - 6:00 PM (GST)"
+    },
+    "badgeSla": "Guaranteed 24-Hour Response",
+    "form": {
+      "title": "Request Manpower Proposal",
+      "subtitle": "Fill in your details below and our corporate workforce consultant will contact you within 24 hours with a custom quote.",
+      "fullNameLabel": "Full Name",
+      "fullNamePlaceholder": "e.g. Alexander Wright",
+      "emailLabel": "Corporate Email",
+      "emailPlaceholder": "e.g. a.wright@company.ae",
+      "phoneLabel": "Phone Number",
+      "phonePlaceholder": "e.g. +971 50 123 4567",
+      "serviceTypeLabel": "Required Service Category",
+      "serviceTypeSelect": "Select an industry sector",
+      "serviceOptions": {
+        "construction": "Construction & Civil Engineering",
+        "mep": "MEP (Electrical & Plumbing)",
+        "hospitality": "Hospitality & Catering Staff",
+        "facility": "Facility Management & Cleaning",
+        "logistics": "Logistics & Warehouse Operations"
+      },
+      "workforceSizeLabel": "Estimated Workforce Size",
+      "workforceSizeSelect": "Select worker count",
+      "sizeOptions": {
+        "small": "1 - 15 Workers",
+        "medium": "16 - 50 Workers",
+        "large": "51 - 200 Workers",
+        "enterprise": "200+ Enterprise Mobilization"
+      },
+      "messageLabel": "Project Requirements / Details",
+      "messagePlaceholder": "Describe your project timeline, specific trade roles needed, location, and visa status...",
+      "submitButton": "Send Proposal Request",
+      "submitting": "Submitting Request...",
+      "successTitle": "Request Received Successfully!",
+      "successMessage": "Thank you for reaching out. Our Senior Manpower Consultant will contact you within 24 business hours.",
+      "sendAnother": "Send Another Request"
+    }
   },
   "Theme": {
     "light": "Light",
