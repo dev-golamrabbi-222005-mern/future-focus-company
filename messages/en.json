@@ -541,6 +541,114 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"
   },
+  "Testimonials": {
+    "tagline": "Client Success Stories",
+    "heading": "Trusted by Leading Enterprises Across Dubai & UAE",
+    "subheading": "See how our reliable manpower solutions have powered major construction, hospitality, and facility management projects across the GCC.",
+    "verifiedClient": "Verified Partner",
+    "items": {
+      "item1": {
+        "quote": "Future Focus Company provided us with 150+ certified welders and fabricators for our Dubai Marina project on short notice. Their vetting process and visa speed are unmatched in the region.",
+        "name": "Tariq Al-Mansoor",
+        "role": "HR Director, Emaar Contracting Partner",
+        "location": "Dubai, UAE",
+        "project": "Dubai Marina Development"
+      },
+      "item2": {
+        "quote": "Sourcing skilled hospitality and facility management staff used to take months. Future Focus deployed 80+ pre-trained staff to our 5-star hotel property within 18 days. Exceptional service!",
+        "name": "Sarah Jenkins",
+        "role": "Head of People & Culture",
+        "location": "Abu Dhabi, UAE",
+        "project": "Luxury Resort Group"
+      },
+      "item3": {
+        "quote": "Their compliance with UAE labor laws and transparent recruitment standards give us total peace of mind. Every technician supplied passed our technical trade test on day one.",
+        "name": "Engineer Rashid Al-Hassan",
+        "role": "Operations Vice President",
+        "location": "Riyadh & Dubai",
+        "project": "Industrial Infrastructure"
+      }
+    }
+  },
+  "FAQ": {
+    "tagline": "Got Questions?",
+    "heading": "Frequently Asked Questions",
+    "subheading": "Everything you need to know about our recruitment process, visa compliance, worker deployment, and service guarantees in Dubai & Saudi Arabia.",
+    "stillHaveQuestions": "Have a specific workforce requirement not answered here?",
+    "contactSupport": "Speak with Our Manpower Advisor",
+    "items": {
+      "item1": {
+        "question": "How quickly can Future Focus deploy workers to our Dubai project?",
+        "answer": "Standard deployment takes between 14 to 21 days from visa quota approval. For pre-vetted candidates already in our talent pipeline, mobilization can occur in as few as 7 business days."
+      },
+      "item2": {
+        "question": "Are all supplied candidates trade-tested and medical-checked?",
+        "answer": "Yes. Every candidate undergoes rigorous practical trade testing at certified centers in Bangladesh, followed by GAMCA medical screening, background checks, and embassy document attestation before arrival."
+      },
+      "item3": {
+        "question": "What happens if a deployed worker does not meet our performance standards?",
+        "answer": "We offer a 90-day performance and medical guarantee. If any candidate fails to meet your agreed skill level or medical compliance during this window, we replace them at zero extra recruitment fee."
+      },
+      "item4": {
+        "question": "Which industries and manpower categories do you specialize in?",
+        "answer": "We specialize in Construction & Civil Engineering, MEP (Mechanical, Electrical, Plumbing), Hospitality & Catering, Facility Management, Logistics, Security Services, and Heavy Equipment Operation."
+      },
+      "item5": {
+        "question": "Do you handle visa processing, flights, and government clearance?",
+        "answer": "Yes, we manage end-to-end mobilization including MOHRE work permits, employment visa processing, flight bookings, pre-departure orientation, and airport reception upon arrival in the UAE/KSA."
+      }
+    }
+  },
+  "GetInTouch": {
+    "tagline": "Let's Talk Business",
+    "heading": "Ready to Scale Your Workforce with Premier Talent?",
+    "subheading": "Reach out to our Dubai business team today. Whether you need 10 specialist tradesmen or a 500-strong turnkey project crew, we deliver on time and fully compliant.",
+    "contactInfo": {
+      "addressTitle": "Headquarters & Office",
+      "address": "Level 18, Commercial Tower, Business Bay, Dubai, UAE",
+      "phoneTitle": "Direct Phone / WhatsApp",
+      "phone": "+971 4 388 9200 / +971 50 123 4567",
+      "emailTitle": "Corporate Inquiries",
+      "email": "manpower@futurefocus.ae",
+      "hoursTitle": "Operating Hours",
+      "hours": "Monday - Saturday: 8:00 AM - 6:00 PM (GST)"
+    },
+    "badgeSla": "Guaranteed 24-Hour Response",
+    "form": {
+      "title": "Request Manpower Proposal",
+      "subtitle": "Fill in your details below and our corporate workforce consultant will contact you within 24 hours with a custom quote.",
+      "fullNameLabel": "Full Name",
+      "fullNamePlaceholder": "e.g. Alexander Wright",
+      "emailLabel": "Corporate Email",
+      "emailPlaceholder": "e.g. a.wright@company.ae",
+      "phoneLabel": "Phone Number",
+      "phonePlaceholder": "e.g. +971 50 123 4567",
+      "serviceTypeLabel": "Required Service Category",
+      "serviceTypeSelect": "Select an industry sector",
+      "serviceOptions": {
+        "construction": "Construction & Civil Engineering",
+        "mep": "MEP (Electrical & Plumbing)",
+        "hospitality": "Hospitality & Catering Staff",
+        "facility": "Facility Management & Cleaning",
+        "logistics": "Logistics & Warehouse Operations"
+      },
+      "workforceSizeLabel": "Estimated Workforce Size",
+      "workforceSizeSelect": "Select worker count",
+      "sizeOptions": {
+        "small": "1 - 15 Workers",
+        "medium": "16 - 50 Workers",
+        "large": "51 - 200 Workers",
+        "enterprise": "200+ Enterprise Mobilization"
+      },
+      "messageLabel": "Project Requirements / Details",
+      "messagePlaceholder": "Describe your project timeline, specific trade roles needed, location, and visa status...",
+      "submitButton": "Send Proposal Request",
+      "submitting": "Submitting Request...",
+      "successTitle": "Request Received Successfully!",
+      "successMessage": "Thank you for reaching out. Our Senior Manpower Consultant will contact you within 24 business hours.",
+      "sendAnother": "Send Another Request"
+    }
+  },
   "Theme": {
     "light": "Light",
     "dark": "Dark"
