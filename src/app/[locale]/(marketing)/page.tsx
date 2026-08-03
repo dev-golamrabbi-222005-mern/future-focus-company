@@ -3,6 +3,7 @@ import AboutSection from '@/components/sections/AboutSection';
 import { StatsSection } from '@/components/sections/StatsSection';
 import { WhyChooseUs } from '@/components/sections/WhyChooseUs';
 import { AboutSnippet } from '@/components/sections/AboutSnippet';
+import { SectorsGrid } from '@/components/features/services/SectorsGrid';
 import { GlobalReachMap } from '@/components/sections/GlobalReachMap';
 import { ProcessTimeline } from '@/components/sections/ProcessTimeline';
 import { Testimonials } from '@/components/sections/Testimonials';
