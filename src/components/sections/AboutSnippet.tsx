@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
@@ -67,42 +68,77 @@ export function AboutSnippet() {
       <div className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          
-          {/* Left Column: Visual Image Composition */}
-          <div ref={imageRef} className="relative">
-            <div className="relative rounded-3xl overflow-hidden border border-border shadow-2xl bg-card aspect-[4/3] group">
-              <div className="absolute inset-0 bg-gradient-to-tr from-slate-950 via-sky-950 to-slate-900 flex flex-col justify-between p-8 text-white">
-                <div className="flex justify-between items-start">
-                  <div className="p-3 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20">
-                    <Building2 className="h-8 w-8 text-sky-400" />
-                  </div>
-                  <div className="px-4 py-2 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 font-semibold text-xs flex items-center gap-1.5 backdrop-blur-md">
-                    <ShieldCheck className="h-4 w-4" />
-                    <span>{t('bmetBadge')}</span>
-                  </div>
-                </div>
+          {/* Left side image section */}
+            <div ref={imageRef} className="relative">
+      <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-border bg-card shadow-2xl group">
 
-                <div className="space-y-2">
-                  <span className="text-xs uppercase tracking-widest text-sky-400 font-bold">
-                    {t('pipelineBadge')}
-                  </span>
-                  <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
-                    {t('cardTitle')}
-                  </h3>
-                </div>
-              </div>
+        {/* Image */}
+
+        <img
+          src="/images/about/recruitment-banner2.jpg"
+          alt="Future Focus Company"
+          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+
+        {/* Dark Overlay */}
+
+        <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent" />
+
+        {/* Content */}
+
+        <div className="absolute inset-0 flex flex-col justify-between p-8 text-white">
+
+          <div className="flex justify-between items-start">
+
+            <div className="p-3 rounded-2xl bg-black/30 backdrop-blur-md border border-white/20">
+              <Building2 className="h-8 w-8 text-sky-300" />
             </div>
 
-            <div className="absolute -bottom-6 -right-6 sm:bottom-6 sm:-right-6 p-5 rounded-2xl bg-card border border-primary/30 shadow-2xl max-w-xs backdrop-blur-xl hidden sm:flex items-center gap-4">
-              <div className="p-3 rounded-xl bg-primary text-primary-foreground shrink-0">
-                <ShieldCheck className="h-6 w-6" />
-              </div>
-              <div className="space-y-0.5">
-                <span className="text-xs font-bold text-primary block uppercase">{t('ministryApproved')}</span>
-                <span className="text-sm font-extrabold text-foreground">{t('rlLicense')}</span>
-              </div>
+            <div className="px-4 py-2 rounded-full bg-emerald-500/20 border border-emerald-400/30 backdrop-blur-md text-emerald-200 text-xs font-semibold flex items-center gap-2">
+              <ShieldCheck className="h-4 w-4" />
+              <span>{t("bmetBadge")}</span>
             </div>
+
           </div>
+
+          <div className="space-y-3">
+
+            <span className="text-xs font-bold uppercase tracking-[0.3em] text-sky-300">
+              {t("pipelineBadge")}
+            </span>
+
+            <h3 className="max-w-md text-3xl font-black leading-tight">
+              {t("cardTitle")}
+            </h3>
+
+          </div>
+
+        </div>
+
+      </div>
+
+  {/* Floating Card */}
+
+  <div className="absolute -bottom-6 right-6 hidden max-w-xs items-center gap-4 rounded-2xl border border-primary/20 bg-card/90 p-5 shadow-2xl backdrop-blur-xl sm:flex">
+
+    <div className="rounded-xl bg-primary p-3 text-primary-foreground">
+      <ShieldCheck className="h-6 w-6" />
+    </div>
+
+    <div>
+      <span className="block text-xs font-bold uppercase text-primary">
+        {t("ministryApproved")}
+      </span>
+
+      <span className="text-sm font-extrabold text-foreground">
+        {t("rlLicense")}
+      </span>
+    </div>
+
+  </div>
+
+</div>
+
 
           {/* Right Column: Text & CEO Quote */}
           <div ref={contentRef} className="space-y-8">

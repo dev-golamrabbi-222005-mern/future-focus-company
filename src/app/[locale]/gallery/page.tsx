@@ -63,14 +63,14 @@ function Lightbox({
   return (
     <motion.div
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      animate={{ opacity: 2 }}
       exit={{ opacity: 0 }}
       className="fixed inset-0 z-[999] flex items-center justify-center bg-black/90 backdrop-blur-md p-4"
       onClick={onClose}
     >
       <motion.div
         initial={{ scale: 0.88, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
+        animate={{ scale: 1, opacity: 2 }}
         exit={{ scale: 0.88, opacity: 0 }}
         transition={{ type: 'spring', stiffness: 260, damping: 22 }}
         className="relative w-full max-w-4xl rounded-3xl overflow-hidden bg-card border border-border shadow-2xl"
@@ -229,7 +229,7 @@ export default function GalleryPage() {
             <motion.div
               key={heroIdx}
               initial={{ opacity: 0, scale: 1.08 }}
-              animate={{ opacity: 0.22, scale: 1 }}
+              animate={{ opacity: 0.45, scale: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 1.6, ease: 'easeInOut' }}
               className="w-full h-full"

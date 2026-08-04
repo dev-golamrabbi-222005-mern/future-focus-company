@@ -15,13 +15,13 @@ export const siteConfig = {
     saudi: {
       address: 'Suite 402, Business Bay Tower, Al A\'amal St, Business Bay, Riyadh, KSA',
       phone: '+966 56 616 7562',
-      Whatsapp: 'https://wa.me/966500000000',
+      Whatsapp: 'https://wa.me/966533248473',
       email: 'operations@ffccom.net'
     },
     bangladesh: {
       address: 'House 12, Road 04, Block B, Banani, Dhaka-1213, Bangladesh',
       phone: '+966 56 616 7562',
-      Whatsapp: 'https://wa.me/966500000000',
+      Whatsapp: 'https://wa.me/966533248473',
       email: 'Operations@ffccom.net'
     }
   },

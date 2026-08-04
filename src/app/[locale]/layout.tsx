@@ -7,6 +7,7 @@ import { locales } from '@/i18n';
 import { ThemeProvider } from '@/providers/ThemeProvider';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
+import WhatsAppFloat from '@/components/ui/WhatsAppFloat';
 import '@/styles/globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -53,6 +54,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
             <Navbar />
             <main className="flex-1">{children}</main>
             <Footer />
+            <WhatsAppFloat />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
