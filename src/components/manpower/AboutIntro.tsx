@@ -345,7 +345,7 @@ export default function AboutIntro() {
             className="floating-image absolute right-[-35px] top-16 flex h-36 w-36 items-center justify-center rounded-full bg-primary shadow-[0_0_50px_rgba(255,205,0,.45)]"
           >
             <div className="text-center">
-              <h4 className="text-5xl font-black text-primary-foreground">05+</h4>
+              <h4 className="text-5xl font-black text-primary-foreground">{t("experienceValue")}</h4>
 
               <p className="mt-2 text-xs font-bold uppercase tracking-[0.2em] text-primary-foreground">
                 {t("experience")}

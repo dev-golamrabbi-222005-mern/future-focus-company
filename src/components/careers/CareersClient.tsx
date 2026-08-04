@@ -17,10 +17,10 @@ export function CareersClient() {
   const t = useTranslations("CareersPage");
 
   const heroStats = [
-    { icon: Briefcase, value: "9+",     label: t("heroStatJobs") },
-    { icon: Users,     value: "5,000+", label: t("heroStatPlaced") },
-    { icon: DollarSign,value: "SAR 2K+",label: t("heroStatSalary") },
-    { icon: Clock,     value: "15–30d", label: t("heroStatDays") },
+    { icon: Briefcase, value: t("heroStatJobsValue"),   label: t("heroStatJobs") },
+    { icon: Users,     value: t("heroStatPlacedValue"), label: t("heroStatPlaced") },
+    { icon: DollarSign,value: t("heroStatSalaryValue"), label: t("heroStatSalary") },
+    { icon: Clock,     value: t("heroStatDaysValue"),   label: t("heroStatDays") },
   ];
 
   return (
