@@ -26,9 +26,9 @@ if (typeof window !== "undefined") {
 
 /* ── Job image map — curated Unsplash photos per role ── */
 const JOB_IMAGES: Record<string, string> = {
-  job1: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80", // receptionist / hotel lobby
-  job2: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80", // housekeeper
-  job3: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&q=80", // security guard
+  job1: "https://i.postimg.cc/bwRztbmv/Hospitality.png", // receptionist / hotel lobby
+  job2: "https://i.postimg.cc/JzQ1kJpy/Housekeeper.png", // housekeeper
+  job3: "https://i.postimg.cc/qvGk3n1h/Security-Guard.png", // security guard
   job4: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80", // driver
   job5: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80", // office / tea boy
   job6: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80", // gardener
@@ -244,7 +244,7 @@ export default function CareersJobsSection() {
 
                     {/* Title on image bottom */}
                     <div className="absolute bottom-4 left-4 right-4">
-                      <h3 className="text-lg font-extrabold text-white leading-tight drop-shadow-lg group-hover:text-primary-foreground transition-colors">
+                      <h3 className="text-lg font-extrabold text-white leading-tight drop-shadow-lg transition-colors">
                         {job.title}
                       </h3>
                     </div>
