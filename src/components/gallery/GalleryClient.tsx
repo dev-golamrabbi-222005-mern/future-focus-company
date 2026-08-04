@@ -185,7 +185,7 @@ export function GalleryClient() {
         ease: 'power2.out',
         scrollTrigger: { trigger: card, start: 'top 90%' },
         onUpdate: () => {
-          card.childNodes[0].textContent = Math.floor(obj.val).toLocaleString();
+          card.childNodes[0].textContent = Math.floor(obj.val).toLocaleString(locale === 'bn' ? 'bn-BD' : locale === 'ar' ? 'ar-SA' : 'en-US');
         },
       });
     });

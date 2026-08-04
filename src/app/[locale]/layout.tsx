@@ -8,6 +8,7 @@ import { ThemeProvider } from '@/providers/ThemeProvider';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import WhatsAppFloat from '@/components/ui/WhatsAppFloat';
+import { JsonLd } from '@/components/seo/JsonLd';
 import '@/styles/globals.css';
 
 const inter = Inter({ subsets: ['latin'] });

@@ -29,10 +29,10 @@ export function Hero() {
   }, []);
 
   const stats = [
-    { label: t('statsPlacements'), value: '15,000+', icon: Users },
-    { label: t('statsSatisfaction'), value: '98.5%', icon: CheckCircle2 },
-    { label: t('statsExperience'), value: '14+ Years', icon: Award },
-    { label: t('statsCountries'), value: '6 GCC Nations', icon: Globe2 },
+    { label: t('statsPlacements'), value: t('statsPlacementsValue'), icon: Users },
+    { label: t('statsSatisfaction'), value: t('statsSatisfactionValue'), icon: CheckCircle2 },
+    { label: t('statsExperience'), value: t('statsExperienceValue'), icon: Award },
+    { label: t('statsCountries'), value: t('statsCountriesValue'), icon: Globe2 },
   ];
 
   useGSAP(

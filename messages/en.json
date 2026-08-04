@@ -21,7 +21,11 @@
     "statsPlacements": "Placements Completed",
     "statsSatisfaction": "Employer Satisfaction",
     "statsExperience": "Years Experience",
-    "statsCountries": "Partner Countries"
+    "statsCountries": "Partner Countries",
+    "statsPlacementsValue": "15,000+",
+    "statsSatisfactionValue": "98.5%",
+    "statsExperienceValue": "14+ Years",
+    "statsCountriesValue": "6 GCC Nations"
   },
   "Hero1": {
     "brandName": "Future Focus",
@@ -86,6 +90,11 @@
     "clients": "Satisfied Clients",
 
     "support": "Customer Support",
+
+    "experienceValue": "05+",
+    "workersValue": "5K+",
+    "clientsValue": "150+",
+    "supportValue": "24/7",
 
     "companyName": "Future Focus Company",
 
@@ -659,7 +668,8 @@
   "country": "Saudi Arabia",
   "cities": "Riyadh • Jeddah • Dammam • Eastern Province",
 
-  "experience": "Years Trusted"
+  "experience": "Years Trusted",
+  "experienceValue": "05+"
 },
 "WhatIsManpower": {
   "tag": "What We Do",
@@ -896,6 +906,10 @@
     "heroStatPlaced": "Workers Placed",
     "heroStatSalary": "Avg. Monthly Salary",
     "heroStatDays": "Avg. Deploy Time",
+    "heroStatJobsValue": "9+",
+    "heroStatPlacedValue": "5,000+",
+    "heroStatSalaryValue": "SAR 2K+",
+    "heroStatDaysValue": "15–30d",
 
     "filterTag": "Job Listings",
     "filterTitle": "Current Openings in Saudi Arabia",

@@ -30,10 +30,10 @@ export default function AboutCompany() {
   const imageRef = React.useRef<HTMLDivElement>(null);
 
   const stats = [
-    { icon: Building2,  value: "05+",  label: t("experience") },
-    { icon: Users,      value: "5K+",  label: t("workers")    },
-    { icon: BriefcaseBusiness, value: "150+", label: t("clients") },
-    { icon: ShieldCheck, value: "24/7", label: t("support")   },
+    { icon: Building2,  value: t("experienceValue"),  label: t("experience") },
+    { icon: Users,      value: t("workersValue"),  label: t("workers")    },
+    { icon: BriefcaseBusiness, value: t("clientsValue"), label: t("clients") },
+    { icon: ShieldCheck, value: t("supportValue"), label: t("support")   },
   ];
 
   useGSAP(
