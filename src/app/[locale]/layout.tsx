@@ -8,6 +8,7 @@ import { ThemeProvider } from '@/providers/ThemeProvider';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import WhatsAppFloat from '@/components/ui/WhatsAppFloat';
+import { ChatWidget } from '@/components/features/chat/ChatWidget';
 import { JsonLd } from '@/components/seo/JsonLd';
 import '@/styles/globals.css';
 
@@ -125,6 +126,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
             <main className="flex-1">{children}</main>
             <Footer />
             <WhatsAppFloat />
+            <ChatWidget />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

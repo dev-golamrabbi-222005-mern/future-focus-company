@@ -1200,5 +1200,16 @@
       "title": "Contact Us | Riyadh (Saudi Arabia) & Dhaka (Bangladesh) Offices",
       "description": "Get in touch with Future Focus Company. Visit our Saudi Arabia office in Riyadh or Bangladesh office in Banani, Dhaka. Request a custom manpower proposal."
     }
+  },
+  "ChatWidget": {
+    "title": "AI Assistant",
+    "subtitle": "Online • Ask me anything",
+    "placeholder": "Type your message...",
+    "send": "Send message",
+    "typing": "AI is typing...",
+    "welcomeMessage": "Hello! How can I help you with our recruitment & manpower services today?",
+    "error": "Sorry, something went wrong. Please try again.",
+    "open": "Open AI Support",
+    "close": "Close AI Support"
   }
 }
