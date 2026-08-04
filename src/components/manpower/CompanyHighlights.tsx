@@ -77,7 +77,7 @@ export default function CompanyHighlights() {
         />
       </div>
 
-      <div className="relative mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto w-full max-w-[1380px] px-4 sm:px-6 lg:px-8">
 
         <div className="grid grid-cols-1 divide-y divide-white/10 sm:grid-cols-2 lg:grid-cols-3 md:divide-x md:divide-y-0 xl:grid-cols-5">
           {highlights.map((item, index) => {

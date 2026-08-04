@@ -33,8 +33,8 @@ export function ContactFormSection() {
   };
 
   return (
-    <div className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+    <div className="max-w-[1380px] mx-auto">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-12">
         {/* Left Column: Interactive Contact Form */}
         <div className="gsap-fade-up p-8 sm:p-10 rounded-3xl border border-border bg-card shadow-lg space-y-6">
           <h2 className="text-2xl font-bold text-foreground">

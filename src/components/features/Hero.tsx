@@ -89,7 +89,7 @@ export function Hero() {
   );
 
   return (
-    <section ref={heroRef} className="relative min-h-[calc(100vh-80px)] flex flex-col justify-center items-center pt-8 md:pt-10 lg:pt-12 pb-12 md:pb-16 lg:pb-20 overflow-hidden">
+    <section ref={heroRef} className="relative max-h-[70vh] min-h-[500px] h-[70vh] flex flex-col justify-center items-center py-6 md:py-8 overflow-hidden">
       {/* Background Decorative Orbs */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-primary/15 rounded-full blur-[140px] pointer-events-none -z-10" />
       <div className="absolute top-1/3 right-10 w-[350px] h-[350px] bg-accent/15 rounded-full blur-[120px] pointer-events-none -z-10" />
@@ -137,7 +137,7 @@ export function Hero() {
             </Link>
 
             <Link
-              href={`/${locale}/jobs`}
+              href={`/${locale}/careers`}
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl border-2 border-primary/40 bg-card text-foreground font-bold text-base hover:bg-muted hover:border-primary/60 transition-all duration-200"
             >
               <Users className="h-5 w-5 text-primary" />

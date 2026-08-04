@@ -7,8 +7,8 @@ export default function GoogleMapSection() {
   const t = useTranslations("GoogleMap");
 
   return (
-    <section className="py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-5">
+    <section className="py-12 md:py-16 lg:py-20 bg-background">
+      <div className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8">
 
         {/* Header */}
 

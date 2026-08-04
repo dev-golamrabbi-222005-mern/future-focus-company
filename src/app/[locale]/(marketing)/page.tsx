@@ -3,9 +3,12 @@ import AboutSection from '@/components/sections/AboutSection';
 import { StatsSection } from '@/components/sections/StatsSection';
 import { WhyChooseUs } from '@/components/sections/WhyChooseUs';
 import { AboutSnippet } from '@/components/sections/AboutSnippet';
+import { SectorsGrid } from '@/components/features/services/SectorsGrid';
 import { GlobalReachMap } from '@/components/sections/GlobalReachMap';
 import { ProcessTimeline } from '@/components/sections/ProcessTimeline';
-import { SectorsGrid } from '@/components/sections/SectorsGrid';
+import { Testimonials } from '@/components/sections/Testimonials';
+import { FAQ } from '@/components/sections/FAQ';
+import { GetInTouch } from '@/components/sections/GetInTouch';
 
 interface HomePageProps {
   params: Promise<{ locale: string }>;
@@ -39,6 +42,9 @@ export default async function HomePage({ params }: HomePageProps) {
 
       {/* Step-by-Step Recruitment Process Timeline */}
       <ProcessTimeline />
+      <Testimonials/>
+      <FAQ/>
+      <GetInTouch/>
     </>
   );
 }
