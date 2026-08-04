@@ -1,32 +1,21 @@
-import type { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
-import { GalleryClient } from '@/components/gallery/GalleryClient';
+'use client';
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'SEO' });
+import * as React from 'react';
+import Link from 'next/link';
+import { useTranslations, useLocale } from 'next-intl';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import {
+  Camera, ArrowRight, Play, X, ChevronLeft, ChevronRight,
+  Users, Briefcase, Award, Globe,
+} from 'lucide-react';
 
-  return {
-    title: t('gallery.title'),
-    description: t('gallery.description'),
-    alternates: {
-      canonical: `/${locale}/gallery`,
-      languages: {
-        en: '/en/gallery',
-        bn: '/bn/gallery',
-        ar: '/ar/gallery',
-        'x-default': '/en/gallery',
-      },
-    },
-    openGraph: {
-      title: t('gallery.title'),
-      description: t('gallery.description'),
-      url: `/${locale}/gallery`,
-    },
-  };
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
 }
 
-// ─── Gallery data ────────────────────────────────────────────────────────────
 const SLIDE_IMAGES = [
   'https://i.postimg.cc/k5K41hnC/Hero-1.png',
   'https://i.postimg.cc/g08JSBYY/Hero-2.jpg',
@@ -48,7 +37,6 @@ const ITEM_IMAGES = [
 
 const STAT_ICONS = [Users, Briefcase, Award, Globe];
 
-// ─── Lightbox Component ──────────────────────────────────────────────────────
 function Lightbox({
   items, activeIdx, onClose, onPrev, onNext,
 }: {
@@ -73,30 +61,27 @@ function Lightbox({
   return (
     <motion.div
       initial={{ opacity: 0 }}
-      animate={{ opacity: 2 }}
+      animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="fixed inset-0 z-[999] flex items-center justify-center bg-black/90 backdrop-blur-md p-4"
       onClick={onClose}
     >
       <motion.div
         initial={{ scale: 0.88, opacity: 0 }}
-        animate={{ scale: 1, opacity: 2 }}
+        animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.88, opacity: 0 }}
         transition={{ type: 'spring', stiffness: 260, damping: 22 }}
         className="relative w-full max-w-4xl rounded-3xl overflow-hidden bg-card border border-border shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Image */}
         <div className="relative aspect-video w-full">
           <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
         </div>
-        {/* Caption */}
         <div className="p-6 space-y-1">
           <h3 className="text-xl font-extrabold text-foreground">{item.title}</h3>
           <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
         </div>
-        {/* Controls */}
         <button onClick={onClose} className="absolute top-4 right-4 p-2 rounded-full bg-black/50 text-white hover:bg-black/80 transition-colors">
           <X className="h-5 w-5" />
         </button>
@@ -106,7 +91,6 @@ function Lightbox({
         <button onClick={onNext} className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white hover:bg-black/80 transition-colors">
           <ChevronRight className="h-6 w-6" />
         </button>
-        {/* Counter */}
         <span className="absolute bottom-20 right-6 text-xs text-white/60 font-bold">
           {activeIdx + 1} / {items.length}
         </span>
@@ -115,19 +99,16 @@ function Lightbox({
   );
 }
 
-// ─── Main Page ───────────────────────────────────────────────────────────────
-export default function GalleryPage() {
+export function GalleryClient() {
   const t = useTranslations('GalleryPage');
   const locale = useLocale();
 
-  // Hero background slideshow
   const [heroIdx, setHeroIdx] = React.useState(0);
   React.useEffect(() => {
     const id = setInterval(() => setHeroIdx((p) => (p + 1) % SLIDE_IMAGES.length), 5000);
     return () => clearInterval(id);
   }, []);
 
-  // Filter state
   const CATEGORIES = ['All', 'Training', 'Departure', 'Office', 'Events'] as const;
   type Cat = typeof CATEGORIES[number];
   const [activeFilter, setActiveFilter] = React.useState<Cat>('All');
@@ -146,7 +127,6 @@ export default function GalleryPage() {
     ? galleryItems
     : galleryItems.filter((item) => item.category === activeFilter);
 
-  // Lightbox
   const [lightboxIdx, setLightboxIdx] = React.useState<number | null>(null);
   const openLightbox = (idx: number) => setLightboxIdx(idx);
   const closeLightbox = () => setLightboxIdx(null);
@@ -155,15 +135,11 @@ export default function GalleryPage() {
   const nextLightbox = () =>
     setLightboxIdx((p) => (p === null ? 0 : (p + 1) % filtered.length));
 
-  // Stats section InView
   const statsRef = React.useRef<HTMLDivElement>(null);
-
-  // GSAP refs
   const heroRef = React.useRef<HTMLDivElement>(null);
   const filterRef = React.useRef<HTMLDivElement>(null);
   const ctaRef = React.useRef<HTMLDivElement>(null);
 
-  // ── GSAP: Hero text entrance ──
   useGSAP(() => {
     if (!heroRef.current) return;
     gsap.fromTo(
@@ -173,7 +149,6 @@ export default function GalleryPage() {
     );
   }, { scope: heroRef });
 
-  // ── GSAP: Filter section header ──
   useGSAP(() => {
     if (!filterRef.current) return;
     gsap.fromTo(
@@ -186,7 +161,6 @@ export default function GalleryPage() {
     );
   }, { scope: filterRef });
 
-  // ── GSAP: CTA section ──
   useGSAP(() => {
     if (!ctaRef.current) return;
     gsap.fromTo(
@@ -199,13 +173,11 @@ export default function GalleryPage() {
     );
   }, { scope: ctaRef });
 
-  // ── GSAP: Stats count-up ──
   useGSAP(() => {
     if (!statsRef.current) return;
     const cards = statsRef.current.querySelectorAll('.stat-num');
     cards.forEach((card) => {
       const target = parseInt(card.getAttribute('data-target') || '0', 10);
-      const suffix = card.querySelector('span')?.textContent ?? '';
       const obj = { val: 0 };
       gsap.to(obj, {
         val: target,
@@ -213,7 +185,6 @@ export default function GalleryPage() {
         ease: 'power2.out',
         scrollTrigger: { trigger: card, start: 'top 90%' },
         onUpdate: () => {
-          const span = card.querySelector('span');
           card.childNodes[0].textContent = Math.floor(obj.val).toLocaleString();
         },
       });
@@ -229,17 +200,13 @@ export default function GalleryPage() {
 
   return (
     <>
-      {/* ════════════════════════════════════════════════════════
-          SECTION 1 — HERO BANNER
-      ════════════════════════════════════════════════════════ */}
       <section ref={heroRef} className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-background">
-        {/* Animated background */}
         <div className="absolute inset-0 z-0">
           <AnimatePresence mode="wait">
             <motion.div
               key={heroIdx}
               initial={{ opacity: 0, scale: 1.08 }}
-              animate={{ opacity: 0.45, scale: 1 }}
+              animate={{ opacity: 0.22, scale: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 1.6, ease: 'easeInOut' }}
               className="w-full h-full"
@@ -247,14 +214,11 @@ export default function GalleryPage() {
               <img src={SLIDE_IMAGES[heroIdx]} alt="" className="w-full h-full object-cover" />
             </motion.div>
           </AnimatePresence>
-          {/* Gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/60 to-background" />
-          {/* Glow blob */}
           <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-primary/15 rounded-full blur-[130px] pointer-events-none" />
         </div>
 
         <div className="relative z-10 w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8 py-20 md:py-28 text-center">
-          {/* Tagline badge */}
           <div className="hero-anim mb-6 flex justify-center">
             <span className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
               <Camera className="h-3.5 w-3.5" />
@@ -262,7 +226,6 @@ export default function GalleryPage() {
             </span>
           </div>
 
-          {/* Heading */}
           <h1 className="hero-anim text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground leading-[1.1] mb-6">
             {t('heroHeading')}{' '}
             <span className="bg-gradient-to-r from-sky-500 via-primary to-cyan-400 bg-clip-text text-transparent">
@@ -270,12 +233,10 @@ export default function GalleryPage() {
             </span>
           </h1>
 
-          {/* Subheading */}
           <p className="hero-anim text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-10">
             {t('heroSubheading')}
           </p>
 
-          {/* CTA + stats row */}
           <div className="hero-anim flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
             <motion.a
               href="#gallery-grid"
@@ -287,7 +248,6 @@ export default function GalleryPage() {
             </motion.a>
           </div>
 
-          {/* Hero stats chips */}
           <div className="hero-anim flex flex-wrap items-center justify-center gap-4">
             {[
               { num: t('heroStat1Num'), label: t('heroStat1Label') },
@@ -303,13 +263,8 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════
-          SECTION 2 — FILTER + MASONRY GRID
-      ════════════════════════════════════════════════════════ */}
       <section id="gallery-grid" ref={filterRef} className="py-16 md:py-20 lg:py-24 bg-background">
         <div className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8">
-
-          {/* Section Header */}
           <div className="text-center mb-12 filter-anim">
             <div className="mb-4 flex justify-center">
               <span className="text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
@@ -324,7 +279,6 @@ export default function GalleryPage() {
             </p>
           </div>
 
-          {/* Filter Tabs */}
           <div className="filter-anim flex flex-wrap items-center justify-center gap-2 mb-10">
             {CATEGORIES.map((cat) => (
               <motion.button
@@ -346,7 +300,6 @@ export default function GalleryPage() {
             ))}
           </div>
 
-          {/* Grid */}
           <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatePresence mode="popLayout">
               {filtered.map((item, idx) => (
@@ -362,27 +315,22 @@ export default function GalleryPage() {
                   role="button"
                   aria-label={`Open ${item.title}`}
                 >
-                  {/* Image */}
                   <img
                     src={item.img}
                     alt={item.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
-                  {/* Category badge (always visible) */}
                   <div className="absolute top-4 left-4">
                     <span className="text-[10px] font-bold uppercase tracking-widest bg-primary/90 text-primary-foreground px-3 py-1 rounded-full backdrop-blur-sm">
                       {item.category}
                     </span>
                   </div>
-                  {/* Play icon on hover */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="p-4 rounded-full bg-white/20 backdrop-blur-md border border-white/30">
                       <Play className="h-7 w-7 text-white fill-white" />
                     </div>
                   </div>
-                  {/* Caption on hover */}
                   <div className="absolute bottom-0 inset-x-0 p-5 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-400">
                     <h3 className="text-base font-extrabold text-white mb-1">{item.title}</h3>
                     <p className="text-xs text-white/70 leading-relaxed line-clamp-2">{item.desc}</p>
@@ -394,15 +342,10 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════
-          SECTION 3 — ANIMATED STATS BAR
-      ════════════════════════════════════════════════════════ */}
       <section className="py-16 md:py-20 bg-muted/40 border-y border-border/60 relative overflow-hidden">
-        {/* Background glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[220px] bg-primary/10 rounded-full blur-[130px] pointer-events-none" />
 
         <div ref={statsRef} className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8">
-          {/* Header */}
           <div className="text-center mb-12">
             <div className="mb-4 flex justify-center">
               <span className="text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
@@ -414,7 +357,6 @@ export default function GalleryPage() {
             </h2>
           </div>
 
-          {/* Stats grid */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map(({ numKey, suffix, label, icon: Icon }, idx) => {
               const rawNum = t(numKey);
@@ -428,13 +370,10 @@ export default function GalleryPage() {
                   transition={{ duration: 0.7, delay: idx * 0.12, ease: 'easeOut' }}
                   className="relative group p-7 rounded-3xl border border-border bg-card shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center overflow-hidden"
                 >
-                  {/* Glow on hover */}
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
-                  {/* Icon */}
                   <div className="mb-4 inline-flex items-center justify-center h-12 w-12 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 mx-auto">
                     <Icon className="h-6 w-6" />
                   </div>
-                  {/* Animated number */}
                   <div className="text-4xl md:text-5xl font-black text-foreground mb-2 tabular-nums stat-num" data-target={num}>
                     0<span className="text-primary">{suffix}</span>
                   </div>
@@ -446,18 +385,13 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════
-          SECTION 4 — CALL TO ACTION
-      ════════════════════════════════════════════════════════ */}
       <section ref={ctaRef} className="relative py-24 md:py-32 bg-background overflow-hidden">
-        {/* Background glows */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute left-1/2 top-0 h-[450px] w-[450px] -translate-x-1/2 rounded-full bg-primary/10 blur-[130px]" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(3,105,161,0.06),transparent_70%)]" />
         </div>
 
         <div className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8 text-center">
-          {/* Tagline */}
           <div className="cta-anim mb-6 flex justify-center">
             <motion.span
               initial={{ opacity: 0, y: 20 }}
@@ -471,7 +405,6 @@ export default function GalleryPage() {
             </motion.span>
           </div>
 
-          {/* Heading */}
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -482,15 +415,12 @@ export default function GalleryPage() {
             {t('ctaHeading')}
           </motion.h2>
 
-          {/* Divider */}
           <div className="cta-anim mx-auto mb-8 h-1 w-20 rounded-full bg-gradient-to-r from-primary to-cyan-400" />
 
-          {/* Subheading */}
           <p className="cta-anim text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-12">
             {t('ctaSubheading')}
           </p>
 
-          {/* Buttons */}
           <div className="cta-anim flex flex-col sm:flex-row items-center justify-center gap-4">
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Link
@@ -512,7 +442,6 @@ export default function GalleryPage() {
             </motion.div>
           </div>
 
-          {/* Trust badges */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -535,7 +464,6 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* ════════════════ LIGHTBOX ════════════════ */}
       <AnimatePresence>
         {lightboxIdx !== null && (
           <Lightbox

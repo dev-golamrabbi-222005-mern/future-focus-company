@@ -1151,5 +1151,40 @@
     "en": "English",
     "bn": "বাংলা",
     "ar": "العربية"
+  },
+  "SEO": {
+    "siteName": "Future Focus Company",
+    "defaultTitle": "Future Focus Company | Govt. Approved Recruitment Agency RL-1428",
+    "titleTemplate": "%s | Future Focus Company",
+    "defaultDescription": "Connecting Skilled Bangladeshi Talent with Top Employers in Saudi Arabia & the Middle East. Govt. Approved Recruitment Agency (RL-1428). High quality workforce mobilization.",
+    "keywords": "Recruitment Agency Bangladesh, Saudi Arabia Manpower, Govt Approved Agency RL-1428, Skilled Bangladeshi Workers, Gulf Manpower Recruitment, Future Focus Company, Labor Visa Recruitment",
+    "home": {
+      "title": "Government Approved Recruitment Agency RL-1428 | Future Focus Company",
+      "description": "Premier manpower recruitment agency bridging skilled Bangladeshi talent with top employers in Saudi Arabia & GCC. Transparent, trusted & Govt. approved (RL-1428)."
+    },
+    "about": {
+      "title": "About Us - Premier Manpower Recruitment Agency",
+      "description": "Learn about Future Focus Company (RL-1428), our mission, executive leadership, and track record of sending over 5,000+ skilled workers to Saudi Arabia & Gulf countries."
+    },
+    "services": {
+      "title": "Recruitment & Manpower Services | Saudi Arabia & GCC",
+      "description": "Comprehensive manpower recruitment services including trade testing, medical screening, visa processing, flight arrangements, and candidate mobilization."
+    },
+    "manpower": {
+      "title": "Hire Skilled Bangladeshi Manpower | Construction, MEP, Hospitality",
+      "description": "Mobilize certified Bangladeshi talent for Saudi Vision 2030 projects. Welders, electricians, masons, hospitality staff, facility maintenance workers and engineers."
+    },
+    "careers": {
+      "title": "Job Vacancies & Overseas Careers | Apply for Saudi Arabia Visa",
+      "description": "Explore verified job vacancies in Saudi Arabia, UAE & Qatar. Apply directly for skilled, semi-skilled, and professional overseas employment opportunities."
+    },
+    "gallery": {
+      "title": "Deployment Gallery & Success Stories | Future Focus Company",
+      "description": "View real candidate deployment photos, trade center training sessions, visa stamping approvals, and employer selection drives."
+    },
+    "contact": {
+      "title": "Contact Us | Riyadh (Saudi Arabia) & Dhaka (Bangladesh) Offices",
+      "description": "Get in touch with Future Focus Company. Visit our Saudi Arabia office in Riyadh or Bangladesh office in Banani, Dhaka. Request a custom manpower proposal."
+    }
   }
 }
