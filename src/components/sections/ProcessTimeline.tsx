@@ -86,14 +86,15 @@ export function ProcessTimeline() {
 
         {/* Timeline Layout */}
         <div className="relative max-w-4xl mx-auto">
-          <div className="absolute left-6 md:left-1/2 top-4 bottom-4 w-1 bg-border/60 -translate-x-1/2 rounded-full" />
-
+          {/* Background line */}
+          <div className="absolute left-5 md:left-1/2 top-4 bottom-4 w-[2px] bg-border/60 md:-translate-x-1/2 rounded-full" />
+          {/* Animated fill line */}
           <div
             ref={lineRef}
-            className="absolute left-6 md:left-1/2 top-4 bottom-4 w-1 bg-gradient-to-b from-primary via-sky-400 to-accent -translate-x-1/2 rounded-full origin-top"
+            className="absolute left-5 md:left-1/2 top-4 bottom-4 w-[2px] bg-gradient-to-b from-primary via-sky-400 to-accent md:-translate-x-1/2 rounded-full origin-top"
           />
 
-          <div className="space-y-12 md:space-y-16 relative">
+          <div className="space-y-10 md:space-y-16 relative">
             {steps.map((step, idx) => {
               const Icon = step.icon;
               const isEven = idx % 2 === 0;
@@ -111,12 +112,13 @@ export function ProcessTimeline() {
                     damping: 14,
                     delay: idx * 0.05,
                   }}
-                  className={`timeline-step flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12 ${
+                  className={`timeline-step relative flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12 ${
                     isEven ? 'md:flex-row-reverse' : ''
                   }`}
                 >
-                  <div className="w-full md:w-1/2 pl-14 md:pl-0">
-                    <div className="p-6 sm:p-8 rounded-3xl border border-border bg-card shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 space-y-3">
+                  {/* Card — offset left on mobile to clear dot */}
+                  <div className="w-full md:w-1/2 pl-12 md:pl-0">
+                    <div className="p-5 sm:p-7 rounded-3xl border border-border bg-card shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 space-y-3">
                       <div className="flex items-center justify-between">
                         <span className="text-xs font-extrabold tracking-widest text-primary uppercase bg-primary/10 px-3 py-1 rounded-full">
                           Step {step.num}
@@ -126,7 +128,7 @@ export function ProcessTimeline() {
                         </div>
                       </div>
 
-                      <h3 className="text-xl font-extrabold text-foreground tracking-tight">
+                      <h3 className="text-lg sm:text-xl font-extrabold text-foreground tracking-tight">
                         {step.title}
                       </h3>
 
@@ -136,8 +138,9 @@ export function ProcessTimeline() {
                     </div>
                   </div>
 
-                  <div className="absolute left-6 md:left-1/2 -translate-x-1/2 flex items-center justify-center">
-                    <div className="h-12 w-12 rounded-full bg-primary text-primary-foreground font-extrabold text-sm border-4 border-background shadow-lg flex items-center justify-center">
+                  {/* Dot — left-5 on mobile, centred on md+ */}
+                  <div className="absolute left-5 top-6 md:left-1/2 md:top-1/2 md:-translate-y-1/2 -translate-x-1/2 flex items-center justify-center z-10">
+                    <div className="h-10 w-10 md:h-12 md:w-12 rounded-full bg-primary text-primary-foreground font-extrabold text-xs md:text-sm border-4 border-background shadow-lg flex items-center justify-center">
                       {step.num}
                     </div>
                   </div>

@@ -79,10 +79,10 @@ export default function CareersCTA() {
 
             {/* Heading */}
             <div className="cta-up space-y-1">
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight text-foreground">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight text-foreground">
                 {t("ctaTitle1")}
               </h2>
-              <span className="block text-4xl sm:text-5xl lg:text-6xl font-black bg-gradient-to-r from-primary via-sky-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="block text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black bg-gradient-to-r from-primary via-sky-400 to-cyan-400 bg-clip-text text-transparent">
                 {t("ctaTitle2")}
               </span>
             </div>

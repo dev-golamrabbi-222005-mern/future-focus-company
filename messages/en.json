@@ -21,7 +21,11 @@
     "statsPlacements": "Placements Completed",
     "statsSatisfaction": "Employer Satisfaction",
     "statsExperience": "Years Experience",
-    "statsCountries": "Partner Countries"
+    "statsCountries": "Partner Countries",
+    "statsPlacementsValue": "15,000+",
+    "statsSatisfactionValue": "98.5%",
+    "statsExperienceValue": "14+ Years",
+    "statsCountriesValue": "6 GCC Nations"
   },
   "Hero1": {
     "brandName": "Future Focus",
@@ -86,6 +90,11 @@
     "clients": "Satisfied Clients",
 
     "support": "Customer Support",
+
+    "experienceValue": "05+",
+    "workersValue": "5K+",
+    "clientsValue": "150+",
+    "supportValue": "24/7",
 
     "companyName": "Future Focus Company",
 
@@ -659,7 +668,8 @@
   "country": "Saudi Arabia",
   "cities": "Riyadh • Jeddah • Dammam • Eastern Province",
 
-  "experience": "Years Trusted"
+  "experience": "Years Trusted",
+  "experienceValue": "05+"
 },
 "WhatIsManpower": {
   "tag": "What We Do",
@@ -896,6 +906,10 @@
     "heroStatPlaced": "Workers Placed",
     "heroStatSalary": "Avg. Monthly Salary",
     "heroStatDays": "Avg. Deploy Time",
+    "heroStatJobsValue": "9+",
+    "heroStatPlacedValue": "5,000+",
+    "heroStatSalaryValue": "SAR 2K+",
+    "heroStatDaysValue": "15–30d",
 
     "filterTag": "Job Listings",
     "filterTitle": "Current Openings in Saudi Arabia",
@@ -1151,5 +1165,51 @@
     "en": "English",
     "bn": "বাংলা",
     "ar": "العربية"
+  },
+  "SEO": {
+    "siteName": "Future Focus Company",
+    "defaultTitle": "Future Focus Company | Govt. Approved Recruitment Agency RL-1428",
+    "titleTemplate": "%s | Future Focus Company",
+    "defaultDescription": "Connecting Skilled Bangladeshi Talent with Top Employers in Saudi Arabia & the Middle East. Govt. Approved Recruitment Agency (RL-1428). High quality workforce mobilization.",
+    "keywords": "Recruitment Agency Bangladesh, Saudi Arabia Manpower, Govt Approved Agency RL-1428, Skilled Bangladeshi Workers, Gulf Manpower Recruitment, Future Focus Company, Labor Visa Recruitment",
+    "home": {
+      "title": "Government Approved Recruitment Agency RL-1428 | Future Focus Company",
+      "description": "Premier manpower recruitment agency bridging skilled Bangladeshi talent with top employers in Saudi Arabia & GCC. Transparent, trusted & Govt. approved (RL-1428)."
+    },
+    "about": {
+      "title": "About Us - Premier Manpower Recruitment Agency",
+      "description": "Learn about Future Focus Company (RL-1428), our mission, executive leadership, and track record of sending over 5,000+ skilled workers to Saudi Arabia & Gulf countries."
+    },
+    "services": {
+      "title": "Recruitment & Manpower Services | Saudi Arabia & GCC",
+      "description": "Comprehensive manpower recruitment services including trade testing, medical screening, visa processing, flight arrangements, and candidate mobilization."
+    },
+    "manpower": {
+      "title": "Hire Skilled Bangladeshi Manpower | Construction, MEP, Hospitality",
+      "description": "Mobilize certified Bangladeshi talent for Saudi Vision 2030 projects. Welders, electricians, masons, hospitality staff, facility maintenance workers and engineers."
+    },
+    "careers": {
+      "title": "Job Vacancies & Overseas Careers | Apply for Saudi Arabia Visa",
+      "description": "Explore verified job vacancies in Saudi Arabia, UAE & Qatar. Apply directly for skilled, semi-skilled, and professional overseas employment opportunities."
+    },
+    "gallery": {
+      "title": "Deployment Gallery & Success Stories | Future Focus Company",
+      "description": "View real candidate deployment photos, trade center training sessions, visa stamping approvals, and employer selection drives."
+    },
+    "contact": {
+      "title": "Contact Us | Riyadh (Saudi Arabia) & Dhaka (Bangladesh) Offices",
+      "description": "Get in touch with Future Focus Company. Visit our Saudi Arabia office in Riyadh or Bangladesh office in Banani, Dhaka. Request a custom manpower proposal."
+    }
+  },
+  "ChatWidget": {
+    "title": "AI Assistant",
+    "subtitle": "Online • Ask me anything",
+    "placeholder": "Type your message...",
+    "send": "Send message",
+    "typing": "AI is typing...",
+    "welcomeMessage": "Hello! How can I help you with our recruitment & manpower services today?",
+    "error": "Sorry, something went wrong. Please try again.",
+    "open": "Open AI Support",
+    "close": "Close AI Support"
   }
 }

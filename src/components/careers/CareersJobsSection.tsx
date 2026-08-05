@@ -26,15 +26,15 @@ if (typeof window !== "undefined") {
 
 /* ── Job image map — curated Unsplash photos per role ── */
 const JOB_IMAGES: Record<string, string> = {
-  job1: "https://i.postimg.cc/bwRztbmv/Hospitality.png", // receptionist / hotel lobby
-  job2: "https://i.postimg.cc/JzQ1kJpy/Housekeeper.png", // housekeeper
-  job3: "https://i.postimg.cc/qvGk3n1h/Security-Guard.png", // security guard
-  job4: "https://i.postimg.cc/T1xjR06D/Driver.png", // driver
-  job5: "https://i.postimg.cc/G3PJXWF8/Office-Boy.png", // office / tea boy
-  job6: "https://i.postimg.cc/Wz7GtZNM/Gardener.png", // gardener
-  job7: "https://i.postimg.cc/VvFq5tfn/General-Helper.png", // general labor
-  job8: "https://i.postimg.cc/VvFq5tfM/Even-staff.png", // event staff
-  job9: "https://i.postimg.cc/tJz376R0/Golf-Cart-Driver.png", // golf cart
+  job1: "https://i.postimg.cc/sXLhKzXG/Hospitality.png", // receptionist / hotel lobby
+  job2: "https://i.postimg.cc/RhnnDY6P/Housekeeper.png", // housekeeper
+  job3: "https://i.postimg.cc/Fs3TfWWG/Security-Guard.png", // security guard
+  job4: "https://i.postimg.cc/8CDBrTJj/Driver.png", // driver
+  job5: "https://i.postimg.cc/VLnKSGGF/Office-Boy.png", // office / tea boy
+  job6: "https://i.postimg.cc/Bb8xG6kG/Gardener.png", // gardener
+  job7: "https://i.postimg.cc/SRXWps57/General-Helper.png", // general labor
+  job8: "https://i.postimg.cc/yxJFzd5c/Even-staff.png", // event staff
+  job9: "https://i.postimg.cc/t4dFb8ST/Golf-Cart-Driver.png", // golf cart
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
@@ -155,9 +155,9 @@ export default function CareersJobsSection() {
         </div>
 
         {/* ── Search + Filter bar ── */}
-        <div className="flex flex-col sm:flex-row gap-4 items-center">
+        <div className="flex flex-col gap-4">
           {/* Search input */}
-          <div className="relative flex-1 w-full">
+          <div className="relative w-full">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <input
               type="text"
@@ -169,12 +169,12 @@ export default function CareersJobsSection() {
           </div>
 
           {/* Filter pills */}
-          <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
+          <div className="flex flex-wrap gap-2">
             {FILTER_KEYS.map((key) => (
               <button
                 key={key}
                 onClick={() => setActiveFilter(key)}
-                className={`rounded-full px-4 py-2 text-xs font-bold transition-all border ${
+                className={`rounded-full px-3.5 py-2 text-xs font-bold transition-all border ${
                   activeFilter === key
                     ? "bg-primary text-primary-foreground border-primary shadow-lg shadow-primary/25"
                     : "bg-card text-muted-foreground border-border hover:border-primary/40 hover:text-primary"

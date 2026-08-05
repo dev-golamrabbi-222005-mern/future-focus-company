@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { motion } from "framer-motion";
 import {
   Search,
@@ -21,6 +21,10 @@ if (typeof window !== "undefined") {
 
 export default function ProcessSection() {
   const t = useTranslations("Process");
+  const locale = useLocale();
+
+  const formatStepNum = (n: number) =>
+    n.toLocaleString(locale === 'bn' ? 'bn-BD' : locale === 'ar' ? 'ar-SA' : 'en-US', { minimumIntegerDigits: 2 });
 
   const sectionRef = React.useRef<HTMLDivElement>(null);
   const glowRef = React.useRef<HTMLDivElement>(null);
@@ -73,37 +77,37 @@ export default function ProcessSection() {
 
   const process = [
     {
-      number: "01",
+      number: formatStepNum(1),
       title: t("steps.0.title"),
       description: t("steps.0.description"),
       icon: Search,
     },
     {
-      number: "02",
+      number: formatStepNum(2),
       title: t("steps.1.title"),
       description: t("steps.1.description"),
       icon: Lightbulb,
     },
     {
-      number: "03",
+      number: formatStepNum(3),
       title: t("steps.2.title"),
       description: t("steps.2.description"),
       icon: Users,
     },
     {
-      number: "04",
+      number: formatStepNum(4),
       title: t("steps.3.title"),
       description: t("steps.3.description"),
       icon: ShieldCheck,
     },
     {
-      number: "05",
+      number: formatStepNum(5),
       title: t("steps.4.title"),
       description: t("steps.4.description"),
       icon: FileText,
     },
     {
-      number: "06",
+      number: formatStepNum(6),
       title: t("steps.5.title"),
       description: t("steps.5.description"),
       icon: Plane,

@@ -160,7 +160,7 @@ export function GetInTouch() {
                 <span>{t('tagline')}</span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-foreground tracking-tight leading-tight">
                 {t('heading')}
               </h2>
 
@@ -214,7 +214,7 @@ export function GetInTouch() {
 
           {/* Right Column: Floating Form Card */}
           <div ref={rightColRef} className="lg:col-span-7">
-            <div className="bg-card border border-border rounded-3xl p-6 sm:p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
+            <div className="bg-card border border-border rounded-3xl p-5 sm:p-7 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
               {/* Header Decorative Accent */}
               <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-primary via-accent to-primary" />
 

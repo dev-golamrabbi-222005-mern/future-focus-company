@@ -18,17 +18,17 @@ export default function GoogleMapSection() {
             {t("tag")}
           </span>
 
-          <h2 className="mt-6 text-4xl md:text-5xl font-black text-foreground">
+          <h2 className="mt-6 text-3xl sm:text-4xl md:text-5xl font-black text-foreground">
             {t("title")}
           </h2>
 
-          <p className="mt-6 max-w-3xl mx-auto text-lg text-muted-foreground leading-8">
+          <p className="mt-6 max-w-3xl mx-auto text-base sm:text-lg text-muted-foreground leading-8">
             {t("description")}
           </p>
 
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10">
 
           {/* Left */}
 
@@ -99,15 +99,15 @@ export default function GoogleMapSection() {
 
             <div className="overflow-hidden rounded-3xl border border-border shadow-xl">
 
-              <iframe
-                src="https://www.google.com/maps?q=Riyadh,Saudi%20Arabia&output=embed"
-                width="100%"
-                height="550"
-                loading="lazy"
-                allowFullScreen
-                referrerPolicy="no-referrer-when-downgrade"
-                className="w-full"
-              />
+              <div className="relative w-full h-0 pb-[56.25%]">
+                <iframe
+                  src="https://www.google.com/maps?q=Riyadh,Saudi%20Arabia&output=embed"
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
 
             </div>
 
