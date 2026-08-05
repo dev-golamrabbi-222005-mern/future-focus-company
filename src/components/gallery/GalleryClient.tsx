@@ -24,15 +24,15 @@ const SLIDE_IMAGES = [
 ];
 
 const ITEM_IMAGES = [
-  'https://i.postimg.cc/k5K41hnC/Hero-1.png',
-  'https://i.postimg.cc/g08JSBYY/Hero-2.jpg',
-  'https://i.postimg.cc/43VdLFJc/Hero-3.png',
-  'https://i.postimg.cc/3wmRSbKv/Hero-4.png',
-  'https://i.postimg.cc/k5K41hnC/Hero-1.png',
-  'https://i.postimg.cc/g08JSBYY/Hero-2.jpg',
-  'https://i.postimg.cc/43VdLFJc/Hero-3.png',
-  'https://i.postimg.cc/3wmRSbKv/Hero-4.png',
-  'https://i.postimg.cc/k5K41hnC/Hero-1.png',
+  'https://i.postimg.cc/bw6qvjm3/Training.png',
+  'https://i.postimg.cc/Y0XdW8Tj/Departure.png',
+  'https://i.postimg.cc/PrsJGh7g/Office.png',
+  'https://i.postimg.cc/bw6qvjm3/Training.png',
+  'https://i.postimg.cc/bw6qvjm3/Training.png',
+  'https://i.postimg.cc/qBLKGNqb/Evnt.png',
+  'https://i.postimg.cc/qBLKGNqb/Evnt.png',
+  'https://i.postimg.cc/Y0XdW8Tj/Departure.png',
+  'https://i.postimg.cc/PrsJGh7g/Office.png',
 ];
 
 const STAT_ICONS = [Users, Briefcase, Award, Globe];

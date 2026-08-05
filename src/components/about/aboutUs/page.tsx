@@ -16,6 +16,7 @@ import {
   ShieldCheck,
   CheckCircle2,
 } from "lucide-react";
+import LightRays from "@/components/ui/LightRays";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -53,6 +54,27 @@ export default function AboutCompany() {
       ref={sectionRef}
       className="relative overflow-hidden bg-background py-20 lg:py-28"
     >
+
+
+      {/* LightRays decorative background */}
+      <div className="absolute inset-0 -z-10 pointer-events-none h-[300px] sm:h-[400px] lg:h-[600px]">
+        <LightRays
+          raysOrigin="top-center"
+          raysColor="#ffffff"
+          raysSpeed={1}
+          lightSpread={0.5}
+          rayLength={3}
+          followMouse={true}
+          mouseInfluence={0.1}
+          noiseAmount={0}
+          distortion={0}
+          className="custom-rays"
+          pulsating={false}
+          fadeDistance={1}
+          saturation={1}
+        />
+      </div>
+
       {/* Subtle grid background */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(3,105,161,0.08),transparent_50%)]" />
@@ -60,7 +82,7 @@ export default function AboutCompany() {
       </div>
 
       <div className="mx-auto max-w-[1380px] px-4 md:px-6 lg:px-8">
-        <div className="grid items-center gap-16 lg:grid-cols-2">
+        <div className="grid items-center gap-10 lg:gap-16 lg:grid-cols-2">
 
           {/* ── LEFT: Text content ── */}
           <div ref={textRef} className="space-y-8">
@@ -85,7 +107,7 @@ export default function AboutCompany() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="text-4xl md:text-5xl xl:text-6xl font-black leading-[1.08] text-foreground"
+              className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-black leading-[1.08] text-foreground"
             >
               {t("title1")}
               <span className="block bg-gradient-to-r from-primary via-sky-400 to-cyan-400 bg-clip-text text-transparent">
@@ -195,7 +217,7 @@ export default function AboutCompany() {
                   width={900}
                   height={1060}
                   priority
-                  className="h-auto w-full min-h-[520px] md:min-h-[720px] object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  className="h-auto w-full min-h-[340px] sm:min-h-[480px] md:min-h-[600px] object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
 
@@ -214,20 +236,20 @@ export default function AboutCompany() {
                 </div>
               </div>
 
-              {/* Experience badge */}
+              {/* Experience badge — hidden on xs, shown sm+ */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
-                className="absolute -left-8 top-14 z-10"
+                className="absolute -left-4 sm:-left-8 top-10 sm:top-14 z-10 hidden sm:block"
               >
                 <motion.div
                   animate={{ y: [-7, 0, -7] }}
                   transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}
-                  className="flex h-32 w-32 flex-col items-center justify-center rounded-full border-[5px] border-background bg-primary text-primary-foreground shadow-2xl"
+                  className="flex h-24 w-24 sm:h-32 sm:w-32 flex-col items-center justify-center rounded-full border-[5px] border-background bg-primary text-primary-foreground shadow-2xl"
                 >
-                  <span className="text-3xl font-black">05+</span>
+                  <span className="text-2xl sm:text-3xl font-black">05+</span>
                   <span className="mt-1 text-center text-[10px] uppercase tracking-[0.15em] leading-tight px-2">
                     {t("experience")}
                   </span>
@@ -241,7 +263,7 @@ export default function AboutCompany() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.65 }}
                 whileHover={{ scale: 1.05 }}
-                className="absolute -bottom-8 right-4 z-10"
+                className="absolute -bottom-6 sm:-bottom-8 right-2 sm:right-4 z-10"
               >
                 <div className="rounded-2xl border border-border bg-card/95 px-5 py-4 shadow-xl backdrop-blur-md">
                   <div className="flex items-center gap-3">

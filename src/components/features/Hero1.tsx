@@ -12,10 +12,10 @@ export default function Hero1() {
   const [index, setIndex] = useState(0);
 
   const slideImages = [
-    'https://i.postimg.cc/k5K41hnC/Hero-1.png',
-    'https://i.postimg.cc/g08JSBYY/Hero-2.jpg',
-    'https://i.postimg.cc/43VdLFJc/Hero-3.png',
-    'https://i.postimg.cc/3wmRSbKv/Hero-4.png',
+    'https://i.postimg.cc/6p88Qg5V/Hero-1.png',
+    'https://i.postimg.cc/X7HZ443s/Hero-2.jpg',
+    'https://i.postimg.cc/sgMM2qDY/Hero-3.png',
+    'https://i.postimg.cc/QdFFMwxp/Hero-4.png',
   ];
 
   const slides = [
@@ -61,7 +61,7 @@ export default function Hero1() {
   }, [slides.length]);
 
   return (
-    <section className="relative max-h-[70vh] min-h-[500px] h-[70vh] py-6 md:py-8 w-full bg-background overflow-hidden flex items-center justify-center">
+    <section className="relative min-h-[560px] h-auto md:h-[70vh] md:max-h-[70vh] py-10 md:py-8 w-full bg-background overflow-hidden flex items-center justify-center">
       {/* Dynamic Background Image */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence mode="wait">
@@ -84,10 +84,10 @@ export default function Hero1() {
       </div>
 
       <div className="relative z-10 w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8 my-auto">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16 py-4 lg:py-0">
           
           {/* Left Column Text Content */}
-          <div className="w-full lg:w-1/2 space-y-6">
+          <div className="w-full lg:w-1/2 space-y-5 text-center lg:text-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={index}
@@ -104,7 +104,7 @@ export default function Hero1() {
                 </div>
 
                 {/* Main Headline */}
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground tracking-tight leading-[1.1]">
+                <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-foreground tracking-tight leading-[1.1]">
                   {slides[index].title}{' '}
                   <span className="bg-gradient-to-r from-primary via-sky-400 to-cyan-400 bg-clip-text text-transparent">
                     {slides[index].highlight}
@@ -112,16 +112,16 @@ export default function Hero1() {
                 </h1>
 
                 {/* Subtitle */}
-                <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed font-normal max-w-xl">
+                <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed font-normal max-w-xl mx-auto lg:mx-0">
                   {slides[index].desc}
                 </p>
 
                 {/* Dual CTA Buttons */}
-                <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
+                <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-2">
                   {/* Primary CTA (Employers) */}
                   <Link
                     href={`/${locale}/contact#get-in-touch`}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-primary text-primary-foreground font-bold text-base shadow-lg shadow-primary/25 hover:bg-primary/90 hover:shadow-xl transition-all duration-200"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-primary text-primary-foreground font-bold text-sm shadow-lg shadow-primary/25 hover:bg-primary/90 hover:shadow-xl transition-all duration-200"
                   >
                     <span>{t('ctaHire')}</span>
                     <ArrowRight className="h-4 w-4 rtl-flip" />
@@ -130,7 +130,7 @@ export default function Hero1() {
                   {/* Secondary CTA (Candidates) */}
                   <Link
                     href={`/${locale}/careers`}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl border-2 border-primary/40 bg-card/80 backdrop-blur-md text-foreground font-bold text-base hover:bg-muted hover:border-primary/60 transition-all duration-200"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl border-2 border-primary/40 bg-card/80 backdrop-blur-md text-foreground font-bold text-sm hover:bg-muted hover:border-primary/60 transition-all duration-200"
                   >
                     <Users className="h-5 w-5 text-primary" />
                     <span>{t('ctaApply')}</span>
@@ -142,7 +142,7 @@ export default function Hero1() {
 
           {/* Right Column Slide Showcase Card */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-xl aspect-[4/3] rounded-3xl overflow-hidden border border-border/80 shadow-2xl bg-card">
+            <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-xl aspect-[4/3] rounded-3xl overflow-hidden border border-border/80 shadow-2xl bg-card">
               <AnimatePresence initial={false} mode="popLayout">
                 <motion.div
                   key={index}
