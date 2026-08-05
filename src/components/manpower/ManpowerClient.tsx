@@ -113,8 +113,7 @@ const categories = [
                         href={`/${locale}/contact#submit-cv`}
                         className="group/btn inline-flex items-center gap-1.5 rounded-xl bg-primary px-5 py-2.5 text-xs font-bold text-primary-foreground shadow-md shadow-primary/25 hover:bg-primary/90 transition-all"
                       >
-                        {/* {t("applyBtn")} */}
-                        Apply Now
+                        {t("applyBtn")}
                         <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover/btn:translate-x-1" />
                       </Link>
               </div>

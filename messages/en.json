@@ -643,7 +643,8 @@
     "cat4Title": "Transportation",
     "cat4Desc": "Trailer Drivers, Bus Drivers, Forklift Drivers, Bikers.",
     "guaranteeTitle": "Our Recruitment Guarantee",
-    "guaranteeDesc": "3-Month probationary replacement guarantee for any worker not meeting client skill standards."
+    "guaranteeDesc": "3-Month probationary replacement guarantee for any worker not meeting client skill standards.",
+    "applyBtn":"Apply Now"
   },
 
   "AboutIntro": {
