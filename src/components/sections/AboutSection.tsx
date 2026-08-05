@@ -56,10 +56,10 @@ export default function AboutSection() {
             ref={containerRef}
             className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-16 lg:py-20"
         >
-            <div className="grid lg:grid-cols-2 gap-14 lg:gap-24 items-center">
+            <div className="grid lg:grid-cols-2 gap-10 lg:gap-24 items-center pt-8 lg:pt-0">
                 {/* IMAGE */}
 
-                <div className="relative gsap-fade-up">
+                <div className="relative gsap-fade-up mb-10 lg:mb-0">
 
                     <div className="absolute top-8 -right-6 w-full h-full rounded-xl border-2 border-primary/30 hidden lg:block" />
 
@@ -68,18 +68,18 @@ export default function AboutSection() {
                         alt="About"
                         width={700}
                         height={900}
-                        className="relative rounded-xl object-cover shadow-xl"
+                        className="relative rounded-xl object-cover shadow-xl w-full h-auto"
                     />
 
                     {/* Experience */}
 
-                    <div className="absolute -bottom-10 right-0">
+                    <div className="absolute -bottom-8 right-2 sm:right-0">
 
-                        <div className="w-32 h-32 p-2 rounded-full bg-primary text-primary-foreground border-[6px] border-background shadow-xl flex flex-col justify-center items-center">
+                        <div className="w-24 h-24 sm:w-32 sm:h-32 p-2 rounded-full bg-primary text-primary-foreground border-[5px] sm:border-[6px] border-background shadow-xl flex flex-col justify-center items-center">
 
-                            <h2 className="text-4xl font-black">15+</h2>
+                            <h2 className="text-2xl sm:text-4xl font-black">15+</h2>
 
-                            <p className="text-xs uppercase tracking-widest text-center">
+                            <p className="text-[9px] sm:text-xs uppercase tracking-widest text-center">
                                 {t('experience')}
                             </p>
 

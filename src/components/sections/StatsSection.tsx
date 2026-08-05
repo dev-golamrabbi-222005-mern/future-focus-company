@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -13,6 +13,7 @@ if (typeof window !== 'undefined') {
 
 export function StatsSection() {
   const t = useTranslations('StatsSection');
+  const locale = useLocale();
   const containerRef = React.useRef<HTMLDivElement>(null);
 
   const stats = [
@@ -85,7 +86,7 @@ export function StatsSection() {
             start: 'top 85%',
           },
           onUpdate: () => {
-            numElement.textContent = Math.floor(obj.val).toLocaleString();
+            numElement.textContent = Math.floor(obj.val).toLocaleString(locale === 'bn' ? 'bn-BD' : locale === 'ar' ? 'ar-SA' : 'en-US');
           },
         });
       });

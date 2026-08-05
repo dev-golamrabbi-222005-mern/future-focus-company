@@ -5,7 +5,7 @@
     "about": "About Us",
     "services": "Services",
     "manpower": "Manpower Supply",
-    "jobs": "Available Jobs",
+    "careers": "Careers",
     "gallery": "Gallery",
     "contact": "Contact Us",
     "submitCv": "Submit CV"
@@ -21,7 +21,11 @@
     "statsPlacements": "Placements Completed",
     "statsSatisfaction": "Employer Satisfaction",
     "statsExperience": "Years Experience",
-    "statsCountries": "Partner Countries"
+    "statsCountries": "Partner Countries",
+    "statsPlacementsValue": "15,000+",
+    "statsSatisfactionValue": "98.5%",
+    "statsExperienceValue": "14+ Years",
+    "statsCountriesValue": "6 GCC Nations"
   },
   "Hero1": {
     "brandName": "Future Focus",
@@ -44,7 +48,7 @@
       "role": "MIDDLE EAST",
       "title": "LEAD",
       "highlight": "RELIABILITY",
-      "desc": "15+ Years of Reliable Recruitment Across the Gulf. Over 15,000 Bangladeshi workers successfully placed in Saudi Arabia, UAE, Qatar, and beyond."
+      "desc": "05+ Years of Reliable Recruitment Across the Gulf. Over 5,000 Bangladeshi workers successfully placed in Saudi Arabia, UAE, Qatar, and beyond."
     },
     "slide4": {
       "role": "VISION 2030",
@@ -66,6 +70,137 @@
     "workersLabel": "Skilled Workforce Deployed",
     "workersSuffix": "+"
   },
+
+  "AboutCompany": {
+    "tag": "Who We Are",
+
+    "title1": "Building Saudi Arabia's",
+    "title2": "Future Workforce",
+
+    "description": "Future Focus Company is a trusted manpower recruitment and workforce solutions provider based in Riyadh, Saudi Arabia. We specialize in supplying skilled, semi-skilled, and unskilled workers from Bangladesh to meet the growing workforce demands across construction, hospitality, healthcare, industrial, facility management, and commercial sectors. Our commitment to quality, reliability, and timely deployment has made us a preferred partner for businesses throughout the Kingdom.",
+
+    "book": "Request Workforce",
+
+    "services": "Explore Services",
+
+    "experience": "Years of Experience",
+
+    "workers": "Workers Deployed",
+
+    "clients": "Satisfied Clients",
+
+    "support": "Customer Support",
+
+    "experienceValue": "05+",
+    "workersValue": "5K+",
+    "clientsValue": "150+",
+    "supportValue": "24/7",
+
+    "companyName": "Future Focus Company",
+
+    "companyShort": "Government-approved manpower recruitment company providing reliable workforce solutions across Saudi Arabia.",
+
+    "approved": "Government Approved"
+  },
+
+  "CompanyTimeline": {
+    "tag": "Our Journey",
+
+    "title1": "Building Our",
+    "title2": "Success Story",
+
+    "description": "Since 2022, Future Focus Company has been committed to providing reliable manpower recruitment and workforce solutions across Saudi Arabia. Every milestone reflects our dedication to quality, professionalism, and long-term partnerships.",
+
+    "timeline2022": {
+      "badge": "Foundation",
+      "title": "Company Established",
+      "description": "Future Focus Company officially started its manpower recruitment journey, building a strong foundation to connect skilled Bangladeshi workers with employers across Saudi Arabia."
+    },
+
+    "timeline2023": {
+      "badge": "Expansion",
+      "title": "Growing Our Network",
+      "description": "Expanded recruitment operations and established long-term partnerships with employers in Riyadh and other major cities, strengthening our service capabilities."
+    },
+
+    "timeline2024": {
+      "badge": "Innovation",
+      "title": "Digital Recruitment",
+      "description": "Introduced modern digital recruitment processes, including online applications, document verification, and streamlined communication to improve efficiency."
+    },
+
+    "timeline2025": {
+      "badge": "Achievement",
+      "title": "Trusted Workforce Partner",
+      "description": "Successfully deployed thousands of skilled, semi-skilled, and unskilled workers while earning the trust of clients across construction, hospitality, healthcare, and industrial sectors."
+    },
+
+    "timeline2026": {
+      "badge": "Future Vision",
+      "title": "Supporting Saudi Vision 2030",
+      "description": "Continuing to support Saudi Vision 2030 by delivering qualified manpower for infrastructure, hospitality, healthcare, facility management, and industrial development projects."
+    }
+  },
+  
+
+  "WhyChoose": {
+  "tag": "Our Commitment",
+
+  "title": "Why Employers in Saudi Arabia Trust Us",
+
+  "subtitle": "Six things we do differently — and consistently — that make the difference.",
+
+  "feature1": {
+    "title": "On-Time Deployment",
+    "description": "We ensure workers arrive on schedule with complete documentation and hassle-free deployment."
+  },
+
+  "feature2": {
+    "title": "Rigorous Pre-Screening",
+    "description": "Every candidate is carefully screened, skill-tested, medically cleared, and professionally prepared before deployment."
+  },
+
+  "feature3": {
+    "title": "Transparent Pricing",
+    "description": "No hidden charges. Clear quotations, honest pricing, and complete transparency from beginning to end."
+  },
+
+  "feature4": {
+    "title": "Visa & Documentation",
+    "description": "We handle visa processing, medical tests, BMET clearance, embassy formalities, and all required documentation."
+  },
+
+  "feature5": {
+    "title": "Flexible Contracts",
+    "description": "Whether short-term, long-term, or project-based staffing, we provide flexible workforce solutions."
+  },
+
+  "feature6": {
+    "title": "Safety & Legal Compliance",
+    "description": "All workers comply with Saudi labor regulations and receive proper safety orientation before deployment."
+  }
+  },
+  
+  "CallToAction": {
+    "tag": "Ready to Work With Us?",
+
+    "title1": "Let's Build Your",
+
+    "title2": "Workforce Together",
+
+    "description": "Tell us how many workers you need, what industry you're in, and when you need them. We'll handle everything—from candidate selection in Bangladesh to successful deployment in Saudi Arabia.",
+
+    "quoteButton": "Get a Free Quote",
+
+    "whatsappButton": "WhatsApp Us Now",
+
+    "government": "Government Approved",
+
+    "experience": "15+ Years Experience",
+
+    "workers": "10,000+ Workers Placed"
+  },
+
   "AboutSnippet": {
     "badge": "Government License RL-1428",
     "bmetBadge": "BMET Certified Agency",
@@ -135,19 +270,201 @@
     "tagline": "Industries We Serve",
     "heading": "Specialized Talent Across Core Sectors",
     "description": "We supply trained, screened, and motivated workforces tailored to the rigorous demands of Middle Eastern markets.",
-    "sector1Title": "Construction & Infrastructure",
-    "sector1Desc": "Engineers, masons, carpenters, steel fixers, heavy equipment operators, and site supervisors.",
-    "sector2Title": "Hospitality & Catering",
-    "sector2Desc": "Chefs, waitstaff, housekeepers, kitchen stewards, and hotel operations personnel.",
-    "sector3Title": "Transport & Logistics",
-    "sector3Desc": "Heavy vehicle drivers, forklift operators, warehouse handlers, and logistics coordinators.",
-    "sector4Title": "Healthcare & Nursing",
-    "sector4Desc": "Registered nurses, lab technicians, male/female caregivers, and clinic assistants.",
-    "sector5Title": "Facility Management & Security",
-    "sector5Desc": "Security guards, HVAC technicians, electricians, plumbers, and cleaning crews.",
-    "sector6Title": "IT & Corporate Staffing",
-    "sector6Desc": "Administrative assistants, IT technicians, accountants, and customer service reps.",
-    "learnMore": "Explore Sector Details"
+    "targetSector": "Target Sector",
+    "viewDetails": "View Details ->",
+    "home": "Home",
+    "services": "Services",
+    "availableRolesTitle": "Available Trade Categories & Roles",
+    "availableRolesSubtitle": "Every category undergoes 1-on-1 practical trade testing & GAMCA medical clearance.",
+    "tradeTested": "100% Trade Tested",
+    "requestRole": "Hire Category",
+    "sectors": {
+      "construction": {
+        "title": "Construction & Engineering",
+        "deployed": "5,000+ DEPLOYED",
+        "description": "Certified structural welders, high-rise masons, MEP electricians, scaffolders, and heavy equipment operators for Saudi megaprojects.",
+        "roles": {
+          "role1": {
+            "title": "Certified Structural Welders & Fabricators",
+            "badge": "6G Certified • TUV Standard",
+            "desc": "Expert 3G/6G SMAW, MIG, and TIG welders for high-rise steel frames, oil pipelines, and industrial plants."
+          },
+          "role2": {
+            "title": "High-Rise Building Masons & Plasterers",
+            "badge": "Trade Tested",
+            "desc": "Skilled block masons, plasterers, tile fixers, and marble finishers with multi-story project experience."
+          },
+          "role3": {
+            "title": "MEP Electricians & Cable Pullers",
+            "badge": "Industrial & Commercial",
+            "desc": "High/low voltage electricians, cable tray installers, panel board assemblers, and conduit wiremen."
+          },
+          "role4": {
+            "title": "Plumbers & Pipefitters",
+            "badge": "Piping Specialist",
+            "desc": "Sanitary plumbers, fire-fighting pipefitters, and high-pressure water supply network technicians."
+          },
+          "role5": {
+            "title": "Scaffolders & Steel Fixers",
+            "badge": "TUV Safety Certified",
+            "desc": "Heavy scaffolding erectors, rebar fixers, shuttering carpenters, and formwork specialists."
+          },
+          "role6": {
+            "title": "HVAC Technicians & Ductmen",
+            "badge": "Chiller & Ducting",
+            "desc": "Commercial AC technicians, chiller plant operators, insulation specialists, and sheet metal duct fabricators."
+          }
+        }
+      },
+      "hospitality": {
+        "title": "Hospitality & Catering",
+        "deployed": "2,200+ DEPLOYED",
+        "description": "Pre-trained 5-star hotel line cooks, waiters, room attendants, baristas, and kitchen stewards for top KSA properties.",
+        "roles": {
+          "role1": {
+            "title": "5-Star Hotel Line Cooks & Chefs",
+            "badge": "HACCP Certified",
+            "desc": "Experienced Arabic, International, and Asian cuisine cooks trained in food safety and kitchen management."
+          },
+          "role2": {
+            "title": "Waiters & Banquet Servers",
+            "badge": "English / Arabic Speaking",
+            "desc": "Groomed, hospitable service staff for luxury hotels, fine dining restaurants, and royal banquet halls."
+          },
+          "role3": {
+            "title": "Housekeeping & Room Attendants",
+            "badge": "Luxury Hotel Trained",
+            "desc": "Detailed room attendants, floor supervisors, and public area cleaners for resort properties."
+          },
+          "role4": {
+            "title": "Baristas & Beverage Specialists",
+            "badge": "Specialty Coffee",
+            "desc": "Skilled coffee baristas and beverage artisans trained in espresso extraction, latte art, and customer service."
+          },
+          "role5": {
+            "title": "Kitchen Stewards & Dishwashers",
+            "badge": "Sanitation Certified",
+            "desc": "Hardworking kitchen utility staff managing dishwashing machinery and hygiene standards."
+          },
+          "role6": {
+            "title": "Front Desk & Concierge Staff",
+            "badge": "Opera PMS Trained",
+            "desc": "Fluent receptionists and concierge staff handling guest check-ins, reservations, and VIP services."
+          }
+        }
+      },
+      "it": {
+        "title": "IT & Technology",
+        "deployed": "850+ DEPLOYED",
+        "description": "Full-stack software developers, network infrastructure engineers, cybersecurity analysts, and IT helpdesk personnel.",
+        "roles": {
+          "role1": {
+            "title": "Full-Stack Software Engineers",
+            "badge": "React / Node / Python",
+            "desc": "Modern web and mobile application developers experienced in cloud architecture and API integrations."
+          },
+          "role2": {
+            "title": "Network & System Engineers",
+            "badge": "CCNA / CCNP Certified",
+            "desc": "Cisco certified network administrators managing enterprise routers, switches, firewalls, and VPNs."
+          },
+          "role3": {
+            "title": "Cybersecurity Analysts",
+            "badge": "CEH / Security+",
+            "desc": "SOC analysts protecting corporate digital assets, monitoring threat alerts, and performing vulnerability audits."
+          },
+          "role4": {
+            "title": "Helpdesk & IT Support Technicians",
+            "badge": "Tier 1 & 2 Support",
+            "desc": "On-site IT support specialists resolving hardware, software, printer, and Active Directory user issues."
+          },
+          "role5": {
+            "title": "Database Administrators (DBA)",
+            "badge": "SQL / Oracle / Mongo",
+            "desc": "Database specialists managing high-availability clusters, backup strategies, and query performance tuning."
+          },
+          "role6": {
+            "title": "Cloud & DevOps Engineers",
+            "badge": "AWS / Azure / Docker",
+            "desc": "DevOps specialists managing CI/CD pipelines, Kubernetes clusters, and cloud server provisioning."
+          }
+        }
+      },
+      "healthcare": {
+        "title": "Healthcare & Medical Support",
+        "deployed": "1,400+ DEPLOYED",
+        "description": "Prometric-passed registered nurses, medical laboratory technicians, physiotherapy assistants, and medical staff.",
+        "roles": {
+          "role1": {
+            "title": "Registered ICU & Ward Nurses",
+            "badge": "Saudi Prometric Passed",
+            "desc": "BSc & Diploma registered nurses qualified for Saudi Commission for Health Specialties (SCFHS) licensing."
+          },
+          "role2": {
+            "title": "Medical Laboratory Technicians",
+            "badge": "Diagnostic Specialist",
+            "desc": "Pathology lab technicians operating automated blood analyzers, hematology gear, and diagnostic kits."
+          },
+          "role3": {
+            "title": "Physiotherapy Assistants",
+            "badge": "Rehabilitation Care",
+            "desc": "Rehabilitation aides assisting senior physical therapists with patient exercises and electrotherapy."
+          },
+          "role4": {
+            "title": "Patient Care Orderlies & Aides",
+            "badge": "Patient Transport",
+            "desc": "Compassionate ward attendants assisting with patient transfer, mobility, hygiene, and wheelchair assistance."
+          },
+          "role5": {
+            "title": "Pharmacy Assistants",
+            "badge": "Medication Dispensing",
+            "desc": "Hospital and retail pharmacy helpers managing drug inventory, packaging, and prescription sorting."
+          },
+          "role6": {
+            "title": "Hospital Disinfection Technicians",
+            "badge": "Biohazard Hygiene",
+            "desc": "Sterilization technicians maintaining operating theater cleanliness, autoclave gear, and infection control."
+          }
+        }
+      },
+      "driving": {
+        "title": "Transport & Heavy Driving",
+        "deployed": "3,100+ DEPLOYED",
+        "description": "Heavy trailer drivers with KSA licenses, bus drivers, forklift operators, and logistics warehouse handlers.",
+        "roles": {
+          "role1": {
+            "title": "Heavy Trailer & Flatbed Drivers",
+            "badge": "Saudi Heavy License",
+            "desc": "Long-haul trailer drivers experienced with Mercedes Actros, Volvo FH, and flatbed container transport."
+          },
+          "role2": {
+            "title": "Passenger Bus & Coach Drivers",
+            "badge": "Public Transport",
+            "desc": "Safety-conscious drivers operating 50-seater buses for corporate employee transport and pilgrimage routes."
+          },
+          "role3": {
+            "title": "Forklift & Reach Truck Operators",
+            "badge": "TUV Safety Certified",
+            "desc": "Warehouse forklift drivers certified in high-rack stacking, pallet loading, and inventory handling."
+          },
+          "role4": {
+            "title": "Bulldozer & Excavator Operators",
+            "badge": "Heavy Earthmoving",
+            "desc": "Heavy machinery operators for site clearing, trenching, road grading, and quarry operations."
+          },
+          "role5": {
+            "title": "Light Delivery Drivers",
+            "badge": "KSA Light License",
+            "desc": "Courier and commercial van drivers operating logistics routes in Riyadh, Jeddah, and Dammam."
+          },
+          "role6": {
+            "title": "Mobile Crane Operators",
+            "badge": "Third-Party Certified",
+            "desc": "Certified hydraulic crane operators handling 25T to 100T lifts safely on industrial construction sites."
+          }
+        }
+      }
+    }
   },
   "ProcessTimeline": {
     "tagline": "Step-by-Step Excellence",
@@ -171,30 +488,146 @@
     "title": "Empowering Talent, Building Bridges Across Borders",
     "subtitle": "Discover our journey, mission, values, and government certifications as Bangladesh's trusted manpower recruitment partner.",
     "missionTitle": "Our Mission",
-    "missionDesc": "To empower Bangladeshi workers through ethical, transparent overseas recruitment while delivering world-class workforce solutions to enterprise employers in Saudi Arabia and the GCC.",
+    "missionDesc": "To empower businesses across Saudi Arabia by delivering exceptional, reliable, and tailored manpower solutions. At Future Focus Company (FFC), we bridge the gap between industries and top-tier support staff—ranging from specialized airport operations and corporate hospitality to essential technical services. We are dedicated to nurturing workforce excellence that helps our clients achieve operational efficiency and long-term success.",
     "visionTitle": "Our Vision",
-    "visionDesc": "To remain the benchmark recruiting agency recognized across the Middle East for integrity, candidate welfare, and operational speed.",
+    "visionDesc": "To be recognized as the premier and most trusted HR & Manpower solutions partner in Saudi Arabia, driving innovation and service excellence in workforce management. As we scale to support international landmarks like Saudi Arabia's major aviation hubs, our vision is to set the gold standard in staffing across the Middle East—fostering growth, diversity, and unwavering operational support for every sector we serve.",
     "licenseTitle": "Government License & Accreditation",
+    "licenseNumber": "Government License: RL-1428",
     "licenseDesc": "Operating under Ministry License RL-1428 with full BMET compliance, ISO quality certifications, and GAMCA medical affiliation.",
+    "licenseCheck1": "BMET Smart Card Authorized",
+    "licenseCheck2": "GAMCA Medical Affiliated",
+    "licenseCheck3": "Ministry License RL-1428",
+    "licenseCheck4": "Saudi Embassy Verified",
     "mdTitle": "Managing Director's Statement",
-    "mdMessage": "Over the past 15 years, we have placed over 15,000 workers in life-changing careers across Saudi Arabia and the GCC. We believe ethical recruitment is not just good policy—it is our core duty."
+    "mdMessage": "Over the past 05 years, we have placed over 5,000 workers in life-changing careers across Saudi Arabia and the GCC. We believe ethical recruitment is not just good policy—it is our core duty.",
+    "mdName": "Anowar Hossain",
+    "mdRole": "Chief Executive Officer & Founder",
+    "ctaHire": "Request Manpower",
+    "ctaServices": "Explore Services"
   },
   "ServicesPage": {
-    "tagline": "Comprehensive Solutions",
-    "heading": "End-to-End Recruitment & Overseas Logistics",
-    "subheading": "From candidate sourcing to flight ticketing and GCC reception, we manage every detail with complete precision.",
-    "service1Title": "Executive & Skilled Sourcing",
-    "service1Desc": "Rigorous recruitment drives matching candidate skills with exact employer job specifications.",
-    "service2Title": "Trade Testing & Skill Certification",
-    "service2Desc": "Practical evaluation in government-approved technical centers for welding, electrical, masonry, and driving.",
-    "service3Title": "Medical Screening & Clearance",
-    "service3Desc": "GAMCA medical checkups guaranteeing 100% health fitness prior to visa stamping.",
-    "service4Title": "Visa Stamping & BMET Smart Card",
-    "service4Desc": "Official embassy visa processing and BMET smart card issuance under ministry supervision.",
-    "service5Title": "Air Ticketing & Pre-Departure Briefing",
-    "service5Desc": "Group flight reservations, cultural orientation, and GCC labor law briefings.",
-    "service6Title": "On-Ground Reception & Liaison",
-    "service6Desc": "Airport pickup, transport to employer quarters, and continuous client liaison."
+    "hero": {
+      "badge": "Government Approved Manpower Agency • License RL-1428",
+      "title": "Manpower Solutions Across Saudi Arabia",
+      "subtitle": "Government-licensed workforce supply bridging top Bangladeshi talent with Vision 2030 megaprojects across Riyadh, Jeddah, Dammam & Neom.",
+      "ctaRequest": "Request Workers",
+      "ctaDownload": "Download Profile (PDF)",
+      "trust1": "MHRSD License RL-1428",
+      "trust2": "QIWA & Musaned Compliant",
+      "trust3": "GAMCA Medical Cleared",
+      "trust4": "90-Day Free Replacement"
+    },
+    "bento": {
+      "sectionTitle": "Explore Our Specialized Workforce Sectors",
+      "sectionSubtitle": "From large-scale infrastructure to 5-star hospitality and tech teams, we supply trade-tested manpower tailored for Saudi KSA projects.",
+      "exploreSector": "Target Sector",
+      "viewDetails": "View Details",
+      "sectors": {
+        "construction": {
+          "title": "Construction & Engineering",
+          "shortDesc": "Certified welders, high-rise masons, MEP electricians, scaffolders & heavy equipment operators for Saudi megaprojects.",
+          "stats": "5,000+ Deployed"
+        },
+        "hospitality": {
+          "title": "Hospitality & Catering",
+          "shortDesc": "Pre-trained line cooks, stewards, room attendants, baristas & front office staff for hotels across KSA.",
+          "stats": "2,200+ Deployed"
+        },
+        "it": {
+          "title": "IT & Technology",
+          "shortDesc": "Full-stack developers, network engineers, cybersecurity experts & helpdesk support personnel.",
+          "stats": "850+ Deployed"
+        },
+        "healthcare": {
+          "title": "Healthcare & Medical Support",
+          "shortDesc": "Prometric-cleared nurses, lab technicians, physiotherapy assistants & medical facility support staff.",
+          "stats": "1,400+ Deployed"
+        },
+        "driving": {
+          "title": "Transport & Heavy Driving",
+          "shortDesc": "Heavy trailer drivers with KSA licenses, bus drivers, forklift operators & logistics handlers.",
+          "stats": "3,100+ Deployed"
+        },
+        "cleaning": {
+          "title": "Facility Management & Cleaning",
+          "shortDesc": "Janitorial teams, commercial cleaners, window specialists & hospital disinfection technicians.",
+          "stats": "4,500+ Deployed"
+        }
+      }
+    },
+    "compliance": {
+      "tagline": "Saudi Regulatory Standards",
+      "heading": "100% MHRSD Compliant & 90-Day Replacement Guarantee",
+      "subheading": "We strictly adhere to Ministry of Human Resources and Social Development (MHRSD) regulations, Musaned contracts, and GAMCA medical protocols.",
+      "badge1Title": "QIWA & Musaned Direct",
+      "badge1Sub": "Digital contract transfer & official work permit issuance under KSA law.",
+      "badge2Title": "90-Day Free Replacement",
+      "badge2Sub": "If candidate performance falls short, we replace them at zero extra cost.",
+      "badge3Title": "Government License RL-1428",
+      "badge3Sub": "Officially approved recruitment agency by the Ministry of Expatriates Welfare.",
+      "badge4Title": "GAMCA Medical Fitness",
+      "badge4Sub": "Guaranteed fit for duty medical clearance prior to embassy visa stamping."
+    },
+    "process": {
+      "tagline": "How We Deploy Talent",
+      "heading": "Our 5-Step Turnkey Deployment Workflow",
+      "subheading": "A seamless, compliant mobilization pipeline delivering trade-tested workforce to your KSA project site within 14-21 days.",
+      "stepLabel": "Step",
+      "steps": {
+        "step1": {
+          "title": "Quota & Requirement Analysis",
+          "desc": "We review your visa quota, job specifications, wage agreements, and project mobilization timeline in KSA."
+        },
+        "step2": {
+          "title": "Global Sourcing & Candidate Vetting",
+          "desc": "Our recruiters screen thousands of candidates in Bangladesh against your specific trade requirements."
+        },
+        "step3": {
+          "title": "Practical Trade Testing",
+          "desc": "Candidates undergo rigorous practical trade tests at certified technical institutes supervised by engineers."
+        },
+        "step4": {
+          "title": "KSA Visa & GAMCA Medical Clearance",
+          "desc": "Full GAMCA medical screening, embassy visa stamping, and BMET smart card issuance under official oversight."
+        },
+        "step5": {
+          "title": "Mobilization & On-Ground Reception",
+          "desc": "Flight bookings, pre-departure orientation, KSA airport reception, and transport to your project site."
+        }
+      }
+    },
+    "details": {
+      "home": "Home",
+      "services": "Services",
+      "overviewTitle": "Sector Overview & Capabilities",
+      "overviewP1": "Future Focus Company supplies high-performing, certified workforce solutions tailored specifically for Saudi Arabia’s expanding industrial and urban development landscape. With over a decade of recruitment experience, we ensure every worker deployed is fully equipped, safety-trained, and medically fit.",
+      "overviewP2": "Our candidate selection involves rigorous trade evaluations, background checks, and orientation on Saudi Vision 2030 site compliance standards. From initial visa quota processing to on-site reception in KSA, we deliver end-to-end recruitment management.",
+      "rolesTitle": "Key Roles We Supply",
+      "vettingTitle": "Technical Vetting & Trade Test Assurance",
+      "vettingDesc": "We do not rely on paper CVs alone. Every candidate undergoes mandatory 1-on-1 practical trade testing at certified technical facilities in Dhaka and Chittagong before visa submission.",
+      "sidebar": {
+        "formTitle": "Request Proposal for",
+        "formSubtitle": "Submit your workforce headcount requirement and get a custom quote within 24 hours.",
+        "nameLabel": "Full Name",
+        "namePlaceholder": "e.g. Abdullah Al-Otaibi",
+        "emailLabel": "Corporate Email",
+        "emailPlaceholder": "e.g. a.otaibi@company.sa",
+        "phoneLabel": "Phone / WhatsApp",
+        "phonePlaceholder": "e.g. +966 50 123 4567",
+        "countLabel": "Required Workforce Headcount",
+        "selectCount": "Select worker count",
+        "submit": "Submit Headcount Request",
+        "submitting": "Processing Request...",
+        "successTitle": "Headcount Request Submitted!",
+        "successDesc": "Our Riyadh workforce consultant will review your quota request and reach out within 24 hours.",
+        "sendAnother": "Submit Another Request",
+        "whyTitle": "Why Hire Through Us",
+        "point1": "100% Practical Trade Tested",
+        "point2": "GAMCA Medical Cleared",
+        "point3": "90-Day Free Replacement Guarantee",
+        "point4": "MHRSD & Musaned Compliant"
+      }
+    }
   },
   "ManpowerPage": {
     "tagline": "Workforce Solutions",
@@ -210,18 +643,200 @@
     "cat4Title": "Transportation",
     "cat4Desc": "Trailer Drivers, Bus Drivers, Forklift Drivers, Bikers.",
     "guaranteeTitle": "Our Recruitment Guarantee",
-    "guaranteeDesc": "3-Month probationary replacement guarantee for any worker not meeting client skill standards."
+    "guaranteeDesc": "3-Month probationary replacement guarantee for any worker not meeting client skill standards.",
+    "applyBtn":"Apply Now"
   },
+
+  "AboutIntro": {
+  "tag": "Manpower Supply",
+
+  "title1": "Bangladesh",
+  "title2": "To",
+  "title3": "Saudi Arabia",
+
+  "subtitle": "Skilled, semi-skilled & unskilled workers — vetted, documented, and deployed on time.",
+
+  "description": "Future Focus Company is a government-approved international manpower recruitment agency headquartered in Riyadh, Saudi Arabia. We connect Bangladesh’s skilled workforce with employers across Saudi Arabia by providing reliable recruitment, documentation, visa processing, and workforce deployment services.",
+
+  "bangladesh": "Bangladesh",
+  "saudi": "Saudi Arabia",
+
+  "request": "Request Manpower",
+  "whatsapp": "WhatsApp Now",
+  "browse": "Browse Workers",
+
+  "market": "Primary Market",
+  "country": "Saudi Arabia",
+  "cities": "Riyadh • Jeddah • Dammam • Eastern Province",
+
+  "experience": "Years Trusted",
+  "experienceValue": "05+"
+},
+"WhatIsManpower": {
+  "tag": "What We Do",
+
+  "title": "What Is International Manpower Supply?",
+
+  "subtitle": "It is the process of sourcing qualified workers in one country and deploying them to employers in another — legally, safely, and with full documentation support from start to finish.",
+
+  "description1": "Future Focus Company manages the complete manpower supply chain from Bangladesh to Saudi Arabia. We identify workers who match your exact role requirements, conduct thorough screening and medical tests, process visas and travel documentation, and coordinate deployment to your worksite—so you receive work-ready professionals, not paperwork headaches.",
+
+  "description2": "Our manpower supply service covers three major worker categories: skilled professionals (welders, electricians, plumbers), semi-skilled workers (kitchen helpers, factory assistants, baristas), and unskilled labor (general cleaners, site laborers, garden workers). Every worker goes through strict recruitment, verification, and pre-deployment training.",
+
+  "quoteTitle": "Future Focus Company — In One Sentence",
+
+  "quote": "We are a government-approved manpower supply company connecting Bangladesh's workforce with employers across Saudi Arabia through ethical recruitment, complete documentation, and reliable deployment.",
+
+  "cards": [
+    {
+      "title": "Skilled Workers",
+      "jobs": "Welders • Electricians • Steel Fixers • Plumbers • Painters",
+      "description": "Trade-qualified professionals with verified practical experience for construction, oil & gas, industrial, and technical projects across Saudi Arabia."
+    },
+    {
+      "title": "Semi-skilled Workers",
+      "jobs": "Kitchen Helpers • Factory Assistants • Baristas • Car Wash • Fast Food",
+      "description": "Workers with role-specific training and hands-on experience for hospitality, food production, retail, logistics, and manufacturing sectors."
+    },
+    {
+      "title": "Unskilled Labor",
+      "jobs": "General Labor • Cleaners • Garden Workers • Site Helpers",
+      "description": "Reliable and hardworking laborers ready for municipal, commercial, industrial, warehouse, and residential projects with fast deployment."
+    }
+  ]
+},
+"CompanyHighlights": {
+  "items": [
+    {
+      "title": "Govt. Approved",
+      "subtitle": "BD & KSA Licensed"
+    },
+    {
+      "title": "2–4 Weeks",
+      "subtitle": "Deployment Timeline"
+    },
+    {
+      "title": "21+ Job Roles",
+      "subtitle": "All Industries Covered"
+    },
+    {
+      "title": "6+ Countries",
+      "subtitle": "Gulf & Asia Pacific"
+    },
+    {
+      "title": "24 / 7",
+      "subtitle": "Employer Support"
+    }
+  ]
+},
+"Process": {
+  "tag": "The Process",
+
+  "title1": "How We Supply",
+  "title2": "Manpower to Saudi Arabia",
+
+  "subtitle": "A transparent and efficient recruitment process designed to deliver the right workforce with speed, quality, and full legal compliance.",
+
+  "description": "From the first enquiry to the final deployment, every step is carefully managed by our experienced recruitment team to ensure a smooth hiring experience for employers across Saudi Arabia.",
+
+  "steps": [
+    {
+      "title": "Enquiry",
+      "description": "We understand your workforce requirements, project scope, job roles, quantity, qualifications, and deployment schedule."
+    },
+    {
+      "title": "Strategy",
+      "description": "Our recruitment specialists prepare a customized hiring strategy and timeline tailored to your business needs."
+    },
+    {
+      "title": "Sourcing",
+      "description": "Qualified candidates are sourced, interviewed, trade-tested, medically examined, and carefully shortlisted."
+    },
+    {
+      "title": "Clearance",
+      "description": "Government approvals, employer verification, medical clearance, and recruitment compliance are completed."
+    },
+    {
+      "title": "Documentation",
+      "description": "Employment contracts, visas, passports, insurance, and all required legal documentation are processed."
+    },
+    {
+      "title": "Deployment",
+      "description": "Workers travel to Saudi Arabia and are deployed safely to the employer with complete post-arrival support."
+    }
+  ]
+},
+
   "GalleryPage": {
-    "tagline": "Life at Future Focus Company",
-    "heading": "Visual Journey & Deployment Highlights",
-    "subheading": "Explore photos of candidate trade testing, flight departures from Dhaka, and candidate arrivals in Saudi Arabia.",
-    "item1Title": "Trade Test Center - Dhaka",
+    "heroTagline": "Life at Future Focus Company",
+    "heroHeading": "Visual Journey of",
+    "heroHeadingHighlight": "Global Deployment",
+    "heroSubheading": "Explore authentic moments from candidate trade testing, flight departures from Dhaka, and successful arrivals across Saudi Arabia.",
+    "heroCta": "View All Moments",
+    "heroStat1Num": "5000+",
+    "heroStat1Label": "Workers Deployed",
+    "heroStat2Num": "14+",
+    "heroStat2Label": "Years of Trust",
+    "heroStat3Num": "150+",
+    "heroStat3Label": "Partner Clients",
+
+    "filterTagline": "Our Moments",
+    "filterHeading": "Behind the Scenes at Future Focus",
+    "filterSubheading": "From trade testing halls in Dhaka to reception in Riyadh — every photo tells a story of trust, hard work, and new beginnings.",
+    "filterAll": "All",
+    "filterTraining": "Training",
+    "filterDeparture": "Departure",
+    "filterOffice": "Office",
+    "filterEvent": "Events",
+
+    "item1Title": "Trade Test Center – Dhaka",
+    "item1Category": "Training",
+    "item1Desc": "Candidates undergoing practical trade testing at government-certified centers in Dhaka.",
     "item2Title": "Group Departure at HSIA Airport",
+    "item2Category": "Departure",
+    "item2Desc": "A proud moment as our workers depart Hazrat Shahjalal International Airport for Saudi Arabia.",
     "item3Title": "Riyadh Office Liaison Team",
+    "item3Category": "Office",
+    "item3Desc": "Our Riyadh-based team ensuring smooth on-ground coordination for every arriving worker.",
     "item4Title": "Hospitality Training Seminar",
+    "item4Category": "Training",
+    "item4Desc": "Hotel and hospitality workers receiving specialized training before deployment.",
     "item5Title": "Construction Safety Workshop",
-    "item6Title": "Client Delegates Interviewing Candidates"
+    "item5Category": "Training",
+    "item5Desc": "Pre-departure safety orientation for construction workers heading to Saudi worksites.",
+    "item6Title": "Client Interview Session",
+    "item6Category": "Events",
+    "item6Desc": "Saudi employer delegates conducting live candidate selection interviews in Dhaka.",
+    "item7Title": "Medical Clearance Day",
+    "item7Category": "Events",
+    "item7Desc": "GAMCA-certified medical checkups completed — workers cleared and visa-ready.",
+    "item8Title": "Airport Farewell Gathering",
+    "item8Category": "Departure",
+    "item8Desc": "Families and FFC staff seeing off workers bound for Riyadh and Jeddah.",
+    "item9Title": "Riyadh Welcome Reception",
+    "item9Category": "Office",
+    "item9Desc": "Workers arriving at King Khalid International Airport, received by our Saudi team.",
+
+    "statsTagline": "Our Impact in Numbers",
+    "statsHeading": "Milestones That Define Our Journey",
+    "stat1Num": "5000",
+    "stat1Suffix": "+",
+    "stat1Label": "Workers Successfully Deployed",
+    "stat2Num": "150",
+    "stat2Suffix": "+",
+    "stat2Label": "Corporate Clients Served",
+    "stat3Num": "14",
+    "stat3Suffix": "+",
+    "stat3Label": "Years of Trusted Service",
+    "stat4Num": "6",
+    "stat4Suffix": "+",
+    "stat4Label": "Countries Covered",
+
+    "ctaTagline": "Ready to Partner With Us?",
+    "ctaHeading": "Start Your Manpower Journey Today",
+    "ctaSubheading": "Whether you are an employer in Saudi Arabia looking for reliable workers, or a skilled professional seeking overseas opportunities — we are ready for you.",
+    "ctaHire": "Hire Manpower",
+    "ctaApply": "Apply for a Job"
   },
   "ContactPage": {
     "tagline": "Get in Touch",
@@ -238,6 +853,152 @@
     "saudiTitle": "Riyadh Office (Saudi Arabia)",
     "dubaiTitle": "Riyadh Office (Saudi Arabia)",
     "bdTitle": "Dhaka Office (Bangladesh)"
+  },
+
+  "ContactFAQ": {
+  "tag": "Quick Answers",
+  "title": "Before You Contact Us",
+  "subtitle": "Answers to the questions we receive most often — so you know exactly what to expect.",
+
+  "items": [
+    {
+      "question": "How quickly do you respond to enquiries?",
+      "answer": "Our team usually responds within 2–3 business hours during Saudi office hours. WhatsApp inquiries receive the fastest response."
+    },
+    {
+      "question": "How long does it take to deploy workers?",
+      "answer": "Deployment generally takes 15–30 days depending on visa approval, documentation, and the required profession."
+    },
+    {
+      "question": "What information should I include in my enquiry?",
+      "answer": "Please mention the job category, number of workers required, project location, expected joining date, and your contact information."
+    },
+    {
+      "question": "Can I visit your Riyadh office?",
+      "answer": "Yes. We welcome employers to visit our Riyadh office by appointment during business hours."
+    },
+    {
+      "question": "Is there a minimum order for manpower supply?",
+      "answer": "No. We can provide a single worker or hundreds of workers depending on your business requirements."
+    },
+    {
+      "question": "Which industries do you supply workers for?",
+      "answer": "We provide manpower for construction, hospitality, cleaning, logistics, security, healthcare, factories, supermarkets, offices, restaurants and many more."
+    }
+  ]
+},
+
+  "GoogleMap": {
+  "tag": "OUR LOCATION",
+  "title": "Visit Our Office",
+  "description": "Future Focus Company proudly serves clients across Saudi Arabia from our Riyadh office. We are ready to assist you with reliable manpower recruitment solutions.",
+  "office": "Head Office",
+  "time": "Sunday - Thursday : 9:00 AM - 6:00 PM",
+  "button": "Open in Google Maps"
+},
+
+  "CareersPage": {
+    "heroTag": "Now Hiring",
+    "heroTitle1": "Find Your Dream Job",
+    "heroTitle2": "in Saudi Arabia",
+    "heroSubtitle": "Explore verified job vacancies in Riyadh, Jeddah & across the Kingdom. Free visa, accommodation, and medical insurance included.",
+    "heroCta": "Browse All Jobs",
+    "heroStatJobs": "Open Positions",
+    "heroStatPlaced": "Workers Placed",
+    "heroStatSalary": "Avg. Monthly Salary",
+    "heroStatDays": "Avg. Deploy Time",
+    "heroStatJobsValue": "9+",
+    "heroStatPlacedValue": "5,000+",
+    "heroStatSalaryValue": "SAR 2K+",
+    "heroStatDaysValue": "15–30d",
+
+    "filterTag": "Job Listings",
+    "filterTitle": "Current Openings in Saudi Arabia",
+    "filterSubtitle": "All positions include free visa, free accommodation, GAMCA medical clearance, and BMET documentation support.",
+    "searchPlaceholder": "Search job title or location...",
+    "filterAll": "All",
+    "filterHospitality": "Hospitality",
+    "filterSecurity": "Security",
+    "filterSupport": "Support Staff",
+    "filterTransport": "Transport",
+    "filterCleaning": "Cleaning",
+    "noJobs": "No jobs found for this filter.",
+
+    "salaryLabel": "Monthly Salary",
+    "locationLabel": "Location",
+    "typeLabel": "Job Type",
+    "applyBtn": "Apply Now",
+    "freeVisa": "Free Visa",
+    "freeAccom": "Free Accommodation",
+    "freeMedical": "Medical Insurance",
+    "verified": "Verified Demand",
+    "fullTime": "Full-Time",
+    "urgent": "Urgent",
+
+    "job1Title": "Hotel Receptionist",
+    "job1Location": "Riyadh, KSA",
+    "job1Salary": "SAR 2,200 – 2,800 / month",
+    "job1Category": "Hospitality",
+    "job1Desc": "Welcoming guests, managing front-desk operations, handling check-in/check-out, and coordinating with hotel departments.",
+
+    "job2Title": "Housekeeper (Male / Female)",
+    "job2Location": "Riyadh & Jeddah, KSA",
+    "job2Salary": "SAR 1,800 – 2,400 / month",
+    "job2Category": "Cleaning",
+    "job2Desc": "Cleaning and maintaining rooms, common areas, and facilities in hotels, hospitals, and residential compounds.",
+
+    "job3Title": "Security Guard",
+    "job3Location": "Multiple Cities, KSA",
+    "job3Salary": "SAR 2,000 – 2,600 / month",
+    "job3Category": "Security",
+    "job3Desc": "Securing premises, monitoring CCTV, controlling access points, and ensuring safety of buildings and personnel.",
+
+    "job4Title": "Driver (Car / Van / Bus)",
+    "job4Location": "Riyadh, KSA",
+    "job4Salary": "SAR 2,500 – 3,500 / month",
+    "job4Category": "Transport",
+    "job4Desc": "Transporting staff, guests, or goods across the city and intercity with valid KSA driving license.",
+
+    "job5Title": "Office Boy / Tea Boy",
+    "job5Location": "Riyadh, KSA",
+    "job5Salary": "SAR 1,600 – 2,000 / month",
+    "job5Category": "Support Staff",
+    "job5Desc": "Serving tea/coffee, maintaining office cleanliness, photocopying, running errands, and assisting staff.",
+
+    "job6Title": "Gardener / Landscape Worker",
+    "job6Location": "Jeddah & Riyadh, KSA",
+    "job6Salary": "SAR 1,800 – 2,200 / month",
+    "job6Category": "Support Staff",
+    "job6Desc": "Maintaining gardens, trimming hedges, watering plants, and keeping outdoor spaces clean and presentable.",
+
+    "job7Title": "General Helper / Laborer",
+    "job7Location": "Multiple Cities, KSA",
+    "job7Salary": "SAR 1,500 – 2,000 / month",
+    "job7Category": "Support Staff",
+    "job7Desc": "Assisting in day-to-day operations, loading/unloading, cleaning, and general support across various industries.",
+
+    "job8Title": "Event Staff / Support",
+    "job8Location": "Riyadh, KSA",
+    "job8Salary": "SAR 2,000 – 2,800 / month",
+    "job8Category": "Hospitality",
+    "job8Desc": "Supporting event setups, guest services, crowd management, and behind-the-scenes logistics during events.",
+
+    "job9Title": "Golf Cart Driver",
+    "job9Location": "Riyadh Golf Clubs, KSA",
+    "job9Salary": "SAR 2,200 – 2,800 / month",
+    "job9Category": "Transport",
+    "job9Desc": "Driving golf carts within resorts, golf clubs, and compounds to transport guests safely.",
+
+    "ctaTag": "Ready to Apply?",
+    "ctaTitle1": "Start Your Saudi Arabia",
+    "ctaTitle2": "Career Journey Today",
+    "ctaDesc": "Submit your CV and passport copy to our recruitment team. We handle your visa, medical, BMET smart card, and flight — you focus on your new career.",
+    "ctaSubmit": "Submit Your CV",
+    "ctaContact": "Talk to a Recruiter",
+    "ctaBenefit1": "Free Visa Processing",
+    "ctaBenefit2": "BMET Smart Card",
+    "ctaBenefit3": "Free Medical Test",
+    "ctaBenefit4": "Airport Assistance"
   },
   "JobsPage": {
     "tagline": "Latest Vacancies",
@@ -283,10 +1044,119 @@
     "connectTitle": "Connect With Us",
     "connectDesc": "Follow our official channels for the latest recruitment drives and job announcements.",
     "phone": "Phone",
+    "whatsapp": "WhatsApp",
     "email": "Email",
     "rights": "All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"
+  },
+  "Testimonials": {
+    "tagline": "Client Success Stories",
+    "heading": "Trusted by Leading Enterprises Across Dubai & UAE",
+    "subheading": "See how our reliable manpower solutions have powered major construction, hospitality, and facility management projects across the GCC.",
+    "verifiedClient": "Verified Partner",
+    "items": {
+      "item1": {
+        "quote": "Future Focus Company provided us with 150+ certified welders and fabricators for our Dubai Marina project on short notice. Their vetting process and visa speed are unmatched in the region.",
+        "name": "Tariq Al-Mansoor",
+        "role": "HR Director, Emaar Contracting Partner",
+        "location": "Dubai, UAE",
+        "project": "Dubai Marina Development"
+      },
+      "item2": {
+        "quote": "Sourcing skilled hospitality and facility management staff used to take months. Future Focus deployed 80+ pre-trained staff to our 5-star hotel property within 18 days. Exceptional service!",
+        "name": "Sarah Jenkins",
+        "role": "Head of People & Culture",
+        "location": "Abu Dhabi, UAE",
+        "project": "Luxury Resort Group"
+      },
+      "item3": {
+        "quote": "Their compliance with UAE labor laws and transparent recruitment standards give us total peace of mind. Every technician supplied passed our technical trade test on day one.",
+        "name": "Engineer Rashid Al-Hassan",
+        "role": "Operations Vice President",
+        "location": "Riyadh & Dubai",
+        "project": "Industrial Infrastructure"
+      }
+    }
+  },
+  "FAQ": {
+    "tagline": "Got Questions?",
+    "heading": "Frequently Asked Questions",
+    "subheading": "Everything you need to know about our recruitment process, visa compliance, worker deployment, and service guarantees in Dubai & Saudi Arabia.",
+    "stillHaveQuestions": "Have a specific workforce requirement not answered here?",
+    "contactSupport": "Speak with Our Manpower Advisor",
+    "items": {
+      "item1": {
+        "question": "How quickly can Future Focus deploy workers to our Dubai project?",
+        "answer": "Standard deployment takes between 14 to 21 days from visa quota approval. For pre-vetted candidates already in our talent pipeline, mobilization can occur in as few as 7 business days."
+      },
+      "item2": {
+        "question": "Are all supplied candidates trade-tested and medical-checked?",
+        "answer": "Yes. Every candidate undergoes rigorous practical trade testing at certified centers in Bangladesh, followed by GAMCA medical screening, background checks, and embassy document attestation before arrival."
+      },
+      "item3": {
+        "question": "What happens if a deployed worker does not meet our performance standards?",
+        "answer": "We offer a 90-day performance and medical guarantee. If any candidate fails to meet your agreed skill level or medical compliance during this window, we replace them at zero extra recruitment fee."
+      },
+      "item4": {
+        "question": "Which industries and manpower categories do you specialize in?",
+        "answer": "We specialize in Construction & Civil Engineering, MEP (Mechanical, Electrical, Plumbing), Hospitality & Catering, Facility Management, Logistics, Security Services, and Heavy Equipment Operation."
+      },
+      "item5": {
+        "question": "Do you handle visa processing, flights, and government clearance?",
+        "answer": "Yes, we manage end-to-end mobilization including MOHRE work permits, employment visa processing, flight bookings, pre-departure orientation, and airport reception upon arrival in the UAE/KSA."
+      }
+    }
+  },
+  "GetInTouch": {
+    "tagline": "Let's Talk Business",
+    "heading": "Ready to Scale Your Workforce with Premier Talent?",
+    "subheading": "Reach out to our Dubai business team today. Whether you need 10 specialist tradesmen or a 500-strong turnkey project crew, we deliver on time and fully compliant.",
+    "contactInfo": {
+      "addressTitle": "Headquarters & Office",
+      "address": "Level 18, Commercial Tower, Business Bay, Dubai, UAE",
+      "phoneTitle": "Direct Phone / WhatsApp",
+      "phone": "+971 4 388 9200 / +971 50 123 4567",
+      "emailTitle": "Corporate Inquiries",
+      "email": "manpower@futurefocus.ae",
+      "hoursTitle": "Operating Hours",
+      "hours": "Monday - Saturday: 8:00 AM - 6:00 PM (GST)"
+    },
+    "badgeSla": "Guaranteed 24-Hour Response",
+    "form": {
+      "title": "Request Manpower Proposal",
+      "subtitle": "Fill in your details below and our corporate workforce consultant will contact you within 24 hours with a custom quote.",
+      "fullNameLabel": "Full Name",
+      "fullNamePlaceholder": "e.g. Alexander Wright",
+      "emailLabel": "Corporate Email",
+      "emailPlaceholder": "e.g. a.wright@company.ae",
+      "phoneLabel": "Phone Number",
+      "phonePlaceholder": "e.g. +971 50 123 4567",
+      "serviceTypeLabel": "Required Service Category",
+      "serviceTypeSelect": "Select an industry sector",
+      "serviceOptions": {
+        "construction": "Construction & Civil Engineering",
+        "mep": "MEP (Electrical & Plumbing)",
+        "hospitality": "Hospitality & Catering Staff",
+        "facility": "Facility Management & Cleaning",
+        "logistics": "Logistics & Warehouse Operations"
+      },
+      "workforceSizeLabel": "Estimated Workforce Size",
+      "workforceSizeSelect": "Select worker count",
+      "sizeOptions": {
+        "small": "1 - 15 Workers",
+        "medium": "16 - 50 Workers",
+        "large": "51 - 200 Workers",
+        "enterprise": "200+ Enterprise Mobilization"
+      },
+      "messageLabel": "Project Requirements / Details",
+      "messagePlaceholder": "Describe your project timeline, specific trade roles needed, location, and visa status...",
+      "submitButton": "Send Proposal Request",
+      "submitting": "Submitting Request...",
+      "successTitle": "Request Received Successfully!",
+      "successMessage": "Thank you for reaching out. Our Senior Manpower Consultant will contact you within 24 business hours.",
+      "sendAnother": "Send Another Request"
+    }
   },
   "Theme": {
     "light": "Light",
@@ -296,5 +1166,51 @@
     "en": "English",
     "bn": "বাংলা",
     "ar": "العربية"
+  },
+  "SEO": {
+    "siteName": "Future Focus Company",
+    "defaultTitle": "Future Focus Company | Govt. Approved Recruitment Agency RL-1428",
+    "titleTemplate": "%s | Future Focus Company",
+    "defaultDescription": "Connecting Skilled Bangladeshi Talent with Top Employers in Saudi Arabia & the Middle East. Govt. Approved Recruitment Agency (RL-1428). High quality workforce mobilization.",
+    "keywords": "Recruitment Agency Bangladesh, Saudi Arabia Manpower, Govt Approved Agency RL-1428, Skilled Bangladeshi Workers, Gulf Manpower Recruitment, Future Focus Company, Labor Visa Recruitment",
+    "home": {
+      "title": "Government Approved Recruitment Agency RL-1428 | Future Focus Company",
+      "description": "Premier manpower recruitment agency bridging skilled Bangladeshi talent with top employers in Saudi Arabia & GCC. Transparent, trusted & Govt. approved (RL-1428)."
+    },
+    "about": {
+      "title": "About Us - Premier Manpower Recruitment Agency",
+      "description": "Learn about Future Focus Company (RL-1428), our mission, executive leadership, and track record of sending over 5,000+ skilled workers to Saudi Arabia & Gulf countries."
+    },
+    "services": {
+      "title": "Recruitment & Manpower Services | Saudi Arabia & GCC",
+      "description": "Comprehensive manpower recruitment services including trade testing, medical screening, visa processing, flight arrangements, and candidate mobilization."
+    },
+    "manpower": {
+      "title": "Hire Skilled Bangladeshi Manpower | Construction, MEP, Hospitality",
+      "description": "Mobilize certified Bangladeshi talent for Saudi Vision 2030 projects. Welders, electricians, masons, hospitality staff, facility maintenance workers and engineers."
+    },
+    "careers": {
+      "title": "Job Vacancies & Overseas Careers | Apply for Saudi Arabia Visa",
+      "description": "Explore verified job vacancies in Saudi Arabia, UAE & Qatar. Apply directly for skilled, semi-skilled, and professional overseas employment opportunities."
+    },
+    "gallery": {
+      "title": "Deployment Gallery & Success Stories | Future Focus Company",
+      "description": "View real candidate deployment photos, trade center training sessions, visa stamping approvals, and employer selection drives."
+    },
+    "contact": {
+      "title": "Contact Us | Riyadh (Saudi Arabia) & Dhaka (Bangladesh) Offices",
+      "description": "Get in touch with Future Focus Company. Visit our Saudi Arabia office in Riyadh or Bangladesh office in Banani, Dhaka. Request a custom manpower proposal."
+    }
+  },
+  "ChatWidget": {
+    "title": "AI Assistant",
+    "subtitle": "Online • Ask me anything",
+    "placeholder": "Type your message...",
+    "send": "Send message",
+    "typing": "AI is typing...",
+    "welcomeMessage": "Hello! How can I help you with our recruitment & manpower services today?",
+    "error": "Sorry, something went wrong. Please try again.",
+    "open": "Open AI Support",
+    "close": "Close AI Support"
   }
 }

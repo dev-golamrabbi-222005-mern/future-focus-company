@@ -34,9 +34,9 @@ export function Navbar() {
           {/* Logo */}
           <Link
             href={`/${locale}`}
-            className="flex items-center gap-3 group"
+            className="flex items-center gap-2.5 group min-w-0"
           >
-            <div className="relative h-10 w-10 rounded-xl overflow-hidden shadow-md shadow-primary/25 transition-transform group-hover:scale-105 border border-border shrink-0">
+            <div className="relative h-9 w-9 rounded-xl overflow-hidden shadow-md shadow-primary/25 transition-transform group-hover:scale-105 border border-border shrink-0">
               <Image
                 src="/logo.jpg"
                 alt={siteConfig.name}
@@ -44,13 +44,12 @@ export function Navbar() {
                 className="object-cover"
               />
             </div>
-            <div className="flex flex-col">
-              <span className="font-extrabold text-lg sm:text-xl tracking-tight text-foreground flex items-center gap-1.5">
+            <div className="flex flex-col min-w-0 hidden xs:flex sm:flex">
+              <span className="font-extrabold text-base sm:text-lg tracking-tight text-foreground flex items-center gap-1.5 truncate">
                 {t('companyName')}
               </span>
-              <span className="text-[10px] font-semibold tracking-wider uppercase text-primary flex items-center gap-1">
-                <ShieldCheck className="h-3 w-3 text-sky-500" />
-                Govt. Lic: {siteConfig.license}
+              <span className="text-[10px] font-semibold tracking-wider text-muted-foreground hidden sm:block">
+                Your HR partner and solutions
               </span>
             </div>
           </Link>

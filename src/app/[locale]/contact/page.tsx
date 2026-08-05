@@ -1,69 +1,31 @@
-'use client';
+import type { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
+import { ContactClient } from '@/components/contact/ContactClient';
 
-import * as React from 'react';
-import { useTranslations } from 'next-intl';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ContactFormSection } from '@/components/features/contact/ContactFormSection';
-import { SubmitCvSection } from '@/components/features/contact/SubmitCvSection';
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'SEO' });
 
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger);
+  return {
+    title: t('contact.title'),
+    description: t('contact.description'),
+    alternates: {
+      canonical: `/${locale}/contact`,
+      languages: {
+        en: '/en/contact',
+        bn: '/bn/contact',
+        ar: '/ar/contact',
+        'x-default': '/en/contact',
+      },
+    },
+    openGraph: {
+      title: t('contact.title'),
+      description: t('contact.description'),
+      url: `/${locale}/contact`,
+    },
+  };
 }
 
 export default function ContactPage() {
-  const t = useTranslations('ContactPage');
-  const containerRef = React.useRef<HTMLDivElement>(null);
-
-  useGSAP(
-    () => {
-      if (!containerRef.current) return;
-
-      const animatedElements = containerRef.current.querySelectorAll('.gsap-fade-up');
-      gsap.fromTo(
-        animatedElements,
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          stagger: 0.15,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: 'top 80%',
-          },
-        }
-      );
-    },
-    { scope: containerRef }
-  );
-
-  return (
-    <div ref={containerRef} className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8 pt-8 md:pt-10 lg:pt-12 pb-8 md:pb-10 lg:pb-12 space-y-12 md:space-y-16 lg:space-y-20">
-      
-      {/* Header Banner */}
-      <div className="text-center space-y-4 gsap-fade-up">
-        <div className="mb-6 flex justify-center">
-          <span className="text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
-            {t('tagline')}
-          </span>
-        </div>
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground tracking-tight mb-4">
-          {t('heading')}
-        </h1>
-        <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-          {t('subheading')}
-        </p>
-      </div>
-
-      {/* Main Contact Form & Dual Office Info Component */}
-      <ContactFormSection />
-
-      {/* Merged Candidate Application & Submit CV Component */}
-      <SubmitCvSection />
-
-    </div>
-  );
+  return <ContactClient />;
 }
