@@ -16,6 +16,7 @@ import {
   ShieldCheck,
   CheckCircle2,
 } from "lucide-react";
+import LightRays from "@/components/ui/LightRays";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -53,6 +54,26 @@ export default function AboutCompany() {
       ref={sectionRef}
       className="relative overflow-hidden bg-background py-20 lg:py-28"
     >
+
+
+<div style={{ width: '100%', height: '600px', position: 'relative' }}>
+  <LightRays
+    raysOrigin="top-center"
+    raysColor="#ffffff"
+    raysSpeed={1}
+    lightSpread={0.5}
+    rayLength={3}
+    followMouse={true}
+    mouseInfluence={0.1}
+    noiseAmount={0}
+    distortion={0}
+    className="custom-rays"
+    pulsating={false}
+    fadeDistance={1}
+    saturation={1}
+/>
+</div>
+
       {/* Subtle grid background */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(3,105,161,0.08),transparent_50%)]" />

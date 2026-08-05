@@ -29,12 +29,12 @@ const JOB_IMAGES: Record<string, string> = {
   job1: "https://i.postimg.cc/bwRztbmv/Hospitality.png", // receptionist / hotel lobby
   job2: "https://i.postimg.cc/JzQ1kJpy/Housekeeper.png", // housekeeper
   job3: "https://i.postimg.cc/qvGk3n1h/Security-Guard.png", // security guard
-  job4: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80", // driver
-  job5: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80", // office / tea boy
-  job6: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80", // gardener
-  job7: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80", // general labor
-  job8: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80", // event staff
-  job9: "https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&q=80", // golf cart
+  job4: "https://i.postimg.cc/T1xjR06D/Driver.png", // driver
+  job5: "https://i.postimg.cc/G3PJXWF8/Office-Boy.png", // office / tea boy
+  job6: "https://i.postimg.cc/Wz7GtZNM/Gardener.png", // gardener
+  job7: "https://i.postimg.cc/VvFq5tfn/General-Helper.png", // general labor
+  job8: "https://i.postimg.cc/VvFq5tfM/Even-staff.png", // event staff
+  job9: "https://i.postimg.cc/tJz376R0/Golf-Cart-Driver.png", // golf cart
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
