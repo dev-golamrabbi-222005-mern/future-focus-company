@@ -11,6 +11,107 @@ interface Message {
   content: string;
 }
 
+function FormattedText({ content }: { content: string }) {
+  // 1. Unescape literal \n if returned as string from n8n
+  let text = content.replace(/\\n/g, "\n");
+
+  // 2. Pre-process inline bullet dashes (e.g. "Please provide: - Item 1 - Item 2" -> split lines)
+  text = text.replace(/([^\n])\s+([-\*•])\s+/g, "$1\n$2 ");
+
+  // 3. Split into lines and parse structured blocks
+  const lines = text.split("\n");
+  const blocks: Array<{ type: "p" | "ul" | "ol"; items?: string[]; content?: string }> = [];
+  let currentList: { type: "ul" | "ol"; items: string[] } | null = null;
+
+  lines.forEach((line) => {
+    const trimmed = line.trim();
+    if (!trimmed) {
+      if (currentList) {
+        blocks.push(currentList);
+        currentList = null;
+      }
+      return;
+    }
+
+    const isBullet = /^[-\*•]\s+/.test(trimmed);
+    const isNumber = /^\d+[\.\)]\s+/.test(trimmed);
+
+    if (isBullet) {
+      const itemText = trimmed.replace(/^[-\*•]\s+/, "");
+      if (!currentList || currentList.type !== "ul") {
+        if (currentList) blocks.push(currentList);
+        currentList = { type: "ul", items: [] };
+      }
+      currentList.items.push(itemText);
+    } else if (isNumber) {
+      const itemText = trimmed.replace(/^\d+[\.\)]\s+/, "");
+      if (!currentList || currentList.type !== "ol") {
+        if (currentList) blocks.push(currentList);
+        currentList = { type: "ol", items: [] };
+      }
+      currentList.items.push(itemText);
+    } else {
+      if (currentList) {
+        blocks.push(currentList);
+        currentList = null;
+      }
+      blocks.push({ type: "p", content: trimmed });
+    }
+  });
+
+  if (currentList) blocks.push(currentList);
+
+  const parseInline = (str: string) => {
+    // Parse inline bold syntax (**text** or __text__)
+    const parts = str.split(/(\*\*.*?\*\*|__.*?__)/g);
+    return parts.map((part, i) => {
+      if (
+        (part.startsWith("**") && part.endsWith("**")) ||
+        (part.startsWith("__") && part.endsWith("__"))
+      ) {
+        return (
+          <strong key={i} className="font-semibold text-foreground">
+            {part.slice(2, -2)}
+          </strong>
+        );
+      }
+      return part;
+    });
+  };
+
+  return (
+    <div className="space-y-2 text-sm leading-relaxed">
+      {blocks.map((block, idx) => {
+        if (block.type === "ul" && block.items) {
+          return (
+            <ul key={idx} className="space-y-1.5 my-2 pl-0.5">
+              {block.items.map((item, i) => (
+                <li key={i} className="flex items-start gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary shrink-0 mt-2" />
+                  <span className="flex-1">{parseInline(item)}</span>
+                </li>
+              ))}
+            </ul>
+          );
+        }
+        if (block.type === "ol" && block.items) {
+          return (
+            <ol key={idx} className="space-y-1.5 my-2 pl-0.5">
+              {block.items.map((item, i) => (
+                <li key={i} className="flex items-start gap-2">
+                  <span className="text-xs font-bold text-primary shrink-0 mt-0.5">{i + 1}.</span>
+                  <span className="flex-1">{parseInline(item)}</span>
+                </li>
+              ))}
+            </ol>
+          );
+        }
+        return <p key={idx}>{parseInline(block.content || "")}</p>;
+      })}
+    </div>
+  );
+}
+
 export function ChatWidget() {
   const t = useTranslations("ChatWidget");
   const [isOpen, setIsOpen] = React.useState(false);
@@ -40,6 +141,11 @@ export function ChatWidget() {
     }
   }, [messages, loading, isOpen]);
 
+  const sessionIdRef = React.useRef<string>("");
+  if (!sessionIdRef.current) {
+    sessionIdRef.current = "ffc-" + Math.random().toString(36).substring(2, 11);
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const trimmed = input.trim();
@@ -59,7 +165,10 @@ export function ChatWidget() {
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: trimmed }),
+        body: JSON.stringify({
+          message: trimmed,
+          sessionId: sessionIdRef.current,
+        }),
       });
 
       if (!res.ok) throw new Error("API response error");
@@ -117,7 +226,7 @@ export function ChatWidget() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="fixed bottom-24 right-4 sm:right-6 z-50 w-[calc(100vw-2rem)] sm:w-[380px] h-[520px] max-h-[75vh] flex flex-col rounded-3xl bg-card border border-border shadow-2xl overflow-hidden backdrop-blur-2xl"
+            className="fixed bottom-24 right-4 sm:right-6 z-50 w-[calc(100vw-2rem)] sm:w-[380px] h-[540px] max-h-[78vh] flex flex-col rounded-3xl bg-card border border-border shadow-2xl overflow-hidden backdrop-blur-2xl"
           >
             {/* Header */}
             <div className="bg-primary px-5 py-4 text-primary-foreground flex items-center justify-between shadow-md">
@@ -150,20 +259,20 @@ export function ChatWidget() {
                   className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
                 >
                   <div
-                    className={`max-w-[82%] px-4 py-2.5 text-sm leading-relaxed shadow-xs ${
+                    className={`max-w-[88%] px-4 py-3 shadow-xs ${
                       msg.role === "user"
-                        ? "bg-primary text-primary-foreground rounded-2xl rounded-tr-xs"
+                        ? "bg-primary text-primary-foreground rounded-2xl rounded-tr-xs text-sm"
                         : "bg-muted text-foreground border border-border/60 rounded-2xl rounded-tl-xs"
                     }`}
                   >
-                    {msg.content}
+                    {msg.role === "user" ? msg.content : <FormattedText content={msg.content} />}
                   </div>
                 </div>
               ))}
 
               {loading && (
                 <div className="flex justify-start">
-                  <div className="flex items-center gap-2 max-w-[82%] px-4 py-2.5 text-xs text-muted-foreground bg-muted border border-border/60 rounded-2xl rounded-tl-xs">
+                  <div className="flex items-center gap-2 max-w-[85%] px-4 py-2.5 text-xs text-muted-foreground bg-muted border border-border/60 rounded-2xl rounded-tl-xs">
                     <Loader2 className="h-3.5 w-3.5 animate-spin text-primary" />
                     <span>{t("typing")}</span>
                   </div>

@@ -1207,7 +1207,7 @@
     "placeholder": "Type your message...",
     "send": "Send message",
     "typing": "AI is typing...",
-    "welcomeMessage": "Hello! How can I help you with our recruitment & manpower services today?",
+    "welcomeMessage": "Hello — I’m FuFo AI Assistant. How can I help you today?\n\nPlease tell me if you are:\n- An employer/HR looking to hire workers, or\n- A candidate seeking work abroad",
     "error": "Sorry, something went wrong. Please try again.",
     "open": "Open AI Support",
     "close": "Close AI Support"
