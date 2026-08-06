@@ -39,4 +39,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 
 
-Your HR partner and solutions
+Your HR Partner & Resource Solutions
+

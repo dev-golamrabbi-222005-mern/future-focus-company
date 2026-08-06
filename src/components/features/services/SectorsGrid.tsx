@@ -80,6 +80,21 @@ export function SectorsGrid() {
 
   return (
     <section ref={containerRef} className="max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-16">
+      {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16">
+          <div className="mb-6 flex justify-center">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
+              {t('tagline')}
+            </span>
+          </div>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground tracking-tight mb-4">
+            {t('heading')}
+          </h2>
+          {/* <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+            {t('subheading')}
+          </p> */}
+        </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {sectors.map((sector) => {
           const Icon = sector.icon;

@@ -184,7 +184,7 @@ export function AboutSnippet() {
             </div>
 
             {/* CEO Quote Block */}
-            <div className="p-6 rounded-2xl bg-muted/50 border border-border space-y-3 relative">
+            {/* <div className="p-6 rounded-2xl bg-muted/50 border border-border space-y-3 relative">
               <Quote className="h-8 w-8 text-primary/30 absolute top-4 right-4 rtl:left-4 rtl:right-auto" />
               <p className="text-sm sm:text-base italic text-foreground/90 font-medium leading-relaxed">
                 {t('ceoQuote')}
@@ -193,7 +193,7 @@ export function AboutSnippet() {
                 <p className="text-sm font-extrabold text-foreground">{t('ceoName')}</p>
                 <p className="text-xs text-muted-foreground">{t('ceoTitle')}</p>
               </div>
-            </div>
+            </div> */}
 
             {/* Action CTA */}
             <div>
