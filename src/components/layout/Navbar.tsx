@@ -49,7 +49,7 @@ export function Navbar() {
                 {t('companyName')}
               </span>
               <span className="text-[10px] font-semibold tracking-wider text-muted-foreground hidden sm:block">
-                Your HR Partner & Resource Solutions
+                Your HR partner and solutions
               </span>
             </div>
           </Link>

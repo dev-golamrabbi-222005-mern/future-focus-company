@@ -19,7 +19,7 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-const ICONS = [ SearchCheck, BadgeDollarSign, FileCheck2, Clock3, Handshake, ShieldCheck];
+const ICONS = [Clock3, SearchCheck, BadgeDollarSign, FileCheck2, Handshake, ShieldCheck];
 
 const GRADIENTS = [
   "from-blue-500/15 to-sky-400/10 border-blue-500/20 text-blue-500",
@@ -91,7 +91,7 @@ export default function WhyChoose() {
             </span>
           </div>
 
-          <h2 className="why-header-anim text-3xl md:text-4xl lg:text-5xl font-black leading-tight text-foreground">
+          <h2 className="why-header-anim text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-foreground">
             {t("title")}
           </h2>
 
