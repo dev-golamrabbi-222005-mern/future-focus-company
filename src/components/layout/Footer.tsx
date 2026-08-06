@@ -35,7 +35,7 @@ export function Footer() {
                   {tNav('companyName')}
                 </span>
                 <span className="text-xs font-semibold text-primary">
-                  Your HR partner and solutions
+                  Your HR Partner & Resource Solutions
                 </span>
               </div>
             </div>
