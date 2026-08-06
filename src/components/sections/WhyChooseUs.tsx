@@ -114,7 +114,11 @@ export function WhyChooseUs() {
                 </div>
 
                 <div className="pt-2 text-xs font-extrabold text-primary uppercase tracking-wider">
-                  {t('guaranteedStandard')}
+                  {t('bottom' + (idx + 1) + 'Text') && (
+                    <span className="block text-muted-foreground text-[10px] font-normal mt-1">
+                      {t('bottom' + (idx + 1) + 'Text')}
+                    </span>
+                  )}
                 </div>
               </div>
             );

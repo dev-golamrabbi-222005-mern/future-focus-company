@@ -258,10 +258,10 @@ export default function CareersJobsSection() {
                         <MapPin className="h-4 w-4 shrink-0 text-primary" />
                         <span className="font-medium">{job.location}</span>
                       </div>
-                      <div className="flex items-center gap-2 rounded-xl bg-muted/40 border border-border/60 px-3 py-2 text-sm font-bold text-foreground">
+                      {/* <div className="flex items-center gap-2 rounded-xl bg-muted/40 border border-border/60 px-3 py-2 text-sm font-bold text-foreground">
                         <DollarSign className="h-4 w-4 shrink-0 text-emerald-500" />
                         <span>{job.salary}</span>
-                      </div>
+                      </div> */}
                     </div>
 
                     {/* Description */}
