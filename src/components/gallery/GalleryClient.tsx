@@ -452,7 +452,7 @@ export function GalleryClient() {
             <div className="hidden h-px flex-1 max-w-[180px] bg-gradient-to-r from-transparent via-primary/30 to-primary/10 md:block" />
             <div className="flex flex-wrap items-center justify-center gap-4 text-center">
               <span className="h-2.5 w-2.5 rotate-45 bg-primary/70 inline-block" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-primary">Govt. License RL-1428</span>
+              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-primary">Govt. License 7052268831</span>
               <span className="text-primary text-xs">•</span>
               <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-primary">BMET Certified</span>
               <span className="text-primary text-xs">•</span>

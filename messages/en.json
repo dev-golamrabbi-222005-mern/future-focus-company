@@ -11,7 +11,7 @@
     "submitCv": "Submit CV"
   },
   "Hero": {
-    "badge": "Government Approved Recruiting Agency • RL-1428",
+    "badge": "Government Approved Recruiting Agency • 7052268831 License",
     "titlePrefix": "Connecting",
     "titleHighlight": "Global Opportunities",
     "titleSuffix": "with Top Talent",
@@ -114,7 +114,7 @@
     "timeline2022": {
       "badge": "Foundation",
       "title": "Company Established",
-      "description": "Future Focus Company officially started its manpower recruitment journey, building a strong foundation to connect skilled Bangladeshi workers with employers across Saudi Arabia."
+      "description": "Future Focus Company officially began its journey as an international workforce solutions provider, building a trusted recruitment network that connects skilled, semi-skilled, and general workforce from Bangladesh and more than 10 other Asian countries with employers across Saudi Arabia."
     },
 
     "timeline2023": {
@@ -132,7 +132,7 @@
     "timeline2025": {
       "badge": "Achievement",
       "title": "Trusted Workforce Partner",
-      "description": "Successfully deployed thousands of skilled, semi-skilled, and unskilled workers while earning the trust of clients across construction, hospitality, healthcare, and industrial sectors."
+      "description": "Successfully deployed thousands of skilled, semi-skilled, and unskilled workers while earning the trust of clients across construction facilities management, hospitality, healthcare, and industrial sectors."
     },
 
     "timeline2026": {
@@ -146,26 +146,26 @@
   "WhyChoose": {
   "tag": "Our Commitment",
 
-  "title": "Why Employers in Saudi Arabia Trust Us",
+  "title": "Why the Leading Companies in Saudi Arabia Trust Us",
 
   "subtitle": "Six things we do differently — and consistently — that make the difference.",
 
-  "feature1": {
+  "feature4": {
     "title": "On-Time Deployment",
     "description": "We ensure workers arrive on schedule with complete documentation and hassle-free deployment."
   },
 
-  "feature2": {
+  "feature1": {
     "title": "Rigorous Pre-Screening",
     "description": "Every candidate is carefully screened, skill-tested, medically cleared, and professionally prepared before deployment."
   },
 
-  "feature3": {
+  "feature2": {
     "title": "Transparent Pricing",
     "description": "No hidden charges. Clear quotations, honest pricing, and complete transparency from beginning to end."
   },
 
-  "feature4": {
+  "feature3": {
     "title": "Visa & Documentation",
     "description": "We handle visa processing, medical tests, BMET clearance, embassy formalities, and all required documentation."
   },
@@ -496,11 +496,11 @@
     "visionTitle": "Our Vision",
     "visionDesc": "To be recognized as the premier and most trusted HR & Manpower solutions partner in Saudi Arabia, driving innovation and service excellence in workforce management. As we scale to support international landmarks like Saudi Arabia's major aviation hubs, our vision is to set the gold standard in staffing across the Middle East—fostering growth, diversity, and unwavering operational support for every sector we serve.",
     "licenseTitle": "Government License & Accreditation",
-    "licenseNumber": "Government License: RL-1428",
-    "licenseDesc": "Operating under Ministry License RL-1428 with full BMET compliance, ISO quality certifications, and GAMCA medical affiliation.",
+    "licenseNumber": "Government License: 7052268831",
+    "licenseDesc": "Operating under Ministry License 7052268831 with full BMET compliance, ISO quality certifications, and GAMCA medical affiliation.",
     "licenseCheck1": "BMET Smart Card Authorized",
     "licenseCheck2": "GAMCA Medical Affiliated",
-    "licenseCheck3": "Ministry License RL-1428",
+    "licenseCheck3": "Ministry License 7052268831",
     "licenseCheck4": "Saudi Embassy Verified",
     "mdTitle": "Managing Director's Statement",
     "mdMessage": "Over the past 05 years, we have placed over 5,000 workers in life-changing careers across Saudi Arabia and the GCC. We believe ethical recruitment is not just good policy—it is our core duty.",
@@ -511,12 +511,12 @@
   },
   "ServicesPage": {
     "hero": {
-      "badge": "Government Approved Manpower Agency • License RL-1428",
+      "badge": "Government Approved Manpower Agency • License 7052268831",
       "title": "Manpower Solutions Across Saudi Arabia",
       "subtitle": "Government-licensed workforce supply bridging top Bangladeshi talent with Vision 2030 megaprojects across Riyadh, Jeddah, Dammam & Neom.",
       "ctaRequest": "Request Workers",
       "ctaDownload": "Download Profile (PDF)",
-      "trust1": "MHRSD License RL-1428",
+      "trust1": "MHRSD License 7052268831",
       "trust2": "QIWA & Musaned Compliant",
       "trust3": "GAMCA Medical Cleared",
       "trust4": "90-Day Free Replacement"
@@ -567,7 +567,7 @@
       "badge1Sub": "Digital contract transfer & official work permit issuance under KSA law.",
       "badge2Title": "90-Day Free Replacement",
       "badge2Sub": "If candidate performance falls short, we replace them at zero extra cost.",
-      "badge3Title": "Government License RL-1428",
+      "badge3Title": "Government License 7052268831",
       "badge3Sub": "Officially approved recruitment agency by the Ministry of Expatriates Welfare.",
       "badge4Title": "GAMCA Medical Fitness",
       "badge4Sub": "Guaranteed fit for duty medical clearance prior to embassy visa stamping."
@@ -1038,7 +1038,7 @@
   },
   "Footer": {
     "tagline": "Leading government-approved manpower recruitment agency specializing in skilled workforce deployment across Saudi Arabia and the Middle East.",
-    "license": "Government License: RL-1428 | Ministry of Expatriates' Welfare & Overseas Employment",
+    "license": "Government License: 7052268831 | Ministry of Expatriates' Welfare & Overseas Employment",
     "quickLinks": "Quick Links",
     "saudiOffice": "Riyadh Office (KSA)",
     "bdOffice": "Bangladesh Office (Dhaka)",
@@ -1174,17 +1174,17 @@
   },
   "SEO": {
     "siteName": "Future Focus Company",
-    "defaultTitle": "Future Focus Company | Govt. Approved Recruitment Agency RL-1428",
+    "defaultTitle": "Future Focus Company | Govt. Approved Recruitment Agency 7052268831",
     "titleTemplate": "%s | Future Focus Company",
-    "defaultDescription": "Connecting Skilled Bangladeshi Talent with Top Employers in Saudi Arabia & the Middle East. Govt. Approved Recruitment Agency (RL-1428). High quality workforce mobilization.",
-    "keywords": "Recruitment Agency Bangladesh, Saudi Arabia Manpower, Govt Approved Agency RL-1428, Skilled Bangladeshi Workers, Gulf Manpower Recruitment, Future Focus Company, Labor Visa Recruitment",
+    "defaultDescription": "Connecting Skilled Bangladeshi Talent with Top Employers in Saudi Arabia & the Middle East. Govt. Approved Recruitment Agency (7052268831). High quality workforce mobilization.",
+    "keywords": "Recruitment Agency Bangladesh, Saudi Arabia Manpower, Govt Approved Agency 7052268831, Skilled Bangladeshi Workers, Gulf Manpower Recruitment, Future Focus Company, Labor Visa Recruitment",
     "home": {
-      "title": "Government Approved Recruitment Agency RL-1428 | Future Focus Company",
-      "description": "Premier manpower recruitment agency bridging skilled Bangladeshi talent with top employers in Saudi Arabia & GCC. Transparent, trusted & Govt. approved (RL-1428)."
+      "title": "Government Approved Recruitment Agency 7052268831 | Future Focus Company",
+      "description": "Premier manpower recruitment agency bridging skilled Bangladeshi talent with top employers in Saudi Arabia & GCC. Transparent, trusted & Govt. approved (7052268831)."
     },
     "about": {
       "title": "About Us - Premier Manpower Recruitment Agency",
-      "description": "Learn about Future Focus Company (RL-1428), our mission, executive leadership, and track record of sending over 5,000+ skilled workers to Saudi Arabia & Gulf countries."
+      "description": "Learn about Future Focus Company (7052268831), our mission, executive leadership, and track record of sending over 5,000+ skilled workers to Saudi Arabia & Gulf countries."
     },
     "services": {
       "title": "Recruitment & Manpower Services | Saudi Arabia & GCC",
