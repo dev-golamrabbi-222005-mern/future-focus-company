@@ -34,9 +34,9 @@ export function ContactFormSection() {
 
   return (
     <div className="max-w-[1380px] mx-auto">
-      <div className="flex flex-col md:flex-row justify-between items-center gap-12">
+      <div className="flex flex-col md:flex-row items-start gap-8 md:gap-10">
         {/* Left Column: Interactive Contact Form */}
-        <div className="gsap-fade-up p-8 sm:p-10 rounded-3xl border border-border bg-card shadow-lg space-y-6">
+        <div className="gsap-fade-up w-full md:flex-1 p-6 sm:p-8 sm:p-10 rounded-3xl border border-border bg-card shadow-lg space-y-6">
           <h2 className="text-2xl font-bold text-foreground">
             {t("formTitle")}
           </h2>
@@ -128,7 +128,7 @@ export function ContactFormSection() {
         </div>
 
         {/* Right Column: Office Address Cards & Map */}
-        <div className="space-y-6">
+        <div className="w-full md:flex-1 space-y-6">
           {/* Saudi/Primary Overseas Office Card */}
           <div className="gsap-fade-up p-8 rounded-3xl border border-border bg-card shadow-md space-y-4">
             <div className="flex items-center gap-3">

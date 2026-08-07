@@ -4,7 +4,7 @@
     "home": "Home",
     "about": "About Us",
     "services": "Services",
-    "manpower": "Manpower Supply",
+    "globalization": "Globalization",
     "careers": "Careers",
     "gallery": "Gallery",
     "contact": "Contact Us",
@@ -24,7 +24,7 @@
     "statsCountries": "Partner Countries",
     "statsPlacementsValue": "15,000+",
     "statsSatisfactionValue": "98.5%",
-    "statsExperienceValue": "14+ Years",
+    "statsExperienceValue": "5+ Years",
     "statsCountriesValue": "6 GCC Nations"
   },
   "Hero1": {
@@ -643,21 +643,22 @@
     "cat4Title": "Transportation",
     "cat4Desc": "Trailer Drivers, Bus Drivers, Forklift Drivers, Bikers.",
     "guaranteeTitle": "Our Recruitment Guarantee",
-    "guaranteeDesc": "3-Month probationary replacement guarantee for any worker not meeting client skill standards."
+    "guaranteeDesc": "2-Month probationary replacement guarantee for any worker not meeting client skill standards.",
+    "applyBtn":"Apply Now"
   },
 
   "AboutIntro": {
-  "tag": "Manpower Supply",
+  "tag": "GLOBAL TALENT NETWORK",
 
-  "title1": "Bangladesh",
-  "title2": "To",
+  "title1": "Connecting Global Talent",
+  "title2": "With",
   "title3": "Saudi Arabia",
 
   "subtitle": "Skilled, semi-skilled & unskilled workers — vetted, documented, and deployed on time.",
 
-  "description": "Future Focus Company is a government-approved international manpower recruitment agency headquartered in Riyadh, Saudi Arabia. We connect Bangladesh’s skilled workforce with employers across Saudi Arabia by providing reliable recruitment, documentation, visa processing, and workforce deployment services.",
+  "description": "Future Focus Company connects employers in Saudi Arabia with qualified workforce sourced from over 10 countries across Asia. Through our trusted international recruitment network, we provide complete HR and workforce solutions for construction, hospitality, industrial, logistics, healthcare, and other major sectors throughout the Kingdom.",
 
-  "bangladesh": "Bangladesh",
+  "bangladesh": "10+ Countries",
   "saudi": "Saudi Arabia",
 
   "request": "Request Manpower",
@@ -674,33 +675,32 @@
 "WhatIsManpower": {
   "tag": "What We Do",
 
-  "title": "What Is International Manpower Supply?",
+  "title": "Connecting Global Talent. Empowering Saudi Businesses.",
 
-  "subtitle": "It is the process of sourcing qualified workers in one country and deploying them to employers in another — legally, safely, and with full documentation support from start to finish.",
+  "subtitle": "Connecting qualified workforce from 10+ Asian countries with employers across Saudi Arabia.",
 
-  "description1": "Future Focus Company manages the complete manpower supply chain from Bangladesh to Saudi Arabia. We identify workers who match your exact role requirements, conduct thorough screening and medical tests, process visas and travel documentation, and coordinate deployment to your worksite—so you receive work-ready professionals, not paperwork headaches.",
+  "description1": "End-to-end workforce solutions, from international recruitment to successful deployment across Saudi Arabia.",
 
-  "description2": "Our manpower supply service covers three major worker categories: skilled professionals (welders, electricians, plumbers), semi-skilled workers (kitchen helpers, factory assistants, baristas), and unskilled labor (general cleaners, site laborers, garden workers). Every worker goes through strict recruitment, verification, and pre-deployment training.",
-
+  "description2": "Supplying skilled, semi-skilled, and general workforce for Saudi Arabia's leading industries.",
   "quoteTitle": "Future Focus Company — In One Sentence",
 
-  "quote": "We are a government-approved manpower supply company connecting Bangladesh's workforce with employers across Saudi Arabia through ethical recruitment, complete documentation, and reliable deployment.",
+  "quote": "Your trusted HR Partner & Resource Solutions provider for employers across Saudi Arabia.",
 
   "cards": [
     {
-      "title": "Skilled Workers",
-      "jobs": "Welders • Electricians • Steel Fixers • Plumbers • Painters",
-      "description": "Trade-qualified professionals with verified practical experience for construction, oil & gas, industrial, and technical projects across Saudi Arabia."
+      "title": "Skilled Workforce",
+      "jobs": "Engineers • Electricians • Welders • Plumbers • Technicians",
+      "description": "Qualified professionals for technical, industrial, and construction projects."
     },
     {
-      "title": "Semi-skilled Workers",
-      "jobs": "Kitchen Helpers • Factory Assistants • Baristas • Car Wash • Fast Food",
-      "description": "Workers with role-specific training and hands-on experience for hospitality, food production, retail, logistics, and manufacturing sectors."
+      "title": "Semi-skilled Workforce",
+      "jobs": "Hospitality • Logistics • Retail • Manufacturing",
+      "description": "Experienced workers prepared for operational and customer-focused roles."
     },
     {
-      "title": "Unskilled Labor",
-      "jobs": "General Labor • Cleaners • Garden Workers • Site Helpers",
-      "description": "Reliable and hardworking laborers ready for municipal, commercial, industrial, warehouse, and residential projects with fast deployment."
+      "title": "General Workforce",
+      "jobs": "Helpers • Cleaners • Drivers • Support Staff",
+      "description": "Reliable workforce for commercial, industrial, and large-scale projects."
     }
   ]
 },
@@ -774,9 +774,9 @@
     "heroCta": "View All Moments",
     "heroStat1Num": "5000+",
     "heroStat1Label": "Workers Deployed",
-    "heroStat2Num": "14+",
+    "heroStat2Num": "05+",
     "heroStat2Label": "Years of Trust",
-    "heroStat3Num": "150+",
+    "heroStat3Num": "45+",
     "heroStat3Label": "Partner Clients",
 
     "filterTagline": "Our Moments",
@@ -824,7 +824,7 @@
     "stat2Num": "150",
     "stat2Suffix": "+",
     "stat2Label": "Corporate Clients Served",
-    "stat3Num": "14",
+    "stat3Num": "05",
     "stat3Suffix": "+",
     "stat3Label": "Years of Trusted Service",
     "stat4Num": "6",
@@ -927,64 +927,64 @@
     "locationLabel": "Location",
     "typeLabel": "Job Type",
     "applyBtn": "Apply Now",
-    "freeVisa": "Free Visa",
-    "freeAccom": "Free Accommodation",
-    "freeMedical": "Medical Insurance",
+    "freeVisa": "Accommodation (If Applicable)",
+    "freeAccom": "Transportation (If Applicable)",
+    "freeMedical": "Medical Insurance (If Applicable)",
     "verified": "Verified Demand",
     "fullTime": "Full-Time",
     "urgent": "Urgent",
 
-    "job1Title": "Hotel Receptionist",
-    "job1Location": "Riyadh, KSA",
-    "job1Salary": "SAR 2,200 – 2,800 / month",
+    "job1Title": "Receptionist",
+    "job1Location": "KSA",
+    "job1Salary": "Competitive Salary / month",
     "job1Category": "Hospitality",
     "job1Desc": "Welcoming guests, managing front-desk operations, handling check-in/check-out, and coordinating with hotel departments.",
 
     "job2Title": "Housekeeper (Male / Female)",
-    "job2Location": "Riyadh & Jeddah, KSA",
-    "job2Salary": "SAR 1,800 – 2,400 / month",
+    "job2Location": "KSA",
+    "job2Salary": "Competitive Salary / month",
     "job2Category": "Cleaning",
     "job2Desc": "Cleaning and maintaining rooms, common areas, and facilities in hotels, hospitals, and residential compounds.",
 
     "job3Title": "Security Guard",
-    "job3Location": "Multiple Cities, KSA",
-    "job3Salary": "SAR 2,000 – 2,600 / month",
+    "job3Location": "KSA",
+    "job3Salary": "Competitive Salary / month",
     "job3Category": "Security",
     "job3Desc": "Securing premises, monitoring CCTV, controlling access points, and ensuring safety of buildings and personnel.",
 
     "job4Title": "Driver (Car / Van / Bus)",
-    "job4Location": "Riyadh, KSA",
-    "job4Salary": "SAR 2,500 – 3,500 / month",
+    "job4Location": "KSA",
+    "job4Salary": "Competitive Salary / month",
     "job4Category": "Transport",
     "job4Desc": "Transporting staff, guests, or goods across the city and intercity with valid KSA driving license.",
 
     "job5Title": "Office Boy / Tea Boy",
-    "job5Location": "Riyadh, KSA",
-    "job5Salary": "SAR 1,600 – 2,000 / month",
+    "job5Location": "KSA",
+    "job5Salary": "Competitive Salary / month",
     "job5Category": "Support Staff",
     "job5Desc": "Serving tea/coffee, maintaining office cleanliness, photocopying, running errands, and assisting staff.",
 
     "job6Title": "Gardener / Landscape Worker",
-    "job6Location": "Jeddah & Riyadh, KSA",
-    "job6Salary": "SAR 1,800 – 2,200 / month",
+    "job6Location": "KSA",
+    "job6Salary": "Competitive Salary/ month",
     "job6Category": "Support Staff",
     "job6Desc": "Maintaining gardens, trimming hedges, watering plants, and keeping outdoor spaces clean and presentable.",
 
     "job7Title": "General Helper / Laborer",
-    "job7Location": "Multiple Cities, KSA",
-    "job7Salary": "SAR 1,500 – 2,000 / month",
+    "job7Location": "KSA",
+    "job7Salary": "Competitive Salary / month",
     "job7Category": "Support Staff",
     "job7Desc": "Assisting in day-to-day operations, loading/unloading, cleaning, and general support across various industries.",
 
     "job8Title": "Event Staff / Support",
-    "job8Location": "Riyadh, KSA",
-    "job8Salary": "SAR 2,000 – 2,800 / month",
+    "job8Location": "KSA",
+    "job8Salary": "Competitive Salary / month",
     "job8Category": "Hospitality",
     "job8Desc": "Supporting event setups, guest services, crowd management, and behind-the-scenes logistics during events.",
 
     "job9Title": "Golf Cart Driver",
-    "job9Location": "Riyadh Golf Clubs, KSA",
-    "job9Salary": "SAR 2,200 – 2,800 / month",
+    "job9Location": "KSA",
+    "job9Salary": "Competitive Salary / month",
     "job9Category": "Transport",
     "job9Desc": "Driving golf carts within resorts, golf clubs, and compounds to transport guests safely.",
 
@@ -994,9 +994,9 @@
     "ctaDesc": "Submit your CV and passport copy to our recruitment team. We handle your visa, medical, BMET smart card, and flight — you focus on your new career.",
     "ctaSubmit": "Submit Your CV",
     "ctaContact": "Talk to a Recruiter",
-    "ctaBenefit1": "Free Visa Processing",
-    "ctaBenefit2": "BMET Smart Card",
-    "ctaBenefit3": "Free Medical Test",
+    "ctaBenefit1": "Accommodation (If Applicable)",
+    "ctaBenefit2": "Transportation (If Applicable)",
+    "ctaBenefit3": "Medical Insurance (If Applicable)",
     "ctaBenefit4": "Airport Assistance"
   },
   "JobsPage": {
@@ -1006,7 +1006,7 @@
     "applyBtn": "Apply Now",
     "job1Title": "Senior MEP Electrician",
     "job1Company": "Al-Rashid Construction • Riyadh",
-    "job1Salary": "SAR 2,500 - 3,200 / month",
+    "job1Salary": "Competitive Salary",
     "job2Title": "Heavy Trailer Driver",
     "job2Company": "Saudi Logistics • Jeddah",
     "job2Salary": "SAR 3,200 - 4,000 / month",
@@ -1015,7 +1015,7 @@
     "job3Salary": "SAR 2,800 + Duty Meals",
     "job4Title": "Facility Maintenance Technician",
     "job4Company": "Red Sea Global • KSA",
-    "job4Salary": "SAR 2,600 - 3,500 / month"
+    "job4Salary": "Competitive Salary"
   },
   "SubmitCvPage": {
     "tagline": "Candidate Application",
@@ -1056,24 +1056,24 @@
     "verifiedClient": "Verified Partner",
     "items": {
       "item1": {
-        "quote": "Future Focus Company provided us with 150+ certified welders and fabricators for our Dubai Marina project on short notice. Their vetting process and visa speed are unmatched in the region.",
+        "quote": "Future Focus Company provided us with 150+ certified welders and fabricators for our Riyadh infrastructure project on short notice. Their vetting process and visa speed are unmatched in the region.",
         "name": "Tariq Al-Mansoor",
-        "role": "HR Director, Emaar Contracting Partner",
-        "location": "Dubai, UAE",
-        "project": "Dubai Marina Development"
+        "role": "HR Director, Al-Rashid Contracting Partner",
+        "location": "Riyadh, KSA",
+        "project": "Riyadh Infrastructure Development"
       },
       "item2": {
         "quote": "Sourcing skilled hospitality and facility management staff used to take months. Future Focus deployed 80+ pre-trained staff to our 5-star hotel property within 18 days. Exceptional service!",
         "name": "Sarah Jenkins",
         "role": "Head of People & Culture",
-        "location": "Abu Dhabi, UAE",
+        "location": "Jeddah, KSA",
         "project": "Luxury Resort Group"
       },
       "item3": {
-        "quote": "Their compliance with UAE labor laws and transparent recruitment standards give us total peace of mind. Every technician supplied passed our technical trade test on day one.",
+        "quote": "Their compliance with Saudi labor laws and transparent recruitment standards give us total peace of mind. Every technician supplied passed our technical trade test on day one.",
         "name": "Engineer Rashid Al-Hassan",
         "role": "Operations Vice President",
-        "location": "Riyadh & Dubai",
+        "location": "Riyadh, KSA",
         "project": "Industrial Infrastructure"
       }
     }

@@ -1,70 +1,355 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
-  MapPin,
-  DollarSign,
-  ArrowRight,
-  CheckCircle2,
-  Search,
-  Plane,
-  Home,
-  HeartPulse,
-  Briefcase,
-  Zap,
+  MapPin, DollarSign, CheckCircle2, Search,
+  Plane, Home, HeartPulse, Briefcase, Zap,
+  X, Send, ChevronRight, User, Phone, Mail,
+  FileText, Upload, ArrowRight,
 } from "lucide-react";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-/* ── Job image map — curated Unsplash photos per role ── */
+/* ─── Job images ─── */
 const JOB_IMAGES: Record<string, string> = {
-  job1: "https://i.postimg.cc/bwRztbmv/Hospitality.png", // receptionist / hotel lobby
-  job2: "https://i.postimg.cc/JzQ1kJpy/Housekeeper.png", // housekeeper
-  job3: "https://i.postimg.cc/qvGk3n1h/Security-Guard.png", // security guard
-  job4: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80", // driver
-  job5: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80", // office / tea boy
-  job6: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80", // gardener
-  job7: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80", // general labor
-  job8: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80", // event staff
-  job9: "https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&q=80", // golf cart
+  job1: "https://i.postimg.cc/sXLhKzXG/Hospitality.png",
+  job2: "https://i.postimg.cc/RhnnDY6P/Housekeeper.png",
+  job3: "https://i.postimg.cc/Fs3TfWWG/Security-Guard.png",
+  job4: "https://i.postimg.cc/8CDBrTJj/Driver.png",
+  job5: "https://i.postimg.cc/VLnKSGGF/Office-Boy.png",
+  job6: "https://i.postimg.cc/Bb8xG6kG/Gardener.png",
+  job7: "https://i.postimg.cc/SRXWps57/General-Helper.png",
+  job8: "https://i.postimg.cc/yxJFzd5c/Even-staff.png",
+  job9: "https://i.postimg.cc/t4dFb8ST/Golf-Cart-Driver.png",
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
-  Hospitality: "bg-amber-500/15 text-amber-600 border-amber-500/25",
-  Cleaning:    "bg-sky-500/15 text-sky-600 border-sky-500/25",
-  Security:    "bg-red-500/15 text-red-600 border-red-500/25",
-  Transport:   "bg-violet-500/15 text-violet-600 border-violet-500/25",
-  "Support Staff": "bg-emerald-500/15 text-emerald-600 border-emerald-500/25",
+  Hospitality:    "bg-amber-500/15 text-amber-600 border-amber-500/25",
+  Cleaning:       "bg-sky-500/15 text-sky-600 border-sky-500/25",
+  Security:       "bg-red-500/15 text-red-600 border-red-500/25",
+  Transport:      "bg-violet-500/15 text-violet-600 border-violet-500/25",
+  "Support Staff":"bg-emerald-500/15 text-emerald-600 border-emerald-500/25",
 };
 
-const FILTER_KEYS = ["All", "Hospitality", "Security", "Support Staff", "Transport", "Cleaning"] as const;
+const FILTER_KEYS = ["All","Hospitality","Security","Support Staff","Transport","Cleaning"] as const;
 type FilterKey = typeof FILTER_KEYS[number];
 
 const FILTER_LABEL_KEYS: Record<FilterKey, string> = {
-  All:           "filterAll",
-  Hospitality:   "filterHospitality",
-  Security:      "filterSecurity",
-  "Support Staff": "filterSupport",
-  Transport:     "filterTransport",
-  Cleaning:      "filterCleaning",
+  All: "filterAll", Hospitality: "filterHospitality",
+  Security: "filterSecurity", "Support Staff": "filterSupport",
+  Transport: "filterTransport", Cleaning: "filterCleaning",
 };
 
+/* ─── Job type ─── */
+type Job = {
+  key: string;
+  title: string;
+  location: string;
+  salary: string;
+  category: string;
+  desc: string;
+  image: string;
+  urgent: boolean;
+};
+
+/* ─── Apply Form ─── */
+function ApplyForm({
+  job,
+  onClose,
+  onSuccess,
+}: {
+  job: Job;
+  onClose: () => void;
+  onSuccess: () => void;
+}) {
+  const t = useTranslations("CareersPage");
+  const [loading, setLoading] = React.useState(false);
+  const [form, setForm] = React.useState({
+    fullName: "", phone: "", email: "", passportNo: "", experience: "1-3",
+  });
+
+  const handle = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>
+    setForm((p) => ({ ...p, [e.target.name]: e.target.value }));
+
+  const submit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setTimeout(() => { setLoading(false); onSuccess(); }, 1400);
+  };
+
+  return (
+    <form onSubmit={submit} className="space-y-4">
+      {/* Full Name */}
+      <div className="space-y-1.5">
+        <label className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+          <User className="h-3.5 w-3.5" /> Full Name (as per passport) *
+        </label>
+        <input name="fullName" required value={form.fullName} onChange={handle}
+          placeholder="Md. Rahim Uddin"
+          className="w-full rounded-xl border border-border bg-muted/30 px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary" />
+      </div>
+
+      {/* Phone + Email */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="space-y-1.5">
+          <label className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+            <Phone className="h-3.5 w-3.5" /> WhatsApp / Phone *
+          </label>
+          <input name="phone" type="tel" required value={form.phone} onChange={handle}
+            placeholder="+880 1712 345678"
+            className="w-full rounded-xl border border-border bg-muted/30 px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary" />
+        </div>
+        <div className="space-y-1.5">
+          <label className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+            <Mail className="h-3.5 w-3.5" /> Email (optional)
+          </label>
+          <input name="email" type="email" value={form.email} onChange={handle}
+            placeholder="rahim@email.com"
+            className="w-full rounded-xl border border-border bg-muted/30 px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary" />
+        </div>
+      </div>
+
+      {/* Passport + Experience */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="space-y-1.5">
+          <label className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+            <FileText className="h-3.5 w-3.5" /> Passport Number *
+          </label>
+          <input name="passportNo" required value={form.passportNo} onChange={handle}
+            placeholder="A12345678"
+            className="w-full rounded-xl border border-border bg-muted/30 px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary" />
+        </div>
+        <div className="space-y-1.5">
+          <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground block">
+            Years of Experience *
+          </label>
+          <select name="experience" required value={form.experience} onChange={handle}
+            className="w-full rounded-xl border border-border bg-muted/30 px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary">
+            <option value="1-3">1 – 3 Years</option>
+            <option value="3-5">3 – 5 Years</option>
+            <option value="5+">5+ Years (Experienced)</option>
+          </select>
+        </div>
+      </div>
+
+      {/* CV Upload */}
+      <div className="space-y-1.5">
+        <label className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+          <Upload className="h-3.5 w-3.5" /> Upload CV / Resume *
+        </label>
+        <label className="flex flex-col items-center justify-center gap-2 rounded-2xl border-2 border-dashed border-border bg-muted/20 px-4 py-5 text-center cursor-pointer hover:border-primary/50 transition-colors">
+          <Upload className="h-6 w-6 text-primary" />
+          <span className="text-xs font-semibold text-foreground">Click to upload PDF / DOC</span>
+          <span className="text-[10px] text-muted-foreground">Max 5MB</span>
+          <input type="file" accept=".pdf,.doc,.docx" required className="hidden" />
+        </label>
+      </div>
+
+      {/* Actions */}
+      <div className="flex gap-3 pt-2">
+        <button type="button" onClick={onClose}
+          className="flex-1 rounded-xl border border-border bg-muted/40 py-3 text-sm font-semibold text-foreground hover:bg-muted transition-colors">
+          Cancel
+        </button>
+        <button type="submit" disabled={loading}
+          className="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-primary py-3 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/25 hover:bg-primary/90 disabled:opacity-60 transition-all">
+          {loading ? (
+            <span className="animate-spin h-4 w-4 border-2 border-primary-foreground border-t-transparent rounded-full" />
+          ) : (
+            <><Send className="h-4 w-4" /> Submit Application</>
+          )}
+        </button>
+      </div>
+    </form>
+  );
+}
+
+/* ─── Job Detail Modal ─── */
+function JobModal({ job, onClose }: { job: Job; onClose: () => void }) {
+  const t = useTranslations("CareersPage");
+  const [view, setView] = React.useState<"details" | "apply" | "success">("details");
+
+  /* lock body scroll */
+  React.useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = ""; };
+  }, []);
+
+  const perks = [t("freeVisa"), t("freeAccom"), t("freeMedical")];
+
+  return (
+    <AnimatePresence>
+      <motion.div
+        key="modal-backdrop"
+        initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+        className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4"
+      >
+        {/* Backdrop */}
+        <motion.div
+          className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+          onClick={onClose}
+        />
+
+        {/* Panel */}
+        <motion.div
+          key="modal-panel"
+          initial={{ opacity: 0, y: 60, scale: 0.97 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, y: 60, scale: 0.97 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          className="relative z-10 w-full sm:max-w-2xl max-h-[92svh] sm:max-h-[88vh] overflow-hidden rounded-t-[2rem] sm:rounded-[2rem] bg-card border border-border shadow-2xl flex flex-col"
+        >
+          {/* ── Job image header ── */}
+          <div className="relative h-44 sm:h-52 shrink-0 overflow-hidden">
+            <img src={job.image} alt={job.title}
+              className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+
+            {/* Close */}
+            <button onClick={onClose}
+              className="absolute top-4 right-4 flex h-9 w-9 items-center justify-center rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors backdrop-blur-md">
+              <X className="h-5 w-5" />
+            </button>
+
+            {/* Badges */}
+            <div className="absolute top-4 left-4 flex gap-2">
+              <span className={`rounded-full border px-3 py-1 text-[10px] font-bold uppercase tracking-wide backdrop-blur-sm ${CATEGORY_COLORS[job.category] ?? "bg-primary/15 text-primary border-primary/25"}`}>
+                {job.category}
+              </span>
+              {job.urgent && (
+                <span className="inline-flex items-center gap-1 rounded-full bg-red-500 px-2.5 py-1 text-[10px] font-bold text-white">
+                  <Zap className="h-3 w-3" /> Urgent
+                </span>
+              )}
+            </div>
+
+            {/* Title */}
+            <div className="absolute bottom-4 left-4 right-16">
+              <h2 className="text-xl sm:text-2xl font-black text-white leading-tight drop-shadow-lg">
+                {job.title}
+              </h2>
+              <p className="flex items-center gap-1.5 mt-1 text-xs text-white/80 font-semibold">
+                <MapPin className="h-3.5 w-3.5 text-primary" /> {job.location}
+              </p>
+            </div>
+          </div>
+
+          {/* ── Tab switcher (only when not success) ── */}
+          {view !== "success" && (
+            <div className="flex border-b border-border shrink-0">
+              {(["details", "apply"] as const).map((tab) => (
+                <button key={tab} onClick={() => setView(tab)}
+                  className={`flex-1 py-3.5 text-sm font-bold transition-colors ${view === tab
+                    ? "border-b-2 border-primary text-primary"
+                    : "text-muted-foreground hover:text-foreground"}`}>
+                  {tab === "details" ? "Job Details" : "Apply Now"}
+                </button>
+              ))}
+            </div>
+          )}
+
+          {/* ── Scrollable content ── */}
+          <div className="flex-1 overflow-y-auto p-5 sm:p-6">
+
+            {/* SUCCESS */}
+            {view === "success" && (
+              <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}
+                className="py-10 text-center space-y-5">
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500/10">
+                  <CheckCircle2 className="h-9 w-9 text-emerald-500 animate-bounce" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-extrabold text-foreground">Application Submitted!</h3>
+                  <p className="mt-2 text-sm text-muted-foreground max-w-sm mx-auto leading-relaxed">
+                    Our recruitment officers will review your application and call you for trade testing within 2–3 business days.
+                  </p>
+                </div>
+                <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 border border-primary/20 px-5 py-2 text-xs font-bold text-primary">
+                  <Briefcase className="h-3.5 w-3.5" /> {job.title} — Application Received
+                </div>
+                <button onClick={onClose}
+                  className="mt-2 rounded-xl bg-primary px-8 py-3 text-sm font-bold text-primary-foreground hover:bg-primary/90 transition-colors">
+                  Close
+                </button>
+              </motion.div>
+            )}
+
+            {/* DETAILS */}
+            {view === "details" && (
+              <div className="space-y-6">
+                {/* Salary */}
+                <div className="flex items-center gap-2 rounded-2xl bg-muted/40 border border-border px-4 py-3">
+                  <DollarSign className="h-5 w-5 shrink-0 text-emerald-500" />
+                  <div>
+                    <p className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground">Monthly Salary</p>
+                    <p className="text-sm font-extrabold text-foreground">{job.salary}</p>
+                  </div>
+                </div>
+
+                {/* Description */}
+                <div>
+                  <h4 className="text-xs font-extrabold uppercase tracking-widest text-muted-foreground mb-2">Job Description</h4>
+                  <p className="text-sm leading-7 text-foreground/90">{job.desc}</p>
+                </div>
+
+                {/* Perks */}
+                <div>
+                  <h4 className="text-xs font-extrabold uppercase tracking-widest text-muted-foreground mb-3">Included Benefits</h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    {perks.map((perk) => (
+                      <div key={perk} className="flex items-center gap-2 rounded-xl bg-emerald-500/8 border border-emerald-500/20 px-3 py-2.5">
+                        <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-500" />
+                        <span className="text-xs font-semibold text-foreground">{perk}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Job type */}
+                <div className="flex items-center gap-3 p-4 rounded-2xl border border-border bg-muted/30">
+                  <Briefcase className="h-5 w-5 text-primary shrink-0" />
+                  <div>
+                    <p className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground">Job Type</p>
+                    <p className="text-sm font-bold text-foreground">{t("fullTime")} • {job.location}</p>
+                  </div>
+                </div>
+
+                {/* CTA */}
+                <button onClick={() => setView("apply")}
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-primary py-4 font-bold text-sm text-primary-foreground shadow-lg shadow-primary/25 hover:bg-primary/90 transition-all group">
+                  Apply for This Position
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </button>
+              </div>
+            )}
+
+            {/* APPLY FORM */}
+            {view === "apply" && (
+              <ApplyForm job={job} onClose={onClose} onSuccess={() => setView("success")} />
+            )}
+          </div>
+        </motion.div>
+      </motion.div>
+    </AnimatePresence>
+  );
+}
+
+/* ─── Main Section ─── */
 export default function CareersJobsSection() {
   const t = useTranslations("CareersPage");
-  const locale = useLocale();
   const sectionRef = React.useRef<HTMLDivElement>(null);
   const headerRef  = React.useRef<HTMLDivElement>(null);
 
   const [activeFilter, setActiveFilter] = React.useState<FilterKey>("All");
   const [search, setSearch] = React.useState("");
+  const [selectedJob, setSelectedJob] = React.useState<Job | null>(null);
 
   /* ── Build jobs array from translations ── */
   const allJobs = React.useMemo(() => {
@@ -72,7 +357,7 @@ export default function CareersJobsSection() {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const tx = t as (key: any) => string;
     return ids.map((n) => ({
-      key:      `job${n}` as keyof typeof JOB_IMAGES,
+      key:      `job${n}`,
       title:    tx(`job${n}Title`),
       location: tx(`job${n}Location`),
       salary:   tx(`job${n}Salary`),
@@ -83,226 +368,160 @@ export default function CareersJobsSection() {
     }));
   }, [t]);
 
-  const filtered = React.useMemo(() => {
-    return allJobs.filter((j) => {
-      const matchCat    = activeFilter === "All" || j.category === activeFilter;
-      const matchSearch = search === "" ||
-        j.title.toLowerCase().includes(search.toLowerCase()) ||
-        j.location.toLowerCase().includes(search.toLowerCase());
-      return matchCat && matchSearch;
-    });
-  }, [allJobs, activeFilter, search]);
+  const filtered = React.useMemo(() => allJobs.filter((j) => {
+    const matchCat    = activeFilter === "All" || j.category === activeFilter;
+    const matchSearch = search === "" ||
+      j.title.toLowerCase().includes(search.toLowerCase()) ||
+      j.location.toLowerCase().includes(search.toLowerCase());
+    return matchCat && matchSearch;
+  }), [allJobs, activeFilter, search]);
 
-  useGSAP(
-    () => {
-      if (!headerRef.current) return;
-      gsap.fromTo(
-        headerRef.current.querySelectorAll(".gsap-up"),
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1, y: 0, duration: 0.8, stagger: 0.12, ease: "power3.out",
-          scrollTrigger: { trigger: headerRef.current, start: "top 80%" },
-        }
-      );
-    },
-    { scope: headerRef }
-  );
-
-  const benefits = [
-    { icon: Plane,     label: t("freeVisa") },
-    { icon: Home,      label: t("freeAccom") },
-    { icon: HeartPulse,label: t("freeMedical") },
-  ];
+  useGSAP(() => {
+    if (!headerRef.current) return;
+    gsap.fromTo(
+      headerRef.current.querySelectorAll(".gsap-up"),
+      { opacity: 0, y: 40 },
+      { opacity: 1, y: 0, duration: 0.8, stagger: 0.12, ease: "power3.out",
+        scrollTrigger: { trigger: headerRef.current, start: "top 80%" } }
+    );
+  }, { scope: headerRef });
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative bg-background py-16 md:py-20 lg:py-24"
-    >
-      {/* Subtle background */}
-      <div className="absolute inset-0 -z-10 pointer-events-none">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(3,105,161,0.06),transparent_55%)]" />
-      </div>
+    <>
+      <section ref={sectionRef} className="relative bg-background py-16 md:py-20 lg:py-24">
+        <div className="absolute inset-0 -z-10 pointer-events-none">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(3,105,161,0.06),transparent_55%)]" />
+        </div>
 
-      <div className="mx-auto max-w-[1380px] px-4 md:px-6 lg:px-8 space-y-12">
+        <div className="mx-auto max-w-[1380px] px-4 md:px-6 lg:px-8 space-y-10">
 
-        {/* ── Section header ── */}
-        <div ref={headerRef} className="text-center space-y-4">
-          <div className="gsap-up flex justify-center">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
-              {t("filterTag")}
-            </span>
-          </div>
-          <h2 className="gsap-up text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-tight">
-            {t("filterTitle")}
-          </h2>
-          <p className="gsap-up text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            {t("filterSubtitle")}
-          </p>
-
-          {/* Benefits bar */}
-          <div className="gsap-up flex flex-wrap items-center justify-center gap-3 pt-2">
-            {benefits.map(({ icon: Icon, label }) => (
-              <span
-                key={label}
-                className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/25 bg-emerald-500/10 px-3 py-1.5 text-xs font-bold text-emerald-600"
-              >
-                <Icon className="h-3.5 w-3.5" />
-                {label}
+          {/* Header */}
+          <div ref={headerRef} className="text-center space-y-4">
+            <div className="gsap-up flex justify-center">
+              <span className="text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
+                {t("filterTag")}
               </span>
-            ))}
-          </div>
-        </div>
-
-        {/* ── Search + Filter bar ── */}
-        <div className="flex flex-col sm:flex-row gap-4 items-center">
-          {/* Search input */}
-          <div className="relative flex-1 w-full">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-            <input
-              type="text"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              placeholder={t("searchPlaceholder")}
-              className="w-full rounded-xl border border-border bg-card pl-11 pr-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary/60 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
-            />
+            </div>
+            <h2 className="gsap-up text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-tight">
+              {t("filterTitle")}
+            </h2>
+            <p className="gsap-up text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              {t("filterSubtitle")}
+            </p>
           </div>
 
-          {/* Filter pills */}
-          <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
-            {FILTER_KEYS.map((key) => (
-              <button
-                key={key}
-                onClick={() => setActiveFilter(key)}
-                className={`rounded-full px-4 py-2 text-xs font-bold transition-all border ${
-                  activeFilter === key
-                    ? "bg-primary text-primary-foreground border-primary shadow-lg shadow-primary/25"
-                    : "bg-card text-muted-foreground border-border hover:border-primary/40 hover:text-primary"
-                }`}
-              >
-                {t(FILTER_LABEL_KEYS[key])}
-              </button>
-            ))}
+          {/* Search + Filters */}
+          <div className="flex flex-col gap-4">
+            <div className="relative w-full">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <input type="text" value={search} onChange={(e) => setSearch(e.target.value)}
+                placeholder={t("searchPlaceholder")}
+                className="w-full rounded-xl border border-border bg-card pl-11 pr-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary/60 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" />
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {FILTER_KEYS.map((key) => (
+                <button key={key} onClick={() => setActiveFilter(key)}
+                  className={`rounded-full px-3.5 py-2 text-xs font-bold transition-all border ${
+                    activeFilter === key
+                      ? "bg-primary text-primary-foreground border-primary shadow-lg shadow-primary/25"
+                      : "bg-card text-muted-foreground border-border hover:border-primary/40 hover:text-primary"
+                  }`}>
+                  {t(FILTER_LABEL_KEYS[key])}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* ── Job cards grid ── */}
-        <AnimatePresence mode="wait">
-          {filtered.length === 0 ? (
-            <motion.div
-              key="empty"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="py-20 text-center text-muted-foreground text-sm"
-            >
-              {t("noJobs")}
-            </motion.div>
-          ) : (
-            <motion.div
-              key={activeFilter + search}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-            >
-              {filtered.map((job, idx) => (
-                <motion.div
-                  key={job.key}
-                  initial={{ opacity: 0, y: 35, scale: 0.96 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ duration: 0.5, delay: idx * 0.07, ease: "easeOut" }}
-                  whileHover={{ y: -6 }}
-                  className="group relative flex flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-sm hover:shadow-2xl hover:border-primary/30 transition-all duration-400"
-                >
-                  {/* ── Image ── */}
-                  <div className="relative overflow-hidden h-52">
-                    <img
-                      src={job.image}
-                      alt={job.title}
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      loading={idx < 3 ? "eager" : "lazy"}
-                    />
-                    {/* Gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+          {/* Cards grid */}
+          <AnimatePresence mode="wait">
+            {filtered.length === 0 ? (
+              <motion.div key="empty" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+                className="py-20 text-center text-muted-foreground text-sm">
+                {t("noJobs")}
+              </motion.div>
+            ) : (
+              <motion.div key={activeFilter + search}
+                initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filtered.map((job, idx) => (
+                  <motion.div key={job.key}
+                    initial={{ opacity: 0, y: 35, scale: 0.96 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ duration: 0.5, delay: idx * 0.07, ease: "easeOut" }}
+                    whileHover={{ y: -6 }}
+                    className="group relative flex flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-sm hover:shadow-2xl hover:border-primary/30 transition-all duration-300">
 
-                    {/* Badges on image */}
-                    <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
-                      <span
-                        className={`rounded-full border px-3 py-1 text-[10px] font-bold uppercase tracking-wide backdrop-blur-sm ${CATEGORY_COLORS[job.category] ?? "bg-primary/15 text-primary border-primary/25"}`}
-                      >
-                        {job.category}
-                      </span>
-                      {job.urgent && (
-                        <span className="inline-flex items-center gap-1 rounded-full bg-red-500 px-2.5 py-1 text-[10px] font-bold text-white shadow-md">
-                          <Zap className="h-3 w-3" />
-                          {t("urgent")}
+                    {/* Image */}
+                    <div className="relative overflow-hidden h-52">
+                      <img src={job.image} alt={job.title}
+                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        loading={idx < 3 ? "eager" : "lazy"} />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+
+                      {/* Badges */}
+                      <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
+                        <span className={`rounded-full border px-3 py-1 text-[10px] font-bold uppercase tracking-wide backdrop-blur-sm ${CATEGORY_COLORS[job.category] ?? "bg-primary/15 text-primary border-primary/25"}`}>
+                          {job.category}
                         </span>
-                      )}
+                        {job.urgent && (
+                          <span className="inline-flex items-center gap-1 rounded-full bg-red-500 px-2.5 py-1 text-[10px] font-bold text-white shadow-md">
+                            <Zap className="h-3 w-3" /> {t("urgent")}
+                          </span>
+                        )}
+                      </div>
+
+                      {/* Title */}
+                      <div className="absolute bottom-4 left-4 right-4">
+                        <h3 className="text-lg font-extrabold text-white leading-tight drop-shadow-lg">
+                          {job.title}
+                        </h3>
+                      </div>
                     </div>
 
-                    {/* Title on image bottom */}
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <h3 className="text-lg font-extrabold text-white leading-tight drop-shadow-lg transition-colors">
-                        {job.title}
-                      </h3>
-                    </div>
-                  </div>
-
-                  {/* ── Card body ── */}
-                  <div className="flex flex-1 flex-col gap-4 p-5">
-                    {/* Location & salary */}
-                    <div className="space-y-2">
+                    {/* Card body */}
+                    <div className="flex flex-1 flex-col gap-3 p-5">
                       <div className="flex items-center gap-2 text-sm text-muted-foreground">
                         <MapPin className="h-4 w-4 shrink-0 text-primary" />
                         <span className="font-medium">{job.location}</span>
                       </div>
-                      <div className="flex items-center gap-2 rounded-xl bg-muted/40 border border-border/60 px-3 py-2 text-sm font-bold text-foreground">
-                        <DollarSign className="h-4 w-4 shrink-0 text-emerald-500" />
-                        <span>{job.salary}</span>
+
+                      <p className="text-xs leading-5 text-muted-foreground line-clamp-2">{job.desc}</p>
+
+                      {/* Perks */}
+                      <div className="flex flex-wrap gap-1.5">
+                        {[t("freeVisa"), t("freeAccom"), t("freeMedical")].map((perk) => (
+                          <span key={perk}
+                            className="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 text-[10px] font-semibold text-emerald-600">
+                            <CheckCircle2 className="h-3 w-3 shrink-0" /> {perk}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* Footer */}
+                      <div className="mt-auto pt-3 border-t border-border/60 flex items-center justify-between">
+                        <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 border border-primary/20 px-2.5 py-1 text-[10px] font-bold text-primary">
+                          <Briefcase className="h-3 w-3" /> {t("fullTime")}
+                        </span>
+                        <button onClick={() => setSelectedJob(job)}
+                          className="group/btn inline-flex items-center gap-1.5 rounded-xl bg-primary px-5 py-2.5 text-xs font-bold text-primary-foreground shadow-md shadow-primary/25 hover:bg-primary/90 transition-all">
+                          Details
+                          <ChevronRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover/btn:translate-x-0.5" />
+                        </button>
                       </div>
                     </div>
+                  </motion.div>
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      </section>
 
-                    {/* Description */}
-                    <p className="text-xs leading-5 text-muted-foreground line-clamp-2">
-                      {job.desc}
-                    </p>
-
-                    {/* Perks row */}
-                    <div className="flex flex-wrap gap-2">
-                      {[t("freeVisa"), t("freeAccom"), t("freeMedical")].map((perk) => (
-                        <span
-                          key={perk}
-                          className="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 text-[10px] font-semibold text-emerald-600"
-                        >
-                          <CheckCircle2 className="h-3 w-3 shrink-0" />
-                          {perk}
-                        </span>
-                      ))}
-                    </div>
-
-                    {/* Footer */}
-                    <div className="mt-auto pt-3 border-t border-border/60 flex items-center justify-between">
-                      <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 border border-primary/20 px-2.5 py-1 text-[10px] font-bold text-primary">
-                        <Briefcase className="h-3 w-3" />
-                        {t("fullTime")}
-                      </span>
-                      <Link
-                        href={`/${locale}/contact#submit-cv`}
-                        className="group/btn inline-flex items-center gap-1.5 rounded-xl bg-primary px-5 py-2.5 text-xs font-bold text-primary-foreground shadow-md shadow-primary/25 hover:bg-primary/90 transition-all"
-                      >
-                        {t("applyBtn")}
-                        <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover/btn:translate-x-1" />
-                      </Link>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-    </section>
+      {/* Modal */}
+      {selectedJob && (
+        <JobModal job={selectedJob} onClose={() => setSelectedJob(null)} />
+      )}
+    </>
   );
 }

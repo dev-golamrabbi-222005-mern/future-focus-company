@@ -67,7 +67,7 @@ export default function CallToAction() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="cta-reveal text-4xl font-black leading-tight md:text-6xl lg:text-7xl text-foreground"
+          className="cta-reveal text-3xl sm:text-4xl font-black leading-tight md:text-5xl lg:text-7xl text-foreground"
         >
           {t("title1")}
           <span className="mt-2 block bg-gradient-to-r from-primary via-sky-400 to-cyan-400 bg-clip-text text-transparent">

@@ -125,7 +125,7 @@ export default function WhatIsManpower() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="max-w-3xl text-4xl font-black leading-tight text-foreground md:text-5xl lg:text-6xl"
+              className="max-w-3xl text-3xl font-black leading-tight text-foreground md:text-3xl lg:text-4xl"
             >
               {t("title")}
             </motion.h2>
