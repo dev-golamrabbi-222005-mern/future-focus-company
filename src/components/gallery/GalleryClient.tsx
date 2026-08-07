@@ -27,12 +27,12 @@ const ITEM_IMAGES = [
   'https://i.postimg.cc/bw6qvjm3/Training.png',
   'https://i.postimg.cc/Y0XdW8Tj/Departure.png',
   'https://i.postimg.cc/PrsJGh7g/Office.png',
-  'https://i.postimg.cc/bw6qvjm3/Training.png',
-  'https://i.postimg.cc/bw6qvjm3/Training.png',
+  'https://i.postimg.cc/Zn5gpXdX/Training2.png',
+  'https://i.postimg.cc/C5xtk9qW/Training3.png',
   'https://i.postimg.cc/qBLKGNqb/Evnt.png',
-  'https://i.postimg.cc/qBLKGNqb/Evnt.png',
+  'https://i.postimg.cc/Tw9FyTpq/Evnt2.png',
   'https://i.postimg.cc/Y0XdW8Tj/Departure.png',
-  'https://i.postimg.cc/PrsJGh7g/Office.png',
+  'https://i.postimg.cc/2ySJhgZH/Office2.png',
 ];
 
 const STAT_ICONS = [Users, Briefcase, Award, Globe];

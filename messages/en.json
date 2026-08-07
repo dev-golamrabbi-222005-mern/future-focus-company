@@ -4,7 +4,7 @@
     "home": "Home",
     "about": "About Us",
     "services": "Services",
-    "manpower": "Manpower Supply",
+    "globalization": "Globalization",
     "careers": "Careers",
     "gallery": "Gallery",
     "contact": "Contact Us",
@@ -24,7 +24,7 @@
     "statsCountries": "Partner Countries",
     "statsPlacementsValue": "15,000+",
     "statsSatisfactionValue": "98.5%",
-    "statsExperienceValue": "14+ Years",
+    "statsExperienceValue": "5+ Years",
     "statsCountriesValue": "6 GCC Nations"
   },
   "Hero1": {
@@ -647,22 +647,22 @@
     "cat4Title": "Transportation",
     "cat4Desc": "Trailer Drivers, Bus Drivers, Forklift Drivers, Bikers.",
     "guaranteeTitle": "Our Recruitment Guarantee",
-    "guaranteeDesc": "3-Month probationary replacement guarantee for any worker not meeting client skill standards.",
+    "guaranteeDesc": "2-Month probationary replacement guarantee for any worker not meeting client skill standards.",
     "applyBtn":"Apply Now"
   },
 
   "AboutIntro": {
-  "tag": "Manpower Supply",
+  "tag": "GLOBAL TALENT NETWORK",
 
-  "title1": "Bangladesh",
-  "title2": "To",
+  "title1": "Connecting Global Talent",
+  "title2": "With",
   "title3": "Saudi Arabia",
 
   "subtitle": "Skilled, semi-skilled & unskilled workers — vetted, documented, and deployed on time.",
 
-  "description": "Future Focus Company is a government-approved international manpower recruitment agency headquartered in Riyadh, Saudi Arabia. We connect Bangladesh’s skilled workforce with employers across Saudi Arabia by providing reliable recruitment, documentation, visa processing, and workforce deployment services.",
+  "description": "Future Focus Company connects employers in Saudi Arabia with qualified workforce sourced from over 10 countries across Asia. Through our trusted international recruitment network, we provide complete HR and workforce solutions for construction, hospitality, industrial, logistics, healthcare, and other major sectors throughout the Kingdom.",
 
-  "bangladesh": "Bangladesh",
+  "bangladesh": "10+ Countries",
   "saudi": "Saudi Arabia",
 
   "request": "Request Manpower",
@@ -679,33 +679,32 @@
 "WhatIsManpower": {
   "tag": "What We Do",
 
-  "title": "What Is International Manpower Supply?",
+  "title": "Connecting Global Talent. Empowering Saudi Businesses.",
 
-  "subtitle": "It is the process of sourcing qualified workers in one country and deploying them to employers in another — legally, safely, and with full documentation support from start to finish.",
+  "subtitle": "Connecting qualified workforce from 10+ Asian countries with employers across Saudi Arabia.",
 
-  "description1": "Future Focus Company manages the complete manpower supply chain from Bangladesh to Saudi Arabia. We identify workers who match your exact role requirements, conduct thorough screening and medical tests, process visas and travel documentation, and coordinate deployment to your worksite—so you receive work-ready professionals, not paperwork headaches.",
+  "description1": "End-to-end workforce solutions, from international recruitment to successful deployment across Saudi Arabia.",
 
-  "description2": "Our manpower supply service covers three major worker categories: skilled professionals (welders, electricians, plumbers), semi-skilled workers (kitchen helpers, factory assistants, baristas), and unskilled labor (general cleaners, site laborers, garden workers). Every worker goes through strict recruitment, verification, and pre-deployment training.",
-
+  "description2": "Supplying skilled, semi-skilled, and general workforce for Saudi Arabia's leading industries.",
   "quoteTitle": "Future Focus Company — In One Sentence",
 
-  "quote": "We are a government-approved manpower supply company connecting Bangladesh's workforce with employers across Saudi Arabia through ethical recruitment, complete documentation, and reliable deployment.",
+  "quote": "Your trusted HR Partner & Resource Solutions provider for employers across Saudi Arabia.",
 
   "cards": [
     {
-      "title": "Skilled Workers",
-      "jobs": "Welders • Electricians • Steel Fixers • Plumbers • Painters",
-      "description": "Trade-qualified professionals with verified practical experience for construction, oil & gas, industrial, and technical projects across Saudi Arabia."
+      "title": "Skilled Workforce",
+      "jobs": "Engineers • Electricians • Welders • Plumbers • Technicians",
+      "description": "Qualified professionals for technical, industrial, and construction projects."
     },
     {
-      "title": "Semi-skilled Workers",
-      "jobs": "Kitchen Helpers • Factory Assistants • Baristas • Car Wash • Fast Food",
-      "description": "Workers with role-specific training and hands-on experience for hospitality, food production, retail, logistics, and manufacturing sectors."
+      "title": "Semi-skilled Workforce",
+      "jobs": "Hospitality • Logistics • Retail • Manufacturing",
+      "description": "Experienced workers prepared for operational and customer-focused roles."
     },
     {
-      "title": "Unskilled Labor",
-      "jobs": "General Labor • Cleaners • Garden Workers • Site Helpers",
-      "description": "Reliable and hardworking laborers ready for municipal, commercial, industrial, warehouse, and residential projects with fast deployment."
+      "title": "General Workforce",
+      "jobs": "Helpers • Cleaners • Drivers • Support Staff",
+      "description": "Reliable workforce for commercial, industrial, and large-scale projects."
     }
   ]
 },
@@ -779,9 +778,9 @@
     "heroCta": "View All Moments",
     "heroStat1Num": "5000+",
     "heroStat1Label": "Workers Deployed",
-    "heroStat2Num": "14+",
+    "heroStat2Num": "05+",
     "heroStat2Label": "Years of Trust",
-    "heroStat3Num": "150+",
+    "heroStat3Num": "45+",
     "heroStat3Label": "Partner Clients",
 
     "filterTagline": "Our Moments",
@@ -829,7 +828,7 @@
     "stat2Num": "150",
     "stat2Suffix": "+",
     "stat2Label": "Corporate Clients Served",
-    "stat3Num": "14",
+    "stat3Num": "05",
     "stat3Suffix": "+",
     "stat3Label": "Years of Trusted Service",
     "stat4Num": "6",
