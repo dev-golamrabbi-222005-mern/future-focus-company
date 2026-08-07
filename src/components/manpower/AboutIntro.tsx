@@ -116,7 +116,7 @@ export default function AboutIntro() {
 
             {/* Headline */}
             <div className="ai-heading">
-              <h1 className="text-4xl sm:text-5xl xl:text-6xl 2xl:text-7xl font-black leading-[1.04] tracking-tight text-foreground">
+              <h1 className="text-3xl sm:text-4xl xl:text-5xl 2xl:text-5xl font-black leading-[1.04] tracking-tight text-foreground">
                 <span className="block">{t("title1")}</span>
                 <span className="relative inline-flex items-center gap-4 my-1">
                   {/* animated arrow between countries */}
@@ -157,7 +157,7 @@ export default function AboutIntro() {
             <div className="ai-route">
               <div className="inline-flex items-stretch overflow-hidden rounded-2xl border border-border bg-card shadow-md">
                 <div className="flex items-center gap-3 px-5 py-4">
-                  <span className="text-xl">🇧🇩</span>
+                  <span className="text-xl">Asia</span>
                   <div>
                     <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Origin</p>
                     <p className="text-sm font-extrabold text-foreground">{t("bangladesh")}</p>
@@ -210,20 +210,6 @@ export default function AboutIntro() {
               >
                 {t("browse")}
               </Link>
-            </div>
-
-            {/* Micro stats row */}
-            <div className="flex flex-wrap gap-5 pt-1">
-              {[
-                { value: t("experienceValue"), label: t("experience") },
-                { value: "2,500+", label: "Workers Placed" },
-                { value: "100%", label: "Visa Success Rate" },
-              ].map((s) => (
-                <div key={s.label} className="ai-stat">
-                  <p className="text-2xl sm:text-3xl font-black text-foreground leading-none">{s.value}</p>
-                  <p className="mt-1 text-xs text-muted-foreground font-medium">{s.label}</p>
-                </div>
-              ))}
             </div>
           </motion.div>
 

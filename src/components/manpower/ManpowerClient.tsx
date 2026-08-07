@@ -132,7 +132,7 @@ const categories = [
             <p className="text-base text-muted-foreground leading-relaxed">{t('guaranteeDesc')}</p>
           </div>
           <div className="p-6 rounded-2xl bg-primary text-primary-foreground font-extrabold text-center shadow-lg">
-            <span className="text-4xl block">90 Days</span>
+            <span className="text-4xl block">60 Days</span>
             <span className="text-xs uppercase tracking-wider opacity-90">Free Replacement</span>
           </div>
         </div>
