@@ -11,7 +11,7 @@
     "submitCv": "Submit CV"
   },
   "Hero": {
-    "badge": "Government Approved Recruiting Agency • 7052268831 License",
+    "badge": "Government Approved Recruiting Agency • RL-1428",
     "titlePrefix": "Connecting",
     "titleHighlight": "Global Opportunities",
     "titleSuffix": "with Top Talent",
@@ -58,9 +58,9 @@
     }
   },
   "StatsSection": {
-    "tagline": "Global Workforce in Numbers",
-    "heading": "Your Trusted Partner for International Workforce Solutions",
-    "description": "Supporting employers across Saudi Arabia with skilled workforce sourced from multiple countries. Our experience, global recruitment network, and commitment to quality ensure reliable manpower solutions for every industry and project.",
+    "tagline": "Impact in Numbers",
+    "heading": "Empowering Talent, Driving Overseas Growth",
+    "description": "Our track record reflects over a decade of commitment, compliance, and excellence in international manpower solutions.",
     "expLabel": "Years of Experience",
     "expSuffix": "+",
     "visasLabel": "Visas & Permits Processed",
@@ -114,7 +114,7 @@
     "timeline2022": {
       "badge": "Foundation",
       "title": "Company Established",
-      "description": "Future Focus Company officially began its journey as an international workforce solutions provider, building a trusted recruitment network that connects skilled, semi-skilled, and general workforce from Bangladesh and more than 10 other Asian countries with employers across Saudi Arabia."
+      "description": "Future Focus Company officially started its manpower recruitment journey, building a strong foundation to connect skilled Bangladeshi workers with employers across Saudi Arabia."
     },
 
     "timeline2023": {
@@ -132,7 +132,7 @@
     "timeline2025": {
       "badge": "Achievement",
       "title": "Trusted Workforce Partner",
-      "description": "Successfully deployed thousands of skilled, semi-skilled, and unskilled workers while earning the trust of clients across construction facilities management, hospitality, healthcare, and industrial sectors."
+      "description": "Successfully deployed thousands of skilled, semi-skilled, and unskilled workers while earning the trust of clients across construction, hospitality, healthcare, and industrial sectors."
     },
 
     "timeline2026": {
@@ -146,26 +146,26 @@
   "WhyChoose": {
   "tag": "Our Commitment",
 
-  "title": "Why the Leading Companies in Saudi Arabia Trust Us",
+  "title": "Why Employers in Saudi Arabia Trust Us",
 
   "subtitle": "Six things we do differently — and consistently — that make the difference.",
 
-  "feature4": {
+  "feature1": {
     "title": "On-Time Deployment",
     "description": "We ensure workers arrive on schedule with complete documentation and hassle-free deployment."
   },
 
-  "feature1": {
+  "feature2": {
     "title": "Rigorous Pre-Screening",
     "description": "Every candidate is carefully screened, skill-tested, medically cleared, and professionally prepared before deployment."
   },
 
-  "feature2": {
+  "feature3": {
     "title": "Transparent Pricing",
     "description": "No hidden charges. Clear quotations, honest pricing, and complete transparency from beginning to end."
   },
 
-  "feature3": {
+  "feature4": {
     "title": "Visa & Documentation",
     "description": "We handle visa processing, medical tests, BMET clearance, embassy formalities, and all required documentation."
   },
@@ -202,12 +202,12 @@
   },
 
   "AboutSnippet": {
-    "badge": "Government License: 7052268831",
+    "badge": "Government License RL-1428",
     "bmetBadge": "BMET Certified Agency",
     "pipelineBadge": "Dhaka ⇄ Middle East Pipeline",
     "cardTitle": "Overseas Recruitment Excellence",
     "ministryApproved": "Ministry Approved",
-    "rlLicense": "7052268831 License",
+    "rlLicense": "RL-1428 License",
     "title": "Bridging Opportunities Between Bangladesh & Saudi Arabia",
     "subtitle": "Future Focus Company is a premier, government-certified recruitment agency dedicated to matching top Bangladeshi professionals with high-growth industries in Saudi Arabia and the Middle East.",
     "ceoQuote": "\"Our mission is rooted in transparency, candidate welfare, and delivering uncompromised quality to our Middle Eastern enterprise partners.\"",
@@ -223,11 +223,11 @@
   },
   "HomeAbout": {
     "tag": "Who We Are",
-    "title": "Your Trusted Partner for Global Workforce Solutions",
-    "description1": "Future Focus Company is a leading workforce solutions provider based in Riyadh, Saudi Arabia, connecting employers with skilled, semi-skilled, and general workforce sourced from more than ten countries across Asia.",
-    "description2": "From workforce planning and international recruitment to documentation, mobilization, deployment, and on-site support, we deliver end-to-end HR solutions that help businesses across Saudi Arabia build reliable, productive, and compliant teams.",
+    "title": "A Workforce Partner You Can Actually Rely On",
+    "description1": "Pardeshi Global Services is a government-approved manpower recruitment agency serving Saudi Arabia, UAE, Qatar, Oman, Kuwait and Malaysia with skilled and reliable Bangladeshi workers.",
+    "description2": "From recruitment and documentation to visa processing and deployment, we manage every step professionally so your business gets the right workforce on time.",
     "experience": "Years Trusted",
-    "button": "Learn More",
+    "button": "Work With Us",
     "feature1": "On-Time Deployment",
     "feature2": "Visa & Documentation",
     "feature3": "Skilled & Unskilled Labour",
@@ -237,34 +237,30 @@
   },
   "WhyChooseUs": {
     "tagline": "Why Choose Us",
-    "heading": "Why Saudi Employers Choose Future Focus Company",
-    "subheading": "Combining a global recruitment network, rigorous compliance, and end-to-end workforce solutions to deliver qualified talent for every industry across Saudi Arabia.",
+    "heading": "Why Middle Eastern Enterprises Trust Future Focus",
+    "subheading": "Built on strict ministry compliance, ethical recruitment practices, and unmatched speed in workforce deployment.",
     "guaranteedStandard": "Guaranteed Standard",
-    "card1Title": "Global Talent Network",
-    "card1Desc": "Access to skilled, semi-skilled, and general workforce sourced from more than 10 countries across Asia through our trusted international recruitment network.",
-    "bottom1Text": "GLOBAL RECRUITMENT",
-    "card2Title": "Quality Screening & Trade Testing",
-    "card2Desc": "Every candidate undergoes comprehensive screening, skill assessment, and practical trade testing to ensure they meet employer requirements.",
-    "bottom2Text": "QUALITY ASSURED",
-    "card3Title": "End-to-End Workforce Solutions",
-    "card3Desc": "From recruitment and documentation to mobilization, deployment, and on-site coordination, we manage the complete workforce lifecycle.",
-    "bottom3Text": "COMPLETE HR SUPPORT",
-    "card4Title": "Compliance & Reliable Delivery",
-    "card4Desc": "Operating with strict regulatory compliance and transparent processes to ensure timely deployment and dependable workforce solutions.",
-    "bottom4Text": "TRUSTED PARTNERSHIP"
+    "card1Title": "Zero Candidate Exploitation",
+    "card1Desc": "100% BMET compliant recruitment with transparent fee structures and ethical candidate treatment.",
+    "card2Title": "Rigorous Trade Testing",
+    "card2Desc": "Practical technical evaluation in government-certified centers ensuring only vetted, qualified workers get selected.",
+    "card3Title": "Direct Embassy Fast-Track",
+    "card3Desc": "Authorized visa stamping and document processing with KSA, UAE & GCC consulates.",
+    "card4Title": "90-Day Probation Guarantee",
+    "card4Desc": "Full free replacement guarantee if any worker fails to meet specified job requirements within 90 days."
   },
   "GlobalReachMap": {
-    "tagline": "OUR MARKET",
-    "heading": "Focused on Saudi Arabia. Ready for the GCC.",
-    "subheading": "Today we proudly support employers throughout Saudi Arabia with international workforce solutions while building strategic partnerships for future expansion across the Gulf region.",
-    "saudiLabel": "Saudi Arabia (SA)",
-    "saudiCount": "5,000+ Workforce Deployed",
-    "uaeLabel": "Riyadh (RYD)",
-    "uaeCount": "45+ Employer Partners",
-    "qatarLabel": "Jeddah (JED)",
-    "qatarCount": "Hospitality & Logistics",
-    "kuwaitLabel": "Future Expansion (GCC)",
-    "kuwaitCount": "UAE • Qatar • Kuwait • Oman • Bahrain",
+    "tagline": "Regional Presence",
+    "heading": "Active Deployment Network Across the GCC",
+    "subheading": "Supplying thousands of skilled professionals to leading mega-projects in Saudi Arabia, UAE, Qatar, Kuwait, and Oman.",
+    "saudiLabel": "Saudi Arabia (Riyadh & Jeddah)",
+    "saudiCount": "8,500+ Workers Placed",
+    "uaeLabel": "United Arab Emirates (Dubai & Abu Dhabi)",
+    "uaeCount": "4,200+ Workers Placed",
+    "qatarLabel": "Qatar (Doha)",
+    "qatarCount": "1,800+ Workers Placed",
+    "kuwaitLabel": "Kuwait & Oman",
+    "kuwaitCount": "1,500+ Workers Placed",
     "testimonialTitle": "What Enterprise Clients Say",
     "quote": "\"Future Focus supplied over 200 MEP technicians for our Riyadh expansion project on short notice. Their trade testing accuracy and speed were remarkable.\"",
     "author": "Eng. Tariq Al-Mansoor",
@@ -496,11 +492,11 @@
     "visionTitle": "Our Vision",
     "visionDesc": "To be recognized as the premier and most trusted HR & Manpower solutions partner in Saudi Arabia, driving innovation and service excellence in workforce management. As we scale to support international landmarks like Saudi Arabia's major aviation hubs, our vision is to set the gold standard in staffing across the Middle East—fostering growth, diversity, and unwavering operational support for every sector we serve.",
     "licenseTitle": "Government License & Accreditation",
-    "licenseNumber": "Government License: 7052268831",
-    "licenseDesc": "Operating under Ministry License 7052268831 with full BMET compliance, ISO quality certifications, and GAMCA medical affiliation.",
+    "licenseNumber": "Government License: RL-1428",
+    "licenseDesc": "Operating under Ministry License RL-1428 with full BMET compliance, ISO quality certifications, and GAMCA medical affiliation.",
     "licenseCheck1": "BMET Smart Card Authorized",
     "licenseCheck2": "GAMCA Medical Affiliated",
-    "licenseCheck3": "Ministry License 7052268831",
+    "licenseCheck3": "Ministry License RL-1428",
     "licenseCheck4": "Saudi Embassy Verified",
     "mdTitle": "Managing Director's Statement",
     "mdMessage": "Over the past 05 years, we have placed over 5,000 workers in life-changing careers across Saudi Arabia and the GCC. We believe ethical recruitment is not just good policy—it is our core duty.",
@@ -511,12 +507,12 @@
   },
   "ServicesPage": {
     "hero": {
-      "badge": "Government Approved Manpower Agency • License 7052268831",
+      "badge": "Government Approved Manpower Agency • License RL-1428",
       "title": "Manpower Solutions Across Saudi Arabia",
       "subtitle": "Government-licensed workforce supply bridging top Bangladeshi talent with Vision 2030 megaprojects across Riyadh, Jeddah, Dammam & Neom.",
       "ctaRequest": "Request Workers",
       "ctaDownload": "Download Profile (PDF)",
-      "trust1": "MHRSD License 7052268831",
+      "trust1": "MHRSD License RL-1428",
       "trust2": "QIWA & Musaned Compliant",
       "trust3": "GAMCA Medical Cleared",
       "trust4": "90-Day Free Replacement"
@@ -567,7 +563,7 @@
       "badge1Sub": "Digital contract transfer & official work permit issuance under KSA law.",
       "badge2Title": "90-Day Free Replacement",
       "badge2Sub": "If candidate performance falls short, we replace them at zero extra cost.",
-      "badge3Title": "Government License 7052268831",
+      "badge3Title": "Government License RL-1428",
       "badge3Sub": "Officially approved recruitment agency by the Ministry of Expatriates Welfare.",
       "badge4Title": "GAMCA Medical Fitness",
       "badge4Sub": "Guaranteed fit for duty medical clearance prior to embassy visa stamping."
@@ -1039,7 +1035,7 @@
   },
   "Footer": {
     "tagline": "Leading government-approved manpower recruitment agency specializing in skilled workforce deployment across Saudi Arabia and the Middle East.",
-    "license": "Government License: 7052268831 | Ministry of Expatriates' Welfare & Overseas Employment",
+    "license": "Government License: RL-1428 | Ministry of Expatriates' Welfare & Overseas Employment",
     "quickLinks": "Quick Links",
     "saudiOffice": "Riyadh Office (KSA)",
     "bdOffice": "Bangladesh Office (Dhaka)",
@@ -1056,7 +1052,7 @@
   },
   "Testimonials": {
     "tagline": "Client Success Stories",
-    "heading": "Trusted by Leading Enterprises Across Saudi Arabia",
+    "heading": "Trusted by Leading Enterprises Across Dubai & UAE",
     "subheading": "See how our reliable manpower solutions have powered major construction, hospitality, and facility management projects across the GCC.",
     "verifiedClient": "Verified Partner",
     "items": {
@@ -1084,34 +1080,34 @@
     }
   },
   "FAQ": {
-  "tagline": "Got Questions?",
-  "heading": "Frequently Asked Questions",
-  "subheading": "Find answers to the most common questions about our international recruitment process, workforce solutions, deployment procedures, and employer support services across Saudi Arabia.",
-  "stillHaveQuestions": "Need a customized workforce solution for your business?",
-  "contactSupport": "Talk to Our HR & Workforce Advisor",
-  "items": {
-    "item1": {
-      "question": "How quickly can Future Focus Company deploy workers to our project in Saudi Arabia?",
-      "answer": "Deployment timelines typically range from 2 to 4 weeks after receiving the approved job order and required government documentation. Depending on the job category and candidate availability, urgent workforce requirements may be fulfilled even faster."
-    },
-    "item2": {
-      "question": "Where do you source your workforce from?",
-      "answer": "We recruit skilled, semi-skilled, and general workforce from more than ten countries across Asia through our trusted international recruitment network, ensuring every candidate meets our clients' requirements and applicable regulations."
-    },
-    "item3": {
-      "question": "Do you handle the complete recruitment and mobilization process?",
-      "answer": "Yes. We provide end-to-end workforce solutions including candidate sourcing, screening, trade testing, documentation, visa processing, mobilization, deployment, and coordination until workers arrive safely at the project site."
-    },
-    "item4": {
-      "question": "Which industries do you serve?",
-      "answer": "We supply workforce for construction, MEP, oil & gas, facility management, hospitality, logistics, transportation, industrial operations, security services, healthcare support, and many other sectors across Saudi Arabia."
-    },
-    "item5": {
-      "question": "Why should employers choose Future Focus Company?",
-      "answer": "Our international recruitment network, strict candidate screening, transparent processes, and commitment to timely workforce deployment make us a trusted HR and workforce solutions partner for employers across Saudi Arabia."
+    "tagline": "Got Questions?",
+    "heading": "Frequently Asked Questions",
+    "subheading": "Everything you need to know about our recruitment process, visa compliance, worker deployment, and service guarantees in Dubai & Saudi Arabia.",
+    "stillHaveQuestions": "Have a specific workforce requirement not answered here?",
+    "contactSupport": "Speak with Our Manpower Advisor",
+    "items": {
+      "item1": {
+        "question": "How quickly can Future Focus deploy workers to our Dubai project?",
+        "answer": "Standard deployment takes between 14 to 21 days from visa quota approval. For pre-vetted candidates already in our talent pipeline, mobilization can occur in as few as 7 business days."
+      },
+      "item2": {
+        "question": "Are all supplied candidates trade-tested and medical-checked?",
+        "answer": "Yes. Every candidate undergoes rigorous practical trade testing at certified centers in Bangladesh, followed by GAMCA medical screening, background checks, and embassy document attestation before arrival."
+      },
+      "item3": {
+        "question": "What happens if a deployed worker does not meet our performance standards?",
+        "answer": "We offer a 90-day performance and medical guarantee. If any candidate fails to meet your agreed skill level or medical compliance during this window, we replace them at zero extra recruitment fee."
+      },
+      "item4": {
+        "question": "Which industries and manpower categories do you specialize in?",
+        "answer": "We specialize in Construction & Civil Engineering, MEP (Mechanical, Electrical, Plumbing), Hospitality & Catering, Facility Management, Logistics, Security Services, and Heavy Equipment Operation."
+      },
+      "item5": {
+        "question": "Do you handle visa processing, flights, and government clearance?",
+        "answer": "Yes, we manage end-to-end mobilization including MOHRE work permits, employment visa processing, flight bookings, pre-departure orientation, and airport reception upon arrival in the UAE/KSA."
+      }
     }
-  }
-},
+  },
   "GetInTouch": {
     "tagline": "Let's Talk Business",
     "heading": "Ready to Scale Your Workforce with Premier Talent?",
@@ -1173,17 +1169,17 @@
   },
   "SEO": {
     "siteName": "Future Focus Company",
-    "defaultTitle": "Future Focus Company | Govt. Approved Recruitment Agency 7052268831",
+    "defaultTitle": "Future Focus Company | Govt. Approved Recruitment Agency RL-1428",
     "titleTemplate": "%s | Future Focus Company",
-    "defaultDescription": "Connecting Skilled Bangladeshi Talent with Top Employers in Saudi Arabia & the Middle East. Govt. Approved Recruitment Agency (7052268831). High quality workforce mobilization.",
-    "keywords": "Recruitment Agency Bangladesh, Saudi Arabia Manpower, Govt Approved Agency 7052268831, Skilled Bangladeshi Workers, Gulf Manpower Recruitment, Future Focus Company, Labor Visa Recruitment",
+    "defaultDescription": "Connecting Skilled Bangladeshi Talent with Top Employers in Saudi Arabia & the Middle East. Govt. Approved Recruitment Agency (RL-1428). High quality workforce mobilization.",
+    "keywords": "Recruitment Agency Bangladesh, Saudi Arabia Manpower, Govt Approved Agency RL-1428, Skilled Bangladeshi Workers, Gulf Manpower Recruitment, Future Focus Company, Labor Visa Recruitment",
     "home": {
-      "title": "Government Approved Recruitment Agency 7052268831 | Future Focus Company",
-      "description": "Premier manpower recruitment agency bridging skilled Bangladeshi talent with top employers in Saudi Arabia & GCC. Transparent, trusted & Govt. approved (7052268831)."
+      "title": "Government Approved Recruitment Agency RL-1428 | Future Focus Company",
+      "description": "Premier manpower recruitment agency bridging skilled Bangladeshi talent with top employers in Saudi Arabia & GCC. Transparent, trusted & Govt. approved (RL-1428)."
     },
     "about": {
       "title": "About Us - Premier Manpower Recruitment Agency",
-      "description": "Learn about Future Focus Company (7052268831), our mission, executive leadership, and track record of sending over 5,000+ skilled workers to Saudi Arabia & Gulf countries."
+      "description": "Learn about Future Focus Company (RL-1428), our mission, executive leadership, and track record of sending over 5,000+ skilled workers to Saudi Arabia & Gulf countries."
     },
     "services": {
       "title": "Recruitment & Manpower Services | Saudi Arabia & GCC",

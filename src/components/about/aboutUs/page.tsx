@@ -137,7 +137,7 @@ export default function AboutCompany() {
               {[
                 "BMET Smart Card Authorized",
                 "GAMCA Medical Affiliated",
-                "Ministry License 7052268831",
+                "Ministry License RL-1428",
                 "Saudi Embassy Verified",
               ].map((item) => (
                 <li key={item} className="flex items-center gap-2 text-sm font-semibold text-foreground">
@@ -272,7 +272,7 @@ export default function AboutCompany() {
                     </div>
                     <div>
                       <p className="text-sm font-bold text-foreground">{t("approved")}</p>
-                      <p className="text-xs text-muted-foreground">License 7052268831</p>
+                      <p className="text-xs text-muted-foreground">License RL-1428</p>
                     </div>
                   </div>
                 </div>
