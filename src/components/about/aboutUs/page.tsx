@@ -15,6 +15,7 @@ import {
   Users,
   ShieldCheck,
   CheckCircle2,
+  Download,
 } from "lucide-react";
 import LightRays from "@/components/ui/LightRays";
 
@@ -168,6 +169,14 @@ export default function AboutCompany() {
               >
                 {t("services")}
               </Link>
+              <a
+            href="/doc/Profile(FFC).pdf"
+            download
+            className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 rtl:space-x-reverse border border-border bg-card hover:bg-muted/50 text-foreground font-bold px-8 py-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer"
+          >
+            <Download className="w-5 h-5 text-primary" />
+            <span>{t('ctaDownload')}</span>
+          </a>
             </motion.div>
 
             {/* Stats grid */}

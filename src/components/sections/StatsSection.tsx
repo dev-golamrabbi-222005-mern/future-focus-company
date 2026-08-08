@@ -18,28 +18,28 @@ export function StatsSection() {
 
   const stats = [
     {
-      targetNum: 14,
+      targetNum: 5,
       suffix: t('expSuffix'),
       label: t('expLabel'),
       icon: Award,
       color: 'from-blue-600 to-cyan-500',
     },
     {
-      targetNum: 25000,
+      targetNum: 5000,
       suffix: t('visasSuffix'),
       label: t('visasLabel'),
       icon: FileCheck2,
       color: 'from-sky-500 to-indigo-600',
     },
     {
-      targetNum: 150,
+      targetNum: 45,
       suffix: t('clientsSuffix'),
       label: t('clientsLabel'),
       icon: Globe,
       color: 'from-cyan-500 to-blue-600',
     },
     {
-      targetNum: 18000,
+      targetNum: 8000,
       suffix: t('workersSuffix'),
       label: t('workersLabel'),
       icon: Users,
