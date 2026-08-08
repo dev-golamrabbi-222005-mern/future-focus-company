@@ -143,14 +143,14 @@ export function GetInTouch() {
     <section
       id="get-in-touch"
       ref={containerRef}
-      className="py-16 md:py-24 bg-muted/20 border-t border-border/60 relative overflow-hidden"
+      className="pt-12 md:pt-16 lg:pt-20 pb-6 md:pb-8 lg:pb-10 bg-muted/20 border-t border-border/60 relative overflow-hidden"
     >
       {/* Background Decorative Blur */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[140px] pointer-events-none -z-10" />
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[130px] pointer-events-none -z-10" />
 
       <div className="w-full max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           
           {/* Left Column: Let's Talk Business & Contact Details */}
           <div ref={leftColRef} className="lg:col-span-5 space-y-8">

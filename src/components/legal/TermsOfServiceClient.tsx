@@ -24,7 +24,7 @@ export function TermsOfServiceClient() {
   const tCommon = useTranslations('CommonUI');
 
   return (
-    <div className="min-h-screen bg-background pt-24 pb-20 relative overflow-hidden">
+    <div className="min-h-screen bg-background pt-6 md:pt-8 lg:pt-10 pb-6 md:pb-8 lg:pb-10 relative overflow-hidden">
       {/* Ambient background glows */}
       <div className="absolute top-0 inset-x-0 h-96 bg-gradient-to-b from-primary/10 via-background/60 to-background pointer-events-none -z-10" />
       <div className="absolute top-1/3 left-10 w-96 h-96 bg-primary/10 rounded-full blur-[140px] pointer-events-none -z-10" />

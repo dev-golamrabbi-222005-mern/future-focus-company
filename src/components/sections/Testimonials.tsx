@@ -31,7 +31,7 @@ export function Testimonials() {
       // GSAP smooth linear marquee tween
       tweenRef.current = gsap.to(track, {
         x: `-=${totalWidth}`,
-        duration: 35,
+        duration: 100,
         ease: 'none',
         repeat: -1,
         modifiers: {

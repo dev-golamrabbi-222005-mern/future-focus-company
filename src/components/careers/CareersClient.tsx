@@ -26,7 +26,7 @@ export function CareersClient() {
   return (
     <div className="w-full">
       {/* ══════════ HERO ══════════ */}
-      <section className="relative overflow-hidden bg-background pt-20 pb-16 md:pt-28 md:pb-20">
+      <section className="relative overflow-hidden bg-background pt-6 md:pt-8 lg:pt-10 pb-12 md:pb-16">
         <div className="absolute inset-0 -z-10 pointer-events-none">
           <div className="absolute -top-32 left-1/2 h-[560px] w-[560px] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px]" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(3,105,161,0.06),transparent_60%)]" />
@@ -71,7 +71,7 @@ export function CareersClient() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.35 }}
-            className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto"
+            className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-5xl mx-auto"
           >
             {heroStats.map((s, i) => {
               const Icon = s.icon;

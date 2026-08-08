@@ -75,7 +75,7 @@ export default function AboutIntro() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[100svh] flex flex-col justify-center overflow-hidden bg-background"
+      className="relative flex flex-col justify-center overflow-hidden bg-background"
     >
       {/* ── Animated grid bg ── */}
       <motion.div
@@ -100,7 +100,7 @@ export default function AboutIntro() {
       />
 
       {/* ── Main grid ── */}
-      <div className="relative z-10 mx-auto w-full max-w-[1380px] px-4 md:px-6 lg:px-8 py-10 sm:py-14 lg:py-16">
+      <div className="relative z-10 mx-auto w-full max-w-[1380px] px-4 md:px-6 lg:px-8 pt-6 md:pt-8 lg:pt-10 pb-10 sm:pb-14 lg:pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* ══════════ LEFT COLUMN ══════════ */}
@@ -182,35 +182,6 @@ export default function AboutIntro() {
                 </div>
               </div>
             </div>
-
-            {/* CTA buttons */}
-            <div className="ai-ctas flex flex-col sm:flex-row gap-3">
-              <Link
-                href={`/${locale}/contact#get-in-touch`}
-                className="group inline-flex items-center justify-center gap-2.5 rounded-xl bg-primary px-7 py-4 font-bold text-sm text-primary-foreground shadow-lg shadow-primary/30 transition-all duration-200 hover:bg-primary/90 hover:scale-[1.02]"
-              >
-                <Users className="h-4 w-4" />
-                {t("request")}
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-
-              <Link
-                href={siteConfig.offices.saudi.Whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2.5 rounded-xl bg-emerald-500 px-7 py-4 font-bold text-sm text-white shadow-lg shadow-emerald-500/25 transition-all duration-200 hover:bg-emerald-600 hover:scale-[1.02]"
-              >
-                <MessageCircle className="h-4 w-4" />
-                {t("whatsapp")}
-              </Link>
-
-              <Link
-                href={`/${locale}/manpower-solutions`}
-                className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-border bg-card px-7 py-4 font-bold text-sm text-foreground transition-all duration-200 hover:border-primary/50 hover:text-primary"
-              >
-                {t("browse")}
-              </Link>
-            </div>
           </motion.div>
 
           {/* ══════════ RIGHT COLUMN — IMAGE STACK ══════════ */}
@@ -229,9 +200,9 @@ export default function AboutIntro() {
                 src="/images/about/manpower2.jpg"
                 alt="Future Focus Company — Manpower"
                 width={560}
-                height={660}
+                height={100}
                 priority
-                className="w-full h-auto object-cover min-h-[360px] sm:min-h-[500px] transition-transform duration-700 hover:scale-105"
+                className="w-full h-auto object-cover min-h-[360px] sm:min-h-[400px] transition-transform duration-700 hover:scale-105"
               />
               {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -244,21 +215,6 @@ export default function AboutIntro() {
                 </div>
               </div>
             </motion.div>
-
-            {/* Floating: worker image card — bottom left */}
-            {/* <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-6 -left-4 sm:left-0 hidden sm:block w-[160px] sm:w-[190px] overflow-hidden rounded-2xl border-4 border-background shadow-xl"
-            >
-              <Image
-                src="/images/about/about-worker.jpg"
-                alt="Worker"
-                width={190}
-                height={230}
-                className="w-full h-auto object-cover"
-              />
-            </motion.div> */}
 
             {/* Floating: experience badge — top right */}
             <motion.div
@@ -294,25 +250,6 @@ export default function AboutIntro() {
           </motion.div>
         </div>
       </div>
-
-      {/* ── Scroll hint ── */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.8 }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-1 text-muted-foreground/60"
-      >
-        <span className="text-[10px] font-bold uppercase tracking-widest">Scroll</span>
-        <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ duration: 1.4, repeat: Infinity }}
-        >
-          <ChevronDown className="h-4 w-4" />
-        </motion.div>
-      </motion.div>
-
-      {/* ── Bottom divider ── */}
-      <div className="absolute bottom-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
     </section>
   );
 }

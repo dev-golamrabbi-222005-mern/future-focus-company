@@ -41,6 +41,7 @@ export function Navbar() {
                 src="/logo.jpg"
                 alt={siteConfig.name}
                 fill
+                sizes="36px"
                 className="object-cover"
               />
             </div>
@@ -63,7 +64,8 @@ export function Navbar() {
                   key={link.key}
                   href={`/${locale}${link.href}`}
                   className={cn(
-                    'px-3 py-1.5 rounded-lg text-sm transition-all duration-200 relative whitespace-nowrap',
+                    'py-1.5 rounded-lg text-sm transition-all duration-200 relative whitespace-nowrap',
+                    locale === 'bn' ? 'px-2 2xl:px-3' : 'px-3',
                     active
                       ? 'bg-primary/10 text-primary font-bold border border-primary/20 shadow-xs'
                       : 'font-semibold text-muted-foreground hover:text-foreground hover:bg-muted/60'
@@ -77,13 +79,18 @@ export function Navbar() {
 
           {/* Right Actions: Language Dropdown + Theme Toggle + Always-Visible Primary CTA + Mobile Trigger */}
           <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3 shrink-0">
-            <LanguageSwitcher />
-            <ThemeToggle />
-
+            <div className={cn(
+              locale === 'bn'
+                ? "flex flex-col-reverse gap-1 justify-center items-center min-[1600px]:flex-row"
+                : "flex flex-row items-center gap-2"
+            )}>
+              <LanguageSwitcher />
+              <ThemeToggle />
+            </div>
             {/* Always-Visible Primary CTA Button (Mobile, Tablet & Desktop) */}
             <Link
               href={`/${locale}/contact#get-in-touch`}
-              className="inline-flex items-center justify-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-primary text-primary-foreground font-bold text-[11px] sm:text-xs md:text-sm shadow-md shadow-primary/25 hover:bg-primary/90 transition-all shrink-0 whitespace-nowrap"
+              className="inline-flex items-center justify-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-primary text-primary-foreground font-bold text-[11px] sm:text-xs md:text-sm shadow-md shadow-primary/25 hover:bg-primary/90 transition-all shrink-0 whitespace-nowrap"
             >
               <span>{t('requestManpower')}</span>
               <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />

@@ -49,7 +49,7 @@ export function ServiceDetailHero({ slug, locale }: ServiceDetailHeroProps) {
   return (
     <div
       ref={heroRef}
-      className="relative min-h-[380px] sm:min-h-[440px] flex items-center justify-center rounded-3xl overflow-hidden border border-border/80 shadow-2xl mb-12"
+      className="relative min-h-[380px] sm:min-h-[440px] pt-6 md:pt-8 lg:pt-10 flex items-center justify-center rounded-3xl overflow-hidden border border-border/80 shadow-2xl mb-12"
     >
       {/* Background Image with Parallax */}
       <div

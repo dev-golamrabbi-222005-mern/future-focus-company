@@ -5,14 +5,20 @@ import { useParams } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, ShieldCheck } from 'lucide-react';
 
-export function WelcomeLoader() {
-  const params = useParams();
-  const locale = (params?.locale as string) || 'en';
+interface WelcomeLoaderProps {
+  locale?: string;
+}
 
+export function WelcomeLoader({ locale: propLocale }: WelcomeLoaderProps) {
+  const params = useParams();
+  const locale = propLocale || (params?.locale as string) || 'en';
+
+  const [mounted, setMounted] = React.useState(false);
   const [visible, setVisible] = React.useState(false);
   const [themeMode, setThemeMode] = React.useState<'dark' | 'light'>('dark');
 
   React.useEffect(() => {
+    setMounted(true);
     // Check session storage to show only once per browser session
     const hasBeenShown = sessionStorage.getItem('ffc_welcome_shown');
     if (hasBeenShown) {
@@ -40,7 +46,7 @@ export function WelcomeLoader() {
     return () => clearTimeout(timer);
   }, []);
 
-  if (!visible) return null;
+  if (!mounted || !visible) return null;
 
   // Language auto-detection text
   const getGreeting = () => {

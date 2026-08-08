@@ -53,7 +53,7 @@ export default function AboutCompany() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-background py-20 lg:py-28"
+      className="relative overflow-hidden bg-background pt-6 md:pt-8 lg:pt-10 pb-12 lg:pb-16"
     >
 
 
@@ -126,27 +126,6 @@ export default function AboutCompany() {
             >
               {t("description")}
             </motion.p>
-
-            {/* Checklist highlights */}
-            <motion.ul
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.25 }}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-3"
-            >
-              {[
-                "BMET Smart Card Authorized",
-                "GAMCA Medical Affiliated",
-                "Ministry License 7052268831",
-                "Saudi Embassy Verified",
-              ].map((item) => (
-                <li key={item} className="flex items-center gap-2 text-sm font-semibold text-foreground">
-                  <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-500" />
-                  {item}
-                </li>
-              ))}
-            </motion.ul>
 
             {/* CTAs */}
             <motion.div
@@ -245,7 +224,7 @@ export default function AboutCompany() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
-                className="absolute -left-4 sm:-left-8 top-10 sm:top-14 z-10 hidden sm:block"
+                className="absolute -left-4 sm:-left-8 -top-5 sm:-top-10 z-10 hidden sm:block"
               >
                 <motion.div
                   animate={{ y: [-7, 0, -7] }}

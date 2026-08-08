@@ -61,7 +61,7 @@ export default function Hero1() {
   }, [slides.length]);
 
   return (
-    <section className="relative min-h-[560px] h-auto md:h-[70vh] md:max-h-[70vh] py-10 md:py-8 w-full bg-background overflow-hidden flex items-center justify-center">
+    <section className="relative min-h-[560px] h-auto md:h-[70vh] md:max-h-[70vh] pt-6 md:pt-8 lg:pt-10 pb-10 md:pb-8 w-full bg-background overflow-hidden flex items-center justify-center">
       {/* Dynamic Background Image */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence mode="wait">

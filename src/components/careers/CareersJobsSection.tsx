@@ -389,7 +389,7 @@ export default function CareersJobsSection() {
 
   return (
     <>
-      <section ref={sectionRef} className="relative bg-background py-16 md:py-20 lg:py-24">
+      <section ref={sectionRef} className="relative bg-background pt-12 md:pt-16 lg:pt-20 pb-6 md:pb-8 lg:pb-10">
         <div className="absolute inset-0 -z-10 pointer-events-none">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(3,105,161,0.06),transparent_55%)]" />
         </div>
@@ -490,7 +490,7 @@ export default function CareersJobsSection() {
 
                       <p className="text-xs leading-5 text-muted-foreground line-clamp-2">{job.desc}</p>
 
-                      {/* Perks */}
+                      {/* Perks
                       <div className="flex flex-wrap gap-1.5">
                         {[t("freeVisa"), t("freeAccom"), t("freeMedical")].map((perk) => (
                           <span key={perk}
@@ -498,7 +498,7 @@ export default function CareersJobsSection() {
                             <CheckCircle2 className="h-3 w-3 shrink-0" /> {perk}
                           </span>
                         ))}
-                      </div>
+                      </div> */}
 
                       {/* Footer */}
                       <div className="mt-auto pt-3 border-t border-border/60 flex items-center justify-between">

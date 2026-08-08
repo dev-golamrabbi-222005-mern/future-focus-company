@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default function ManpowerSolutionsPage() {
   return (
-    <main className="w-full space-y-12 sm:space-y-16 md:space-y-20 pb-16">
+    <main className="w-full mb-6 md:mb-8 lg:mb-10">
       {/* 1. Hero Section (from old Globalization page) */}
       <AboutIntro />
 

@@ -57,7 +57,7 @@
   },
   "AboutCompany": {
     "tag": "Who We Are",
-    "title1": "Building Saudi Arabia's",
+    "title1": "Building Saudi's",
     "title2": "Future Workforce",
     "description": "Future Focus Company is a trusted manpower recruitment and workforce solutions provider based in Riyadh, Saudi Arabia. We specialize in supplying skilled, semi-skilled, and unskilled workers from Bangladesh to meet the growing workforce demands across construction, hospitality, healthcare, industrial, facility management, and commercial sectors. Our commitment to quality, reliability, and timely deployment has made us a preferred partner for businesses throughout the Kingdom.",
     "book": "Request Workforce",
@@ -1423,5 +1423,35 @@
     "bmetPortalBadge": "BMET Authorized Direct Candidate Portal",
     "freeReplacementBadge": "90 Days Free Replacement",
     "bmetApprovedBadge": "BMET Approved Guarantee"
+  },
+  "Hero1": {
+    "brandName": "Future Focus",
+    "ctaHire": "Hire Manpower",
+    "ctaApply": "Apply for Jobs",
+    "badgeRole": "SAUDI ARABIA & GCC",
+    "slide1": {
+      "role": "SAUDI ARABIA",
+      "title": "WITNESS",
+      "highlight": "SKILLED WORKERS",
+      "desc": "Skilled Workers for Every Industry in Riyadh & Jeddah. Welders, electricians, masons, kitchen staff — we deliver the right person for every job, on time."
+    },
+    "slide2": {
+      "role": "SAUDI ARABIA",
+      "title": "EVOLVE",
+      "highlight": "TRUSTED MANPOWER",
+      "desc": "Trusted Manpower Solutions in Saudi Arabia. Connecting ambitious businesses with reliable workers — from Bangladesh to the heart of the Kingdom."
+    },
+    "slide3": {
+      "role": "MIDDLE EAST",
+      "title": "LEAD",
+      "highlight": "RELIABILITY",
+      "desc": "05+ Years of Reliable Recruitment Across the Gulf. Over 5,000 Bangladeshi workers successfully placed in Saudi Arabia, UAE, Qatar, and beyond."
+    },
+    "slide4": {
+      "role": "VISION 2030",
+      "title": "PARTNER",
+      "highlight": "GROWTH PROJECTS",
+      "desc": "Your Manpower Partner for Vision 2030 Projects. From Aramco sites to infrastructure developments — we supply dependable labor for major growth projects."
+    }
   }
 }
