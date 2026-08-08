@@ -21,6 +21,7 @@ if (typeof window !== 'undefined') {
 export function ManpowerClient() {
    const locale = useLocale();
   const t = useTranslations('ManpowerPage');
+  const tCommon = useTranslations('CommonUI');
   const containerRef = React.useRef<HTMLDivElement>(null);
 
 const categories = [
@@ -126,14 +127,13 @@ const categories = [
           <div className="space-y-3 max-w-2xl">
             <div className="flex items-center gap-2 text-primary font-bold text-sm">
               <ShieldCheck className="h-5 w-5" />
-              <span>BMET Approved Guarantee</span>
+              <span>{tCommon('bmetApprovedBadge')}</span>
             </div>
             <h3 className="text-2xl sm:text-3xl font-extrabold text-foreground">{t('guaranteeTitle')}</h3>
             <p className="text-base text-muted-foreground leading-relaxed">{t('guaranteeDesc')}</p>
           </div>
           <div className="p-6 rounded-2xl bg-primary text-primary-foreground font-extrabold text-center shadow-lg">
-            <span className="text-4xl block">60 Days</span>
-            <span className="text-xs uppercase tracking-wider opacity-90">Free Replacement</span>
+            <span className="text-[13px] uppercase tracking-wider block">{tCommon('freeReplacementBadge')}</span>
           </div>
         </div>
       </div>

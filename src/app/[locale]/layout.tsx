@@ -9,6 +9,7 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import WhatsAppFloat from '@/components/ui/WhatsAppFloat';
 import { ChatWidget } from '@/components/features/chat/ChatWidget';
+import { WelcomeLoader } from '@/components/common/WelcomeLoader';
 import { JsonLd } from '@/components/seo/JsonLd';
 import '@/styles/globals.css';
 
@@ -122,6 +123,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
             enableSystem
             disableTransitionOnChange
           >
+            <WelcomeLoader />
             <Navbar />
             <main className="flex-1">{children}</main>
             <Footer />
