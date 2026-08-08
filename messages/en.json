@@ -59,8 +59,8 @@
   },
   "StatsSection": {
     "tagline": "Global Workforce in Numbers",
-    "heading": "Your Trusted Partner for International Workforce Solutions",
-    "description": "Supporting employers across Saudi Arabia with skilled workforce sourced from multiple countries. Our experience, global recruitment network, and commitment to quality ensure reliable manpower solutions for every industry and project.",
+    "heading": "Your Trusted HR Partner & Resource Solutions",
+    "description": "Supporting employers across Saudi Arabia with skilled workforce sourced from more than 10 other countries. Our experience, global recruitment network, and commitment to quality ensure reliable manpower solutions for every industry and project.",
     "expLabel": "Years of Experience",
     "expSuffix": "+",
     "visasLabel": "Visas & Permits Processed",
@@ -73,33 +73,22 @@
 
   "AboutCompany": {
     "tag": "Who We Are",
-
     "title1": "Building Saudi Arabia's",
     "title2": "Future Workforce",
-
     "description": "Future Focus Company is a trusted manpower recruitment and workforce solutions provider based in Riyadh, Saudi Arabia. We specialize in supplying skilled, semi-skilled, and unskilled workers from Bangladesh to meet the growing workforce demands across construction, hospitality, healthcare, industrial, facility management, and commercial sectors. Our commitment to quality, reliability, and timely deployment has made us a preferred partner for businesses throughout the Kingdom.",
-
     "book": "Request Workforce",
-
     "services": "Explore Services",
-
     "experience": "Years of Experience",
-
     "workers": "Workers Deployed",
-
     "clients": "Satisfied Clients",
-
     "support": "Customer Support",
-
+    "ctaDownload": "Download Profile (PDF)",
     "experienceValue": "05+",
     "workersValue": "5K+",
     "clientsValue": "150+",
     "supportValue": "24/7",
-
     "companyName": "Future Focus Company",
-
     "companyShort": "Government-approved manpower recruitment company providing reliable workforce solutions across Saudi Arabia.",
-
     "approved": "Government Approved"
   },
 
@@ -198,29 +187,38 @@
 
     "experience": "15+ Years Experience",
 
+
     "workers": "10,000+ Workers Placed"
   },
 
   "AboutSnippet": {
-    "badge": "Government License: 7052268831",
-    "bmetBadge": "BMET Certified Agency",
-    "pipelineBadge": "Dhaka ⇄ Middle East Pipeline",
-    "cardTitle": "Overseas Recruitment Excellence",
-    "ministryApproved": "Ministry Approved",
-    "rlLicense": "7052268831 License",
-    "title": "Bridging Opportunities Between Bangladesh & Saudi Arabia",
-    "subtitle": "Future Focus Company is a premier, government-certified recruitment agency dedicated to matching top Bangladeshi professionals with high-growth industries in Saudi Arabia and the Middle East.",
-    "ceoQuote": "\"Our mission is rooted in transparency, candidate welfare, and delivering uncompromised quality to our Middle Eastern enterprise partners.\"",
-    "ceoName": "Md. Rafiqul Islam",
-    "ceoTitle": "Managing Director & Founder",
-    "point1Title": "100% Certified Compliance",
-    "point1Desc": "Full BMET registration and ministry approvals for safe, ethical recruitment.",
-    "point2Title": "End-to-End Logistics",
-    "point2Desc": "Trade testing, medical screening, visa processing, and air ticketing managed under one roof.",
-    "point3Title": "Dedicated Saudi Desk",
-    "point3Desc": "On-ground support team in Riyadh, KSA for direct employer liaison.",
-    "cta": "Learn More About Us"
-  },
+  "badge": "Government License: 7052268831",
+  "bmetBadge": "BMET Certified Agency",
+  "pipelineBadge": "Global Talent ⇄ Saudi Arabia",
+  "cardTitle": "International Workforce Excellence",
+  "ministryApproved": "Government Approved",
+  "rlLicense": "7052268831 License",
+
+  "title": "Connecting Global Talent with Saudi Businesses",
+
+  "subtitle": "Future Focus Company is a trusted HR Partner & Resource Solutions provider, sourcing skilled, semi-skilled, and general manpower from Bangladesh, India, Pakistan, Nepal, the Philippines, Indonesia, Uganda, Sudan, Ethiopia, and Sri Lanka for major companies and projects across Saudi Arabia.",
+
+  "ceoQuote": "\"Our commitment is to connect the right talent with the right opportunities through ethical recruitment, quality workforce solutions, and reliable long-term partnerships.\"",
+
+  "ceoName": "Md. Rafiqul Islam",
+  "ceoTitle": "Managing Director & Founder",
+
+  "point1Title": "Global Talent Network",
+  "point1Desc": "Access to qualified skilled, semi-skilled, and general workforce from 10 international recruitment markets.",
+
+  "point2Title": "End-to-End Workforce Solutions",
+  "point2Desc": "Recruitment, candidate screening, documentation, visa processing, mobilization, and deployment managed professionally.",
+
+  "point3Title": "Saudi-Focused Operations",
+  "point3Desc": "Dedicated workforce solutions and on-ground coordination supporting employers and major projects across Saudi Arabia.",
+
+  "cta": "Learn More About Us"
+},
   "HomeAbout": {
     "tag": "Who We Are",
     "title": "Your Trusted Partner for Global Workforce Solutions",
@@ -908,11 +906,11 @@
     "heroCta": "Browse All Jobs",
     "heroStatJobs": "Open Positions",
     "heroStatPlaced": "Workers Placed",
-    "heroStatSalary": "Avg. Monthly Salary",
+    "heroStatSalary": "Monthly Salary",
     "heroStatDays": "Avg. Deploy Time",
     "heroStatJobsValue": "9+",
     "heroStatPlacedValue": "5,000+",
-    "heroStatSalaryValue": "SAR 2K+",
+    "heroStatSalaryValue": "Competitive",
     "heroStatDaysValue": "15–30d",
 
     "filterTag": "Job Listings",
