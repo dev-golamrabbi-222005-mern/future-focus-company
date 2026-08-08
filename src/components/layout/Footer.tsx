@@ -169,10 +169,13 @@ export function Footer() {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
           <p>© {new Date().getFullYear()} {tNav('companyName')}. {t('rights')}</p>
           <div className="flex items-center gap-6">
-            <Link href={`/${locale}#privacy`} className="hover:text-foreground transition-colors">
+            <Link href={`/${locale}/faq`} className="hover:text-primary transition-colors">
+              {tNav('faq')}
+            </Link>
+            <Link href={`/${locale}/privacy-policy`} className="hover:text-primary transition-colors">
               {t('privacy')}
             </Link>
-            <Link href={`/${locale}#terms`} className="hover:text-foreground transition-colors">
+            <Link href={`/${locale}/terms-of-service`} className="hover:text-primary transition-colors">
               {t('terms')}
             </Link>
           </div>

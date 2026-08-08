@@ -4,9 +4,8 @@ export const siteConfig = {
   license: 'RL-1428',
   navLinks: [
     { href: '', key: 'home' },
+    { href: '/manpower-solutions', key: 'manpowerSolutions' },
     { href: '/about', key: 'about' },
-    { href: '/services', key: 'services' },
-    { href: '/globalization', key: 'globalization' },
     { href: '/careers', key: 'careers' },
     { href: '/gallery', key: 'gallery' },
     { href: '/contact', key: 'contact' },

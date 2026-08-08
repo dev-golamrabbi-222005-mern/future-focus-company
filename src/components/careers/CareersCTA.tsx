@@ -69,9 +69,9 @@ export default function CareersCTA() {
 
             {/* Tag */}
             <motion.div
-              className="cta-up inline-flex items-center gap-3 rounded-full border border-primary/25 bg-primary/10 px-5 py-2"
+              className="cta-up inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-5 py-2"
             >
-              <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
+              <Plane className="w-3.5 h-3.5 text-primary shrink-0" />
               <span className="text-xs font-bold uppercase tracking-[0.35em] text-primary">
                 {t("ctaTag")}
               </span>

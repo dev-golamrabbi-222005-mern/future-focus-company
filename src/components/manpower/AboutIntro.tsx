@@ -205,7 +205,7 @@ export default function AboutIntro() {
               </Link>
 
               <Link
-                href={`/${locale}/services`}
+                href={`/${locale}/manpower-solutions`}
                 className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-border bg-card px-7 py-4 font-bold text-sm text-foreground transition-all duration-200 hover:border-primary/50 hover:text-primary"
               >
                 {t("browse")}

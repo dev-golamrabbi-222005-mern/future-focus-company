@@ -59,8 +59,8 @@ export function ComplianceBanner() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         {/* Left Column: Heading & Subtitle */}
         <div className="lg:col-span-5 space-y-4 text-start">
-          <div className="inline-flex items-center space-x-2 rtl:space-x-reverse bg-emerald-500/10 border border-emerald-500/20 rounded-full px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-emerald-500">
-            <CheckCircle2 className="w-4 h-4 shrink-0" />
+          <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-emerald-500">
+            <CheckCircle2 className="w-3.5 h-3.5 shrink-0 text-emerald-500" />
             <span>{t('tagline')}</span>
           </div>
 

@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { FileSearch, UserCheck, Stethoscope, PlaneTakeoff } from 'lucide-react';
+import { FileSearch, UserCheck, Stethoscope, PlaneTakeoff, Workflow } from 'lucide-react';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
@@ -72,11 +72,12 @@ export function ProcessTimeline() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
           <div className="mb-6 flex justify-center">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
-              {t('tagline')}
+            <span className="text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20 inline-flex items-center gap-2">
+              <Workflow className="w-3.5 h-3.5 shrink-0 text-primary" />
+              <span>{t('tagline')}</span>
             </span>
           </div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground tracking-tight mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground tracking-tight mb-4 text-center">
             {t('heading')}
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground">

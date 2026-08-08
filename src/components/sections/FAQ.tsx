@@ -1,18 +1,23 @@
 'use client';
 
 import * as React from 'react';
+import Link from 'next/link';
+import { useParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { HelpCircle, ChevronDown, MessageSquare, Headset } from 'lucide-react';
+import { HelpCircle, ChevronDown, MessageSquare, Headset, ArrowRight } from 'lucide-react';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
 }
 
 export function FAQ() {
-  const t = useTranslations('FAQ');
+  const t = useTranslations('FAQSystem');
+  const params = useParams();
+  const locale = (params.locale as string) || 'en';
+
   const containerRef = React.useRef<HTMLDivElement>(null);
   const headerRef = React.useRef<HTMLDivElement>(null);
 
@@ -22,19 +27,19 @@ export function FAQ() {
     setOpenIndex((prev) => (prev === index ? null : index));
   };
 
+  // 5 Most Demanded FAQs for Homepage
   const faqItems = [
     { key: 'item1' },
     { key: 'item2' },
-    { key: 'item3' },
-    { key: 'item4' },
-    { key: 'item5' },
+    { key: 'item6' },
+    { key: 'item8' },
+    { key: 'item14' },
   ];
 
   useGSAP(
     () => {
       if (!containerRef.current) return;
 
-      // Header reveal
       if (headerRef.current) {
         gsap.fromTo(
           headerRef.current,
@@ -52,7 +57,6 @@ export function FAQ() {
         );
       }
 
-      // Sequential reveal of FAQ items
       const items = containerRef.current.querySelectorAll('.faq-item');
       gsap.fromTo(
         items,
@@ -78,19 +82,18 @@ export function FAQ() {
       ref={containerRef}
       className="py-16 md:py-24 bg-background relative overflow-hidden"
     >
-      {/* Background Accent Gradients */}
       <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[120px] pointer-events-none -z-10" />
       <div className="absolute bottom-10 left-0 w-[350px] h-[350px] bg-accent/5 rounded-full blur-[100px] pointer-events-none -z-10" />
 
       <div className="w-full max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div ref={headerRef} className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-          <div className="mb-4 inline-flex items-center space-x-2 rtl:space-x-reverse bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary">
-            <HelpCircle className="w-3.5 h-3.5" />
+          <div className="mb-4 inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary">
+            <HelpCircle className="w-3.5 h-3.5 shrink-0 text-primary" />
             <span>{t('tagline')}</span>
           </div>
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground tracking-tight mb-4 leading-tight">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground tracking-tight mb-4 text-center">
             {t('heading')}
           </h2>
 
@@ -99,7 +102,7 @@ export function FAQ() {
           </p>
         </div>
 
-        {/* Accordion Container */}
+        {/* Accordion List */}
         <div className="max-w-4xl mx-auto space-y-4 faq-list">
           {faqItems.map((item, idx) => {
             const question = t(`items.${item.key}.question`);
@@ -136,7 +139,6 @@ export function FAQ() {
                   </span>
                 </button>
 
-                {/* Animated Dropdown Content */}
                 <div
                   className={`grid transition-all duration-300 ease-in-out ${
                     isOpen
@@ -155,29 +157,15 @@ export function FAQ() {
           })}
         </div>
 
-        {/* Bottom Contact Callout */}
-        <div className="mt-12 md:mt-16 text-center max-w-xl mx-auto p-6 rounded-2xl bg-muted/40 border border-border/80 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center space-x-3 rtl:space-x-reverse text-start">
-            <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
-              <Headset className="w-5 h-5" />
-            </div>
-            <div>
-              <p className="text-sm font-semibold text-foreground">
-                {t('stillHaveQuestions')}
-              </p>
-              <p className="text-xs text-muted-foreground">
-                {t('contactSupport')}
-              </p>
-            </div>
-          </div>
-
-          <a
-            href="#get-in-touch"
-            className="inline-flex items-center space-x-2 rtl:space-x-reverse text-xs font-bold bg-primary text-primary-foreground px-5 py-2.5 rounded-xl hover:bg-primary/90 transition-colors shrink-0 shadow-sm"
+        {/* View All FAQs Button */}
+        <div className="mt-10 text-center">
+          <Link
+            href={`/${locale}/faq`}
+            className="inline-flex items-center space-x-2 rtl:space-x-reverse font-bold text-primary border border-primary/30 bg-primary/5 px-6 py-3 rounded-xl hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-sm"
           >
-            <MessageSquare className="w-4 h-4" />
-            <span>{t('contactSupport')}</span>
-          </a>
+            <span>{t('seeMoreFaqs')}</span>
+            <ArrowRight className="w-4 h-4 rtl:rotate-180" />
+          </Link>
         </div>
       </div>
     </section>

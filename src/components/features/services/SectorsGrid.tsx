@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { HardHat, Utensils, Laptop, HeartPulse, Truck, ArrowRight } from 'lucide-react';
+import { HardHat, Utensils, Laptop, HeartPulse, Truck, ArrowRight, Layers } from 'lucide-react';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
@@ -83,11 +83,12 @@ export function SectorsGrid() {
       {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16">
           <div className="mb-6 flex justify-center">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
-              {t('tagline')}
+            <span className="text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20 inline-flex items-center gap-2">
+              <Layers className="w-3.5 h-3.5 shrink-0 text-primary" />
+              <span>{t('tagline')}</span>
             </span>
           </div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground tracking-tight mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground tracking-tight mb-4 text-center">
             {t('heading')}
           </h2>
           {/* <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
@@ -105,7 +106,7 @@ export function SectorsGrid() {
           return (
             <div
               key={sector.slug}
-              className="sector-card bg-[#0a0f1c] border border-white/5 rounded-2xl p-6 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 group shadow-xl relative overflow-hidden"
+              className="sector-card bg-card border border-border rounded-2xl p-6 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 group shadow-sm hover:shadow-xl relative overflow-hidden"
             >
               {/* Top Row: Flex between Icon + Badge */}
               <div className="flex items-center justify-between">
@@ -123,17 +124,17 @@ export function SectorsGrid() {
 
               {/* Middle: Title + Short Description */}
               <div className="my-4">
-                <h3 className="text-xl font-bold text-white group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
                   {title}
                 </h3>
-                <p className="text-sm text-gray-400 mt-2 line-clamp-2 leading-relaxed">
+                <p className="text-sm text-muted-foreground mt-2 line-clamp-2 leading-relaxed">
                   {desc}
                 </p>
               </div>
 
               {/* Bottom Row: Separated by top border */}
-              <div className="pt-4 mt-2 border-t border-white/5 flex items-center justify-between text-xs">
-                <span className="text-gray-400 font-medium">
+              <div className="pt-4 mt-2 border-t border-border/60 flex items-center justify-between text-xs">
+                <span className="text-muted-foreground font-medium">
                   {t('targetSector')}
                 </span>
 

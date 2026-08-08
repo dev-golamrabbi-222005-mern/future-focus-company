@@ -14,11 +14,12 @@ export default function GoogleMapSection() {
 
         <div className="text-center mb-16">
 
-          <span className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-5 py-2 text-sm font-bold uppercase tracking-[0.3em] text-primary">
-            {t("tag")}
+          <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-5 py-2 text-xs font-bold uppercase tracking-[0.3em] text-primary">
+            <MapPin className="w-3.5 h-3.5 shrink-0 text-primary" />
+            <span>{t("tag")}</span>
           </span>
 
-          <h2 className="mt-6 text-3xl sm:text-4xl md:text-5xl font-black text-foreground">
+          <h2 className="mt-6 text-2xl md:text-3xl lg:text-4xl font-bold text-foreground text-center">
             {t("title")}
           </h2>
 

@@ -2,13 +2,14 @@
   "Navigation": {
     "companyName": "Future Focus Company",
     "home": "Home",
+    "manpowerSolutions": "Manpower Solutions",
     "about": "About Us",
-    "services": "Services",
-    "globalization": "Globalization",
     "careers": "Careers",
     "gallery": "Gallery",
     "contact": "Contact Us",
-    "submitCv": "Submit CV"
+    "faq": "FAQ",
+    "submitCv": "Submit CV",
+    "requestManpower": "Request Manpower"
   },
   "Hero": {
     "badge": "Government Approved Recruiting Agency • 7052268831 License",
@@ -70,137 +71,96 @@
     "workersLabel": "Skilled Workforce Deployed",
     "workersSuffix": "+"
   },
-
   "AboutCompany": {
     "tag": "Who We Are",
-
     "title1": "Building Saudi Arabia's",
     "title2": "Future Workforce",
-
     "description": "Future Focus Company is a trusted manpower recruitment and workforce solutions provider based in Riyadh, Saudi Arabia. We specialize in supplying skilled, semi-skilled, and unskilled workers from Bangladesh to meet the growing workforce demands across construction, hospitality, healthcare, industrial, facility management, and commercial sectors. Our commitment to quality, reliability, and timely deployment has made us a preferred partner for businesses throughout the Kingdom.",
-
     "book": "Request Workforce",
-
     "services": "Explore Services",
-
     "experience": "Years of Experience",
-
     "workers": "Workers Deployed",
-
     "clients": "Satisfied Clients",
-
     "support": "Customer Support",
-
     "experienceValue": "05+",
     "workersValue": "5K+",
     "clientsValue": "150+",
     "supportValue": "24/7",
-
     "companyName": "Future Focus Company",
-
     "companyShort": "Government-approved manpower recruitment company providing reliable workforce solutions across Saudi Arabia.",
-
     "approved": "Government Approved"
   },
-
   "CompanyTimeline": {
     "tag": "Our Journey",
-
     "title1": "Building Our",
     "title2": "Success Story",
-
     "description": "Since 2022, Future Focus Company has been committed to providing reliable manpower recruitment and workforce solutions across Saudi Arabia. Every milestone reflects our dedication to quality, professionalism, and long-term partnerships.",
-
     "timeline2022": {
       "badge": "Foundation",
       "title": "Company Established",
       "description": "Future Focus Company officially began its journey as an international workforce solutions provider, building a trusted recruitment network that connects skilled, semi-skilled, and general workforce from Bangladesh and more than 10 other Asian countries with employers across Saudi Arabia."
     },
-
     "timeline2023": {
       "badge": "Expansion",
       "title": "Growing Our Network",
       "description": "Expanded recruitment operations and established long-term partnerships with employers in Riyadh and other major cities, strengthening our service capabilities."
     },
-
     "timeline2024": {
       "badge": "Innovation",
       "title": "Digital Recruitment",
       "description": "Introduced modern digital recruitment processes, including online applications, document verification, and streamlined communication to improve efficiency."
     },
-
     "timeline2025": {
       "badge": "Achievement",
       "title": "Trusted Workforce Partner",
       "description": "Successfully deployed thousands of skilled, semi-skilled, and unskilled workers while earning the trust of clients across construction facilities management, hospitality, healthcare, and industrial sectors."
     },
-
     "timeline2026": {
       "badge": "Future Vision",
       "title": "Supporting Saudi Vision 2030",
       "description": "Continuing to support Saudi Vision 2030 by delivering qualified manpower for infrastructure, hospitality, healthcare, facility management, and industrial development projects."
     }
   },
-  
-
   "WhyChoose": {
-  "tag": "Our Commitment",
-
-  "title": "Why the Leading Companies in Saudi Arabia Trust Us",
-
-  "subtitle": "Six things we do differently — and consistently — that make the difference.",
-
-  "feature4": {
-    "title": "On-Time Deployment",
-    "description": "We ensure workers arrive on schedule with complete documentation and hassle-free deployment."
+    "tag": "Our Commitment",
+    "title": "Why the Leading Companies in Saudi Arabia Trust Us",
+    "subtitle": "Six things we do differently — and consistently — that make the difference.",
+    "feature4": {
+      "title": "On-Time Deployment",
+      "description": "We ensure workers arrive on schedule with complete documentation and hassle-free deployment."
+    },
+    "feature1": {
+      "title": "Rigorous Pre-Screening",
+      "description": "Every candidate is carefully screened, skill-tested, medically cleared, and professionally prepared before deployment."
+    },
+    "feature2": {
+      "title": "Transparent Pricing",
+      "description": "No hidden charges. Clear quotations, honest pricing, and complete transparency from beginning to end."
+    },
+    "feature3": {
+      "title": "Visa & Documentation",
+      "description": "We handle visa processing, medical tests, BMET clearance, embassy formalities, and all required documentation."
+    },
+    "feature5": {
+      "title": "Flexible Contracts",
+      "description": "Whether short-term, long-term, or project-based staffing, we provide flexible workforce solutions."
+    },
+    "feature6": {
+      "title": "Safety & Legal Compliance",
+      "description": "All workers comply with Saudi labor regulations and receive proper safety orientation before deployment."
+    }
   },
-
-  "feature1": {
-    "title": "Rigorous Pre-Screening",
-    "description": "Every candidate is carefully screened, skill-tested, medically cleared, and professionally prepared before deployment."
-  },
-
-  "feature2": {
-    "title": "Transparent Pricing",
-    "description": "No hidden charges. Clear quotations, honest pricing, and complete transparency from beginning to end."
-  },
-
-  "feature3": {
-    "title": "Visa & Documentation",
-    "description": "We handle visa processing, medical tests, BMET clearance, embassy formalities, and all required documentation."
-  },
-
-  "feature5": {
-    "title": "Flexible Contracts",
-    "description": "Whether short-term, long-term, or project-based staffing, we provide flexible workforce solutions."
-  },
-
-  "feature6": {
-    "title": "Safety & Legal Compliance",
-    "description": "All workers comply with Saudi labor regulations and receive proper safety orientation before deployment."
-  }
-  },
-  
   "CallToAction": {
     "tag": "Ready to Work With Us?",
-
     "title1": "Let's Build Your",
-
     "title2": "Workforce Together",
-
     "description": "Tell us how many workers you need, what industry you're in, and when you need them. We'll handle everything—from candidate selection in Bangladesh to successful deployment in Saudi Arabia.",
-
     "quoteButton": "Get a Free Quote",
-
     "whatsappButton": "WhatsApp Us Now",
-
     "government": "Government Approved",
-
     "experience": "15+ Years Experience",
-
     "workers": "10,000+ Workers Placed"
   },
-
   "AboutSnippet": {
     "badge": "Government License: 7052268831",
     "bmetBadge": "BMET Certified Agency",
@@ -648,128 +608,109 @@
     "cat4Desc": "Trailer Drivers, Bus Drivers, Forklift Drivers, Bikers.",
     "guaranteeTitle": "Our Recruitment Guarantee",
     "guaranteeDesc": "2-Month probationary replacement guarantee for any worker not meeting client skill standards.",
-    "applyBtn":"Apply Now"
+    "applyBtn": "Apply Now"
   },
-
   "AboutIntro": {
-  "tag": "GLOBAL TALENT NETWORK",
-
-  "title1": "Connecting Global Talent",
-  "title2": "With",
-  "title3": "Saudi Arabia",
-
-  "subtitle": "Skilled, semi-skilled & unskilled workers — vetted, documented, and deployed on time.",
-
-  "description": "Future Focus Company connects employers in Saudi Arabia with qualified workforce sourced from over 10 countries across Asia. Through our trusted international recruitment network, we provide complete HR and workforce solutions for construction, hospitality, industrial, logistics, healthcare, and other major sectors throughout the Kingdom.",
-
-  "bangladesh": "10+ Countries",
-  "saudi": "Saudi Arabia",
-
-  "request": "Request Manpower",
-  "whatsapp": "WhatsApp Now",
-  "browse": "Browse Workers",
-
-  "market": "Primary Market",
-  "country": "Saudi Arabia",
-  "cities": "Riyadh • Jeddah • Dammam • Eastern Province",
-
-  "experience": "Years Trusted",
-  "experienceValue": "05+"
-},
-"WhatIsManpower": {
-  "tag": "What We Do",
-
-  "title": "Connecting Global Talent. Empowering Saudi Businesses.",
-
-  "subtitle": "Connecting qualified workforce from 10+ Asian countries with employers across Saudi Arabia.",
-
-  "description1": "End-to-end workforce solutions, from international recruitment to successful deployment across Saudi Arabia.",
-
-  "description2": "Supplying skilled, semi-skilled, and general workforce for Saudi Arabia's leading industries.",
-  "quoteTitle": "Future Focus Company — In One Sentence",
-
-  "quote": "Your trusted HR Partner & Resource Solutions provider for employers across Saudi Arabia.",
-
-  "cards": [
-    {
-      "title": "Skilled Workforce",
-      "jobs": "Engineers • Electricians • Welders • Plumbers • Technicians",
-      "description": "Qualified professionals for technical, industrial, and construction projects."
-    },
-    {
-      "title": "Semi-skilled Workforce",
-      "jobs": "Hospitality • Logistics • Retail • Manufacturing",
-      "description": "Experienced workers prepared for operational and customer-focused roles."
-    },
-    {
-      "title": "General Workforce",
-      "jobs": "Helpers • Cleaners • Drivers • Support Staff",
-      "description": "Reliable workforce for commercial, industrial, and large-scale projects."
-    }
-  ]
-},
-"CompanyHighlights": {
-  "items": [
-    {
-      "title": "Govt. Approved",
-      "subtitle": "BD & KSA Licensed"
-    },
-    {
-      "title": "2–4 Weeks",
-      "subtitle": "Deployment Timeline"
-    },
-    {
-      "title": "21+ Job Roles",
-      "subtitle": "All Industries Covered"
-    },
-    {
-      "title": "6+ Countries",
-      "subtitle": "Gulf & Asia Pacific"
-    },
-    {
-      "title": "24 / 7",
-      "subtitle": "Employer Support"
-    }
-  ]
-},
-"Process": {
-  "tag": "The Process",
-
-  "title1": "How We Supply",
-  "title2": "Manpower to Saudi Arabia",
-
-  "subtitle": "A transparent and efficient recruitment process designed to deliver the right workforce with speed, quality, and full legal compliance.",
-
-  "description": "From the first enquiry to the final deployment, every step is carefully managed by our experienced recruitment team to ensure a smooth hiring experience for employers across Saudi Arabia.",
-
-  "steps": [
-    {
-      "title": "Enquiry",
-      "description": "We understand your workforce requirements, project scope, job roles, quantity, qualifications, and deployment schedule."
-    },
-    {
-      "title": "Strategy",
-      "description": "Our recruitment specialists prepare a customized hiring strategy and timeline tailored to your business needs."
-    },
-    {
-      "title": "Sourcing",
-      "description": "Qualified candidates are sourced, interviewed, trade-tested, medically examined, and carefully shortlisted."
-    },
-    {
-      "title": "Clearance",
-      "description": "Government approvals, employer verification, medical clearance, and recruitment compliance are completed."
-    },
-    {
-      "title": "Documentation",
-      "description": "Employment contracts, visas, passports, insurance, and all required legal documentation are processed."
-    },
-    {
-      "title": "Deployment",
-      "description": "Workers travel to Saudi Arabia and are deployed safely to the employer with complete post-arrival support."
-    }
-  ]
-},
-
+    "tag": "GLOBAL TALENT NETWORK",
+    "title1": "Connecting Global Talent",
+    "title2": "With",
+    "title3": "Saudi Arabia",
+    "subtitle": "Skilled, semi-skilled & unskilled workers — vetted, documented, and deployed on time.",
+    "description": "Future Focus Company connects employers in Saudi Arabia with qualified workforce sourced from over 10 countries across Asia. Through our trusted international recruitment network, we provide complete HR and workforce solutions for construction, hospitality, industrial, logistics, healthcare, and other major sectors throughout the Kingdom.",
+    "bangladesh": "10+ Countries",
+    "saudi": "Saudi Arabia",
+    "request": "Request Manpower",
+    "whatsapp": "WhatsApp Now",
+    "browse": "Browse Workers",
+    "market": "Primary Market",
+    "country": "Saudi Arabia",
+    "cities": "Riyadh • Jeddah • Dammam • Eastern Province",
+    "experience": "Years Trusted",
+    "experienceValue": "05+"
+  },
+  "WhatIsManpower": {
+    "tag": "What We Do",
+    "title": "Connecting Global Talent. Empowering Saudi Businesses.",
+    "subtitle": "Connecting qualified workforce from 10+ Asian countries with employers across Saudi Arabia.",
+    "description1": "End-to-end workforce solutions, from international recruitment to successful deployment across Saudi Arabia.",
+    "description2": "Supplying skilled, semi-skilled, and general workforce for Saudi Arabia's leading industries.",
+    "quoteTitle": "Future Focus Company — In One Sentence",
+    "quote": "Your trusted HR Partner & Resource Solutions provider for employers across Saudi Arabia.",
+    "cards": [
+      {
+        "title": "Skilled Workforce",
+        "jobs": "Engineers • Electricians • Welders • Plumbers • Technicians",
+        "description": "Qualified professionals for technical, industrial, and construction projects."
+      },
+      {
+        "title": "Semi-skilled Workforce",
+        "jobs": "Hospitality • Logistics • Retail • Manufacturing",
+        "description": "Experienced workers prepared for operational and customer-focused roles."
+      },
+      {
+        "title": "General Workforce",
+        "jobs": "Helpers • Cleaners • Drivers • Support Staff",
+        "description": "Reliable workforce for commercial, industrial, and large-scale projects."
+      }
+    ]
+  },
+  "CompanyHighlights": {
+    "items": [
+      {
+        "title": "Govt. Approved",
+        "subtitle": "BD & KSA Licensed"
+      },
+      {
+        "title": "2–4 Weeks",
+        "subtitle": "Deployment Timeline"
+      },
+      {
+        "title": "21+ Job Roles",
+        "subtitle": "All Industries Covered"
+      },
+      {
+        "title": "6+ Countries",
+        "subtitle": "Gulf & Asia Pacific"
+      },
+      {
+        "title": "24 / 7",
+        "subtitle": "Employer Support"
+      }
+    ]
+  },
+  "Process": {
+    "tag": "The Process",
+    "title1": "How We Supply",
+    "title2": "Manpower to Saudi Arabia",
+    "subtitle": "A transparent and efficient recruitment process designed to deliver the right workforce with speed, quality, and full legal compliance.",
+    "description": "From the first enquiry to the final deployment, every step is carefully managed by our experienced recruitment team to ensure a smooth hiring experience for employers across Saudi Arabia.",
+    "steps": [
+      {
+        "title": "Enquiry",
+        "description": "We understand your workforce requirements, project scope, job roles, quantity, qualifications, and deployment schedule."
+      },
+      {
+        "title": "Strategy",
+        "description": "Our recruitment specialists prepare a customized hiring strategy and timeline tailored to your business needs."
+      },
+      {
+        "title": "Sourcing",
+        "description": "Qualified candidates are sourced, interviewed, trade-tested, medically examined, and carefully shortlisted."
+      },
+      {
+        "title": "Clearance",
+        "description": "Government approvals, employer verification, medical clearance, and recruitment compliance are completed."
+      },
+      {
+        "title": "Documentation",
+        "description": "Employment contracts, visas, passports, insurance, and all required legal documentation are processed."
+      },
+      {
+        "title": "Deployment",
+        "description": "Workers travel to Saudi Arabia and are deployed safely to the employer with complete post-arrival support."
+      }
+    ]
+  },
   "GalleryPage": {
     "heroTagline": "Life at Future Focus Company",
     "heroHeading": "Visual Journey of",
@@ -782,7 +723,6 @@
     "heroStat2Label": "Years of Trust",
     "heroStat3Num": "45+",
     "heroStat3Label": "Partner Clients",
-
     "filterTagline": "Our Moments",
     "filterHeading": "Behind the Scenes at Future Focus",
     "filterSubheading": "From trade testing halls in Dhaka to reception in Riyadh — every photo tells a story of trust, hard work, and new beginnings.",
@@ -791,7 +731,6 @@
     "filterDeparture": "Departure",
     "filterOffice": "Office",
     "filterEvent": "Events",
-
     "item1Title": "Trade Test Center – Dhaka",
     "item1Category": "Training",
     "item1Desc": "Candidates undergoing practical trade testing at government-certified centers in Dhaka.",
@@ -819,7 +758,6 @@
     "item9Title": "Riyadh Welcome Reception",
     "item9Category": "Office",
     "item9Desc": "Workers arriving at King Khalid International Airport, received by our Saudi team.",
-
     "statsTagline": "Our Impact in Numbers",
     "statsHeading": "Milestones That Define Our Journey",
     "stat1Num": "5000",
@@ -834,7 +772,6 @@
     "stat4Num": "6",
     "stat4Suffix": "+",
     "stat4Label": "Countries Covered",
-
     "ctaTagline": "Ready to Partner With Us?",
     "ctaHeading": "Start Your Manpower Journey Today",
     "ctaSubheading": "Whether you are an employer in Saudi Arabia looking for reliable workers, or a skilled professional seeking overseas opportunities — we are ready for you.",
@@ -857,49 +794,45 @@
     "dubaiTitle": "Riyadh Office (Saudi Arabia)",
     "bdTitle": "Dhaka Office (Bangladesh)"
   },
-
   "ContactFAQ": {
-  "tag": "Quick Answers",
-  "title": "Before You Contact Us",
-  "subtitle": "Answers to the questions we receive most often — so you know exactly what to expect.",
-
-  "items": [
-    {
-      "question": "How quickly do you respond to enquiries?",
-      "answer": "Our team usually responds within 2–3 business hours during Saudi office hours. WhatsApp inquiries receive the fastest response."
-    },
-    {
-      "question": "How long does it take to deploy workers?",
-      "answer": "Deployment generally takes 15–30 days depending on visa approval, documentation, and the required profession."
-    },
-    {
-      "question": "What information should I include in my enquiry?",
-      "answer": "Please mention the job category, number of workers required, project location, expected joining date, and your contact information."
-    },
-    {
-      "question": "Can I visit your Riyadh office?",
-      "answer": "Yes. We welcome employers to visit our Riyadh office by appointment during business hours."
-    },
-    {
-      "question": "Is there a minimum order for manpower supply?",
-      "answer": "No. We can provide a single worker or hundreds of workers depending on your business requirements."
-    },
-    {
-      "question": "Which industries do you supply workers for?",
-      "answer": "We provide manpower for construction, hospitality, cleaning, logistics, security, healthcare, factories, supermarkets, offices, restaurants and many more."
-    }
-  ]
-},
-
+    "tag": "Quick Answers",
+    "title": "Before You Contact Us",
+    "subtitle": "Answers to the questions we receive most often — so you know exactly what to expect.",
+    "items": [
+      {
+        "question": "How quickly do you respond to enquiries?",
+        "answer": "Our team usually responds within 2–3 business hours during Saudi office hours. WhatsApp inquiries receive the fastest response."
+      },
+      {
+        "question": "How long does it take to deploy workers?",
+        "answer": "Deployment generally takes 15–30 days depending on visa approval, documentation, and the required profession."
+      },
+      {
+        "question": "What information should I include in my enquiry?",
+        "answer": "Please mention the job category, number of workers required, project location, expected joining date, and your contact information."
+      },
+      {
+        "question": "Can I visit your Riyadh office?",
+        "answer": "Yes. We welcome employers to visit our Riyadh office by appointment during business hours."
+      },
+      {
+        "question": "Is there a minimum order for manpower supply?",
+        "answer": "No. We can provide a single worker or hundreds of workers depending on your business requirements."
+      },
+      {
+        "question": "Which industries do you supply workers for?",
+        "answer": "We provide manpower for construction, hospitality, cleaning, logistics, security, healthcare, factories, supermarkets, offices, restaurants and many more."
+      }
+    ]
+  },
   "GoogleMap": {
-  "tag": "OUR LOCATION",
-  "title": "Visit Our Office",
-  "description": "Future Focus Company proudly serves clients across Saudi Arabia from our Riyadh office. We are ready to assist you with reliable manpower recruitment solutions.",
-  "office": "Head Office",
-  "time": "Sunday - Thursday : 9:00 AM - 6:00 PM",
-  "button": "Open in Google Maps"
-},
-
+    "tag": "OUR LOCATION",
+    "title": "Visit Our Office",
+    "description": "Future Focus Company proudly serves clients across Saudi Arabia from our Riyadh office. We are ready to assist you with reliable manpower recruitment solutions.",
+    "office": "Head Office",
+    "time": "Sunday - Thursday : 9:00 AM - 6:00 PM",
+    "button": "Open in Google Maps"
+  },
   "CareersPage": {
     "heroTag": "Now Hiring",
     "heroTitle1": "Find Your Dream Job",
@@ -914,7 +847,6 @@
     "heroStatPlacedValue": "5,000+",
     "heroStatSalaryValue": "SAR 2K+",
     "heroStatDaysValue": "15–30d",
-
     "filterTag": "Job Listings",
     "filterTitle": "Current Openings in Saudi Arabia",
     "filterSubtitle": "All positions include free visa, free accommodation, GAMCA medical clearance, and BMET documentation support.",
@@ -926,7 +858,6 @@
     "filterTransport": "Transport",
     "filterCleaning": "Cleaning",
     "noJobs": "No jobs found for this filter.",
-
     "salaryLabel": "Monthly Salary",
     "locationLabel": "Location",
     "typeLabel": "Job Type",
@@ -937,61 +868,51 @@
     "verified": "Verified Demand",
     "fullTime": "Full-Time",
     "urgent": "Urgent",
-
     "job1Title": "Receptionist",
     "job1Location": "KSA",
     "job1Salary": "Competitive Salary / month",
     "job1Category": "Hospitality",
     "job1Desc": "Welcoming guests, managing front-desk operations, handling check-in/check-out, and coordinating with hotel departments.",
-
     "job2Title": "Housekeeper (Male / Female)",
     "job2Location": "KSA",
     "job2Salary": "Competitive Salary / month",
     "job2Category": "Cleaning",
     "job2Desc": "Cleaning and maintaining rooms, common areas, and facilities in hotels, hospitals, and residential compounds.",
-
     "job3Title": "Security Guard",
     "job3Location": "KSA",
     "job3Salary": "Competitive Salary / month",
     "job3Category": "Security",
     "job3Desc": "Securing premises, monitoring CCTV, controlling access points, and ensuring safety of buildings and personnel.",
-
     "job4Title": "Driver (Car / Van / Bus)",
     "job4Location": "KSA",
     "job4Salary": "Competitive Salary / month",
     "job4Category": "Transport",
     "job4Desc": "Transporting staff, guests, or goods across the city and intercity with valid KSA driving license.",
-
     "job5Title": "Office Boy / Tea Boy",
     "job5Location": "KSA",
     "job5Salary": "Competitive Salary / month",
     "job5Category": "Support Staff",
     "job5Desc": "Serving tea/coffee, maintaining office cleanliness, photocopying, running errands, and assisting staff.",
-
     "job6Title": "Gardener / Landscape Worker",
     "job6Location": "KSA",
     "job6Salary": "Competitive Salary/ month",
     "job6Category": "Support Staff",
     "job6Desc": "Maintaining gardens, trimming hedges, watering plants, and keeping outdoor spaces clean and presentable.",
-
     "job7Title": "General Helper / Laborer",
     "job7Location": "KSA",
     "job7Salary": "Competitive Salary / month",
     "job7Category": "Support Staff",
     "job7Desc": "Assisting in day-to-day operations, loading/unloading, cleaning, and general support across various industries.",
-
     "job8Title": "Event Staff / Support",
     "job8Location": "KSA",
     "job8Salary": "Competitive Salary / month",
     "job8Category": "Hospitality",
     "job8Desc": "Supporting event setups, guest services, crowd management, and behind-the-scenes logistics during events.",
-
     "job9Title": "Golf Cart Driver",
     "job9Location": "KSA",
     "job9Salary": "Competitive Salary / month",
     "job9Category": "Transport",
     "job9Desc": "Driving golf carts within resorts, golf clubs, and compounds to transport guests safely.",
-
     "ctaTag": "Ready to Apply?",
     "ctaTitle1": "Start Your Saudi Arabia",
     "ctaTitle2": "Career Journey Today",
@@ -1054,63 +975,321 @@
     "terms": "Terms of Service"
   },
   "Testimonials": {
-    "tagline": "Client Success Stories",
-    "heading": "Trusted by Leading Enterprises Across Saudi Arabia",
-    "subheading": "See how our reliable manpower solutions have powered major construction, hospitality, and facility management projects across the GCC.",
+    "tagline": "Client & Candidate Stories",
+    "heading": "Trusted by Leading Enterprises & Talent Across Saudi Arabia & GCC",
+    "subheading": "See how our reliable manpower solutions power major construction, healthcare, hospitality, and facility management projects across the GCC.",
     "verifiedClient": "Verified Partner",
     "items": {
       "item1": {
-        "quote": "Future Focus Company provided us with 150+ certified welders and fabricators for our Riyadh infrastructure project on short notice. Their vetting process and visa speed are unmatched in the region.",
-        "name": "Tariq Al-Mansoor",
-        "role": "HR Director, Al-Rashid Contracting Partner",
-        "location": "Riyadh, KSA",
-        "project": "Riyadh Infrastructure Development"
+        "quote": "Future Focus Company provided us with 150 skilled scaffolders and masons for our NEOM project. Their strict trade-testing process ensured we got exactly the quality we needed. Highly recommended.",
+        "name": "Ahmed Al-Zahrani",
+        "role": "HR Director (Construction, Riyadh)",
+        "location": "NEOM, KSA",
+        "project": "NEOM Construction Partner",
+        "type": "b2b"
       },
       "item2": {
-        "quote": "Sourcing skilled hospitality and facility management staff used to take months. Future Focus deployed 80+ pre-trained staff to our 5-star hotel property within 18 days. Exceptional service!",
-        "name": "Sarah Jenkins",
-        "role": "Head of People & Culture",
+        "quote": "We struggled with sourcing qualified nurses until we partnered with Future Focus. Their team handled the Prometric and Dataflow processes seamlessly. A truly reliable manpower partner.",
+        "name": "Fatima Al-Sayed",
+        "role": "Operations Head (Healthcare, Jeddah)",
         "location": "Jeddah, KSA",
-        "project": "Luxury Resort Group"
+        "project": "Healthcare Operations",
+        "type": "b2b"
       },
       "item3": {
-        "quote": "Their compliance with Saudi labor laws and transparent recruitment standards give us total peace of mind. Every technician supplied passed our technical trade test on day one.",
-        "name": "Engineer Rashid Al-Hassan",
-        "role": "Operations Vice President",
+        "quote": "The hospitality staff deployed by Future Focus were well-trained, English-speaking, and ready to work. Their 90-day replacement guarantee gave us great peace of mind.",
+        "name": "Khalid Mansour",
+        "role": "General Manager (Hospitality, Dubai)",
+        "location": "Dubai, UAE",
+        "project": "Luxury Hospitality Group",
+        "type": "b2b"
+      },
+      "item4": {
+        "quote": "What impressed me most was their turnaround time. We needed 50 certified electricians urgently, and Future Focus managed the sourcing, visa, and deployment within 45 days.",
+        "name": "Omar Tariq",
+        "role": "Project Manager (MEP Engineering, Dammam)",
+        "location": "Dammam, KSA",
+        "project": "Industrial MEP",
+        "type": "b2b"
+      },
+      "item5": {
+        "quote": "Sourcing heavy vehicle drivers with valid GCC licenses was a challenge. Future Focus not only found the right candidates but also ensured all their medical and legal clearances were flawless.",
+        "name": "Saeed Al-Maktoum",
+        "role": "Logistics Director (Qatar)",
+        "location": "Doha, Qatar",
+        "project": "GCC Logistics",
+        "type": "b2b"
+      },
+      "item6": {
+        "quote": "Professional, transparent, and strictly compliant with MHRSD guidelines. They are our go-to agency for hiring both skilled and semi-skilled cleaning personnel.",
+        "name": "Yasser Al-Qahtani",
+        "role": "CEO (Facility Management, Riyadh)",
         "location": "Riyadh, KSA",
-        "project": "Industrial Infrastructure"
+        "project": "FM Enterprise",
+        "type": "b2b"
+      },
+      "item7": {
+        "quote": "We hired a team of 10 network engineers through them. The candidates were technically sound and culturally adaptable. Future Focus made international hiring effortless.",
+        "name": "Hassan Al-Nasser",
+        "role": "IT Manager (Tech Solutions, UAE)",
+        "location": "Abu Dhabi, UAE",
+        "project": "Enterprise IT Solutions",
+        "type": "b2b"
+      },
+      "item8": {
+        "quote": "Their 5-step turnkey deployment workflow is incredibly efficient. We received regular updates on candidate medicals and visa stamping without having to ask.",
+        "name": "Tariq Bin Ziyad",
+        "role": "Plant Head (Manufacturing, Jubail)",
+        "location": "Jubail, KSA",
+        "project": "Industrial Manufacturing",
+        "type": "b2b"
+      },
+      "item9": {
+        "quote": "Excellent support from their Dhaka office. They arranged live video interviews and practical trade tests for our team to evaluate the crane operators directly.",
+        "name": "Faisal Al-Dosari",
+        "role": "Procurement Head (Heavy Machinery, KSA)",
+        "location": "Riyadh, KSA",
+        "project": "Heavy Machinery Supply",
+        "type": "b2b"
+      },
+      "item10": {
+        "quote": "Future Focus understands the GCC labor laws perfectly. Their candidate onboarding and documentation process is the best we've seen from South Asia.",
+        "name": "Aisha Al-Farsi",
+        "role": "HR Business Partner (Retail, Oman)",
+        "location": "Muscat, Oman",
+        "project": "Gulf Retail Group",
+        "type": "b2b"
+      },
+      "item11": {
+        "quote": "Future Focus Company is 100% genuine. They didn't ask for any hidden fees, and my visa processing was transparent. Now I am working in a reputed company in Riyadh.",
+        "name": "Rahim Uddin",
+        "role": "Welder (Deployed to KSA)",
+        "location": "Riyadh, KSA",
+        "project": "Deployed Candidate",
+        "type": "b2c"
+      },
+      "item12": {
+        "quote": "I was guided perfectly for my medical and embassy interviews. The team is very supportive, and they ensured my safe travel to Dubai. Thank you, Future Focus!",
+        "name": "Nusrat Jahan",
+        "role": "Registered Nurse (Deployed to UAE)",
+        "location": "Dubai, UAE",
+        "project": "Deployed Candidate",
+        "type": "b2c"
+      },
+      "item13": {
+        "quote": "Their process is very fast. I applied, gave my trade test, and within two months I was flying. The salary and benefits promised match exactly with my contract.",
+        "name": "Abdul Karim",
+        "role": "Heavy Driver (Deployed to Qatar)",
+        "location": "Doha, Qatar",
+        "project": "Deployed Candidate",
+        "type": "b2c"
+      },
+      "item14": {
+        "quote": "Many agencies make fake promises, but Future Focus is different. They explained everything clearly and placed me in a 5-star hotel in Jeddah.",
+        "name": "Sabbir Hossain",
+        "role": "Hotel Receptionist (Deployed to KSA)",
+        "location": "Jeddah, KSA",
+        "project": "Deployed Candidate",
+        "type": "b2c"
+      },
+      "item15": {
+        "quote": "From my initial interview to my final flight, the Future Focus team was always available to answer my questions. A highly professional agency for Bangladeshi workers.",
+        "name": "Mehedi Hasan",
+        "role": "Electrician (Deployed to Oman)",
+        "location": "Muscat, Oman",
+        "project": "Deployed Candidate",
+        "type": "b2c"
       }
     }
   },
-  "FAQ": {
-  "tagline": "Got Questions?",
-  "heading": "Frequently Asked Questions",
-  "subheading": "Find answers to the most common questions about our international recruitment process, workforce solutions, deployment procedures, and employer support services across Saudi Arabia.",
-  "stillHaveQuestions": "Need a customized workforce solution for your business?",
-  "contactSupport": "Talk to Our HR & Workforce Advisor",
-  "items": {
-    "item1": {
-      "question": "How quickly can Future Focus Company deploy workers to our project in Saudi Arabia?",
-      "answer": "Deployment timelines typically range from 2 to 4 weeks after receiving the approved job order and required government documentation. Depending on the job category and candidate availability, urgent workforce requirements may be fulfilled even faster."
-    },
-    "item2": {
-      "question": "Where do you source your workforce from?",
-      "answer": "We recruit skilled, semi-skilled, and general workforce from more than ten countries across Asia through our trusted international recruitment network, ensuring every candidate meets our clients' requirements and applicable regulations."
-    },
-    "item3": {
-      "question": "Do you handle the complete recruitment and mobilization process?",
-      "answer": "Yes. We provide end-to-end workforce solutions including candidate sourcing, screening, trade testing, documentation, visa processing, mobilization, deployment, and coordination until workers arrive safely at the project site."
-    },
-    "item4": {
-      "question": "Which industries do you serve?",
-      "answer": "We supply workforce for construction, MEP, oil & gas, facility management, hospitality, logistics, transportation, industrial operations, security services, healthcare support, and many other sectors across Saudi Arabia."
-    },
-    "item5": {
-      "question": "Why should employers choose Future Focus Company?",
-      "answer": "Our international recruitment network, strict candidate screening, transparent processes, and commitment to timely workforce deployment make us a trusted HR and workforce solutions partner for employers across Saudi Arabia."
+  "FAQSystem": {
+    "tagline": "Knowledge Base & FAQs",
+    "heading": "Everything You Need to Know",
+    "subheading": "Comprehensive answers for employers and candidates regarding international recruitment, visa compliance, trade testing, and deployment.",
+    "searchPlaceholder": "Search FAQs (e.g., visa, medical, replacement guarantee, trade test)...",
+    "allCategories": "All Categories",
+    "catEmployersServices": "Employer Services & Sourcing",
+    "catEmployersProcess": "Process & Guarantees",
+    "catCandidates": "Candidates & Job Seekers",
+    "seeMoreFaqs": "See More FAQs",
+    "noResults": "No FAQs match your search query. Feel free to contact our support team.",
+    "items": {
+      "item1": {
+        "question": "What is Future Focus Company?",
+        "answer": "Future Focus Company is a premium, government-approved manpower recruitment agency specializing in sourcing, screening, and deploying skilled and semi-skilled workforce from 10+ countries to Saudi Arabia and the GCC.",
+        "category": "catEmployersServices"
+      },
+      "item2": {
+        "question": "Which industries do you supply manpower for?",
+        "answer": "We supply workforce for a wide range of sectors including Construction & Engineering, Healthcare, Hospitality, IT & Technology, Transport & Heavy Driving, and Facility Management.",
+        "category": "catEmployersServices"
+      },
+      "item3": {
+        "question": "From which countries do you source your candidates?",
+        "answer": "While our primary recruitment hub is Bangladesh, we have a strong global network to source qualified talent from over 10 countries across Asia and Africa to meet diverse employer needs.",
+        "category": "catEmployersServices"
+      },
+      "item4": {
+        "question": "Do you supply both skilled and unskilled workers?",
+        "answer": "Yes, we provide highly skilled professionals (engineers, nurses, developers), semi-skilled workers (welders, drivers, chefs), and unskilled labor for support roles.",
+        "category": "catEmployersServices"
+      },
+      "item5": {
+        "question": "Are your candidates trade-tested?",
+        "answer": "Absolutely. All technical and skilled candidates undergo rigorous practical trade testing and evaluation at our affiliated certified testing centers before final selection.",
+        "category": "catEmployersServices"
+      },
+      "item6": {
+        "question": "How long does the recruitment and deployment process take?",
+        "answer": "Standard deployment typically takes between 30 to 45 days after the final selection and receipt of the original visa documents, subject to medical and embassy clearance.",
+        "category": "catEmployersProcess"
+      },
+      "item7": {
+        "question": "How do I request a manpower proposal?",
+        "answer": "You can easily request a proposal by clicking the 'Request Manpower' button on our website, filling out your headcount and sector requirements. Our team will get back to you within 24 hours.",
+        "category": "catEmployersProcess"
+      },
+      "item8": {
+        "question": "What is your replacement guarantee?",
+        "answer": "We offer a 100% compliant 90-day free replacement guarantee. If a deployed worker is found medically or technically unfit within the probation period, we will replace them at no extra agency service cost.",
+        "category": "catEmployersProcess"
+      },
+      "item9": {
+        "question": "Can our HR team interview the candidates directly?",
+        "answer": "Yes, we highly encourage this. We facilitate online video interviews (via Zoom/Teams) and can also arrange logistics if your HR delegates wish to visit our recruitment centers for in-person evaluations.",
+        "category": "catEmployersProcess"
+      },
+      "item10": {
+        "question": "Do you handle visa processing and medical clearances?",
+        "answer": "Yes, we provide end-to-end solutions. This includes GAMCA medical checkups, background verification, visa stamping, and ticketing.",
+        "category": "catEmployersProcess"
+      },
+      "item11": {
+        "question": "Are your services compliant with GCC labor laws?",
+        "answer": "Yes, our processes strictly adhere to the regulatory frameworks of the destination countries, including MHRSD (Musaned) compliance for Saudi Arabia.",
+        "category": "catEmployersProcess"
+      },
+      "item12": {
+        "question": "Is there a minimum order quantity for manpower supply?",
+        "answer": "We cater to both small specialized requirements and large-scale bulk recruitment for mega projects. Contact us with your specific needs for a tailored solution.",
+        "category": "catEmployersProcess"
+      },
+      "item13": {
+        "question": "How do you ensure candidate welfare and ethical recruitment?",
+        "answer": "We are strictly against exploitative practices. We ensure transparent contracts, zero hidden fees for candidates where applicable, and comprehensive pre-departure briefings.",
+        "category": "catEmployersProcess"
+      },
+      "item14": {
+        "question": "How can I apply for a job through Future Focus?",
+        "answer": "You can browse current vacancies on our 'Careers' page and apply directly by submitting your CV and passport copy through our secure online form.",
+        "category": "catCandidates"
+      },
+      "item15": {
+        "question": "Do I need to pay any upfront registration fees?",
+        "answer": "No, Future Focus Company does not charge unauthorized upfront registration fees. We strongly advise candidates not to pay middlemen or unauthorized agents.",
+        "category": "catCandidates"
+      },
+      "item16": {
+        "question": "How will I know if my application is selected?",
+        "answer": "If your profile matches a client's requirement, our recruitment team will contact you directly via phone or email for an initial screening and interview schedule.",
+        "category": "catCandidates"
+      },
+      "item17": {
+        "question": "What documents are required for an overseas job application?",
+        "answer": "Generally, you need an updated CV, a valid passport (with at least 1-year validity), educational/training certificates, experience letters, and recent passport-sized photographs.",
+        "category": "catCandidates"
+      },
+      "item18": {
+        "question": "Do you provide any training before departure?",
+        "answer": "Yes, all selected candidates undergo a mandatory pre-departure orientation briefing. This covers the host country's culture, labor laws, company policies, and basic safety rules.",
+        "category": "catCandidates"
+      },
+      "item19": {
+        "question": "Is the employer responsible for my accommodation and medical?",
+        "answer": "In most GCC countries, standard employment contracts mandate that the employer provides free accommodation, transportation, and medical insurance, though this depends on the specific job offer.",
+        "category": "catCandidates"
+      },
+      "item20": {
+        "question": "Can I visit your office directly to drop off my CV?",
+        "answer": "Yes, you are welcome to visit our physical offices in Dhaka or Riyadh during standard working hours. Please check the 'Contact Us' page for our exact locations and timings.",
+        "category": "catCandidates"
+      }
     }
-  }
-},
+  },
+  "LegalPage": {
+    "privacyTitle": "Privacy Policy",
+    "privacySubtitle": "How Future Focus Company protects and handles candidate and corporate client data in compliance with international recruitment regulations.",
+    "termsTitle": "Terms of Service",
+    "termsSubtitle": "Terms, conditions, and operational framework governing workforce recruitment, deployment SLAs, and agency services.",
+    "lastUpdated": "Last Updated: August 2026"
+  },
+  "PrivacyPolicy": {
+    "badge": "Data Protection & Privacy",
+    "privacyTitle": "Privacy Policy",
+    "privacySubtitle": "How Future Focus Company protects and safeguards the personal and corporate information of candidates and employers.",
+    "effectiveDate": "Effective Date: August 2026 • Govt. License RL-1428",
+    "sec1Title": "1. Introduction",
+    "sec1Desc": "Welcome to Future Focus Company. We are committed to protecting the privacy and security of the personal and corporate information shared with us by job seekers (candidates) and employers (clients). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our recruitment services.",
+    "sec2Title": "2. Information We Collect",
+    "sec2CandidatesTitle": "From Candidates",
+    "sec2CandidatesDesc": "Full name, contact details, email address, date of birth, passport details, educational qualifications, employment history (CV/Resume), trade test results, and medical clearance reports (e.g., GAMCA).",
+    "sec2EmployersTitle": "From Employers",
+    "sec2EmployersDesc": "Company name, commercial registration details, contact person information, email, phone numbers, workforce requirements, and visa quota details.",
+    "sec2AutoTitle": "Automatically Collected Data",
+    "sec2AutoDesc": "IP address, browser type, device information, and website usage data collected via cookies to enhance user experience and site functionality.",
+    "sec3Title": "3. How We Use Your Information",
+    "sec3Item1": "To match candidates with suitable job opportunities in Saudi Arabia and the GCC.",
+    "sec3Item2": "To process visa applications, medical clearances, and travel documentation.",
+    "sec3Item3": "To provide employers with candidate profiles for screening and selection.",
+    "sec3Item4": "To communicate regarding job alerts, interview schedules, and manpower deployment updates.",
+    "sec3Item5": "To comply with local and international labor laws, including MHRSD (Saudi Arabia) and BMET (Bangladesh) regulations.",
+    "sec4Title": "4. How We Share Your Information",
+    "sec4Desc": "We do not sell your personal data. We may share your information only with:",
+    "sec4Item1Title": "Prospective Employers",
+    "sec4Item1Desc": "Candidate CVs and trade test results are shared with verified clients for hiring purposes.",
+    "sec4Item2Title": "Government & Regulatory Authorities",
+    "sec4Item2Desc": "Embassies, immigration departments, and ministries (e.g., MHRSD) for visa and legal processing.",
+    "sec4Item3Title": "Authorized Third Parties",
+    "sec4Item3Desc": "Medical testing centers (GAMCA), flight booking agencies, and training institutes directly involved in your deployment process.",
+    "sec5Title": "5. Data Security and Retention",
+    "sec5Desc": "We implement strict technical and organizational security measures to protect your data from unauthorized access. We retain candidate and client data only for as long as necessary to fulfill our recruitment services or to comply with legal obligations.",
+    "sec6Title": "6. Your Rights & Contact Information",
+    "sec6Desc": "Candidates and employers have the right to request access to, correction, or deletion of their personal/corporate data held by us. To exercise these rights, please contact us at Operations@ffccom.net or +966 56 616 7562.",
+    "contactBtn": "Contact Compliance Desk"
+  },
+  "TermsOfService": {
+    "badge": "Legal Framework & Terms",
+    "termsTitle": "Terms of Service",
+    "termsSubtitle": "Terms, conditions, and operational framework governing workforce recruitment, candidate deployment, and agency services.",
+    "effectiveDate": "Effective Date: August 2026 • Govt. License RL-1428",
+    "sec1Title": "1. Acceptance of Terms",
+    "sec1Desc": "By accessing the Future Focus Company website and utilizing our recruitment services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please refrain from using our platform.",
+    "sec2Title": "2. Services Provided",
+    "sec2Desc": "Future Focus Company acts as an intermediary facilitating overseas employment. We connect qualified international candidates with verified employers in Saudi Arabia and the GCC.",
+    "sec3Title": "3. Terms for Candidates (Job Seekers)",
+    "sec3Item1Title": "Accuracy of Information",
+    "sec3Item1Desc": "You confirm that all information provided (CV, experience, passport, educational certificates) is true, accurate, and valid. Submission of fraudulent documents will result in immediate disqualification and potential legal action.",
+    "sec3Item2Title": "No Guarantee of Employment",
+    "sec3Item2Desc": "Submitting an application does not guarantee job placement or visa approval. Final selection is at the sole discretion of the employer, and visa issuance is determined by the respective embassy.",
+    "sec3Item3Title": "Anti-Fraud & Zero Hidden Fees Policy",
+    "sec3Item3Desc": "Future Focus Company operates strictly within government-approved fee structures. We do not charge unauthorized upfront recruitment fees. Candidates are strictly advised not to pay any money to third-party brokers or unofficial sub-agents claiming to represent us.",
+    "sec4Title": "4. Terms for Employers (Clients)",
+    "sec4Item1Title": "Compliance with Labor Laws",
+    "sec4Item1Desc": "Employers must ensure that all job offers comply with the labor laws of the host country (e.g., MHRSD in KSA).",
+    "sec4Item2Title": "Accurate Job Descriptions",
+    "sec4Item2Desc": "Employers must provide clear and accurate information regarding salary, working hours, accommodation, and benefits.",
+    "sec4Item3Title": "Replacement Guarantee (90 Days)",
+    "sec4Item3Desc": "Our 90-day free replacement guarantee is strictly applicable only if the deployed candidate is found medically or technically unfit, subject to the conditions outlined in our official Manpower Supply Agreement.",
+    "sec5Title": "5. Website Usage and Intellectual Property",
+    "sec5Desc": "All content on this website, including text, graphics, logos, and images, is the property of Future Focus Company. Unauthorized reproduction, distribution, or copying of any material is strictly prohibited.",
+    "sec6Title": "6. Limitation of Liability",
+    "sec6Desc": "Future Focus Company shall not be held liable for any direct, indirect, incidental, or consequential damages arising out of the use of our website, rejection of visas by embassies, or disputes arising between the employer and the employee post-deployment.",
+    "sec7Title": "7. Governing Law",
+    "sec7Desc": "These terms are governed by and construed in accordance with the laws of Bangladesh and the operational compliance laws of the Kingdom of Saudi Arabia (KSA).",
+    "sec8Title": "8. Contact Information",
+    "sec8Desc": "For any questions regarding these Terms of Service, please contact us at Operations@ffccom.net or +966 56 616 7562.",
+    "inquireBtn": "Inquire With Legal Desk"
+  },
   "GetInTouch": {
     "tagline": "Let's Talk Business",
     "heading": "Ready to Scale Your Workforce with Premier Talent?",
