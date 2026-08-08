@@ -3,7 +3,7 @@
 import * as React from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { Wrench, Cog, Hammer } from "lucide-react";
+import { Wrench, Cog, Hammer, CheckCircle2 } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -109,10 +109,9 @@ export default function WhatIsManpower() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="mb-6 inline-flex items-center gap-3 rounded-full border border-primary/20 bg-primary/10 px-5 py-2"
+              className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-5 py-2"
             >
-              <span className="h-2 w-2 rounded-full bg-primary" />
-
+              <CheckCircle2 className="w-3.5 h-3.5 text-primary shrink-0" />
               <span className="text-xs font-bold uppercase tracking-[0.35em] text-primary">
                 {t("tag")}
               </span>
@@ -125,7 +124,7 @@ export default function WhatIsManpower() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="max-w-3xl text-3xl font-black leading-tight text-foreground md:text-3xl lg:text-4xl"
+              className="max-w-3xl text-2xl md:text-3xl lg:text-4xl font-bold text-foreground tracking-tight"
             >
               {t("title")}
             </motion.h2>

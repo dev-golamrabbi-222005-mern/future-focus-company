@@ -78,11 +78,12 @@ export function AboutClient() {
         {/* ════ SECTION HEADER ════ */}
         <div className="text-center space-y-4 gsap-fade-up">
           <div className="flex justify-center">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
-              {t("tagline")}
+            <span className="text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20 inline-flex items-center gap-2">
+              <ShieldCheck className="w-3.5 h-3.5 shrink-0 text-primary" />
+              <span>{t("tagline")}</span>
             </span>
           </div>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground tracking-tight leading-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground tracking-tight leading-tight text-center">
             {t("title")}
           </h1>
           <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -243,7 +244,7 @@ export function AboutClient() {
             <ArrowRight className="h-4 w-4" />
           </Link>
           <Link
-            href={`/${locale}/services`}
+            href={`/${locale}/manpower-solutions`}
             className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border border-border bg-card text-foreground font-semibold text-sm hover:border-primary/50 hover:text-primary transition-all"
           >
             {t("ctaServices")}

@@ -48,7 +48,7 @@ export function ServiceHero({ locale }: { locale: string }) {
         </div>
 
         {/* Hero Title */}
-        <h1 className="hero-animate text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground tracking-tight leading-tight mb-6">
+        <h1 className="hero-animate text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground tracking-tight leading-tight mb-6">
           {t('title')}
         </h1>
 

@@ -104,7 +104,7 @@ export default function Hero1() {
                 </div>
 
                 {/* Main Headline */}
-                <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-foreground tracking-tight leading-[1.1]">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground tracking-tight leading-[1.1]">
                   {slides[index].title}{' '}
                   <span className="bg-gradient-to-r from-primary via-sky-400 to-cyan-400 bg-clip-text text-transparent">
                     {slides[index].highlight}

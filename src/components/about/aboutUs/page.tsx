@@ -164,7 +164,7 @@ export default function AboutCompany() {
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
               <Link
-                href={`/${locale}/services`}
+                href={`/${locale}/manpower-solutions`}
                 className="inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-card px-8 py-4 font-semibold text-foreground transition-all hover:border-primary/50 hover:text-primary"
               >
                 {t("services")}

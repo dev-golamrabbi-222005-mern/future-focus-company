@@ -155,8 +155,8 @@ export function GetInTouch() {
           {/* Left Column: Let's Talk Business & Contact Details */}
           <div ref={leftColRef} className="lg:col-span-5 space-y-8">
             <div className="space-y-4">
-              <div className="inline-flex items-center space-x-2 rtl:space-x-reverse bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary">
-                <Building2 className="w-3.5 h-3.5" />
+              <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary">
+                <Send className="w-3.5 h-3.5 shrink-0 text-primary" />
                 <span>{t('tagline')}</span>
               </div>
 

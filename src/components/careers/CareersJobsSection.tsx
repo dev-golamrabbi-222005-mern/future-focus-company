@@ -398,11 +398,12 @@ export default function CareersJobsSection() {
           {/* Header */}
           <div ref={headerRef} className="text-center space-y-4">
             <div className="gsap-up flex justify-center">
-              <span className="text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
-                {t("filterTag")}
+              <span className="text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20 inline-flex items-center gap-2">
+                <Briefcase className="w-3.5 h-3.5 shrink-0 text-primary" />
+                <span>{t("filterTag")}</span>
               </span>
             </div>
-            <h2 className="gsap-up text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-tight">
+            <h2 className="gsap-up text-2xl md:text-3xl lg:text-4xl font-bold text-foreground leading-tight text-center">
               {t("filterTitle")}
             </h2>
             <p className="gsap-up text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">

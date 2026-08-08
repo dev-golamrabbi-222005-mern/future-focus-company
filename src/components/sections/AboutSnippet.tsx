@@ -144,8 +144,9 @@ export function AboutSnippet() {
           <div ref={contentRef} className="space-y-8">
             <div>
               <div className="mb-6">
-                <span className="text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
-                  {t('badge')}
+                <span className="text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20 inline-flex items-center gap-2">
+                  <Building2 className="w-3.5 h-3.5 shrink-0 text-primary" />
+                  <span>{t('badge')}</span>
                 </span>
               </div>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground tracking-tight leading-tight mb-4">

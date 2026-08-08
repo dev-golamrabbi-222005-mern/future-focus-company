@@ -75,10 +75,18 @@ export function Navbar() {
             })}
           </nav>
 
-          {/* Right Actions: Language Dropdown + Slider Theme Toggle */}
-          <div className="flex items-center gap-3 sm:gap-4">
+          {/* Right Actions: Language Dropdown + Slider Theme Toggle + Primary CTA */}
+          <div className="flex items-center gap-2.5 sm:gap-3">
             <LanguageSwitcher />
             <ThemeToggle />
+
+            {/* Primary CTA Button (Desktop) */}
+            <Link
+              href={`/${locale}/contact#get-in-touch`}
+              className="hidden lg:inline-flex items-center justify-center px-4 py-2 rounded-xl bg-primary text-primary-foreground font-bold text-xs sm:text-sm shadow-md shadow-primary/25 hover:bg-primary/90 transition-all duration-200 shrink-0"
+            >
+              {t('requestManpower')}
+            </Link>
 
             {/* Mobile Menu Toggle Button */}
             <button
@@ -119,6 +127,16 @@ export function Navbar() {
               </Link>
             );
           })}
+
+          <div className="pt-2">
+            <Link
+              href={`/${locale}/contact#get-in-touch`}
+              onClick={() => setMobileMenuOpen(false)}
+              className="block w-full text-center px-4 py-3 rounded-xl bg-primary text-primary-foreground font-bold text-base shadow-md shadow-primary/25 hover:bg-primary/90 transition-all"
+            >
+              {t('requestManpower')}
+            </Link>
+          </div>
         </div>
       )}
     </header>

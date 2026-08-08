@@ -78,11 +78,12 @@ export function WhyChooseUs() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16">
           <div className="mb-6 flex justify-center">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
-              {t('tagline')}
+            <span className="text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20 inline-flex items-center gap-2">
+              <ShieldCheck className="w-3.5 h-3.5 shrink-0 text-primary" />
+              <span>{t('tagline')}</span>
             </span>
           </div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground tracking-tight mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground tracking-tight mb-4 text-center">
             {t('heading')}
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
