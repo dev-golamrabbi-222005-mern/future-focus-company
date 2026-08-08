@@ -14,6 +14,7 @@ interface SectorDetailHeroProps {
 
 export function SectorDetailHero({ slug, locale }: SectorDetailHeroProps) {
   const t = useTranslations('SectorsGrid');
+  const tCommon = useTranslations('CommonUI');
   const heroRef = React.useRef<HTMLDivElement>(null);
 
   const title = t(`sectors.${slug}.title`);
@@ -63,7 +64,7 @@ export function SectorDetailHero({ slug, locale }: SectorDetailHeroProps) {
       <div className="flex flex-wrap items-center justify-center gap-3 text-xs font-bold">
         <span className="inline-flex items-center space-x-1.5 rtl:space-x-reverse bg-primary/10 text-primary border border-primary/20 px-3.5 py-1.5 rounded-full">
           <ShieldCheck className="w-4 h-4" />
-          <span>MHRSD Licensed & Compliant</span>
+          <span>{tCommon('licenseBadge')}</span>
         </span>
         <span className="inline-flex items-center space-x-1.5 rtl:space-x-reverse bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 px-3.5 py-1.5 rounded-full">
           <Users2 className="w-4 h-4" />
@@ -71,7 +72,7 @@ export function SectorDetailHero({ slug, locale }: SectorDetailHeroProps) {
         </span>
         <span className="inline-flex items-center space-x-1.5 rtl:space-x-reverse bg-amber-500/10 text-amber-500 border border-amber-500/20 px-3.5 py-1.5 rounded-full">
           <MapPin className="w-4 h-4" />
-          <span>Saudi Arabia (KSA)</span>
+          <span>{tCommon('ksaBadge')}</span>
         </span>
       </div>
     </div>

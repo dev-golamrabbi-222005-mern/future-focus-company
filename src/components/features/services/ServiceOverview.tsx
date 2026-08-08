@@ -10,6 +10,7 @@ interface ServiceOverviewProps {
 
 export function ServiceOverview({ slug }: ServiceOverviewProps) {
   const t = useTranslations('ServicesPage.details');
+  const tCommon = useTranslations('CommonUI');
 
   // Fallback / dynamic data for roles based on sector slug
   const rolesMap: Record<string, string[]> = {
@@ -126,16 +127,13 @@ export function ServiceOverview({ slug }: ServiceOverviewProps) {
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
           <div className="p-4 rounded-xl bg-muted/30 border border-border/50 text-center space-y-1">
-            <p className="text-xs uppercase font-extrabold text-primary">Stage 1</p>
-            <p className="text-sm font-bold text-foreground">Document Vetting</p>
+            <p className="text-sm font-bold text-foreground">{tCommon('stage1')}</p>
           </div>
           <div className="p-4 rounded-xl bg-muted/30 border border-border/50 text-center space-y-1">
-            <p className="text-xs uppercase font-extrabold text-amber-500">Stage 2</p>
-            <p className="text-sm font-bold text-foreground">Practical Trade Test</p>
+            <p className="text-sm font-bold text-foreground">{tCommon('stage2')}</p>
           </div>
           <div className="p-4 rounded-xl bg-muted/30 border border-border/50 text-center space-y-1">
-            <p className="text-xs uppercase font-extrabold text-emerald-500">Stage 3</p>
-            <p className="text-sm font-bold text-foreground">GAMCA & Embassy Visa</p>
+            <p className="text-sm font-bold text-foreground">{tCommon('stage3')}</p>
           </div>
         </div>
       </div>

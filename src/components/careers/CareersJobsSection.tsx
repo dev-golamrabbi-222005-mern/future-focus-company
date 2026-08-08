@@ -74,6 +74,7 @@ function ApplyForm({
   const [form, setForm] = React.useState({
     fullName: "", phone: "", email: "", passportNo: "", experience: "1-3",
   });
+  const tCommon = useTranslations('CommonUI');
 
   const handle = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>
     setForm((p) => ({ ...p, [e.target.name]: e.target.value }));
@@ -132,9 +133,9 @@ function ApplyForm({
           </label>
           <select name="experience" required value={form.experience} onChange={handle}
             className="w-full rounded-xl border border-border bg-muted/30 px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary">
-            <option value="1-3">1 – 3 Years</option>
-            <option value="3-5">3 – 5 Years</option>
-            <option value="5+">5+ Years (Experienced)</option>
+            <option value="1-3">{tCommon('years1_3')}</option>
+            <option value="3-5">{tCommon('years3_5')}</option>
+            <option value="5+">{tCommon('years5Plus')}</option>
           </select>
         </div>
       </div>
@@ -146,8 +147,7 @@ function ApplyForm({
         </label>
         <label className="flex flex-col items-center justify-center gap-2 rounded-2xl border-2 border-dashed border-border bg-muted/20 px-4 py-5 text-center cursor-pointer hover:border-primary/50 transition-colors">
           <Upload className="h-6 w-6 text-primary" />
-          <span className="text-xs font-semibold text-foreground">Click to upload PDF / DOC</span>
-          <span className="text-[10px] text-muted-foreground">Max 5MB</span>
+          <span className="text-xs font-semibold text-foreground">{tCommon('uploadPdfDoc')}</span>
           <input type="file" accept=".pdf,.doc,.docx" required className="hidden" />
         </label>
       </div>
@@ -163,7 +163,7 @@ function ApplyForm({
           {loading ? (
             <span className="animate-spin h-4 w-4 border-2 border-primary-foreground border-t-transparent rounded-full" />
           ) : (
-            <><Send className="h-4 w-4" /> Submit Application</>
+            <><Send className="h-4 w-4" /> {tCommon('submitApp')}</>
           )}
         </button>
       </div>
@@ -174,6 +174,7 @@ function ApplyForm({
 /* ─── Job Detail Modal ─── */
 function JobModal({ job, onClose }: { job: Job; onClose: () => void }) {
   const t = useTranslations("CareersPage");
+  const tCommon = useTranslations("CommonUI");
   const [view, setView] = React.useState<"details" | "apply" | "success">("details");
 
   /* lock body scroll */
@@ -266,13 +267,13 @@ function JobModal({ job, onClose }: { job: Job; onClose: () => void }) {
                   <CheckCircle2 className="h-9 w-9 text-emerald-500 animate-bounce" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-extrabold text-foreground">Application Submitted!</h3>
+                  <h3 className="text-xl font-extrabold text-foreground">{tCommon('appSubmitted')}</h3>
                   <p className="mt-2 text-sm text-muted-foreground max-w-sm mx-auto leading-relaxed">
                     Our recruitment officers will review your application and call you for trade testing within 2–3 business days.
                   </p>
                 </div>
                 <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 border border-primary/20 px-5 py-2 text-xs font-bold text-primary">
-                  <Briefcase className="h-3.5 w-3.5" /> {job.title} — Application Received
+                  <Briefcase className="h-3.5 w-3.5" /> {job.title}
                 </div>
                 <button onClick={onClose}
                   className="mt-2 rounded-xl bg-primary px-8 py-3 text-sm font-bold text-primary-foreground hover:bg-primary/90 transition-colors">
@@ -288,20 +289,20 @@ function JobModal({ job, onClose }: { job: Job; onClose: () => void }) {
                 <div className="flex items-center gap-2 rounded-2xl bg-muted/40 border border-border px-4 py-3">
                   <DollarSign className="h-5 w-5 shrink-0 text-emerald-500" />
                   <div>
-                    <p className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground">Monthly Salary</p>
+                    <p className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground">{tCommon('monthlySalary')}</p>
                     <p className="text-sm font-extrabold text-foreground">{job.salary}</p>
                   </div>
                 </div>
 
                 {/* Description */}
                 <div>
-                  <h4 className="text-xs font-extrabold uppercase tracking-widest text-muted-foreground mb-2">Job Description</h4>
+                  <h4 className="text-xs font-extrabold uppercase tracking-widest text-muted-foreground mb-2">{tCommon('jobDescription')}</h4>
                   <p className="text-sm leading-7 text-foreground/90">{job.desc}</p>
                 </div>
 
                 {/* Perks */}
                 <div>
-                  <h4 className="text-xs font-extrabold uppercase tracking-widest text-muted-foreground mb-3">Included Benefits</h4>
+                  <h4 className="text-xs font-extrabold uppercase tracking-widest text-muted-foreground mb-3">{tCommon('includedBenefits')}</h4>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                     {perks.map((perk) => (
                       <div key={perk} className="flex items-center gap-2 rounded-xl bg-emerald-500/8 border border-emerald-500/20 px-3 py-2.5">
@@ -316,7 +317,7 @@ function JobModal({ job, onClose }: { job: Job; onClose: () => void }) {
                 <div className="flex items-center gap-3 p-4 rounded-2xl border border-border bg-muted/30">
                   <Briefcase className="h-5 w-5 text-primary shrink-0" />
                   <div>
-                    <p className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground">Job Type</p>
+                    <p className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground">{tCommon('jobType')}</p>
                     <p className="text-sm font-bold text-foreground">{t("fullTime")} • {job.location}</p>
                   </div>
                 </div>
@@ -388,7 +389,7 @@ export default function CareersJobsSection() {
 
   return (
     <>
-      <section ref={sectionRef} className="relative bg-background py-16 md:py-20 lg:py-24">
+      <section ref={sectionRef} className="relative bg-background pt-12 md:pt-16 lg:pt-20 pb-6 md:pb-8 lg:pb-10">
         <div className="absolute inset-0 -z-10 pointer-events-none">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(3,105,161,0.06),transparent_55%)]" />
         </div>
@@ -489,7 +490,7 @@ export default function CareersJobsSection() {
 
                       <p className="text-xs leading-5 text-muted-foreground line-clamp-2">{job.desc}</p>
 
-                      {/* Perks */}
+                      {/* Perks
                       <div className="flex flex-wrap gap-1.5">
                         {[t("freeVisa"), t("freeAccom"), t("freeMedical")].map((perk) => (
                           <span key={perk}
@@ -497,7 +498,7 @@ export default function CareersJobsSection() {
                             <CheckCircle2 className="h-3 w-3 shrink-0" /> {perk}
                           </span>
                         ))}
-                      </div>
+                      </div> */}
 
                       {/* Footer */}
                       <div className="mt-auto pt-3 border-t border-border/60 flex items-center justify-between">

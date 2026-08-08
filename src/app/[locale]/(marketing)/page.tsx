@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import Hero1 from '@/components/features/Hero1';
+import Hero1 from '@/components/features/Hero';
 import AboutSection from '@/components/sections/AboutSection';
 import { StatsSection } from '@/components/sections/StatsSection';
 import { WhyChooseUs } from '@/components/sections/WhyChooseUs';

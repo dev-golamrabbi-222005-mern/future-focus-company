@@ -6,6 +6,7 @@ import { Upload, FileText, CheckCircle2, Send, User } from 'lucide-react';
 
 export function SubmitCvSection() {
   const t = useTranslations('SubmitCvPage');
+  const tCommon = useTranslations('CommonUI');
   const [cvSubmitted, setCvSubmitted] = React.useState(false);
 
   return (
@@ -37,14 +38,14 @@ export function SubmitCvSection() {
               </div>
               <div>
                 <h3 className="text-2xl font-extrabold text-foreground">{t('formTitle')}</h3>
-                <p className="text-xs text-muted-foreground font-medium">BMET Authorized Direct Candidate Portal</p>
+                <p className="text-xs text-muted-foreground font-medium">{tCommon('bmetPortalBadge')}</p>
               </div>
             </div>
 
             {cvSubmitted ? (
               <div className="p-8 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-500 text-center space-y-4">
                 <CheckCircle2 className="h-12 w-12 mx-auto animate-bounce" />
-                <h4 className="text-2xl font-extrabold">Application Submitted!</h4>
+                <h4 className="text-2xl font-extrabold">{tCommon('appSubmitted')}</h4>
                 <p className="text-sm font-semibold max-w-md mx-auto text-foreground/90">
                   {t('successMessage')}
                 </p>
@@ -79,12 +80,12 @@ export function SubmitCvSection() {
 
                   <div className="space-y-2">
                     <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                      {t('passportNo')}
+                      {t('passport')}
                     </label>
                     <input
                       type="text"
                       required
-                      placeholder="A12345678"
+                      placeholder="A01234567"
                       className="w-full px-4 py-3.5 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground"
                     />
                   </div>
@@ -99,7 +100,7 @@ export function SubmitCvSection() {
                       required
                       className="w-full px-4 py-3.5 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground"
                     >
-                      <option value="">Select Category</option>
+                      <option value="">{tCommon('selectCategory')}</option>
                       <option value="electrician">MEP Electrician</option>
                       <option value="driver">Heavy Trailer Driver</option>
                       <option value="cook">Hospitality Line Cook</option>
@@ -117,9 +118,9 @@ export function SubmitCvSection() {
                       required
                       className="w-full px-4 py-3.5 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground"
                     >
-                      <option value="1-3">1 - 3 Years</option>
-                      <option value="3-5">3 - 5 Years</option>
-                      <option value="5+">5+ Years (Experienced)</option>
+                      <option value="1-3">{tCommon('years1_3')}</option>
+                      <option value="3-5">{tCommon('years3_5')}</option>
+                      <option value="5+">{tCommon('years5Plus')}</option>
                     </select>
                   </div>
                 </div>
@@ -130,8 +131,7 @@ export function SubmitCvSection() {
                   </label>
                   <div className="p-6 rounded-2xl border-2 border-dashed border-border hover:border-primary/50 bg-muted/20 transition-colors text-center cursor-pointer space-y-2">
                     <Upload className="h-8 w-8 text-primary mx-auto" />
-                    <p className="text-xs font-semibold text-foreground">Click to upload Resume / CV</p>
-                    <p className="text-[10px] text-muted-foreground">PDF, DOC, DOCX up to 5MB</p>
+                    <p className="text-xs font-semibold text-foreground">{tCommon('uploadResume')}</p>
                     <input type="file" required accept=".pdf,.doc,.docx" className="hidden" id="cv-upload-component" />
                   </div>
                 </div>
@@ -142,8 +142,7 @@ export function SubmitCvSection() {
                   </label>
                   <div className="p-6 rounded-2xl border-2 border-dashed border-border hover:border-primary/50 bg-muted/20 transition-colors text-center cursor-pointer space-y-2">
                     <FileText className="h-8 w-8 text-accent mx-auto" />
-                    <p className="text-xs font-semibold text-foreground">Click to upload Passport Main Page Copy</p>
-                    <p className="text-[10px] text-muted-foreground">PDF, JPG, PNG up to 5MB</p>
+                    <p className="text-xs font-semibold text-foreground">{tCommon('uploadPassport')}</p>
                     <input type="file" required accept=".pdf,.jpg,.jpeg,.png" className="hidden" id="passport-upload-component" />
                   </div>
                 </div>

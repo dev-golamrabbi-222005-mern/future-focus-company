@@ -9,29 +9,13 @@
     "contact": "Contact Us",
     "faq": "FAQ",
     "submitCv": "Submit CV",
-    "requestManpower": "Request Manpower"
+    "requestManpower": "Request Manpower",
+    "motto": "Your HR partner and solutions"
   },
   "Hero": {
-    "badge": "Government Approved Recruiting Agency • 7052268831 License",
-    "titlePrefix": "Connecting",
-    "titleHighlight": "Global Opportunities",
-    "titleSuffix": "with Top Talent",
-    "subtitle": "Premier manpower recruitment bridging skilled Bangladeshi talent with prestigious employers across Saudi Arabia & the Middle East. Trusted, transparent, and certified recruitment solutions.",
-    "ctaHire": "Hire Manpower (Saudi Arabia)",
-    "ctaApply": "Apply for Jobs (Bangladesh)",
-    "statsPlacements": "Placements Completed",
-    "statsSatisfaction": "Employer Satisfaction",
-    "statsExperience": "Years Experience",
-    "statsCountries": "Partner Countries",
-    "statsPlacementsValue": "15,000+",
-    "statsSatisfactionValue": "98.5%",
-    "statsExperienceValue": "5+ Years",
-    "statsCountriesValue": "6 GCC Nations"
-  },
-  "Hero1": {
     "brandName": "Future Focus",
-    "ctaHire": "Hire Manpower (Saudi Arabia)",
-    "ctaApply": "Apply for Jobs (Bangladesh)",
+    "ctaHire": "Hire Manpower",
+    "ctaApply": "Apply for Jobs",
     "badgeRole": "SAUDI ARABIA & GCC",
     "slide1": {
       "role": "SAUDI ARABIA",
@@ -73,7 +57,7 @@
   },
   "AboutCompany": {
     "tag": "Who We Are",
-    "title1": "Building Saudi Arabia's",
+    "title1": "Building Saudi's",
     "title2": "Future Workforce",
     "description": "Future Focus Company is a trusted manpower recruitment and workforce solutions provider based in Riyadh, Saudi Arabia. We specialize in supplying skilled, semi-skilled, and unskilled workers from Bangladesh to meet the growing workforce demands across construction, hospitality, healthcare, industrial, facility management, and commercial sectors. Our commitment to quality, reliability, and timely deployment has made us a preferred partner for businesses throughout the Kingdom.",
     "book": "Request Workforce",
@@ -160,38 +144,28 @@
     "whatsappButton": "WhatsApp Us Now",
     "government": "Government Approved",
     "experience": "15+ Years Experience",
-
-
     "workers": "10,000+ Workers Placed"
   },
   "AboutSnippet": {
-  "badge": "Government License: 7052268831",
-  "bmetBadge": "BMET Certified Agency",
-  "pipelineBadge": "Global Talent ⇄ Saudi Arabia",
-  "cardTitle": "International Workforce Excellence",
-  "ministryApproved": "Government Approved",
-  "rlLicense": "7052268831 License",
-
-  "title": "Connecting Global Talent with Saudi Businesses",
-
-  "subtitle": "Future Focus Company is a trusted HR Partner & Resource Solutions provider, sourcing skilled, semi-skilled, and general manpower from Bangladesh, India, Pakistan, Nepal, the Philippines, Indonesia, Uganda, Sudan, Ethiopia, and Sri Lanka for major companies and projects across Saudi Arabia.",
-
-  "ceoQuote": "\"Our commitment is to connect the right talent with the right opportunities through ethical recruitment, quality workforce solutions, and reliable long-term partnerships.\"",
-
-  "ceoName": "Md. Rafiqul Islam",
-  "ceoTitle": "Managing Director & Founder",
-
-  "point1Title": "Global Talent Network",
-  "point1Desc": "Access to qualified skilled, semi-skilled, and general workforce from 10 international recruitment markets.",
-
-  "point2Title": "End-to-End Workforce Solutions",
-  "point2Desc": "Recruitment, candidate screening, documentation, visa processing, mobilization, and deployment managed professionally.",
-
-  "point3Title": "Saudi-Focused Operations",
-  "point3Desc": "Dedicated workforce solutions and on-ground coordination supporting employers and major projects across Saudi Arabia.",
-
-  "cta": "Learn More About Us"
-},
+    "badge": "Government License: 7052268831",
+    "bmetBadge": "BMET Certified Agency",
+    "pipelineBadge": "Global Talent ⇄ Saudi Arabia",
+    "cardTitle": "International Workforce Excellence",
+    "ministryApproved": "Government Approved",
+    "rlLicense": "7052268831 License",
+    "title": "Connecting Global Talent with Saudi Businesses",
+    "subtitle": "Future Focus Company is a trusted HR Partner & Resource Solutions provider, sourcing skilled, semi-skilled, and general manpower from Bangladesh, India, Pakistan, Nepal, the Philippines, Indonesia, Uganda, Sudan, Ethiopia, and Sri Lanka for major companies and projects across Saudi Arabia.",
+    "ceoQuote": "\"Our commitment is to connect the right talent with the right opportunities through ethical recruitment, quality workforce solutions, and reliable long-term partnerships.\"",
+    "ceoName": "Md. Rafiqul Islam",
+    "ceoTitle": "Managing Director & Founder",
+    "point1Title": "Global Talent Network",
+    "point1Desc": "Access to qualified skilled, semi-skilled, and general workforce from 10 international recruitment markets.",
+    "point2Title": "End-to-End Workforce Solutions",
+    "point2Desc": "Recruitment, candidate screening, documentation, visa processing, mobilization, and deployment managed professionally.",
+    "point3Title": "Saudi-Focused Operations",
+    "point3Desc": "Dedicated workforce solutions and on-ground coordination supporting employers and major projects across Saudi Arabia.",
+    "cta": "Learn More About Us"
+  },
   "HomeAbout": {
     "tag": "Who We Are",
     "title": "Your Trusted Partner for Global Workforce Solutions",
@@ -1362,37 +1336,49 @@
   },
   "SEO": {
     "siteName": "Future Focus Company",
-    "defaultTitle": "Future Focus Company | Govt. Approved Recruitment Agency 7052268831",
-    "titleTemplate": "%s | Future Focus Company",
-    "defaultDescription": "Connecting Skilled Bangladeshi Talent with Top Employers in Saudi Arabia & the Middle East. Govt. Approved Recruitment Agency (7052268831). High quality workforce mobilization.",
-    "keywords": "Recruitment Agency Bangladesh, Saudi Arabia Manpower, Govt Approved Agency 7052268831, Skilled Bangladeshi Workers, Gulf Manpower Recruitment, Future Focus Company, Labor Visa Recruitment",
+    "defaultTitle": "FFC | Home",
+    "titleTemplate": "%s | FFC",
+    "defaultDescription": "Your HR Partner & Resources Solution",
+    "keywords": "Recruitment Agency Bangladesh, Saudi Arabia Manpower, Govt Approved Agency RL-1428, Skilled Bangladeshi Workers, Gulf Manpower Recruitment, Future Focus Company, Labor Visa Recruitment",
     "home": {
-      "title": "Government Approved Recruitment Agency 7052268831 | Future Focus Company",
-      "description": "Premier manpower recruitment agency bridging skilled Bangladeshi talent with top employers in Saudi Arabia & GCC. Transparent, trusted & Govt. approved (7052268831)."
+      "title": "FFC | Home",
+      "description": "Your HR Partner & Resources Solution"
     },
     "about": {
-      "title": "About Us - Premier Manpower Recruitment Agency",
-      "description": "Learn about Future Focus Company (7052268831), our mission, executive leadership, and track record of sending over 5,000+ skilled workers to Saudi Arabia & Gulf countries."
-    },
-    "services": {
-      "title": "Recruitment & Manpower Services | Saudi Arabia & GCC",
-      "description": "Comprehensive manpower recruitment services including trade testing, medical screening, visa processing, flight arrangements, and candidate mobilization."
+      "title": "About Us",
+      "description": "Your HR Partner & Resources Solution"
     },
     "manpower": {
-      "title": "Hire Skilled Bangladeshi Manpower | Construction, MEP, Hospitality",
-      "description": "Mobilize certified Bangladeshi talent for Saudi Vision 2030 projects. Welders, electricians, masons, hospitality staff, facility maintenance workers and engineers."
+      "title": "Manpower Solutions",
+      "description": "Your HR Partner & Resources Solution"
+    },
+    "services": {
+      "title": "Services",
+      "description": "Your HR Partner & Resources Solution"
     },
     "careers": {
-      "title": "Job Vacancies & Overseas Careers | Apply for Saudi Arabia Visa",
-      "description": "Explore verified job vacancies in Saudi Arabia, UAE & Qatar. Apply directly for skilled, semi-skilled, and professional overseas employment opportunities."
+      "title": "Careers",
+      "description": "Your HR Partner & Resources Solution"
     },
     "gallery": {
-      "title": "Deployment Gallery & Success Stories | Future Focus Company",
-      "description": "View real candidate deployment photos, trade center training sessions, visa stamping approvals, and employer selection drives."
+      "title": "Gallery",
+      "description": "Your HR Partner & Resources Solution"
     },
     "contact": {
-      "title": "Contact Us | Riyadh (Saudi Arabia) & Dhaka (Bangladesh) Offices",
-      "description": "Get in touch with Future Focus Company. Visit our Saudi Arabia office in Riyadh or Bangladesh office in Banani, Dhaka. Request a custom manpower proposal."
+      "title": "Contact Us",
+      "description": "Your HR Partner & Resources Solution"
+    },
+    "faq": {
+      "title": "FAQ",
+      "description": "Your HR Partner & Resources Solution"
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "Your HR Partner & Resources Solution"
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "description": "Your HR Partner & Resources Solution"
     }
   },
   "ChatWidget": {
@@ -1405,5 +1391,67 @@
     "error": "Sorry, something went wrong. Please try again.",
     "open": "Open AI Support",
     "close": "Close AI Support"
+  },
+  "CommonUI": {
+    "years1_3": "1 - 3 Years",
+    "years3_5": "3 - 5 Years",
+    "years5Plus": "5+ Years (Experienced)",
+    "uploadPdfDoc": "Click to upload PDF / DOC (Max 5MB)",
+    "uploadResume": "Click to upload Resume / CV (PDF, DOC, DOCX up to 5MB)",
+    "uploadPassport": "Click to upload Passport Main Page Copy (PDF, JPG, PNG up to 5MB)",
+    "submitApp": "Submit Application",
+    "appSubmitted": "Application Submitted Successfully!",
+    "monthlySalary": "Monthly Salary",
+    "jobDescription": "Job Description",
+    "includedBenefits": "Included Benefits",
+    "jobType": "Job Type",
+    "selectCategory": "Select Job Category",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "licenseBadge": "MHRSD Licensed & Compliant",
+    "ksaBadge": "Saudi Arabia (KSA)",
+    "gamcaBadge": "GAMCA Medical Cleared",
+    "stage1": "Stage 1: Document Vetting",
+    "stage2": "Stage 2: Practical Trade Test",
+    "stage3": "Stage 3: GAMCA & Embassy Visa",
+    "workersSmall": "1 - 20 Workers",
+    "workersMedium": "21 - 50 Workers",
+    "workersLarge": "51 - 200 Workers",
+    "workersEnterprise": "200+ Turnkey Mobilization",
+    "verifiedClient": "Verified Corporate Client",
+    "error404Badge": "Error 404 • Page Not Found",
+    "bmetPortalBadge": "BMET Authorized Direct Candidate Portal",
+    "freeReplacementBadge": "90 Days Free Replacement",
+    "bmetApprovedBadge": "BMET Approved Guarantee"
+  },
+  "Hero1": {
+    "brandName": "Future Focus",
+    "ctaHire": "Hire Manpower",
+    "ctaApply": "Apply for Jobs",
+    "badgeRole": "SAUDI ARABIA & GCC",
+    "slide1": {
+      "role": "SAUDI ARABIA",
+      "title": "WITNESS",
+      "highlight": "SKILLED WORKERS",
+      "desc": "Skilled Workers for Every Industry in Riyadh & Jeddah. Welders, electricians, masons, kitchen staff — we deliver the right person for every job, on time."
+    },
+    "slide2": {
+      "role": "SAUDI ARABIA",
+      "title": "EVOLVE",
+      "highlight": "TRUSTED MANPOWER",
+      "desc": "Trusted Manpower Solutions in Saudi Arabia. Connecting ambitious businesses with reliable workers — from Bangladesh to the heart of the Kingdom."
+    },
+    "slide3": {
+      "role": "MIDDLE EAST",
+      "title": "LEAD",
+      "highlight": "RELIABILITY",
+      "desc": "05+ Years of Reliable Recruitment Across the Gulf. Over 5,000 Bangladeshi workers successfully placed in Saudi Arabia, UAE, Qatar, and beyond."
+    },
+    "slide4": {
+      "role": "VISION 2030",
+      "title": "PARTNER",
+      "highlight": "GROWTH PROJECTS",
+      "desc": "Your Manpower Partner for Vision 2030 Projects. From Aramco sites to infrastructure developments — we supply dependable labor for major growth projects."
+    }
   }
 }

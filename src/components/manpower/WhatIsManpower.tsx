@@ -85,7 +85,7 @@ export default function WhatIsManpower() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-background py-24 lg:py-32"
+      className="relative overflow-hidden bg-background py-12 md:py-16 lg:py-20"
     >
       {/* Background Glow */}
 

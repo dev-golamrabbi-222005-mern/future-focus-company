@@ -11,6 +11,7 @@ interface ServiceSidebarProps {
 export function ServiceSidebar({ slug }: ServiceSidebarProps) {
   const t = useTranslations('ServicesPage.details.sidebar');
   const tBento = useTranslations('ServicesPage.bento.sectors');
+  const tCommon = useTranslations('CommonUI');
 
   const sectorTitle = tBento(`${slug}.title`);
 
@@ -131,10 +132,10 @@ export function ServiceSidebar({ slug }: ServiceSidebarProps) {
                 <option value="" disabled>
                   {t('selectCount')}
                 </option>
-                <option value="1-20">1 - 20 Workers</option>
-                <option value="21-50">21 - 50 Workers</option>
-                <option value="51-200">51 - 200 Workers</option>
-                <option value="200+">200+ Turnkey Mobilization</option>
+                <option value="1-20">{tCommon('workersSmall')}</option>
+                <option value="21-50">{tCommon('workersMedium')}</option>
+                <option value="51-200">{tCommon('workersLarge')}</option>
+                <option value="200+">{tCommon('workersEnterprise')}</option>
               </select>
             </div>
 

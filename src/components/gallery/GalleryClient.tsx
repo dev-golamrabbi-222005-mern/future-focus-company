@@ -200,7 +200,7 @@ export function GalleryClient() {
 
   return (
     <>
-      <section ref={heroRef} className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-background">
+      <section ref={heroRef} className="relative min-h-[80vh] pt-6 md:pt-8 lg:pt-10 flex items-center justify-center overflow-hidden bg-background">
         <div className="absolute inset-0 z-0">
           <AnimatePresence mode="wait">
             <motion.div
@@ -385,7 +385,7 @@ export function GalleryClient() {
         </div>
       </section>
 
-      <section ref={ctaRef} className="relative py-24 md:py-32 bg-background overflow-hidden">
+      <section ref={ctaRef} className="relative pt-12 md:pt-16 lg:pt-20 pb-6 md:pb-8 lg:pb-10 bg-background overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <div className="absolute left-1/2 top-0 h-[450px] w-[450px] -translate-x-1/2 rounded-full bg-primary/10 blur-[130px]" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(3,105,161,0.06),transparent_70%)]" />

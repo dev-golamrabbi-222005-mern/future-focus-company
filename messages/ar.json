@@ -9,29 +9,13 @@
     "contact": "اتصل بنا",
     "faq": "الأسئلة الشائعة",
     "submitCv": "تقديم الطلب",
-    "requestManpower": "اطلب العمالة"
+    "requestManpower": "اطلب العمالة",
+    "motto": "شريككم في الموارد البشرية والحلول"
   },
   "Hero": {
-    "badge": "وكالة توظيف معتمدة حكومياً • ترخيص 7052268831",
-    "titlePrefix": "ربط الفرص العالمية",
-    "titleHighlight": "بأفضل الكفاءات",
-    "titleSuffix": "والخبرات",
-    "subtitle": "الرائدة في استقدام وتوظيف العمالة البنغلاديشية الماهرة لكبرى الشركات والمؤسسات في السعودية والشرق الأوسط. حلول توظيف موثوقة ومعتمدة.",
-    "ctaHire": "طلب كوادروعمالة (السعودية)",
-    "ctaApply": "التقديم على وظيفة (بنغلاديش)",
-    "statsPlacements": "عملية توظيف ناجحة",
-    "statsSatisfaction": "نسبة رضا أصحاب العمل",
-    "statsExperience": "عاماً من الخبرة",
-    "statsCountries": "دول شريكة",
-    "statsPlacementsValue": "١٥٬٠٠٠+",
-    "statsSatisfactionValue": "٩٨٫٥٪",
-    "statsExperienceValue": "١٤+ عاماً",
-    "statsCountriesValue": "٦ دول الخليج"
-  },
-  "Hero1": {
     "brandName": "فيوتشر فوكس",
-    "ctaHire": "طلب كوادروعمالة (السعودية)",
-    "ctaApply": "التقديم على وظيفة (بنغلاديش)",
+    "ctaHire": "طلب كوادروعمالة",
+    "ctaApply": "التقديم على وظيفة",
     "badgeRole": "المملكة العربية السعودية ودول الخليج",
     "slide1": {
       "role": "المملكة العربية السعودية",
@@ -1351,38 +1335,50 @@
     "ar": "العربية"
   },
   "SEO": {
-    "siteName": "شركة فيوچر فوكس",
-    "defaultTitle": "شركة فيوچر فوكس | وكالة استقدام وتوظيف معتمدة حكومياً 7052268831",
-    "titleTemplate": "%s | شركة فيوچر فوكس",
-    "defaultDescription": "تزويد الشركات والمشاريع في المملكة العربية السعودية ودول الخليج بالعمالة البنغلاديشية الماهرة والمدربة. ترخيص حكومي 7052268831.",
-    "keywords": "استقدام عمالة بنغلاديش, توظيف عمالة السعودية, وكالة استقدام معتمدة 7052268831, عمالة مهنية بنغلاديش, شركة فيوتشر فوكس",
+    "siteName": "Future Focus Company",
+    "defaultTitle": "FFC | Home",
+    "titleTemplate": "%s | FFC",
+    "defaultDescription": "Your HR Partner & Resources Solution",
+    "keywords": "Recruitment Agency Bangladesh, Saudi Arabia Manpower, Govt Approved Agency RL-1428, Skilled Bangladeshi Workers, Gulf Manpower Recruitment, Future Focus Company, Labor Visa Recruitment",
     "home": {
-      "title": "وكالة استقدام وتوظيف عمالة معتمدة حكومياً 7052268831 | شركة فيوچر فوكس",
-      "description": "الوكالة الرائدة في توفير واستقدام الكوادر والعمالة البنغلاديشية الماهرة لكبرى الشركات في السعودية ودول الخليج. ترخيص حكومي رقم 7052268831."
+      "title": "FFC | Home",
+      "description": "Your HR Partner & Resources Solution"
     },
     "about": {
-      "title": "من نحن - وكالة التوظيف والاستقدام الرائدة",
-      "description": "تعرف على شركة فيوچر فوكس (7052268831)، رؤيتنا، وخبرتنا الممتدة في توظيف وأكثر من ٥٬٠٠٠ عامل ماهر في المملكة والخليج."
-    },
-    "services": {
-      "title": "خدمات الاستقدام والتوظيف | السعودية ودول الخليج",
-      "description": "خدمات متكاملة تشمل اختيارات الفحص الفني، الفحص الطبي، إنهاء إجراءات التأشيرات والتذاكر وتجهيز العمالة."
+      "title": "من نحن",
+      "description": "Your HR Partner & Resources Solution"
     },
     "manpower": {
-      "title": "استقدام عمالة بنغلاديشية ماهرة | مقاولات، كهرباء، ضيافة",
-      "description": "تأمين الكوادر والعمالة الماهرة لمشاريع رؤية السعودية 2030: لحامين، كهربائيين، سباكين، بناءين، وطواقم ضيافة صيانة."
+      "title": "حلول العمالة",
+      "description": "Your HR Partner & Resources Solution"
+    },
+    "services": {
+      "title": "الخدمات",
+      "description": "Your HR Partner & Resources Solution"
     },
     "careers": {
-      "title": "الوظائف الفرص الخارجية | تقديم على تأشيرة السعودية",
-      "description": "استكشف الفرص الوظيفية المتاحة في المملكة العربية السعودية والإمارات وقطر وتواصل معنا مباشرة."
+      "title": "الوظائف",
+      "description": "Your HR Partner & Resources Solution"
     },
     "gallery": {
-      "title": "معرض صور سفر العمالة والتوظيف | شركة فيوچر فوكس",
-      "description": "شاهد صور مغادرة العمالة، مراكز التدريب الفني، ومقابلات التوظيف المباشرة."
+      "title": "معرض الصور",
+      "description": "Your HR Partner & Resources Solution"
     },
     "contact": {
-      "title": "اتصل بنا | مكتب الرياض (السعودية) ومكتب دكا (بنغلاديش)",
-      "description": "تواصل مع شركة فيوچر فوكس في الرياض أو دكا. اطلب عرض سعر واستقدام العمالة الماهرة لمشروعك."
+      "title": "اتصل بنا",
+      "description": "Your HR Partner & Resources Solution"
+    },
+    "faq": {
+      "title": "الأسئلة الشائعة",
+      "description": "Your HR Partner & Resources Solution"
+    },
+    "privacy": {
+      "title": "سياسة الخصوصية",
+      "description": "Your HR Partner & Resources Solution"
+    },
+    "terms": {
+      "title": "شروط الخدمة",
+      "description": "Your HR Partner & Resources Solution"
     }
   },
   "ChatWidget": {
@@ -1395,5 +1391,67 @@
     "error": "عذراً، حدث خطأ ما. يرجى المحاولة مرة أخرى.",
     "open": "فتح الدعم الذكي",
     "close": "إغلاق الدعم الذكي"
+  },
+  "CommonUI": {
+    "years1_3": "١ - ٣ سنوات",
+    "years3_5": "٣ - ٥ سنوات",
+    "years5Plus": "٥+ سنوات (خبرة)",
+    "uploadPdfDoc": "انقر لتحميل ملف PDF / DOC (حد أقصى 5 ميجابايت)",
+    "uploadResume": "انقر لتحميل السيرة الذاتية (حد أقصى 5 ميجابايت)",
+    "uploadPassport": "انقر لتحميل صورة جواز السفر (حد أقصى 5 ميجابايت)",
+    "submitApp": "تقديم الطلب",
+    "appSubmitted": "تم تقديم الطلب بنجاح!",
+    "monthlySalary": "الراتب الشهري",
+    "jobDescription": "الوصف الوظيفي",
+    "includedBenefits": "المزايا المشمولة",
+    "jobType": "نوع الوظيفة",
+    "selectCategory": "اختر فئة الوظيفة",
+    "emailLabel": "البريد الإلكتروني",
+    "phoneLabel": "الهاتف",
+    "licenseBadge": "مرخص من وزارة الموارد البشرية",
+    "ksaBadge": "المملكة العربية السعودية",
+    "gamcaBadge": "فحص طبي جَامكا مكتمل",
+    "stage1": "المرحلة الأولى: تدقيق الوثائق",
+    "stage2": "المرحلة الثانية: الاختبار المهني العملي",
+    "stage3": "المرحلة الثالثة: التأشيرة والفحص الطبي",
+    "workersSmall": "١ - ٢٠ موظفاً",
+    "workersMedium": "٢١ - ٥٠ موظفاً",
+    "workersLarge": "٥١ - ٢٠٠ موظف",
+    "workersEnterprise": "٢٠٠+ تعبئة مؤسسية",
+    "verifiedClient": "عميل شركاء معتمد",
+    "error404Badge": "خطأ ٤٠٤ • الصفحة غير موجودة",
+    "bmetPortalBadge": "بوابة المرشحين المعتمدة من BMET",
+    "freeReplacementBadge": "ضمان استبدال مجاني لمدة 90 يوماً",
+    "bmetApprovedBadge": "ضمان معتمد من BMET"
+  },
+  "Hero1": {
+    "brandName": "فيوتشر فوكس",
+    "ctaHire": "طلب كوادروعمالة",
+    "ctaApply": "التقديم على وظيفة",
+    "badgeRole": "المملكة العربية السعودية ودول الخليج",
+    "slide1": {
+      "role": "المملكة العربية السعودية",
+      "title": "التميز",
+      "highlight": "العمالة الماهرة",
+      "desc": "نوفر عمالة ماهرة لجميع القطاعات في الرياض وجدة، بما في ذلك اللحامين والكهربائيين والبنائين وموظفي المطابخ، في الوقت المناسب."
+    },
+    "slide2": {
+      "role": "المملكة العربية السعودية",
+      "title": "التطور",
+      "highlight": "القوى العاملة الموثوقة",
+      "desc": "حلول موثوقة لتوظيف العمالة في المملكة العربية السعودية، وربط الشركات الطموحة بالعمالة البنغلاديشية الموثوقة."
+    },
+    "slide3": {
+      "role": "الشرق الأوسط",
+      "title": "الريادة",
+      "highlight": "الموثوقية",
+      "desc": "أكثر من ٠٥ عامًا من الخبرة في توظيف أكثر من ٥٬٠٠٠ عامل بنغلاديشي في السعودية والإمارات وقطر وعُمان والكويت."
+    },
+    "slide4": {
+      "role": "رؤية 2030",
+      "title": "الشراكة",
+      "highlight": "مشاريع النمو",
+      "desc": "شريككم الموثوق لتوفير القوى العاملة لمشاريع رؤية السعودية 2030 في قطاعات البناء والضيافة والرعاية الصحية والصناعة."
+    }
   }
 }

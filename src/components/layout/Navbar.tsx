@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useTranslations, useLocale } from 'next-intl';
-import { Menu, X, ShieldCheck } from 'lucide-react';
+import { Menu, X, ShieldCheck, Sparkles } from 'lucide-react';
 import { siteConfig } from '@/config/site';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher';
@@ -41,6 +41,7 @@ export function Navbar() {
                 src="/logo.jpg"
                 alt={siteConfig.name}
                 fill
+                sizes="36px"
                 className="object-cover"
               />
             </div>
@@ -49,13 +50,13 @@ export function Navbar() {
                 {t('companyName')}
               </span>
               <span className="text-[10px] font-semibold tracking-wider text-muted-foreground hidden sm:block">
-                Your HR Partner & Resource Solutions
+                {t('motto')}
               </span>
             </div>
           </Link>
 
           {/* Centered Navigation Links (Desktop) */}
-          <nav className="hidden md:flex items-center space-x-1 lg:space-x-2 rtl:space-x-reverse">
+          <nav className="hidden xl:flex items-center space-x-1 rtl:space-x-reverse">
             {siteConfig.navLinks.map((link) => {
               const active = isLinkActive(link.href);
               return (
@@ -63,7 +64,8 @@ export function Navbar() {
                   key={link.key}
                   href={`/${locale}${link.href}`}
                   className={cn(
-                    'px-3.5 py-2 rounded-lg text-sm transition-all duration-200 relative',
+                    'py-1.5 rounded-lg text-sm transition-all duration-200 relative whitespace-nowrap',
+                    locale === 'bn' ? 'px-2 2xl:px-3' : 'px-3',
                     active
                       ? 'bg-primary/10 text-primary font-bold border border-primary/20 shadow-xs'
                       : 'font-semibold text-muted-foreground hover:text-foreground hover:bg-muted/60'
@@ -75,30 +77,36 @@ export function Navbar() {
             })}
           </nav>
 
-          {/* Right Actions: Language Dropdown + Slider Theme Toggle + Primary CTA */}
-          <div className="flex items-center gap-2.5 sm:gap-3">
-            <LanguageSwitcher />
-            <ThemeToggle />
-
-            {/* Primary CTA Button (Desktop) */}
+          {/* Right Actions: Language Dropdown + Theme Toggle + Always-Visible Primary CTA + Mobile Trigger */}
+          <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3 shrink-0">
+            <div className={cn(
+              locale === 'bn'
+                ? "flex flex-col-reverse gap-1 justify-center items-center min-[1600px]:flex-row"
+                : "flex flex-row items-center gap-2"
+            )}>
+              <LanguageSwitcher />
+              <ThemeToggle />
+            </div>
+            {/* Always-Visible Primary CTA Button (Mobile, Tablet & Desktop) */}
             <Link
               href={`/${locale}/contact#get-in-touch`}
-              className="hidden lg:inline-flex items-center justify-center px-4 py-2 rounded-xl bg-primary text-primary-foreground font-bold text-xs sm:text-sm shadow-md shadow-primary/25 hover:bg-primary/90 transition-all duration-200 shrink-0"
+              className="inline-flex items-center justify-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-primary text-primary-foreground font-bold text-[11px] sm:text-xs md:text-sm shadow-md shadow-primary/25 hover:bg-primary/90 transition-all shrink-0 whitespace-nowrap"
             >
-              {t('requestManpower')}
+              <span>{t('requestManpower')}</span>
+              <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
             </Link>
 
-            {/* Mobile Menu Toggle Button */}
+            {/* Mobile / Tablet Menu Toggle Button */}
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg border border-border text-foreground hover:bg-muted transition-colors"
+              className="xl:hidden p-2 sm:p-2.5 rounded-xl border border-border text-foreground hover:bg-muted transition-colors cursor-pointer shrink-0"
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? (
-                <X className="h-5 w-5" />
+                <X className="h-4 w-4 sm:h-5 sm:w-5" />
               ) : (
-                <Menu className="h-5 w-5" />
+                <Menu className="h-4 w-4 sm:h-5 sm:w-5" />
               )}
             </button>
           </div>
@@ -106,9 +114,9 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile / Tablet Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-b border-border bg-card/95 backdrop-blur-xl px-4 pt-2 pb-6 space-y-2 animate-in slide-in-from-top duration-300">
+        <div className="xl:hidden border-b border-border bg-card/95 backdrop-blur-xl px-4 pt-3 pb-6 space-y-3 animate-in slide-in-from-top duration-300">
           {siteConfig.navLinks.map((link) => {
             const active = isLinkActive(link.href);
             return (
@@ -117,7 +125,7 @@ export function Navbar() {
                 href={`/${locale}${link.href}`}
                 onClick={() => setMobileMenuOpen(false)}
                 className={cn(
-                  'block px-4 py-3 rounded-lg text-base transition-colors',
+                  'block px-4 py-3 rounded-xl text-base transition-colors',
                   active
                     ? 'bg-primary/15 text-primary font-bold border-l-4 border-primary'
                     : 'font-medium text-foreground hover:bg-primary/10 hover:text-primary'
@@ -132,9 +140,10 @@ export function Navbar() {
             <Link
               href={`/${locale}/contact#get-in-touch`}
               onClick={() => setMobileMenuOpen(false)}
-              className="block w-full text-center px-4 py-3 rounded-xl bg-primary text-primary-foreground font-bold text-base shadow-md shadow-primary/25 hover:bg-primary/90 transition-all"
+              className="flex items-center justify-center gap-2 w-full text-center px-4 py-3.5 rounded-xl bg-primary text-primary-foreground font-bold text-base shadow-md shadow-primary/25 hover:bg-primary/90 transition-all"
             >
-              {t('requestManpower')}
+              <span>{t('requestManpower')}</span>
+              <Sparkles className="w-5 h-5" />
             </Link>
           </div>
         </div>

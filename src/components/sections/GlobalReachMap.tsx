@@ -13,6 +13,7 @@ if (typeof window !== 'undefined') {
 
 export function GlobalReachMap() {
   const t = useTranslations('GlobalReachMap');
+  const tCommon = useTranslations('CommonUI');
   const containerRef = React.useRef<HTMLDivElement>(null);
 
   const hubs = [
@@ -140,7 +141,7 @@ export function GlobalReachMap() {
               </div>
               <div>
                 <h3 className="text-lg font-extrabold text-foreground">{t('testimonialTitle')}</h3>
-                <p className="text-xs text-muted-foreground font-semibold">Verified Corporate Client</p>
+                <p className="text-xs text-muted-foreground font-semibold">{tCommon('verifiedClient')}</p>
               </div>
             </div>
 
