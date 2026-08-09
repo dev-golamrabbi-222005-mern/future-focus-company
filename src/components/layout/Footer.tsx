@@ -142,7 +142,7 @@ export function Footer() {
               </a>
 
               <a
-                href="https://wa.me/97141234567"
+                href="https://wa.me/966533248473"
                 target="_blank"
                 rel="noreferrer"
                 className="p-2.5 rounded-lg border border-border bg-muted/50 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all"
@@ -152,7 +152,7 @@ export function Footer() {
               </a>
 
               <a
-                href="https://globalmanpower.com"
+                href="https://www.futurefocus.com"
                 target="_blank"
                 rel="noreferrer"
                 className="p-2.5 rounded-lg border border-border bg-muted/50 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all"
