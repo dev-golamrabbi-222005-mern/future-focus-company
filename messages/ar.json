@@ -505,17 +505,21 @@
       }
     },
     "compliance": {
-      "tagline": "معايير الامتثال السعودية",
-      "heading": "امتثال ١٠٠٪ لـ MHRSD وضمان استبدال ٩٠ يوماً",
-      "subheading": "نلتزم صارمًا بلوائح وزارة الموارد البشرية والتنمية الاجتماعية (MHRSD) وعقود Musaned وبروتوكولات GAMCA الطبية.",
-      "badge1Title": "Qiwa وMusaned المباشر",
-      "badge1Sub": "نقل العقود الرقمية وإصدار تصاريح العمل الرسمية وفق نظام كيه إس إيه.",
-      "badge2Title": "استبدال مجاني خلال ٩٠ يوماً",
-      "badge2Sub": "إذا لم يلبِّ المرشح توقعات الأداء، نستبدله بصفر رسوم إضافية.",
-      "badge3Title": "رخصة حكومية 7052268831",
-      "badge3Sub": "وكالة توظيف معتمدة رسمياً من وزارة الغتربين.",
-      "badge4Title": "لياقة GAMCA الطبية",
-      "badge4Sub": "تخليص طبي «لائق للعمل» مضمون قبل ختم تأشيرة السفارة."
+      "tagline": "الجودة والامتثال",
+      "heading": "قوى عاملة موثوقة. معايير مهنية.",
+      "subheading": "نتبع عمليات منظمة للتوظيف والفحص والتوثيق والنشر لتقديم حلول قوى عاملة مؤهلة تتوافق مع متطلبات أصحاب العمل في المملكة العربية السعودية.",
+
+      "badge1Title": "توظيف موثوق",
+      "badge1Sub": "يتم اختيار المرشحين وفحصهم بعناية وفقاً لمتطلبات الوظيفة والمهارات والخبرات المطلوبة.",
+
+      "badge2Title": "فحص الجودة",
+      "badge2Sub": "نقيّم مدى ملاءمة المرشحين من خلال الفحص المنظم والتقييم المتخصص لكل وظيفة قبل التوظيف.",
+
+      "badge3Title": "دعم التوثيق",
+      "badge3Sub": "يقوم فريقنا بتنسيق وثائق التوظيف والعمل والسفر والنشر المطلوبة بطريقة احترافية.",
+
+      "badge4Title": "نشر موثوق للقوى العاملة",
+      "badge4Sub": "من اختيار المرشحين إلى التعبئة والوصول، ننسق عملية نشر القوى العاملة بعناية وكفاءة."
     },
     "process": {
       "tagline": "كيف نوظّف الكفاءات",
@@ -1355,7 +1359,7 @@
     "defaultDescription": "Your HR Partner & Resources Solution",
     "keywords": "Recruitment Agency Bangladesh, Saudi Arabia Manpower, Govt Approved Agency RL-1428, Skilled Bangladeshi Workers, Gulf Manpower Recruitment, Future Focus Company, Labor Visa Recruitment",
     "home": {
-      "title": "FFC | Home",
+      "title": "Future Focus Company | Home",
       "description": "Your HR Partner & Resources Solution"
     },
     "about": {

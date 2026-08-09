@@ -64,7 +64,7 @@ export function WelcomeLoader({ locale: propLocale }: WelcomeLoaderProps) {
     }
     return {
       welcome: 'Welcome to Future Focus Company',
-      motto: 'Your HR Partner & Solutions',
+      motto: 'Your HR Partner & Resource Solutions',
     };
   };
 

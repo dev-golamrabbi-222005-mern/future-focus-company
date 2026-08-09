@@ -10,7 +10,7 @@
     "faq": "FAQ",
     "submitCv": "Submit CV",
     "requestManpower": "Request Manpower",
-    "motto": "Your HR partner and solutions"
+    "motto": "Your HR Partner & Resource Solutions"
   },
   "Hero": {
     "brandName": "Future Focus",
@@ -505,17 +505,21 @@
       }
     },
     "compliance": {
-      "tagline": "Saudi Regulatory Standards",
-      "heading": "100% MHRSD Compliant & 90-Day Replacement Guarantee",
-      "subheading": "We strictly adhere to Ministry of Human Resources and Social Development (MHRSD) regulations, Musaned contracts, and GAMCA medical protocols.",
-      "badge1Title": "QIWA & Musaned Direct",
-      "badge1Sub": "Digital contract transfer & official work permit issuance under KSA law.",
-      "badge2Title": "90-Day Free Replacement",
-      "badge2Sub": "If candidate performance falls short, we replace them at zero extra cost.",
-      "badge3Title": "Government License 7052268831",
-      "badge3Sub": "Officially approved recruitment agency by the Ministry of Expatriates Welfare.",
-      "badge4Title": "GAMCA Medical Fitness",
-      "badge4Sub": "Guaranteed fit for duty medical clearance prior to embassy visa stamping."
+      "tagline": "QUALITY & COMPLIANCE",
+      "heading": "Reliable Workforce. Professional Standards.",
+      "subheading": "We follow structured recruitment, screening, documentation, and deployment processes to deliver qualified workforce solutions aligned with employer requirements in Saudi Arabia.",
+
+      "badge1Title": "Verified Recruitment",
+      "badge1Sub": "Candidates are carefully sourced and screened according to job requirements, skills, and experience.",
+
+      "badge2Title": "Quality Screening",
+      "badge2Sub": "We assess candidate suitability through structured screening and role-specific evaluation before deployment.",
+
+      "badge3Title": "Documentation Support",
+      "badge3Sub": "Our team coordinates required recruitment, employment, travel, and deployment documentation professionally.",
+
+      "badge4Title": "Reliable Deployment",
+      "badge4Sub": "From candidate selection to mobilization and arrival, we coordinate the deployment process with care and efficiency."
     },
     "process": {
       "tagline": "How We Deploy Talent",
@@ -1355,7 +1359,7 @@
     "defaultDescription": "Your HR Partner & Resources Solution",
     "keywords": "Recruitment Agency Bangladesh, Saudi Arabia Manpower, Govt Approved Agency RL-1428, Skilled Bangladeshi Workers, Gulf Manpower Recruitment, Future Focus Company, Labor Visa Recruitment",
     "home": {
-      "title": "FFC | Home",
+      "title": "Future Focus Company | Home",
       "description": "Your HR Partner & Resources Solution"
     },
     "about": {
