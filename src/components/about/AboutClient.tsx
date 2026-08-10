@@ -46,10 +46,10 @@ export function AboutClient() {
             trigger: containerRef.current,
             start: "top 78%",
           },
-        }
+        },
       );
     },
-    { scope: containerRef }
+    { scope: containerRef },
   );
 
   const licenseChecks = [
@@ -107,7 +107,9 @@ export function AboutClient() {
                 <div className="p-3 rounded-2xl bg-primary/10 text-primary">
                   <Target className="h-6 w-6" />
                 </div>
-                <h2 className="text-2xl font-extrabold text-foreground">{t("missionTitle")}</h2>
+                <h2 className="text-2xl font-extrabold text-foreground">
+                  {t("missionTitle")}
+                </h2>
               </div>
               <div className="relative overflow-hidden rounded-2xl aspect-video">
                 <img
@@ -137,7 +139,9 @@ export function AboutClient() {
                 <div className="p-3 rounded-2xl bg-accent/10 text-accent">
                   <Eye className="h-6 w-6" />
                 </div>
-                <h2 className="text-2xl font-extrabold text-foreground">{t("visionTitle")}</h2>
+                <h2 className="text-2xl font-extrabold text-foreground">
+                  {t("visionTitle")}
+                </h2>
               </div>
               <div className="relative overflow-hidden rounded-2xl aspect-video">
                 <img
@@ -185,7 +189,10 @@ export function AboutClient() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
               {licenseChecks.map((item) => (
-                <div key={item} className="flex items-center gap-2.5 text-sm font-semibold text-foreground">
+                <div
+                  key={item}
+                  className="flex items-center gap-2.5 text-sm font-semibold text-foreground"
+                >
                   <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-500" />
                   {item}
                 </div>
@@ -195,38 +202,81 @@ export function AboutClient() {
         </motion.div>
 
         {/* ════ MANAGING DIRECTOR STATEMENT ════ */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.75, delay: 0.1 }}
-          className="gsap-fade-up relative max-w-4xl mx-auto"
-        >
-          <div className="relative overflow-hidden rounded-3xl border border-border bg-card shadow-md p-8 sm:p-10 space-y-5">
-            <Quote className="absolute top-6 right-6 rtl:left-6 rtl:right-auto h-12 w-12 text-primary/10 pointer-events-none" />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.75, delay: 0.1 }}
+            className="gsap-fade-up relative max-w-4xl mx-auto"
+          >
+            <div className="relative overflow-hidden rounded-3xl border border-border bg-card shadow-md p-8 sm:p-10 space-y-5 transform transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl">
+              <Quote className="absolute top-6 right-6 rtl:left-6 rtl:right-auto h-12 w-12 text-primary/10 pointer-events-none" />
 
-            <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 border border-primary/20">
-              <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-              <span className="text-xs font-bold uppercase tracking-widest text-primary">
-                {t("mdTitle")}
-              </span>
-            </div>
-
-            <blockquote className="text-base sm:text-lg italic text-muted-foreground leading-relaxed border-l-4 border-primary/40 pl-5">
-              {t("mdMessage")}
-            </blockquote>
-
-            <div className="pt-4 border-t border-border/60 flex items-center gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary to-sky-400 text-primary-foreground font-black text-lg shadow-md">
-                A
+              <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 border border-primary/20">
+                <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+                <span className="text-xs font-bold uppercase tracking-widest text-primary">
+                  {t("ceoTitle")}
+                </span>
               </div>
-              <div>
-                <p className="text-base font-extrabold text-foreground">{t("mdName")}</p>
-                <p className="text-xs text-primary font-semibold">{t("mdRole")}</p>
+
+              <blockquote className="text-base sm:text-lg italic text-muted-foreground leading-relaxed border-l-4 border-primary/40 pl-5">
+                {t("ceoMessage")}
+              </blockquote>
+
+              <div className="pt-4 border-t border-border/60 flex items-center gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary to-sky-400 text-primary-foreground font-black text-lg shadow-md">
+                  A
+                </div>
+                <div>
+                  <p className="text-base font-extrabold text-foreground">
+                    {t("ceoName")}
+                  </p>
+                  <p className="text-xs text-primary font-semibold">
+                    {t("ceoRole")}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+          {/* CEO STATEMENT */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.75, delay: 0.1 }}
+            className="gsap-fade-up relative max-w-4xl mx-auto"
+          >
+            <div className="relative overflow-hidden rounded-3xl border border-border bg-card shadow-md p-8 sm:p-10 space-y-5 transform transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl">
+              <Quote className="absolute top-6 right-6 rtl:left-6 rtl:right-auto h-12 w-12 text-primary/10 pointer-events-none" />
+
+              <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 border border-primary/20">
+                <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+                <span className="text-xs font-bold uppercase tracking-widest text-primary">
+                  {t("mdTitle")}
+                </span>
+              </div>
+
+              <blockquote className="text-base sm:text-lg italic text-muted-foreground leading-relaxed border-l-4 border-primary/40 pl-5">
+                {t("mdMessage")}
+              </blockquote>
+
+              <div className="pt-4 border-t border-border/60 flex items-center gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary to-sky-400 text-primary-foreground font-black text-lg shadow-md">
+                  A
+                </div>
+                <div>
+                  <p className="text-base font-extrabold text-foreground">
+                    {t("mdName")}
+                  </p>
+                  <p className="text-xs text-primary font-semibold">
+                    {t("mdRole")}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
 
         {/* ════ QUICK NAVIGATE ════ */}
         <motion.div
