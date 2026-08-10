@@ -37,135 +37,41 @@ export function FAQClient() {
   ];
 
   const faqItems = [
-    {
-      category: 'employers',
-      question: t('q1.question'),
-      answer: t('q1.answer'),
-      details: t('q1.details'),
-    },
-    {
-      category: 'employers',
-      question: t('q2.question'),
-      answer: t('q2.answer'),
-      details: t('q2.details'),
-    },
-    {
-      category: 'employers',
-      question: t('q3.question'),
-      answer: t('q3.answer'),
-      details: t('q3.details'),
-    },
-    {
-      category: 'employers',
-      question: t('q4.question'),
-      answer: t('q4.answer'),
-      details: t('q4.details'),
-    },
-    {
-      category: 'compliance',
-      question: t('q5.question'),
-      answer: t('q5.answer'),
-      details: t('q5.details'),
-    },
-    {
-      category: 'compliance',
-      question: t('q6.question'),
-      answer: t('q6.answer'),
-      details: t('q6.details'),
-    },
-    {
-      category: 'candidates',
-      question: t('q7.question'),
-      answer: t('q7.answer'),
-      details: t('q7.details'),
-    },
-    {
-      category: 'candidates',
-      question: t('q8.question'),
-      answer: t('q8.answer'),
-      details: t('q8.details'),
-    },
-    {
-      category: 'candidates',
-      question: t('q9.question'),
-      answer: t('q9.answer'),
-      details: t('q9.details'),
-    },
-    {
-      category: 'deployment',
-      question: t('q10.question'),
-      answer: t('q10.answer'),
-      details: t('q10.details'),
-    },
-    {
-      category: 'deployment',
-      question: t('q11.question'),
-      answer: t('q11.answer'),
-      details: t('q11.details'),
-    },
-    {
-      category: 'employers',
-      question: t('q12.question'),
-      answer: t('q12.answer'),
-      details: t('q12.details'),
-    },
-    {
-      category: 'compliance',
-      question: t('q13.question'),
-      answer: t('q13.answer'),
-      details: t('q13.details'),
-    },
-    {
-      category: 'deployment',
-      question: t('q14.question'),
-      answer: t('q14.answer'),
-      details: t('q14.details'),
-    },
-    {
-      category: 'candidates',
-      question: t('q15.question'),
-      answer: t('q15.answer'),
-      details: t('q15.details'),
-    },
-    {
-      category: 'employers',
-      question: t('q16.question'),
-      answer: t('q16.answer'),
-      details: t('q16.details'),
-    },
-    {
-      category: 'compliance',
-      question: t('q17.question'),
-      answer: t('q17.answer'),
-      details: t('q17.details'),
-    },
-    {
-      category: 'deployment',
-      question: t('q18.question'),
-      answer: t('q18.answer'),
-      details: t('q18.details'),
-    },
-    {
-      category: 'candidates',
-      question: t('q19.question'),
-      answer: t('q19.answer'),
-      details: t('q19.details'),
-    },
-    {
-      category: 'employers',
-      question: t('q20.question'),
-      answer: t('q20.answer'),
-      details: t('q20.details'),
-    },
+    { category: 'employers', key: 'item1' },
+    { category: 'employers', key: 'item2' },
+    { category: 'employers', key: 'item3' },
+    { category: 'employers', key: 'item4' },
+    { category: 'compliance', key: 'item5' },
+    { category: 'compliance', key: 'item6' },
+    { category: 'candidates', key: 'item7' },
+    { category: 'candidates', key: 'item8' },
+    { category: 'candidates', key: 'item9' },
+    { category: 'deployment', key: 'item10' },
+    { category: 'deployment', key: 'item11' },
+    { category: 'employers', key: 'item12' },
+    { category: 'compliance', key: 'item13' },
+    { category: 'deployment', key: 'item14' },
+    { category: 'candidates', key: 'item15' },
+    { category: 'employers', key: 'item16' },
+    { category: 'compliance', key: 'item17' },
+    { category: 'deployment', key: 'item18' },
+    { category: 'candidates', key: 'item19' },
+    { category: 'employers', key: 'item20' },
   ];
 
-  const filteredFaqs = faqItems.filter((faq) => {
+  const localizedFaqs = faqItems.map((faq) => ({
+    ...faq,
+    question: t(`items.${faq.key}.question`),
+    answer: t(`items.${faq.key}.answer`),
+    details: '',
+  }));
+
+  const filteredFaqs = localizedFaqs.filter((faq) => {
     const matchesCategory =
       selectedCategory === 'all' || faq.category === selectedCategory;
     const matchesSearch =
       faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      faq.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      faq.details.toLowerCase().includes(searchQuery.toLowerCase());
+      faq.answer.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
