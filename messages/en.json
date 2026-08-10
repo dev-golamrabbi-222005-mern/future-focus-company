@@ -932,20 +932,45 @@
     "job4Salary": "Competitive Salary"
   },
   "SubmitCvPage": {
-    "tagline": "Candidate Application",
-    "heading": "Submit Your Resume & Passport",
-    "subheading": "Take the first step towards an exciting career in Saudi Arabia and the GCC. Upload your documents for instant review by our recruiters.",
-    "formTitle": "Application Form",
-    "fullName": "Full Name (As per Passport)",
-    "phone": "Mobile Number / WhatsApp",
-    "trade": "Selected Trade / Position",
-    "expYears": "Years of Experience",
-    "passportNo": "Passport Number",
+    "tagline": "Join Our Global Talent Network",
+    "heading": "Submit Your CV",
+    "subheading": "Take the next step in your career. Submit your CV and let us connect you with the right opportunity.",
+
+    "formTitle": "Submit Your Application",
+
+    "fullName": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "nationality": "Nationality",
+    "currentLocation": "Current Location",
     "passport": "Passport Number",
-    "uploadCv": "Upload Resume / CV (PDF/DOC)",
-    "uploadPassport": "Upload Passport Copy (PDF/JPG)",
-    "submitApplication": "Submit Candidate Application",
-    "successMessage": "Application Submitted! Our recruitment officers will call you for trade testing."
+
+    "professionalInformation": "Professional Information",
+    "professionalInformationDesc": "Provide your professional details and work experience.",
+
+    "personalInformation": "Personal Information",
+    "personalInformationDesc": "Please provide accurate personal information.",
+
+    "fullNameHint": "Enter your full name (2–60 characters).",
+    "passportHint": "Enter your valid passport number.",
+
+    "trade": "Trade / Position",
+    "expYears": "Years of Experience",
+
+    "requiredDocuments": "Required Documents",
+    "requiredDocumentsDesc": "Upload clear and valid copies of the required documents.",
+
+    "uploadCv": "Upload CV / Resume",
+    "uploadPassport": "Upload Passport Copy",
+
+    "submitApplication": "Submit Application",
+     "selectCountry": "Select Country",
+
+    "successMessage": "Your application has been submitted successfully. Our recruitment team will review your profile and contact you if a suitable opportunity is available.",
+
+    "applicationConsent": "I confirm that the information provided is accurate and I authorize Future Focus Company to use my information for recruitment purposes.",
+
+    "privacyNote": "Your information will be handled confidentially and used only for recruitment and employment-related purposes."
   },
   "Footer": {
     "tagline": "Leading government-approved manpower recruitment agency specializing in skilled workforce deployment across Saudi Arabia and the Middle East.",
@@ -1426,6 +1451,7 @@
     "selectCategory": "Select Job Category",
     "emailLabel": "Email",
     "phoneLabel": "Phone",
+    "selectCountry": "Select Country",
     "licenseBadge": "MHRSD Licensed & Compliant",
     "ksaBadge": "Saudi Arabia (KSA)",
     "gamcaBadge": "GAMCA Medical Cleared",
@@ -1440,7 +1466,9 @@
     "error404Badge": "Error 404 • Page Not Found",
     "bmetPortalBadge": "BMET Authorized Direct Candidate Portal",
     "freeReplacementBadge": "90 Days Free Replacement",
-    "bmetApprovedBadge": "BMET Approved Guarantee"
+    "bmetApprovedBadge": "BMET Approved Guarantee",
+    "selectExperience": "Select Experience",
+    "other": "Other"
   },
   "Hero1": {
     "brandName": "Future Focus",
