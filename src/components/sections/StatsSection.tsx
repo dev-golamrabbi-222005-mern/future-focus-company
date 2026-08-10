@@ -117,7 +117,7 @@ export function StatsSection() {
       </div>
       <section
         ref={containerRef}
-        className="absolute flex flex-col items-center justify-center w-full h-full"
+        className="absolute p-4 flex flex-col items-center justify-center w-full h-full"
       >
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[250px] bg-primary/10 rounded-full blur-[140px] pointer-events-none -z-10" />
 
