@@ -39,23 +39,32 @@ export function SubmitCvSection() {
     const file = e.target.files?.[0];
     if (file) {
       setCvFileName(file.name);
-      try { setCvBase64(await fileToBase64(file)); }
-      catch (err) { console.error("CV conversion error:", err); }
+      try {
+        setCvBase64(await fileToBase64(file));
+      } catch (err) {
+        console.error("CV conversion error:", err);
+      }
     }
   };
 
-  const handlePassportFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handlePassportFileChange = async (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
     const file = e.target.files?.[0];
     if (file) {
       setPassportFileName(file.name);
-      try { setPassportBase64(await fileToBase64(file)); }
-      catch (err) { console.error("Passport conversion error:", err); }
+      try {
+        setPassportBase64(await fileToBase64(file));
+      } catch (err) {
+        console.error("Passport conversion error:", err);
+      }
     }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+
     const result = await sendCvEmail({
       form_type: "Candidate CV Portal Submission",
       candidate_name: form.fullName,
@@ -70,6 +79,7 @@ export function SubmitCvSection() {
       passport_file_name: passportFileName || "Not attached",
       passport_attachment: passportBase64 || "",
     });
+
     setLoading(false);
     if (result.success) setCvSubmitted(true);
   };
@@ -77,7 +87,7 @@ export function SubmitCvSection() {
   return (
     <section id="submit-cv" className="pt-12 md:pt-16 border-t border-border/60">
       <div className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8">
-
+        
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16 gsap-fade-up">
           <div className="mb-6 flex justify-center">
@@ -96,7 +106,7 @@ export function SubmitCvSection() {
         {/* Application Form */}
         <div className="max-w-3xl mx-auto gsap-fade-up">
           <div className="p-8 sm:p-12 rounded-3xl border border-border bg-card shadow-xl space-y-8">
-
+            
             {/* Form Header */}
             <div className="flex items-center gap-4 pb-5 border-b border-border/60">
               <div className="p-3.5 rounded-xl bg-primary/10 text-primary">
@@ -119,7 +129,7 @@ export function SubmitCvSection() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-8">
 
-                {/* ── Personal Information ── */}
+                {/* Personal Information */}
                 <div className="space-y-4">
                   <div>
                     <h4 className="text-sm font-bold text-foreground">{t("personalInformation")}</h4>
@@ -230,7 +240,7 @@ export function SubmitCvSection() {
                   </div>
                 </div>
 
-                {/* ── Professional Information ── */}
+                {/* Professional Information */}
                 <div className="space-y-4 pt-2">
                   <div>
                     <h4 className="text-sm font-bold text-foreground">{t("professionalInformation")}</h4>
@@ -286,7 +296,7 @@ export function SubmitCvSection() {
                   </div>
                 </div>
 
-                {/* ── Documents ── */}
+                {/* Documents */}
                 <div className="space-y-4 pt-2">
                   <div>
                     <h4 className="text-sm font-bold text-foreground">{t("requiredDocuments")}</h4>
@@ -300,4 +310,73 @@ export function SubmitCvSection() {
                     </label>
                     <label
                       htmlFor="cv-upload-input"
-                      className="flex flex-col items-center justify-center gap-2 p-6 rounded-2xl border
+                      className="flex flex-col items-center justify-center gap-2 p-6 rounded-2xl border-2 border-dashed border-border hover:border-primary/50 bg-muted/20 transition-colors text-center cursor-pointer"
+                    >
+                      <Upload className="h-8 w-8 text-primary" />
+                      <p className="text-xs font-semibold text-foreground">
+                        {cvFileName ? `Attached: ${cvFileName}` : tCommon("uploadResume")}
+                      </p>
+                      <input
+                        id="cv-upload-input"
+                        type="file"
+                        ref={cvInputRef}
+                        onChange={handleCvFileChange}
+                        required
+                        accept=".pdf,.doc,.docx"
+                        className="hidden"
+                      />
+                    </label>
+                  </div>
+
+                  {/* Passport Upload */}
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                      {t("uploadPassport")} <span className="text-destructive">*</span>
+                    </label>
+                    <label
+                      htmlFor="passport-upload-input"
+                      className="flex flex-col items-center justify-center gap-2 p-6 rounded-2xl border-2 border-dashed border-border hover:border-primary/50 bg-muted/20 transition-colors text-center cursor-pointer"
+                    >
+                      <FileText className="h-8 w-8 text-accent" />
+                      <p className="text-xs font-semibold text-foreground">
+                        {passportFileName ? `Attached: ${passportFileName}` : tCommon("uploadPassport")}
+                      </p>
+                      <input
+                        id="passport-upload-input"
+                        type="file"
+                        ref={passportInputRef}
+                        onChange={handlePassportFileChange}
+                        required
+                        accept=".pdf,.jpg,.jpeg,.png"
+                        className="hidden"
+                      />
+                    </label>
+                  </div>
+                </div>
+
+                {/* Submit Button */}
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="w-full py-4 rounded-xl bg-primary text-primary-foreground font-bold text-sm shadow-xl hover:bg-primary/90 disabled:opacity-60 transition-all flex items-center justify-center gap-2"
+                >
+                  {loading ? (
+                    <span className="animate-spin h-4 w-4 border-2 border-primary-foreground border-t-transparent rounded-full" />
+                  ) : (
+                    <>
+                      <Send className="h-4 w-4" />
+                      <span>{t("submitApplication")}</span>
+                    </>
+                  )}
+                </button>
+
+              </form>
+            )}
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+}
