@@ -183,20 +183,27 @@
   "WhyChooseUs": {
     "tagline": "Why Choose Us",
     "heading": "Why Saudi Employers Choose Future Focus Company",
-    "subheading": "Combining a global recruitment network, rigorous compliance, and end-to-end workforce solutions to deliver qualified talent for every industry across Saudi Arabia.",
-    "guaranteedStandard": "Guaranteed Standard",
-    "card1Title": "Global Talent Network",
-    "card1Desc": "Access to skilled, semi-skilled, and general workforce sourced from more than 10 countries across Asia through our trusted international recruitment network.",
-    "bottom1Text": "GLOBAL RECRUITMENT",
-    "card2Title": "Quality Screening & Trade Testing",
-    "card2Desc": "Every candidate undergoes comprehensive screening, skill assessment, and practical trade testing to ensure they meet employer requirements.",
-    "bottom2Text": "QUALITY ASSURED",
-    "card3Title": "End-to-End Workforce Solutions",
-    "card3Desc": "From recruitment and documentation to mobilization, deployment, and on-site coordination, we manage the complete workforce lifecycle.",
-    "bottom3Text": "COMPLETE HR SUPPORT",
-    "card4Title": "Compliance & Reliable Delivery",
-    "card4Desc": "Operating with strict regulatory compliance and transparent processes to ensure timely deployment and dependable workforce solutions.",
-    "bottom4Text": "TRUSTED PARTNERSHIP"
+    "subheading": "Ten proven commitments that set us apart — from reliability and compliance to innovation and lasting partnerships.",
+    "item1Title": "Reliability & Trustworthiness",
+    "item1Desc": "Consistently providing qualified and dependable workforce solutions that meet clients' needs on time, every time.",
+    "item2Title": "Quality of Workforce",
+    "item2Desc": "Ensuring that the supplied manpower is skilled, trained, and suited to the specific requirements of the facilities management industry.",
+    "item3Title": "Wide Network & Coverage",
+    "item3Desc": "Capable of supplying manpower across all regions of Saudi Arabia, ensuring timely and efficient service.",
+    "item4Title": "Compliance & Safety",
+    "item4Desc": "Adhering to Saudi Arabia's labor laws and safety standards, ensuring legal compliance and worker safety at every step.",
+    "item5Title": "Cost-Effectiveness",
+    "item5Desc": "Offering competitive pricing without compromising on quality, providing real value for money for every client.",
+    "item6Title": "Customer-Centric Approach",
+    "item6Desc": "Focused on understanding client needs and providing customized solutions with excellent customer support.",
+    "item7Title": "Fast Turnaround Time",
+    "item7Desc": "Ability to quickly mobilize and supply manpower to meet urgent project demands across Saudi Arabia.",
+    "item8Title": "Strong Industry Partnerships",
+    "item8Desc": "Established relationships with leading FM companies, ensuring credibility and proven performance across sectors.",
+    "item9Title": "Innovation & Continuous Improvement",
+    "item9Desc": "Utilizing the latest recruitment and management techniques to improve service delivery and workforce quality.",
+    "item10Title": "Reputation & Track Record",
+    "item10Desc": "Building a reputation based on successful placements and long-term client relationships throughout the Kingdom."
   },
   "GlobalReachMap": {
     "tagline": "OUR MARKET",
@@ -220,7 +227,8 @@
     "heading": "Specialized Talent Across Core Sectors",
     "description": "We supply trained, screened, and motivated workforces tailored to the rigorous demands of Middle Eastern markets.",
     "targetSector": "Target Sector",
-    "viewDetails": "View Details ->",
+    "viewDetails": "View Details",
+    "subServices": "Key Workforce",
     "home": "Home",
     "services": "Services",
     "availableRolesTitle": "Available Trade Categories & Roles",
@@ -228,10 +236,35 @@
     "tradeTested": "100% Trade Tested",
     "requestRole": "Hire Category",
     "sectors": {
+      "facility-management": {
+        "title": "Facility Management",
+        "deployed": "Facility Services",
+        "description": "Reliable workforce solutions for hard and soft facility management services across Saudi Arabia.",
+        "services": {
+          "electricians": "Electricians",
+          "plumbers": "Plumbers",
+          "hvac": "HVAC Technicians",
+          "housekeepers": "Housekeepers",
+          "gardeners": "Gardeners",
+          "security": "Security Staff",
+          "drivers": "Drivers",
+          "catering": "Catering Staff"
+        }
+      },
       "construction": {
         "title": "Construction & Engineering",
         "deployed": "5,000+ DEPLOYED",
         "description": "Certified structural welders, high-rise masons, MEP electricians, scaffolders, and heavy equipment operators for Saudi megaprojects.",
+        "services": {
+          "civilEngineers": "Civil Engineers",
+          "siteEngineers": "Site Engineers",
+          "supervisors": "Construction Supervisors",
+          "masons": "Masons",
+          "steelFixers": "Steel Fixers",
+          "welders": "Welders",
+          "scaffolders": "Scaffolders",
+          "equipmentOperators": "Equipment Operators"
+        },
         "roles": {
           "role1": {
             "title": "Certified Structural Welders & Fabricators",
