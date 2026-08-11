@@ -10,7 +10,7 @@
     "faq": "FAQ",
     "submitCv": "Submit CV",
     "requestManpower": "Request Manpower",
-    "motto": "Your HR partner and solutions"
+    "motto": "Your HR Partner & Resource Solutions"
   },
   "Hero": {
     "brandName": "Future Focus",
@@ -59,7 +59,7 @@
     "tag": "Who We Are",
     "title1": "Building Saudi's",
     "title2": "Future Workforce",
-    "description": "Future Focus Company is a trusted manpower recruitment and workforce solutions provider based in Riyadh, Saudi Arabia. We specialize in supplying skilled, semi-skilled, and unskilled workers from Bangladesh to meet the growing workforce demands across construction, hospitality, healthcare, industrial, facility management, and commercial sectors. Our commitment to quality, reliability, and timely deployment has made us a preferred partner for businesses throughout the Kingdom.",
+    "description": "Future Focus Company was founded with a clear vision to become a trusted provider of manpower solutions in Saudi Arabia. From our humble beginnings, we have grown into a reliable workforce partner serving clients across facility management, construction, and other key sectors. Through continuous improvement, strategic partnerships, and a commitment to excellence, we provide skilled manpower with professionalism, compliance, and efficiency. Today, we remain focused on supporting Saudi Arabia’s growing business needs through reliable workforce solutions and long-term partnerships.",
     "book": "Request Workforce",
     "services": "Explore Services",
     "experience": "Years of Experience",
@@ -169,8 +169,8 @@
   "HomeAbout": {
     "tag": "Who We Are",
     "title": "Your Trusted Partner for Global Workforce Solutions",
-    "description1": "Future Focus Company is a leading workforce solutions provider based in Riyadh, Saudi Arabia, connecting employers with skilled, semi-skilled, and general workforce sourced from more than ten countries across Asia.",
-    "description2": "From workforce planning and international recruitment to documentation, mobilization, deployment, and on-site support, we deliver end-to-end HR solutions that help businesses across Saudi Arabia build reliable, productive, and compliant teams.",
+    "description1": "Future Focus Company was established with a clear vision to deliver reliable manpower solutions across Saudi Arabia. We have grown into a trusted workforce partner serving key sectors including facility management, construction, and industrial services.",
+    "description2": "Driven by professionalism, compliance, and continuous improvement, we connect businesses with qualified manpower and efficient workforce solutions. Our focus remains on building lasting partnerships and supporting Saudi Arabia’s evolving workforce needs.",
     "experience": "Years Trusted",
     "button": "Learn More",
     "feature1": "On-Time Deployment",
@@ -437,9 +437,9 @@
     "title": "Empowering Talent, Building Bridges Across Borders",
     "subtitle": "Discover our journey, mission, values, and government certifications as Bangladesh's trusted manpower recruitment partner.",
     "missionTitle": "Our Mission",
-    "missionDesc": "To empower businesses across Saudi Arabia by delivering exceptional, reliable, and tailored manpower solutions. At Future Focus Company (FFC), we bridge the gap between industries and top-tier support staff—ranging from specialized airport operations and corporate hospitality to essential technical services. We are dedicated to nurturing workforce excellence that helps our clients achieve operational efficiency and long-term success.",
+    "missionDesc": "To deliver reliable and high-quality manpower solutions that support the growth and development of facilities management companies in the Kingdom of Saudi Arabia.",
     "visionTitle": "Our Vision",
-    "visionDesc": "To be recognized as the premier and most trusted HR & Manpower solutions partner in Saudi Arabia, driving innovation and service excellence in workforce management. As we scale to support international landmarks like Saudi Arabia's major aviation hubs, our vision is to set the gold standard in staffing across the Middle East—fostering growth, diversity, and unwavering operational support for every sector we serve.",
+    "visionDesc": "To be the preferred manpower partner, contributing to Saudi Arabia's vision of sustainable development and economic diversification through exceptional workforce supply.",
     "licenseTitle": "Government License & Accreditation",
     "licenseNumber": "Government License: 7052268831",
     "licenseDesc": "Operating under Ministry License 7052268831 with full BMET compliance, ISO quality certifications, and GAMCA medical affiliation.",
@@ -447,10 +447,14 @@
     "licenseCheck2": "GAMCA Medical Affiliated",
     "licenseCheck3": "Ministry License 7052268831",
     "licenseCheck4": "Saudi Embassy Verified",
-    "mdTitle": "Managing Director's Statement",
-    "mdMessage": "Over the past 05 years, we have placed over 5,000 workers in life-changing careers across Saudi Arabia and the GCC. We believe ethical recruitment is not just good policy—it is our core duty.",
-    "mdName": "Anowar Hossain",
-    "mdRole": "Chief Executive Officer & Founder",
+    "ceoTitle": "Chief Executive Officer's Statement",
+    "ceoMessage": "At Future Focus Company, our vision is to be the foremost provider of skilled manpower in Saudi Arabia, supporting the nation’s journey towards economic diversification and sustainable development. As CEO, I assure our clients and partners of our unwavering commitment to quality, safety, and innovation. We strive to exceed expectations through tailored solutions, rapid deployment, and a customer-centric approach. We look forward to collaborating with you and contributing to your success in the facilities management industry.",
+    "ceoName": "Mohammad",
+    "ceoRole": "Chief Executive Officer",
+    "mdTitle": "General Manager's Statement",
+    "mdMessage": "Welcome to Future Focus Company. As the GM, I am committed to delivering exceptional manpower solutions that drive the success of our clients in Saudi Arabia’s facilities management sector. Our dedicated team ensures reliability, quality, and compliance in every workforce we provide. We are passionate about building long-term partnerships based on trust, integrity, and excellence. Together, we aim to contribute to the sustainable growth and development of the Kingdom. Thank you for choosing us as your trusted manpower partner.",
+    "mdName": "Sharif Uddin",
+    "mdRole": "General Manager",
     "ctaHire": "Request Manpower",
     "ctaServices": "Explore Services"
   },
@@ -505,17 +509,21 @@
       }
     },
     "compliance": {
-      "tagline": "Saudi Regulatory Standards",
-      "heading": "100% MHRSD Compliant & 90-Day Replacement Guarantee",
-      "subheading": "We strictly adhere to Ministry of Human Resources and Social Development (MHRSD) regulations, Musaned contracts, and GAMCA medical protocols.",
-      "badge1Title": "QIWA & Musaned Direct",
-      "badge1Sub": "Digital contract transfer & official work permit issuance under KSA law.",
-      "badge2Title": "90-Day Free Replacement",
-      "badge2Sub": "If candidate performance falls short, we replace them at zero extra cost.",
-      "badge3Title": "Government License 7052268831",
-      "badge3Sub": "Officially approved recruitment agency by the Ministry of Expatriates Welfare.",
-      "badge4Title": "GAMCA Medical Fitness",
-      "badge4Sub": "Guaranteed fit for duty medical clearance prior to embassy visa stamping."
+      "tagline": "QUALITY & COMPLIANCE",
+      "heading": "Reliable Workforce. Professional Standards.",
+      "subheading": "We follow structured recruitment, screening, documentation, and deployment processes to deliver qualified workforce solutions aligned with employer requirements in Saudi Arabia.",
+
+      "badge1Title": "Verified Recruitment",
+      "badge1Sub": "Candidates are carefully sourced and screened according to job requirements, skills, and experience.",
+
+      "badge2Title": "Quality Screening",
+      "badge2Sub": "We assess candidate suitability through structured screening and role-specific evaluation before deployment.",
+
+      "badge3Title": "Documentation Support",
+      "badge3Sub": "Our team coordinates required recruitment, employment, travel, and deployment documentation professionally.",
+
+      "badge4Title": "Reliable Deployment",
+      "badge4Sub": "From candidate selection to mobilization and arrival, we coordinate the deployment process with care and efficiency."
     },
     "process": {
       "tagline": "How We Deploy Talent",
@@ -947,19 +955,45 @@
     "job4Salary": "Competitive Salary"
   },
   "SubmitCvPage": {
-    "tagline": "Candidate Application",
-    "heading": "Submit Your Resume & Passport",
-    "subheading": "Take the first step towards an exciting career in Saudi Arabia and the GCC. Upload your documents for instant review by our recruiters.",
-    "formTitle": "Application Form",
-    "fullName": "Full Name (As per Passport)",
-    "phone": "Mobile Number / WhatsApp",
-    "trade": "Selected Trade / Position",
+    "tagline": "Join Our Global Talent Network",
+    "heading": "Submit Your CV",
+    "subheading": "Take the next step in your career. Submit your CV and let us connect you with the right opportunity.",
+
+    "formTitle": "Submit Your Application",
+
+    "fullName": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "nationality": "Nationality",
+    "currentLocation": "Current Location",
+    "passport": "Passport Number",
+
+    "professionalInformation": "Professional Information",
+    "professionalInformationDesc": "Provide your professional details and work experience.",
+
+    "personalInformation": "Personal Information",
+    "personalInformationDesc": "Please provide accurate personal information.",
+
+    "fullNameHint": "Enter your full name (2–60 characters).",
+    "passportHint": "Enter your valid passport number.",
+
+    "trade": "Trade / Position",
     "expYears": "Years of Experience",
-    "passportNo": "Passport Number",
-    "uploadCv": "Upload Resume / CV (PDF/DOC)",
-    "uploadPassport": "Upload Passport Copy (PDF/JPG)",
-    "submitApplication": "Submit Candidate Application",
-    "successMessage": "Application Submitted! Our recruitment officers will call you for trade testing."
+
+    "requiredDocuments": "Required Documents",
+    "requiredDocumentsDesc": "Upload clear and valid copies of the required documents.",
+
+    "uploadCv": "Upload CV / Resume",
+    "uploadPassport": "Upload Passport Copy",
+
+    "submitApplication": "Submit Application",
+     "selectCountry": "Select Country",
+
+    "successMessage": "Your application has been submitted successfully. Our recruitment team will review your profile and contact you if a suitable opportunity is available.",
+
+    "applicationConsent": "I confirm that the information provided is accurate and I authorize Future Focus Company to use my information for recruitment purposes.",
+
+    "privacyNote": "Your information will be handled confidentially and used only for recruitment and employment-related purposes."
   },
   "Footer": {
     "tagline": "Leading government-approved manpower recruitment agency specializing in skilled workforce deployment across Saudi Arabia and the Middle East.",
@@ -968,7 +1002,7 @@
     "saudiOffice": "Riyadh Office (KSA)",
     "bdOffice": "Bangladesh Office (Dhaka)",
     "saudiAddress": "Suite 402, Business Bay Tower, Al A'amal St, Business Bay, Riyadh, KSA",
-    "bdAddress": "House 12, Road 04, Block B, Banani, Dhaka-1213, Bangladesh",
+    "bdAddress": "204 Shahid Syed Nazrul Islam Avenue, 89 (12/B Old) Bijoy Nagar, Aziz Co-operative Marker - 2nd floor, Dhaka 1000, Bangladesh",
     "connectTitle": "Connect With Us",
     "connectDesc": "Follow our official channels for the latest recruitment drives and job announcements.",
     "phone": "Phone",
@@ -1108,9 +1142,22 @@
   },
   "FAQSystem": {
     "tagline": "Knowledge Base & FAQs",
+    "heroTitle": "Frequently Asked Questions",
+    "heroSubtitle": "Comprehensive answers for employers and job seekers about international recruitment, visa processing, trade testing, and deployment to Saudi Arabia.",
     "heading": "Everything You Need to Know",
     "subheading": "Comprehensive answers for employers and candidates regarding international recruitment, visa compliance, trade testing, and deployment.",
     "searchPlaceholder": "Search FAQs (e.g., visa, medical, replacement guarantee, trade test)...",
+    "badge": "FAQ Highlights",
+    "ctaHeading": "Still have a question?",
+    "ctaSubheading": "Our recruitment advisors respond within 24 hours. Get in touch with our team today.",
+    "ctaButton": "Contact Us Now",
+    "categories": {
+      "all": "All",
+      "employers": "Employer Services",
+      "candidates": "Candidates",
+      "compliance": "Compliance",
+      "deployment": "Deployment"
+    },
     "allCategories": "All Categories",
     "catEmployersServices": "Employer Services & Sourcing",
     "catEmployersProcess": "Process & Guarantees",
@@ -1362,7 +1409,7 @@
     "defaultDescription": "Your HR Partner & Resources Solution",
     "keywords": "Recruitment Agency Bangladesh, Saudi Arabia Manpower, Govt Approved Agency RL-1428, Skilled Bangladeshi Workers, Gulf Manpower Recruitment, Future Focus Company, Labor Visa Recruitment",
     "home": {
-      "title": "FFC | Home",
+      "title": "Future Focus Company | Home",
       "description": "Your HR Partner & Resources Solution"
     },
     "about": {
@@ -1429,6 +1476,7 @@
     "selectCategory": "Select Job Category",
     "emailLabel": "Email",
     "phoneLabel": "Phone",
+    "selectCountry": "Select Country",
     "licenseBadge": "MHRSD Licensed & Compliant",
     "ksaBadge": "Saudi Arabia (KSA)",
     "gamcaBadge": "GAMCA Medical Cleared",
@@ -1443,7 +1491,9 @@
     "error404Badge": "Error 404 • Page Not Found",
     "bmetPortalBadge": "BMET Authorized Direct Candidate Portal",
     "freeReplacementBadge": "90 Days Free Replacement",
-    "bmetApprovedBadge": "BMET Approved Guarantee"
+    "bmetApprovedBadge": "BMET Approved Guarantee",
+    "selectExperience": "Select Experience",
+    "other": "Other"
   },
   "Hero1": {
     "brandName": "Future Focus",

@@ -11,7 +11,6 @@ import {
   Building2,
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
-
 import { sendContactEmail } from "@/lib/emailjs";
 
 export function ContactFormSection() {
@@ -88,8 +87,9 @@ export function ContactFormSection() {
   return (
     <div className="max-w-[1380px] mx-auto">
       <div className="flex flex-col md:flex-row items-start gap-8 md:gap-10">
+
         {/* Left Column: Interactive Contact Form */}
-        <div className="gsap-fade-up w-full md:flex-1 p-6 sm:p-8 sm:p-10 rounded-3xl border border-border bg-card shadow-lg space-y-6">
+        <div className="gsap-fade-up w-full md:flex-1 p-6 sm:p-10 rounded-3xl border border-border bg-card shadow-lg space-y-6">
           <h2 className="text-2xl font-bold text-foreground">
             {t("formTitle")}
           </h2>
@@ -112,6 +112,7 @@ export function ContactFormSection() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
+
               {/* Full Name */}
               <div className="space-y-1.5">
                 <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
@@ -120,11 +121,15 @@ export function ContactFormSection() {
                 <input
                   type="text"
                   name="fullName"
+                  required
+                  minLength={2}
+                  maxLength={60}
+                  autoComplete="name"
                   value={form.fullName}
                   onChange={handleChange}
-                  required
                   placeholder="e.g. Abdullah Al-Otaibi"
-                  className="w-full px-4 py-3 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground"
+                  title="Name must be between 2 and 60 characters"
+                  className="w-full px-4 py-3 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground placeholder:text-muted-foreground/60"
                 />
               </div>
 
@@ -137,11 +142,14 @@ export function ContactFormSection() {
                   <input
                     type="email"
                     name="email"
+                    required
+                    maxLength={100}
+                    autoComplete="email"
                     value={form.email}
                     onChange={handleChange}
-                    required
                     placeholder="e.g. a.otaibi@company.sa"
-                    className="w-full px-4 py-3 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground"
+                    title="Please enter a valid email address"
+                    className="w-full px-4 py-3 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground placeholder:text-muted-foreground/60"
                   />
                 </div>
 
@@ -152,11 +160,17 @@ export function ContactFormSection() {
                   <input
                     type="tel"
                     name="phone"
+                    required
+                    minLength={8}
+                    maxLength={20}
+                    autoComplete="tel"
+                    inputMode="tel"
+                    pattern="^\+?[0-9\s\-()]{8,20}$"
                     value={form.phone}
                     onChange={handleChange}
-                    required
                     placeholder="+966 50 123 4567"
-                    className="w-full px-4 py-3 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground"
+                    title="Please enter a valid phone number"
+                    className="w-full px-4 py-3 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground placeholder:text-muted-foreground/60"
                   />
                 </div>
               </div>
@@ -169,10 +183,12 @@ export function ContactFormSection() {
                 <input
                   type="text"
                   name="company"
+                  maxLength={100}
+                  autoComplete="organization"
                   value={form.company}
                   onChange={handleChange}
                   placeholder={t("companyPlaceholder")}
-                  className="w-full px-4 py-3 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground"
+                  className="w-full px-4 py-3 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground placeholder:text-muted-foreground/60"
                 />
               </div>
 
@@ -239,11 +255,14 @@ export function ContactFormSection() {
                 </label>
                 <textarea
                   name="message"
+                  rows={5}
+                  minLength={10}
+                  maxLength={1000}
                   value={form.message}
                   onChange={handleChange}
-                  rows={4}
                   placeholder={t("messagePlaceholder")}
-                  className="w-full px-4 py-3 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground resize-none"
+                  title="Message must be between 10 and 1000 characters"
+                  className="w-full px-4 py-3 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground placeholder:text-muted-foreground/60 resize-none"
                 />
               </div>
 
@@ -261,13 +280,19 @@ export function ContactFormSection() {
                   </>
                 )}
               </button>
+
+              {/* Privacy Note (from main) */}
+              <p className="text-center text-[11px] text-muted-foreground">
+                Your information will be kept confidential and used only to respond to your inquiry.
+              </p>
+
             </form>
           )}
         </div>
 
         {/* Right Column: Office Address Cards */}
         <div className="w-full md:flex-1 space-y-6">
-          {/* Saudi/Primary Overseas Office Card */}
+          {/* Saudi Office Card */}
           <div className="gsap-fade-up p-8 rounded-3xl border border-border bg-card shadow-md space-y-4">
             <div className="flex items-center gap-3">
               <div className="p-3 rounded-xl bg-primary/10 text-primary">
@@ -327,6 +352,7 @@ export function ContactFormSection() {
             </div>
           </div>
         </div>
+
       </div>
     </div>
   );
