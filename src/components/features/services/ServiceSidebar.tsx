@@ -4,6 +4,8 @@ import * as React from 'react';
 import { useTranslations } from 'next-intl';
 import { Send, CheckCircle2, ShieldCheck, Award, Headset } from 'lucide-react';
 
+import { sendContactEmail } from '@/lib/emailjs';
+
 interface ServiceSidebarProps {
   slug: string;
 }
@@ -26,13 +28,24 @@ export function ServiceSidebar({ slug }: ServiceSidebarProps) {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [isSubmitted, setIsSubmitted] = React.useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
+
+    const result = await sendContactEmail({
+      form_type: `Quick Service Inquiry (${slug})`,
+      sector: sectorTitle,
+      from_name: formState.fullName,
+      from_email: formState.email,
+      phone: formState.phone,
+      workforce_count: formState.count,
+      message: formState.message,
+    });
+
+    setIsSubmitting(false);
+    if (result.success) {
       setIsSubmitted(true);
-    }, 1000);
+    }
   };
 
   return (

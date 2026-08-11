@@ -13,9 +13,9 @@ import {
   Send,
   CheckCircle2,
   ShieldCheck,
-  Building2,
-  Sparkles,
 } from 'lucide-react';
+
+import { sendContactEmail } from '@/lib/emailjs';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
@@ -31,6 +31,7 @@ export function GetInTouch() {
     fullName: '',
     email: '',
     phone: '',
+    company: '',
     serviceType: '',
     workforceSize: '',
     message: '',
@@ -46,15 +47,25 @@ export function GetInTouch() {
     setFormState((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
+    const result = await sendContactEmail({
+      form_type: 'Get In Touch / Manpower Request',
+      from_name: formState.fullName,
+      from_email: formState.email,
+      phone: formState.phone,
+      company: formState.company,
+      service_type: formState.serviceType,
+      workforce_size: formState.workforceSize,
+      message: formState.message,
+    });
+
+    setIsSubmitting(false);
+    if (result.success) {
       setIsSubmitted(true);
-    }, 1200);
+    }
   };
 
   const resetForm = () => {
@@ -62,6 +73,7 @@ export function GetInTouch() {
       fullName: '',
       email: '',
       phone: '',
+      company: '',
       serviceType: '',
       workforceSize: '',
       message: '',
@@ -73,7 +85,6 @@ export function GetInTouch() {
     () => {
       if (!containerRef.current) return;
 
-      // Left Column Slide-in from Left
       if (leftColRef.current) {
         gsap.fromTo(
           leftColRef.current,
@@ -91,7 +102,6 @@ export function GetInTouch() {
         );
       }
 
-      // Right Column Slide-in from Right
       if (rightColRef.current) {
         gsap.fromTo(
           rightColRef.current,
@@ -151,8 +161,8 @@ export function GetInTouch() {
 
       <div className="w-full max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          
-          {/* Left Column: Let's Talk Business & Contact Details */}
+
+          {/* Left Column */}
           <div ref={leftColRef} className="lg:col-span-5 space-y-8">
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary">
@@ -179,7 +189,7 @@ export function GetInTouch() {
                   {t('badgeSla')}
                 </p>
                 <p className="text-xs text-muted-foreground">
-                  Our Dubai team reviews & responds to proposals on the same day.
+                  Our team reviews & responds to proposals on the same day.
                 </p>
               </div>
             </div>
@@ -252,8 +262,8 @@ export function GetInTouch() {
                     </p>
                   </div>
 
+                  {/* Row 1: Full Name + Email */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                    {/* Full Name */}
                     <div className="space-y-2">
                       <label className="text-xs font-bold uppercase tracking-wider text-foreground">
                         {t('form.fullNameLabel')} *
@@ -269,7 +279,6 @@ export function GetInTouch() {
                       />
                     </div>
 
-                    {/* Corporate Email */}
                     <div className="space-y-2">
                       <label className="text-xs font-bold uppercase tracking-wider text-foreground">
                         {t('form.emailLabel')} *
@@ -286,8 +295,8 @@ export function GetInTouch() {
                     </div>
                   </div>
 
+                  {/* Row 2: Phone + Company */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                    {/* Phone Number */}
                     <div className="space-y-2">
                       <label className="text-xs font-bold uppercase tracking-wider text-foreground">
                         {t('form.phoneLabel')} *
@@ -303,7 +312,23 @@ export function GetInTouch() {
                       />
                     </div>
 
-                    {/* Service Type Dropdown */}
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold uppercase tracking-wider text-foreground">
+                        {t('form.companyLabel')}
+                      </label>
+                      <input
+                        type="text"
+                        name="company"
+                        value={formState.company}
+                        onChange={handleChange}
+                        placeholder={t('form.companyPlaceholder')}
+                        className="w-full bg-background border border-border rounded-xl px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Row 3: Service Type + Workforce Size */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     <div className="space-y-2">
                       <label className="text-xs font-bold uppercase tracking-wider text-foreground">
                         {t('form.serviceTypeLabel')} *
@@ -335,28 +360,27 @@ export function GetInTouch() {
                         </option>
                       </select>
                     </div>
-                  </div>
 
-                  {/* Estimated Workforce Size */}
-                  <div className="space-y-2">
-                    <label className="text-xs font-bold uppercase tracking-wider text-foreground">
-                      {t('form.workforceSizeLabel')} *
-                    </label>
-                    <select
-                      name="workforceSize"
-                      required
-                      value={formState.workforceSize}
-                      onChange={handleChange}
-                      className="w-full bg-background border border-border rounded-xl px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 cursor-pointer"
-                    >
-                      <option value="" disabled>
-                        {t('form.workforceSizeSelect')}
-                      </option>
-                      <option value="small">{t('form.sizeOptions.small')}</option>
-                      <option value="medium">{t('form.sizeOptions.medium')}</option>
-                      <option value="large">{t('form.sizeOptions.large')}</option>
-                      <option value="enterprise">{t('form.sizeOptions.enterprise')}</option>
-                    </select>
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold uppercase tracking-wider text-foreground">
+                        {t('form.workforceSizeLabel')} *
+                      </label>
+                      <select
+                        name="workforceSize"
+                        required
+                        value={formState.workforceSize}
+                        onChange={handleChange}
+                        className="w-full bg-background border border-border rounded-xl px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 cursor-pointer"
+                      >
+                        <option value="" disabled>
+                          {t('form.workforceSizeSelect')}
+                        </option>
+                        <option value="small">{t('form.sizeOptions.small')}</option>
+                        <option value="medium">{t('form.sizeOptions.medium')}</option>
+                        <option value="large">{t('form.sizeOptions.large')}</option>
+                        <option value="enterprise">{t('form.sizeOptions.enterprise')}</option>
+                      </select>
+                    </div>
                   </div>
 
                   {/* Message / Project Details */}

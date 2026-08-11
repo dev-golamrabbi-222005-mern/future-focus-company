@@ -779,8 +779,27 @@
     "nameLabel": "Full Name",
     "emailLabel": "Email Address",
     "phoneLabel": "Phone / WhatsApp",
-    "subjectLabel": "Subject / Inquiry Type",
-    "messageLabel": "Your Message",
+    "companyLabel": "Company / Organization Name",
+    "companyPlaceholder": "e.g. Al-Rashid Construction Co.",
+    "serviceTypeLabel": "Required Service Category",
+    "serviceTypeSelect": "Select an industry sector",
+    "serviceOptions": {
+      "construction": "Construction & Civil Engineering",
+      "mep": "MEP (Electrical & Plumbing)",
+      "hospitality": "Hospitality & Catering Staff",
+      "facility": "Facility Management & Cleaning",
+      "logistics": "Logistics & Warehouse Operations"
+    },
+    "workforceSizeLabel": "Estimated Workforce Size",
+    "workforceSizeSelect": "Select worker count",
+    "sizeOptions": {
+      "small": "1 - 15 Workers",
+      "medium": "16 - 50 Workers",
+      "large": "51 - 200 Workers",
+      "enterprise": "200+ Enterprise Mobilization"
+    },
+    "messageLabel": "Project Requirements / Message",
+    "messagePlaceholder": "Describe your manpower requirements, project location, timeline, and any other details...",
     "submitBtn": "Submit Inquiry",
     "successMsg": "Thank you! Your message has been sent successfully. Our team will contact you within 24 hours.",
     "saudiTitle": "Riyadh Office (Saudi Arabia)",
@@ -1346,6 +1365,8 @@
       "emailPlaceholder": "e.g. a.wright@company.ae",
       "phoneLabel": "Phone Number",
       "phonePlaceholder": "e.g. +971 50 123 4567",
+      "companyLabel": "Company / Organization Name",
+      "companyPlaceholder": "e.g. Al-Rashid Construction Co.",
       "serviceTypeLabel": "Required Service Category",
       "serviceTypeSelect": "Select an industry sector",
       "serviceOptions": {
