@@ -12,6 +12,7 @@ import {
   X, Send, ChevronRight, User, Phone, Mail,
   FileText, Upload, ArrowRight,
 } from "lucide-react";
+import { sendCvEmail, fileToBase64 } from "@/lib/emailjs";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -74,15 +75,46 @@ function ApplyForm({
   const [form, setForm] = React.useState({
     fullName: "", phone: "", email: "", passportNo: "", experience: "1-3",
   });
+  const [cvFileName, setCvFileName] = React.useState("");
+  const [cvBase64, setCvBase64] = React.useState("");
   const tCommon = useTranslations('CommonUI');
 
   const handle = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>
     setForm((p) => ({ ...p, [e.target.name]: e.target.value }));
 
-  const submit = (e: React.FormEvent) => {
+  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      setCvFileName(file.name);
+      try {
+        const b64 = await fileToBase64(file);
+        setCvBase64(b64);
+      } catch (err) {
+        console.error('CV conversion error:', err);
+      }
+    }
+  };
+
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => { setLoading(false); onSuccess(); }, 1400);
+
+    const result = await sendCvEmail({
+      form_type: 'Job Application',
+      job_title: job.title,
+      candidate_name: form.fullName,
+      phone: form.phone,
+      email: form.email,
+      passport_no: form.passportNo,
+      experience_years: form.experience,
+      cv_file_name: cvFileName || 'Not attached',
+      cv_attachment: cvBase64 || '',
+    });
+
+    setLoading(false);
+    if (result.success) {
+      onSuccess();
+    }
   };
 
   return (
@@ -147,8 +179,10 @@ function ApplyForm({
         </label>
         <label className="flex flex-col items-center justify-center gap-2 rounded-2xl border-2 border-dashed border-border bg-muted/20 px-4 py-5 text-center cursor-pointer hover:border-primary/50 transition-colors">
           <Upload className="h-6 w-6 text-primary" />
-          <span className="text-xs font-semibold text-foreground">{tCommon('uploadPdfDoc')}</span>
-          <input type="file" accept=".pdf,.doc,.docx" required className="hidden" />
+          <span className="text-xs font-semibold text-foreground">
+            {cvFileName ? `Attached: ${cvFileName}` : tCommon('uploadPdfDoc')}
+          </span>
+          <input type="file" accept=".pdf,.doc,.docx" onChange={handleFileChange} required className="hidden" />
         </label>
       </div>
 

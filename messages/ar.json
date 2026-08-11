@@ -771,8 +771,27 @@
     "nameLabel": "الاسم الكامل",
     "emailLabel": "البريد الإلكتروني",
     "phoneLabel": "رقم الهاتف / الواتساب",
-    "subjectLabel": "الموضوع / نوع الاستفسار",
-    "messageLabel": "رسالتك",
+    "companyLabel": "اسم الشركة / المؤسسة",
+    "companyPlaceholder": "مثال: شركة الراشد للمقاولات",
+    "serviceTypeLabel": "فئة الخدمة المطلوبة",
+    "serviceTypeSelect": "اختر قطاع الصناعة",
+    "serviceOptions": {
+      "construction": "البناء والهندسة المدنية",
+      "mep": "MEP (الكهرباء والسباكة)",
+      "hospitality": "موظفو الضيافة والتموين",
+      "facility": "إدارة المرافق والتنظيف",
+      "logistics": "عمليات اللوجستيات والمستودعات"
+    },
+    "workforceSizeLabel": "الحجم التقديري للقوى العاملة",
+    "workforceSizeSelect": "اختر عدد الموظفين",
+    "sizeOptions": {
+      "small": "١ - ١٥ موظفاً",
+      "medium": "١٦ - ٥٠ موظفاً",
+      "large": "٥١ - ٢٠٠ موظف",
+      "enterprise": "٢٠٠+ تعبئة مؤسسية"
+    },
+    "messageLabel": "متطلبات المشروع / الرسالة",
+    "messagePlaceholder": "صِف احتياجاتك من القوى العاملة وموقع المشروع والجدول الزمني وأي تفاصيل أخرى...",
     "submitBtn": "إرسال الرسالة",
     "successMsg": "شكراً لك! تم إرسال رسالتك بنجاح وسيقوم فريقنا بالتواصل معك خلال ٢٤ ساعة.",
     "saudiTitle": "مكتب الرياض (السعودية)",
@@ -1299,6 +1318,8 @@
       "emailPlaceholder": "مثال: a.wright@company.ae",
       "phoneLabel": "رقم الهاتف",
       "phonePlaceholder": "مثال: +971 50 123 4567",
+      "companyLabel": "اسم الشركة / المؤسسة",
+      "companyPlaceholder": "مثال: شركة الراشد للمقاولات",
       "serviceTypeLabel": "فئة الخدمة المطلوبة",
       "serviceTypeSelect": "اختر قطاع الصناعة",
       "serviceOptions": {

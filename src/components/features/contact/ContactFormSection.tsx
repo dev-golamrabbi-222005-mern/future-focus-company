@@ -9,15 +9,68 @@ import {
   Send,
   CheckCircle2,
   Building2,
-  Link,
-  MessageCircle,
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
+
+import { sendContactEmail } from "@/lib/emailjs";
 
 export function ContactFormSection() {
   const t = useTranslations("ContactPage");
   const tFooter = useTranslations("Footer");
   const [submitted, setSubmitted] = React.useState(false);
+  const [loading, setLoading] = React.useState(false);
+
+  const [form, setForm] = React.useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    company: "",
+    serviceType: "",
+    workforceSize: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const result = await sendContactEmail({
+      form_type: "Contact Us Inquiry",
+      from_name: form.fullName,
+      from_email: form.email,
+      phone: form.phone,
+      company: form.company,
+      service_type: form.serviceType,
+      workforce_size: form.workforceSize,
+      message: form.message,
+    });
+
+    setLoading(false);
+    if (result.success) {
+      setSubmitted(true);
+    }
+  };
+
+  const resetForm = () => {
+    setForm({
+      fullName: "",
+      email: "",
+      phone: "",
+      company: "",
+      serviceType: "",
+      workforceSize: "",
+      message: "",
+    });
+    setSubmitted(false);
+  };
 
   const primaryOffice = siteConfig.offices.saudi || {
     address:
@@ -42,49 +95,65 @@ export function ContactFormSection() {
           </h2>
 
           {submitted ? (
-            <div className="p-6 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-500 flex items-start gap-3">
-              <CheckCircle2 className="h-6 w-6 shrink-0 mt-0.5" />
-              <p className="text-sm font-semibold">{t("successMsg")}</p>
+            <div className="py-10 text-center space-y-5">
+              <div className="w-14 h-14 rounded-full bg-emerald-500/10 text-emerald-500 flex items-center justify-center mx-auto">
+                <CheckCircle2 className="h-8 w-8" />
+              </div>
+              <p className="text-sm font-semibold text-emerald-600 dark:text-emerald-400">
+                {t("successMsg")}
+              </p>
+              <button
+                type="button"
+                onClick={resetForm}
+                className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold px-5 py-2.5 rounded-xl hover:bg-primary/90 transition-colors text-sm cursor-pointer"
+              >
+                <span>Send Another</span>
+              </button>
             </div>
           ) : (
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                setSubmitted(true);
-              }}
-              className="space-y-4"
-            >
+            <form onSubmit={handleSubmit} className="space-y-4">
+              {/* Full Name */}
               <div className="space-y-1.5">
                 <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                  {t("nameLabel")}
+                  {t("nameLabel")} *
                 </label>
                 <input
                   type="text"
+                  name="fullName"
+                  value={form.fullName}
+                  onChange={handleChange}
                   required
-                  placeholder="John Doe"
+                  placeholder="e.g. Abdullah Al-Otaibi"
                   className="w-full px-4 py-3 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground"
                 />
               </div>
 
+              {/* Email + Phone */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
                   <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                    {t("emailLabel")}
+                    {t("emailLabel")} *
                   </label>
                   <input
                     type="email"
+                    name="email"
+                    value={form.email}
+                    onChange={handleChange}
                     required
-                    placeholder="john@example.com"
+                    placeholder="e.g. a.otaibi@company.sa"
                     className="w-full px-4 py-3 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground"
                   />
                 </div>
 
                 <div className="space-y-1.5">
                   <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                    {t("phoneLabel")}
+                    {t("phoneLabel")} *
                   </label>
                   <input
                     type="tel"
+                    name="phone"
+                    value={form.phone}
+                    onChange={handleChange}
                     required
                     placeholder="+966 50 123 4567"
                     className="w-full px-4 py-3 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground"
@@ -92,42 +161,111 @@ export function ContactFormSection() {
                 </div>
               </div>
 
+              {/* Company Name */}
               <div className="space-y-1.5">
                 <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                  {t("subjectLabel")}
+                  {t("companyLabel")}
                 </label>
                 <input
                   type="text"
-                  required
-                  placeholder="Manpower Requirement / Inquiry"
+                  name="company"
+                  value={form.company}
+                  onChange={handleChange}
+                  placeholder={t("companyPlaceholder")}
                   className="w-full px-4 py-3 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground"
                 />
               </div>
 
+              {/* Service Type + Workforce Size */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="space-y-1.5">
+                  <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                    {t("serviceTypeLabel")} *
+                  </label>
+                  <select
+                    name="serviceType"
+                    required
+                    value={form.serviceType}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground cursor-pointer"
+                  >
+                    <option value="" disabled>
+                      {t("serviceTypeSelect")}
+                    </option>
+                    <option value="construction">
+                      {t("serviceOptions.construction")}
+                    </option>
+                    <option value="mep">{t("serviceOptions.mep")}</option>
+                    <option value="hospitality">
+                      {t("serviceOptions.hospitality")}
+                    </option>
+                    <option value="facility">
+                      {t("serviceOptions.facility")}
+                    </option>
+                    <option value="logistics">
+                      {t("serviceOptions.logistics")}
+                    </option>
+                  </select>
+                </div>
+
+                <div className="space-y-1.5">
+                  <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                    {t("workforceSizeLabel")} *
+                  </label>
+                  <select
+                    name="workforceSize"
+                    required
+                    value={form.workforceSize}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground cursor-pointer"
+                  >
+                    <option value="" disabled>
+                      {t("workforceSizeSelect")}
+                    </option>
+                    <option value="small">{t("sizeOptions.small")}</option>
+                    <option value="medium">{t("sizeOptions.medium")}</option>
+                    <option value="large">{t("sizeOptions.large")}</option>
+                    <option value="enterprise">
+                      {t("sizeOptions.enterprise")}
+                    </option>
+                  </select>
+                </div>
+              </div>
+
+              {/* Message */}
               <div className="space-y-1.5">
                 <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
                   {t("messageLabel")}
                 </label>
                 <textarea
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
                   rows={4}
-                  required
-                  placeholder="Detail your manpower requirements..."
+                  placeholder={t("messagePlaceholder")}
                   className="w-full px-4 py-3 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground resize-none"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full py-4 rounded-xl bg-primary text-primary-foreground font-bold text-sm shadow-lg hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
+                disabled={loading}
+                className="w-full py-4 rounded-xl bg-primary text-primary-foreground font-bold text-sm shadow-lg hover:bg-primary/90 disabled:opacity-60 transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
-                <Send className="h-4 w-4" />
-                <span>{t("submitBtn")}</span>
+                {loading ? (
+                  <span className="animate-spin h-4 w-4 border-2 border-primary-foreground border-t-transparent rounded-full" />
+                ) : (
+                  <>
+                    <Send className="h-4 w-4" />
+                    <span>{t("submitBtn")}</span>
+                  </>
+                )}
               </button>
             </form>
           )}
         </div>
 
-        {/* Right Column: Office Address Cards & Map */}
+        {/* Right Column: Office Address Cards */}
         <div className="w-full md:flex-1 space-y-6">
           {/* Saudi/Primary Overseas Office Card */}
           <div className="gsap-fade-up p-8 rounded-3xl border border-border bg-card shadow-md space-y-4">
@@ -178,7 +316,6 @@ export function ContactFormSection() {
                 <Phone className="h-4 w-4 text-accent shrink-0" />
                 <span>{bdOffice.phone}</span>
               </p>
-              
               <p className="flex items-center gap-2.5">
                 <Phone className="h-4 w-4 text-primary shrink-0" />
                 <span>{primaryOffice.Whatsapp}</span>
@@ -189,15 +326,6 @@ export function ContactFormSection() {
               </p>
             </div>
           </div>
-
-          {/* Google Maps Embed Mock */}
-          {/* <div className="gsap-fade-up rounded-3xl overflow-hidden border border-border bg-muted/40 h-52 relative flex items-center justify-center p-4 text-center">
-            <div className="space-y-2">
-              <MapPin className="h-8 w-8 text-primary mx-auto animate-bounce" />
-              <p className="text-sm font-bold text-foreground">Interactive Google Maps Location</p>
-              <p className="text-xs text-muted-foreground">Riyadh, KSA & Banani, Dhaka</p>
-            </div>
-          </div> */}
         </div>
       </div>
     </div>

@@ -3,11 +3,82 @@
 import * as React from 'react';
 import { useTranslations } from 'next-intl';
 import { Upload, FileText, CheckCircle2, Send, User } from 'lucide-react';
+import { sendCvEmail, fileToBase64 } from '@/lib/emailjs';
 
 export function SubmitCvSection() {
   const t = useTranslations('SubmitCvPage');
   const tCommon = useTranslations('CommonUI');
   const [cvSubmitted, setCvSubmitted] = React.useState(false);
+  const [loading, setLoading] = React.useState(false);
+
+  const [form, setForm] = React.useState({
+    fullName: '',
+    phone: '',
+    passport: '',
+    trade: '',
+    expYears: '1-3',
+  });
+
+  const [cvFileName, setCvFileName] = React.useState<string>('');
+  const [cvBase64, setCvBase64] = React.useState<string>('');
+  const [passportFileName, setPassportFileName] = React.useState<string>('');
+  const [passportBase64, setPassportBase64] = React.useState<string>('');
+
+  const cvInputRef = React.useRef<HTMLInputElement>(null);
+  const passportInputRef = React.useRef<HTMLInputElement>(null);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    setForm((p) => ({ ...p, [e.target.name]: e.target.value }));
+  };
+
+  const handleCvFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      setCvFileName(file.name);
+      try {
+        const b64 = await fileToBase64(file);
+        setCvBase64(b64);
+      } catch (err) {
+        console.error('File conversion error:', err);
+      }
+    }
+  };
+
+  const handlePassportFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      setPassportFileName(file.name);
+      try {
+        const b64 = await fileToBase64(file);
+        setPassportBase64(b64);
+      } catch (err) {
+        console.error('Passport conversion error:', err);
+      }
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const result = await sendCvEmail({
+      form_type: 'Candidate CV Portal Submission',
+      candidate_name: form.fullName,
+      phone: form.phone,
+      passport_no: form.passport,
+      trade: form.trade,
+      experience_years: form.expYears,
+      cv_file_name: cvFileName || 'Not attached',
+      cv_attachment: cvBase64 || '',
+      passport_file_name: passportFileName || 'Not attached',
+      passport_attachment: passportBase64 || '',
+    });
+
+    setLoading(false);
+    if (result.success) {
+      setCvSubmitted(true);
+    }
+  };
 
   return (
     <section id="submit-cv" className="pt-12 md:pt-16 border-t border-border/60">
@@ -51,7 +122,7 @@ export function SubmitCvSection() {
                 </p>
               </div>
             ) : (
-              <form onSubmit={(e) => { e.preventDefault(); setCvSubmitted(true); }} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
@@ -59,6 +130,9 @@ export function SubmitCvSection() {
                   </label>
                   <input
                     type="text"
+                    name="fullName"
+                    value={form.fullName}
+                    onChange={handleChange}
                     required
                     placeholder="Md. Rahim Uddin"
                     className="w-full px-4 py-3.5 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground"
@@ -72,6 +146,9 @@ export function SubmitCvSection() {
                     </label>
                     <input
                       type="tel"
+                      name="phone"
+                      value={form.phone}
+                      onChange={handleChange}
                       required
                       placeholder="+880 1712 345678"
                       className="w-full px-4 py-3.5 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground"
@@ -84,6 +161,9 @@ export function SubmitCvSection() {
                     </label>
                     <input
                       type="text"
+                      name="passport"
+                      value={form.passport}
+                      onChange={handleChange}
                       required
                       placeholder="A01234567"
                       className="w-full px-4 py-3.5 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground"
@@ -97,6 +177,9 @@ export function SubmitCvSection() {
                       {t('trade')}
                     </label>
                     <select
+                      name="trade"
+                      value={form.trade}
+                      onChange={handleChange}
                       required
                       className="w-full px-4 py-3.5 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground"
                     >
@@ -115,6 +198,9 @@ export function SubmitCvSection() {
                       {t('expYears')}
                     </label>
                     <select
+                      name="expYears"
+                      value={form.expYears}
+                      onChange={handleChange}
                       required
                       className="w-full px-4 py-3.5 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground"
                     >
@@ -125,34 +211,63 @@ export function SubmitCvSection() {
                   </div>
                 </div>
 
+                {/* CV Attachment */}
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
                     {t('uploadCv')}
                   </label>
-                  <div className="p-6 rounded-2xl border-2 border-dashed border-border hover:border-primary/50 bg-muted/20 transition-colors text-center cursor-pointer space-y-2">
-                    <Upload className="h-8 w-8 text-primary mx-auto" />
-                    <p className="text-xs font-semibold text-foreground">{tCommon('uploadResume')}</p>
-                    <input type="file" required accept=".pdf,.doc,.docx" className="hidden" id="cv-upload-component" />
-                  </div>
+                  <label htmlFor="cv-upload-input" className="flex flex-col items-center justify-center gap-2 p-6 rounded-2xl border-2 border-dashed border-border hover:border-primary/50 bg-muted/20 transition-colors text-center cursor-pointer">
+                    <Upload className="h-8 w-8 text-primary" />
+                    <p className="text-xs font-semibold text-foreground">
+                      {cvFileName ? `Attached: ${cvFileName}` : tCommon('uploadResume')}
+                    </p>
+                    <input
+                      id="cv-upload-input"
+                      type="file"
+                      ref={cvInputRef}
+                      onChange={handleCvFileChange}
+                      required
+                      accept=".pdf,.doc,.docx"
+                      className="hidden"
+                    />
+                  </label>
                 </div>
 
+                {/* Passport Attachment */}
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
                     {t('uploadPassport')}
                   </label>
-                  <div className="p-6 rounded-2xl border-2 border-dashed border-border hover:border-primary/50 bg-muted/20 transition-colors text-center cursor-pointer space-y-2">
-                    <FileText className="h-8 w-8 text-accent mx-auto" />
-                    <p className="text-xs font-semibold text-foreground">{tCommon('uploadPassport')}</p>
-                    <input type="file" required accept=".pdf,.jpg,.jpeg,.png" className="hidden" id="passport-upload-component" />
-                  </div>
+                  <label htmlFor="passport-upload-input" className="flex flex-col items-center justify-center gap-2 p-6 rounded-2xl border-2 border-dashed border-border hover:border-primary/50 bg-muted/20 transition-colors text-center cursor-pointer">
+                    <FileText className="h-8 w-8 text-accent" />
+                    <p className="text-xs font-semibold text-foreground">
+                      {passportFileName ? `Attached: ${passportFileName}` : tCommon('uploadPassport')}
+                    </p>
+                    <input
+                      id="passport-upload-input"
+                      type="file"
+                      ref={passportInputRef}
+                      onChange={handlePassportFileChange}
+                      required
+                      accept=".pdf,.jpg,.jpeg,.png"
+                      className="hidden"
+                    />
+                  </label>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-xl bg-primary text-primary-foreground font-bold text-sm shadow-xl hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
+                  disabled={loading}
+                  className="w-full py-4 rounded-xl bg-primary text-primary-foreground font-bold text-sm shadow-xl hover:bg-primary/90 disabled:opacity-60 transition-all flex items-center justify-center gap-2"
                 >
-                  <Send className="h-4 w-4" />
-                  <span>{t('submitApplication')}</span>
+                  {loading ? (
+                    <span className="animate-spin h-4 w-4 border-2 border-primary-foreground border-t-transparent rounded-full" />
+                  ) : (
+                    <>
+                      <Send className="h-4 w-4" />
+                      <span>{t('submitApplication')}</span>
+                    </>
+                  )}
                 </button>
 
               </form>

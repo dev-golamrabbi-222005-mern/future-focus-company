@@ -773,8 +773,27 @@
     "nameLabel": "পূর্ণ নাম",
     "emailLabel": "ইমেইল ঠিকানা",
     "phoneLabel": "ফোন/হোয়াটসঅ্যাপ নম্বর",
-    "subjectLabel": "বিষয় / যোগাযোগের ধরন",
-    "messageLabel": "আপনার বার্তা",
+    "companyLabel": "কোম্পানি / প্রতিষ্ঠানের নাম",
+    "companyPlaceholder": "যেমন: আল-রাশিদ কনস্ট্রাকশন কো.",
+    "serviceTypeLabel": "প্রয়োজনীয় সেবা ক্যাটাগরি",
+    "serviceTypeSelect": "একটি শিল্প খাত বেছে নিন",
+    "serviceOptions": {
+      "construction": "নির্মাণ ও সিভিল ইঞ্জিনিয়ারিং",
+      "mep": "এমইপি (ইলেকট্রিক্যাল ও প্লাম্বিং)",
+      "hospitality": "হসপিটালিটি ও ক্যাটারিং স্টাফ",
+      "facility": "ফ্যাসিলিটি ম্যানেজমেন্ট ও ক্লিনিং",
+      "logistics": "লজিস্টিক্স ও ওয়্যারহাউজ অপারেশন"
+    },
+    "workforceSizeLabel": "আনুমানিক জনশক্তির আকার",
+    "workforceSizeSelect": "কর্মীর সংখ্যা বেছে নিন",
+    "sizeOptions": {
+      "small": "১ - ১৫ কর্মী",
+      "medium": "১৬ - ৫০ কর্মী",
+      "large": "৫১ - ২০০ কর্মী",
+      "enterprise": "২০০+ এন্টারপ্রাইজ মোবিলাইজেশন"
+    },
+    "messageLabel": "প্রকল্পের চাহিদা / বার্তা",
+    "messagePlaceholder": "আপনার জনশক্তির চাহিদা, প্রকল্পের অবস্থান, সময়সীমা ও অন্যান্য তথ্য বর্ণনা করুন...",
     "submitBtn": "বার্তা পাঠান",
     "successMsg": "ধন্যবাদ! আপনার বার্তা সফলভাবে পাঠানো হয়েছে। আমাদের প্রতিনিধি ২৪ ঘণ্টার মধ্যে যোগাযোগ করবেন।",
     "saudiTitle": "রিয়াদ অফিস (সৌদি আরব)",
@@ -1142,6 +1161,8 @@
       "emailPlaceholder": "যেমন: a.wright@company.ae",
       "phoneLabel": "ফোন নম্বর",
       "phonePlaceholder": "যেমন: +971 50 123 4567",
+      "companyLabel": "কোম্পানি / প্রতিষ্ঠানের নাম",
+      "companyPlaceholder": "যেমন: আল-রাশিদ কনস্ট্রাকশন কো.",
       "serviceTypeLabel": "প্রয়োজনীয় সেবা ক্যাটাগরি",
       "serviceTypeSelect": "একটি শিল্প খাত বেছে নিন",
       "serviceOptions": {
