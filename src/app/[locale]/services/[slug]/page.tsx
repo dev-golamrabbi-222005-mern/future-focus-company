@@ -4,7 +4,7 @@ import { SectorDetailHero } from '@/components/features/services/SectorDetailHer
 import { JobRolesGrid } from '@/components/features/services/JobRolesGrid';
 import { ServiceSidebar } from '@/components/features/services/ServiceSidebar';
 
-const validSlugs = ['construction', 'hospitality', 'it', 'healthcare', 'driving'];
+const validSlugs = ['facility-management', 'construction', 'hospitality', 'it', 'healthcare', 'driving'];
 
 interface ServiceDetailsPageProps {
   params: Promise<{ locale: string; slug: string }>;

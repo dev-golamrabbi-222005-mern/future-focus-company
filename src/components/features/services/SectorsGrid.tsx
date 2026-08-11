@@ -169,7 +169,7 @@ export function SectorsGrid() {
                   <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
 
                   <span>
-                    {t(`sectors.${sector.slug}.services.${serviceKey}`)}
+                    {t(`sectors.${sector.slug}.services.${serviceKey}.title`)}
                   </span>
                 </div>
               ))}
