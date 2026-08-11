@@ -13,9 +13,15 @@ interface ServiceSidebarProps {
 export function ServiceSidebar({ slug }: ServiceSidebarProps) {
   const t = useTranslations('ServicesPage.details.sidebar');
   const tBento = useTranslations('ServicesPage.bento.sectors');
+  const tSectors = useTranslations('SectorsGrid');
   const tCommon = useTranslations('CommonUI');
 
-  const sectorTitle = tBento(`${slug}.title`);
+  // SectorsGrid namespace covers facility-management & construction;
+  // ServicesPage.bento covers hospitality, it, healthcare, driving
+  const SECTORS_GRID_SLUGS = ['facility-management', 'construction'];
+  const sectorTitle = SECTORS_GRID_SLUGS.includes(slug)
+    ? tSectors(`sectors.${slug}.title`)
+    : tBento(`${slug}.title`);
 
   const [formState, setFormState] = React.useState({
     fullName: '',

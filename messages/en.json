@@ -183,20 +183,27 @@
   "WhyChooseUs": {
     "tagline": "Why Choose Us",
     "heading": "Why Saudi Employers Choose Future Focus Company",
-    "subheading": "Combining a global recruitment network, rigorous compliance, and end-to-end workforce solutions to deliver qualified talent for every industry across Saudi Arabia.",
-    "guaranteedStandard": "Guaranteed Standard",
-    "card1Title": "Global Talent Network",
-    "card1Desc": "Access to skilled, semi-skilled, and general workforce sourced from more than 10 countries across Asia through our trusted international recruitment network.",
-    "bottom1Text": "GLOBAL RECRUITMENT",
-    "card2Title": "Quality Screening & Trade Testing",
-    "card2Desc": "Every candidate undergoes comprehensive screening, skill assessment, and practical trade testing to ensure they meet employer requirements.",
-    "bottom2Text": "QUALITY ASSURED",
-    "card3Title": "End-to-End Workforce Solutions",
-    "card3Desc": "From recruitment and documentation to mobilization, deployment, and on-site coordination, we manage the complete workforce lifecycle.",
-    "bottom3Text": "COMPLETE HR SUPPORT",
-    "card4Title": "Compliance & Reliable Delivery",
-    "card4Desc": "Operating with strict regulatory compliance and transparent processes to ensure timely deployment and dependable workforce solutions.",
-    "bottom4Text": "TRUSTED PARTNERSHIP"
+    "subheading": "Ten proven commitments that set us apart — from reliability and compliance to innovation and lasting partnerships.",
+    "item1Title": "Reliability & Trustworthiness",
+    "item1Desc": "Consistently providing qualified and dependable workforce solutions that meet clients' needs on time, every time.",
+    "item2Title": "Quality of Workforce",
+    "item2Desc": "Ensuring that the supplied manpower is skilled, trained, and suited to the specific requirements of the facilities management industry.",
+    "item3Title": "Wide Network & Coverage",
+    "item3Desc": "Capable of supplying manpower across all regions of Saudi Arabia, ensuring timely and efficient service.",
+    "item4Title": "Compliance & Safety",
+    "item4Desc": "Adhering to Saudi Arabia's labor laws and safety standards, ensuring legal compliance and worker safety at every step.",
+    "item5Title": "Cost-Effectiveness",
+    "item5Desc": "Offering competitive pricing without compromising on quality, providing real value for money for every client.",
+    "item6Title": "Customer-Centric Approach",
+    "item6Desc": "Focused on understanding client needs and providing customized solutions with excellent customer support.",
+    "item7Title": "Fast Turnaround Time",
+    "item7Desc": "Ability to quickly mobilize and supply manpower to meet urgent project demands across Saudi Arabia.",
+    "item8Title": "Strong Industry Partnerships",
+    "item8Desc": "Established relationships with leading FM companies, ensuring credibility and proven performance across sectors.",
+    "item9Title": "Innovation & Continuous Improvement",
+    "item9Desc": "Utilizing the latest recruitment and management techniques to improve service delivery and workforce quality.",
+    "item10Title": "Reputation & Track Record",
+    "item10Desc": "Building a reputation based on successful placements and long-term client relationships throughout the Kingdom."
   },
   "GlobalReachMap": {
     "tagline": "OUR MARKET",
@@ -220,7 +227,8 @@
     "heading": "Specialized Talent Across Core Sectors",
     "description": "We supply trained, screened, and motivated workforces tailored to the rigorous demands of Middle Eastern markets.",
     "targetSector": "Target Sector",
-    "viewDetails": "View Details ->",
+    "viewDetails": "View Details",
+    "subServices": "Key Workforce",
     "home": "Home",
     "services": "Services",
     "availableRolesTitle": "Available Trade Categories & Roles",
@@ -228,10 +236,99 @@
     "tradeTested": "100% Trade Tested",
     "requestRole": "Hire Category",
     "sectors": {
+      "facility-management": {
+        "title": "Facility Management",
+        "deployed": "Facility Services",
+        "description": "Reliable workforce solutions for hard and soft facility management services across Saudi Arabia.",
+        "services": {
+          "electricians": {
+            "title": "Electricians",
+            "badge": "Electrical Works",
+            "desc": "Qualified electricians for maintenance, installation, and repair of electrical systems in commercial and residential facilities."
+          },
+          "plumbers": {
+            "title": "Plumbers",
+            "badge": "Plumbing & Sanitation",
+            "desc": "Skilled plumbers for installation and maintenance of water supply, drainage, and sanitation systems across facilities."
+          },
+          "hvac": {
+            "title": "HVAC Technicians",
+            "badge": "Cooling & Ventilation",
+            "desc": "Experienced HVAC technicians for servicing, installation, and preventive maintenance of air conditioning and ventilation systems."
+          },
+          "housekeepers": {
+            "title": "Housekeepers",
+            "badge": "Soft FM",
+            "desc": "Trained housekeeping staff for daily cleaning, sanitization, and upkeep of offices, hotels, hospitals, and residential complexes."
+          },
+          "gardeners": {
+            "title": "Gardeners & Landscapers",
+            "badge": "Landscaping",
+            "desc": "Skilled gardeners and landscaping workers for maintaining green spaces, parks, and outdoor areas of commercial properties."
+          },
+          "security": {
+            "title": "Security Staff",
+            "badge": "Security & Safety",
+            "desc": "Trained security guards and supervisors for access control, CCTV monitoring, and ensuring safety of premises and personnel."
+          },
+          "drivers": {
+            "title": "Drivers",
+            "badge": "Transportation",
+            "desc": "Licensed drivers for facility vehicles, staff transportation, and logistics support across corporate and industrial sites."
+          },
+          "catering": {
+            "title": "Catering Staff",
+            "badge": "Food & Beverage",
+            "desc": "Professional catering and cafeteria staff for preparing, serving, and managing food operations in corporate and institutional facilities."
+          }
+        }
+      },
       "construction": {
         "title": "Construction & Engineering",
         "deployed": "5,000+ DEPLOYED",
         "description": "Certified structural welders, high-rise masons, MEP electricians, scaffolders, and heavy equipment operators for Saudi megaprojects.",
+        "services": {
+          "civilEngineers": {
+            "title": "Civil Engineers",
+            "badge": "Engineering",
+            "desc": "Qualified civil engineers for planning, design supervision, and execution of structural and infrastructure construction projects."
+          },
+          "siteEngineers": {
+            "title": "Site Engineers",
+            "badge": "Site Management",
+            "desc": "Experienced site engineers for day-to-day on-site supervision, quality control, and coordination of construction activities."
+          },
+          "supervisors": {
+            "title": "Construction Supervisors",
+            "badge": "Supervision",
+            "desc": "Skilled construction supervisors overseeing workforce productivity, safety compliance, and progress reporting on active sites."
+          },
+          "masons": {
+            "title": "Masons",
+            "badge": "Trade Tested",
+            "desc": "Expert block masons, brick layers, and stone fixers with hands-on experience in high-rise and large-scale construction projects."
+          },
+          "steelFixers": {
+            "title": "Steel Fixers",
+            "badge": "Structural Steel",
+            "desc": "Certified rebar fixers and steel fabricators for reinforced concrete structures, foundations, and industrial frameworks."
+          },
+          "welders": {
+            "title": "Welders",
+            "badge": "6G Certified",
+            "desc": "Professional SMAW, MIG, and TIG welders for steel structures, pipelines, and heavy fabrication work on megaprojects."
+          },
+          "scaffolders": {
+            "title": "Scaffolders",
+            "badge": "TUV Safety Certified",
+            "desc": "Safety-certified scaffolding erectors for multi-story buildings, industrial plants, and complex construction environments."
+          },
+          "equipmentOperators": {
+            "title": "Equipment Operators",
+            "badge": "Heavy Equipment",
+            "desc": "Licensed operators for cranes, excavators, forklifts, and other heavy machinery used in large-scale construction projects."
+          }
+        },
         "roles": {
           "role1": {
             "title": "Certified Structural Welders & Fabricators",

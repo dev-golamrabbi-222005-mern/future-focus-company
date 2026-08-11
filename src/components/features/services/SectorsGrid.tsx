@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { HardHat, Utensils, Laptop, HeartPulse, Truck, ArrowRight, Layers } from 'lucide-react';
+import { HardHat, Utensils, Laptop, HeartPulse, Truck, ArrowRight, Layers, Building2 } from 'lucide-react';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
@@ -20,37 +20,49 @@ export function SectorsGrid() {
   const containerRef = React.useRef<HTMLDivElement>(null);
 
   const sectors = [
-    {
-      slug: 'construction',
-      icon: HardHat,
-      color: 'bg-amber-500/10 text-amber-400 border-amber-500/20',
-      badgeColor: 'bg-amber-500/10 text-amber-400 border-amber-500/20',
-    },
-    {
-      slug: 'hospitality',
-      icon: Utensils,
-      color: 'bg-sky-500/10 text-sky-400 border-sky-500/20',
-      badgeColor: 'bg-sky-500/10 text-sky-400 border-sky-500/20',
-    },
-    {
-      slug: 'it',
-      icon: Laptop,
-      color: 'bg-purple-500/10 text-purple-400 border-purple-500/20',
-      badgeColor: 'bg-purple-500/10 text-purple-400 border-purple-500/20',
-    },
-    {
-      slug: 'healthcare',
-      icon: HeartPulse,
-      color: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
-      badgeColor: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
-    },
-    {
-      slug: 'driving',
-      icon: Truck,
-      color: 'bg-rose-500/10 text-rose-400 border-rose-500/20',
-      badgeColor: 'bg-rose-500/10 text-rose-400 border-rose-500/20',
-    },
-  ];
+  {
+    slug: "facility-management",
+    icon: Building2,
+    image: "/images/services/Facility-Mangement.png",
+    color:
+      "bg-cyan-500/10 text-cyan-500 border-cyan-500/20",
+    badgeColor:
+      "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
+
+    subServices: [
+      "electricians",
+      "plumbers",
+      "hvac",
+      "housekeepers",
+      "gardeners",
+      "security",
+      "drivers",
+      "catering",
+    ],
+  },
+
+  {
+    slug: "construction",
+    icon: HardHat,
+    image: "/images/services/Cunstaction.png",
+    color:
+      "bg-amber-500/10 text-amber-500 border-amber-500/20",
+    badgeColor:
+      "bg-amber-500/10 text-amber-400 border-amber-500/20",
+
+    subServices: [
+      "civilEngineers",
+      "siteEngineers",
+      "supervisors",
+      "masons",
+      "steelFixers",
+      "welders",
+      "scaffolders",
+      "equipmentOperators",
+    ],
+  },
+];
+
 
   useGSAP(
     () => {
@@ -96,60 +108,93 @@ export function SectorsGrid() {
           </p> */}
         </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {sectors.map((sector) => {
-          const Icon = sector.icon;
-          const title = t(`sectors.${sector.slug}.title`);
-          const desc = t(`sectors.${sector.slug}.description`);
-          const deployed = t(`sectors.${sector.slug}.deployed`);
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+  {sectors.map((sector) => {
+    const Icon = sector.icon;
 
-          return (
-            <div
-              key={sector.slug}
-              className="sector-card bg-card border border-border rounded-2xl p-6 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 group shadow-sm hover:shadow-xl relative overflow-hidden"
-            >
-              {/* Top Row: Flex between Icon + Badge */}
-              <div className="flex items-center justify-between">
+    const title = t(`sectors.${sector.slug}.title`);
+    const desc = t(`sectors.${sector.slug}.description`);
+    const deployed = t(`sectors.${sector.slug}.deployed`);
+
+    return (
+      <div
+        key={sector.slug}
+        className="sector-card bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300 group shadow-sm hover:shadow-xl"
+      >
+        {/* Image */}
+        <div className="relative h-52 overflow-hidden">
+          <img
+            src={sector.image}
+            alt={title}
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            loading="lazy"
+          />
+
+          {/* Image Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+
+          {/* Badge */}
+          <span
+            className={`absolute top-4 right-4 text-[10px] font-extrabold tracking-wider px-3 py-1.5 rounded-full border uppercase backdrop-blur-md ${sector.badgeColor}`}
+          >
+            {deployed}
+          </span>
+        </div>
+
+        {/* Content */}
+        <div className="p-6">
+          {/* Title + Description */}
+          <div>
+            <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+              {title}
+            </h3>
+
+            <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
+              {desc}
+            </p>
+          </div>
+
+          {/* Sub Services */}
+          <div className="mt-5">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-3">
+              {t("subServices")}
+            </h4>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2">
+              {sector.subServices.map((serviceKey: string) => (
                 <div
-                  className={`w-12 h-12 rounded-xl border flex items-center justify-center ${sector.color} group-hover:scale-110 transition-transform duration-300`}
+                  key={serviceKey}
+                  className="flex items-start gap-2 text-sm text-foreground/80"
                 >
-                  <Icon className="w-6 h-6" />
+                  <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+
+                  <span>
+                    {t(`sectors.${sector.slug}.services.${serviceKey}.title`)}
+                  </span>
                 </div>
-                <span
-                  className={`text-[11px] font-extrabold tracking-wider px-3 py-1 rounded-full border uppercase ${sector.badgeColor}`}
-                >
-                  {deployed}
-                </span>
-              </div>
-
-              {/* Middle: Title + Short Description */}
-              <div className="my-4">
-                <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
-                  {title}
-                </h3>
-                <p className="text-sm text-muted-foreground mt-2 line-clamp-2 leading-relaxed">
-                  {desc}
-                </p>
-              </div>
-
-              {/* Bottom Row: Separated by top border */}
-              <div className="pt-4 mt-2 border-t border-border/60 flex items-center justify-between text-xs">
-                <span className="text-muted-foreground font-medium">
-                  {t('targetSector')}
-                </span>
-
-                <Link
-                  href={`/${locale}/services/${sector.slug}`}
-                  className="inline-flex items-center space-x-1 rtl:space-x-reverse text-primary font-bold hover:underline group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform"
-                >
-                  <span>{t('viewDetails')}</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
+              ))}
             </div>
-          );
-        })}
+          </div>
+
+          {/* Bottom */}
+          <div className="pt-4 mt-5 border-t border-border/60 flex items-center justify-between text-xs">
+            <span className="text-muted-foreground font-medium">
+              {t("targetSector")}
+            </span>
+
+            <Link
+              href={`/${locale}/services/${sector.slug}`}
+              className="inline-flex items-center gap-1 text-primary font-bold hover:underline group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform"
+            >
+              <span>{t("viewDetails")}</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
       </div>
+    );
+  })}
+</div>
     </section>
   );
 }
