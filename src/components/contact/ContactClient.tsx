@@ -46,9 +46,9 @@ export function ContactClient() {
     <div>
       <div
         ref={containerRef}
-        className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8 pt-6 md:pt-8 lg:pt-10 pb-8 md:pb-10 lg:pb-12 space-y-12 md:space-y-16 lg:space-y-20"
+        className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8 pt-8 md:pt-10 lg:pt-12 pb-12 md:pb-16 lg:pb-20"
       >
-        <div className="text-center space-y-4 gsap-fade-up">
+        <div className="text-center space-y-4 gsap-fade-up mb-14">
           <div className="mb-6 flex justify-center">
             <span className="text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
               {t("tagline")}

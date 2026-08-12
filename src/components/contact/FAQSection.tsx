@@ -23,7 +23,7 @@ export default function FAQSection() {
   ];
 
   return (
-    <section className="relative pt-12 md:pt-16 lg:pt-20 pb-6 md:pb-8 lg:pb-10 bg-background overflow-hidden">
+    <section className="relative py-12 md:py-16 lg:py-20 bg-background overflow-hidden">
       {/* Background Accent Blur */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-primary/10 rounded-full blur-[140px] pointer-events-none -z-10" />
 
