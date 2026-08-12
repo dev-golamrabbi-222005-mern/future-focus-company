@@ -2,19 +2,12 @@
 
 import * as React from 'react';
 import { useTranslations } from 'next-intl';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Globe, MapPin, Quote, Building, Star, Landmark, Gem, Crown } from 'lucide-react';
-
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger);
-}
+import { motion } from 'framer-motion';
+import { Globe, Quote, Building, Star, Landmark, Gem, Crown } from 'lucide-react';
 
 export function GlobalReachMap() {
   const t = useTranslations('GlobalReachMap');
   const tCommon = useTranslations('CommonUI');
-  const containerRef = React.useRef<HTMLDivElement>(null);
 
   const hubs = [
     {
@@ -51,37 +44,18 @@ export function GlobalReachMap() {
     },
   ];
 
-  useGSAP(
-    () => {
-      if (!containerRef.current) return;
-
-      const animatedElements = containerRef.current.querySelectorAll('.gsap-fade-up');
-
-      gsap.fromTo(
-        animatedElements,
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          stagger: 0.15,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: 'top 75%',
-          },
-        }
-      );
-    },
-    { scope: containerRef }
-  );
-
   return (
-    <section ref={containerRef} className="py-12 md:py-16 lg:py-20 relative overflow-hidden">
+    <section className="py-12 md:py-16 lg:py-20 relative overflow-hidden">
       <div className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16 gsap-fade-up">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-3xl mx-auto mb-14 md:mb-16"
+        >
           <div className="mb-6 flex justify-center">
             <span className="text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20 inline-flex items-center gap-2">
               <Globe className="w-3.5 h-3.5 shrink-0 text-primary" />
@@ -94,9 +68,9 @@ export function GlobalReachMap() {
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
             {t('subheading')}
           </p>
-        </div>
+        </motion.div>
 
-        {/* 2-Column Grid: Deployment Hubs & Client Testimonial */}
+        {/* 2-Column Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           
           {/* Left Column: GCC Deployment Network */}
@@ -104,9 +78,14 @@ export function GlobalReachMap() {
             {hubs.map((hub, idx) => {
               const Icon = hub.icon;
               return (
-                <div
+                <motion.div
                   key={idx}
-                  className="gsap-fade-up p-6 rounded-2xl border border-border bg-card shadow-sm hover:shadow-lg hover:border-primary/50 transition-all flex items-center justify-between gap-4 group"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  whileHover={{ y: -4 }}
+                  transition={{ duration: 0.4, delay: idx * 0.08 }}
+                  className="p-6 rounded-2xl border border-border bg-card shadow-sm hover:shadow-lg hover:border-primary/50 transition-all flex items-center justify-between gap-4 group cursor-pointer"
                 >
                   <div className="flex items-center gap-3.5">
                     <span className="text-3xl">{hub.flag}</span>
@@ -126,13 +105,19 @@ export function GlobalReachMap() {
                   <div className="px-4 py-2 rounded-xl bg-primary/10 text-primary font-extrabold text-xs shrink-0">
                     {hub.count}
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>
 
           {/* Right Column: Featured Enterprise Testimonial Card */}
-          <div className="gsap-fade-up p-8 sm:p-10 rounded-3xl border border-primary/30 bg-gradient-to-br from-card via-card to-primary/10 shadow-xl space-y-6 relative overflow-hidden">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="p-8 sm:p-10 rounded-3xl border border-primary/30 bg-gradient-to-br from-card via-card to-primary/10 shadow-xl space-y-6 relative overflow-hidden"
+          >
             <Quote className="h-12 w-12 text-primary/20 absolute top-6 right-6 rtl:left-6 rtl:right-auto" />
 
             <div className="flex items-center gap-3">
@@ -153,7 +138,7 @@ export function GlobalReachMap() {
               <p className="text-base font-extrabold text-foreground">{t('author')}</p>
               <p className="text-xs text-primary font-semibold">{t('role')}</p>
             </div>
-          </div>
+          </motion.div>
 
         </div>
 

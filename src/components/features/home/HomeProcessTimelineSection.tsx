@@ -70,7 +70,13 @@ export function ProcessTimeline() {
     <section ref={containerRef} className="pt-12 md:pt-16 lg:pt-20 pb-8 md:pb-10 lg:pb-12 relative overflow-hidden">
       <div className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-3xl mx-auto mb-16 md:mb-20"
+        >
           <div className="mb-6 flex justify-center">
             <span className="text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20 inline-flex items-center gap-2">
               <Workflow className="w-3.5 h-3.5 shrink-0 text-primary" />
@@ -83,7 +89,7 @@ export function ProcessTimeline() {
           <p className="text-base sm:text-lg text-muted-foreground">
             {t('description')}
           </p>
-        </div>
+        </motion.div>
 
         {/* Timeline Layout */}
         <div className="relative max-w-4xl mx-auto">
@@ -103,15 +109,12 @@ export function ProcessTimeline() {
               return (
                 <motion.div
                   key={idx}
-                  initial={{ opacity: 0, scale: 0.65, y: 70 }}
+                  initial={{ opacity: 0, scale: 0.85, y: 40 }}
                   whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.2, margin: '0px 0px -80px 0px' }}
+                  viewport={{ once: true, margin: "-100px" }}
                   transition={{
-                    duration: 0.6,
-                    type: 'spring',
-                    stiffness: 110,
-                    damping: 14,
-                    delay: idx * 0.05,
+                    duration: 0.5,
+                    delay: idx * 0.1,
                   }}
                   className={`timeline-step relative flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12 ${
                     isEven ? 'md:flex-row-reverse' : ''

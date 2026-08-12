@@ -33,19 +33,6 @@ export default function ProcessSection() {
     () => {
       if (!sectionRef.current) return;
 
-      gsap.from(".process-card", {
-        opacity: 0,
-        y: 80,
-        stagger: 0.15,
-        duration: 0.9,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 75%",
-          once: true,
-        },
-      });
-
       const section = sectionRef.current;
       const glow = glowRef.current;
 

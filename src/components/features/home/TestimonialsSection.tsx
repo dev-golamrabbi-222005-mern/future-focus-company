@@ -2,13 +2,10 @@
 
 import * as React from 'react';
 import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import { Star, Quote, MessageSquareQuote, CheckCircle2, Building2 } from 'lucide-react';
-
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin();
-}
+import { Star, Quote, MessageSquareQuote, CheckCircle2 } from 'lucide-react';
 
 export function Testimonials() {
   const t = useTranslations('Testimonials');
@@ -59,7 +56,14 @@ export function Testimonials() {
       {/* Ambient background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-primary/10 rounded-full blur-[150px] pointer-events-none -z-10" />
 
-      <div className="w-full max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 mb-12 md:mb-16 text-center">
+      {/* Header */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="w-full max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 mb-12 md:mb-16 text-center"
+      >
         <div className="mb-4 inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary">
           <MessageSquareQuote className="w-3.5 h-3.5 shrink-0 text-primary" />
           <span>{t('tagline')}</span>
@@ -72,10 +76,14 @@ export function Testimonials() {
         <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
           {t('subheading')}
         </p>
-      </div>
+      </motion.div>
 
       {/* Infinite Marquee Wrapper */}
-      <div
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6, delay: 0.2 }}
         className="relative w-full overflow-hidden py-4 cursor-grab active:cursor-grabbing"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -175,7 +183,7 @@ export function Testimonials() {
             );
           })}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

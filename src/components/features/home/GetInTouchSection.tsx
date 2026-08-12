@@ -2,9 +2,7 @@
 
 import * as React from 'react';
 import { useTranslations } from 'next-intl';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { motion } from 'framer-motion';
 import {
   MapPin,
   Phone,
@@ -17,15 +15,8 @@ import {
 
 import { sendContactEmail } from '@/lib/emailjs';
 
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger);
-}
-
 export function GetInTouch() {
   const t = useTranslations('GetInTouch');
-  const containerRef = React.useRef<HTMLDivElement>(null);
-  const leftColRef = React.useRef<HTMLDivElement>(null);
-  const rightColRef = React.useRef<HTMLDivElement>(null);
 
   const [formState, setFormState] = React.useState({
     fullName: '',
@@ -81,47 +72,6 @@ export function GetInTouch() {
     setIsSubmitted(false);
   };
 
-  useGSAP(
-    () => {
-      if (!containerRef.current) return;
-
-      if (leftColRef.current) {
-        gsap.fromTo(
-          leftColRef.current,
-          { opacity: 0, x: -50 },
-          {
-            opacity: 1,
-            x: 0,
-            duration: 0.9,
-            ease: 'power3.out',
-            scrollTrigger: {
-              trigger: containerRef.current,
-              start: 'top 75%',
-            },
-          }
-        );
-      }
-
-      if (rightColRef.current) {
-        gsap.fromTo(
-          rightColRef.current,
-          { opacity: 0, x: 50 },
-          {
-            opacity: 1,
-            x: 0,
-            duration: 0.9,
-            ease: 'power3.out',
-            scrollTrigger: {
-              trigger: containerRef.current,
-              start: 'top 75%',
-            },
-          }
-        );
-      }
-    },
-    { scope: containerRef }
-  );
-
   const contactCards = [
     {
       icon: MapPin,
@@ -152,7 +102,6 @@ export function GetInTouch() {
   return (
     <section
       id="get-in-touch"
-      ref={containerRef}
       className="pt-12 md:pt-16 lg:pt-20 pb-8 md:pb-10 lg:pb-12 bg-muted/20 border-t border-border/60 relative overflow-hidden"
     >
       {/* Background Decorative Blur */}
@@ -163,7 +112,13 @@ export function GetInTouch() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
 
           {/* Left Column */}
-          <div ref={leftColRef} className="lg:col-span-5 space-y-8">
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="lg:col-span-5 space-y-8"
+          >
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary">
                 <Send className="w-3.5 h-3.5 shrink-0 text-primary" />
@@ -199,8 +154,12 @@ export function GetInTouch() {
               {contactCards.map((card, idx) => {
                 const Icon = card.icon;
                 return (
-                  <div
+                  <motion.div
                     key={idx}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.4, delay: idx * 0.08 }}
                     className="p-5 rounded-2xl bg-card border border-border/80 shadow-sm hover:shadow-md transition-all flex items-start space-x-4 rtl:space-x-reverse group"
                   >
                     <div
@@ -216,14 +175,20 @@ export function GetInTouch() {
                         {card.value}
                       </p>
                     </div>
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Column: Floating Form Card */}
-          <div ref={rightColRef} className="lg:col-span-7">
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="lg:col-span-7"
+          >
             <div className="bg-card border border-border rounded-3xl p-5 sm:p-7 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
               {/* Header Decorative Accent */}
               <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-primary via-accent to-primary" />
@@ -419,7 +384,7 @@ export function GetInTouch() {
                 </form>
               )}
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>

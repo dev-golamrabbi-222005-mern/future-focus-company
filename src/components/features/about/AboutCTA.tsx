@@ -5,38 +5,14 @@ import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { siteConfig } from "@/config/site";
-
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
-}
 
 export default function CallToAction() {
   const t = useTranslations("CallToAction");
   const locale = useLocale();
-  const sectionRef = React.useRef<HTMLDivElement>(null);
-
-  useGSAP(
-    () => {
-      if (!sectionRef.current) return;
-      gsap.fromTo(
-        sectionRef.current.querySelectorAll(".cta-reveal"),
-        { y: 55, opacity: 0 },
-        {
-          y: 0, opacity: 1, duration: 0.95, stagger: 0.13, ease: "power3.out",
-          scrollTrigger: { trigger: sectionRef.current, start: "top 80%" },
-        }
-      );
-    },
-    { scope: sectionRef }
-  );
 
   return (
     <section
-      ref={sectionRef}
       className="relative overflow-hidden pt-12 md:pt-16 lg:pt-20 pb-6 md:pb-8 lg:pb-10"
     >
       {/* Background glows */}
@@ -51,9 +27,9 @@ export default function CallToAction() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.7 }}
-          className="cta-reveal mb-6 inline-flex items-center gap-3 rounded-full border border-primary/20 bg-primary/10 px-5 py-2"
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="mb-6 inline-flex items-center gap-3 rounded-full border border-primary/20 bg-primary/10 px-5 py-2"
         >
           <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
           <span className="text-xs font-bold uppercase tracking-[0.35em] text-primary">
@@ -63,11 +39,11 @@ export default function CallToAction() {
 
         {/* Heading */}
         <motion.h2
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="cta-reveal text-3xl sm:text-4xl font-black leading-tight md:text-5xl lg:text-7xl text-foreground"
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-3xl sm:text-4xl font-black leading-tight md:text-5xl lg:text-7xl text-foreground"
         >
           {t("title1")}
           <span className="mt-2 block bg-gradient-to-r from-primary via-sky-400 to-cyan-400 bg-clip-text text-transparent">
@@ -76,15 +52,33 @@ export default function CallToAction() {
         </motion.h2>
 
         {/* Divider */}
-        <div className="cta-reveal mx-auto mt-7 h-[3px] w-24 rounded-full bg-gradient-to-r from-primary to-cyan-400" />
+        <motion.div
+          initial={{ opacity: 0, scaleX: 0 }}
+          whileInView={{ opacity: 1, scaleX: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="mx-auto mt-7 h-[3px] w-24 rounded-full bg-gradient-to-r from-primary to-cyan-400"
+        />
 
         {/* Description */}
-        <p className="cta-reveal mx-auto mt-7 max-w-3xl text-base md:text-lg leading-8 text-muted-foreground">
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.25 }}
+          className="mx-auto mt-7 max-w-3xl text-base md:text-lg leading-8 text-muted-foreground"
+        >
           {t("description")}
-        </p>
+        </motion.p>
 
         {/* Buttons */}
-        <div className="cta-reveal mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5, delay: 0.35 }}
+          className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row"
+        >
           <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
             <Link
               href={`/${locale}/contact`}
@@ -106,15 +100,15 @@ export default function CallToAction() {
               {t("whatsappButton")}
             </Link>
           </motion.div>
-        </div>
+        </motion.div>
 
         {/* Trust bar */}
         <motion.div
-          initial={{ opacity: 0, y: 35 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.75, delay: 0.35 }}
-          className="cta-reveal mt-16 flex items-center justify-center gap-5"
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.45 }}
+          className="mt-16 flex items-center justify-center gap-5"
         >
           <div className="hidden h-px flex-1 max-w-[160px] bg-gradient-to-r from-transparent via-primary/35 to-primary/15 md:block" />
           <div className="flex flex-wrap items-center justify-center gap-3">

@@ -17,7 +17,6 @@ export default function CompanyTimeline() {
 
   const sectionRef  = React.useRef<HTMLDivElement>(null);
   const lineRef     = React.useRef<HTMLDivElement>(null);
-  const cardsRef    = React.useRef<(HTMLDivElement | null)[]>([]);
 
   const timeline = [
     { year: "2022", badge: t("timeline2022.badge"), title: t("timeline2022.title"), description: t("timeline2022.description"), icon: Building2 },
@@ -45,34 +44,6 @@ export default function CompanyTimeline() {
           },
         });
       }
-
-      // Timeline dots pop in
-      gsap.utils.toArray<HTMLElement>(".timeline-dot").forEach((dot) => {
-        gsap.from(dot, {
-          scale: 0,
-          rotate: 180,
-          duration: 0.6,
-          ease: "back.out(2)",
-          scrollTrigger: { trigger: dot, start: "top 90%" },
-        });
-      });
-
-      // Cards slide in from alternating sides
-      cardsRef.current.forEach((card, index) => {
-        if (!card) return;
-        gsap.from(card, {
-          opacity: 0,
-          x: index % 2 === 0 ? -70 : 70,
-          y: 30,
-          duration: 0.9,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: card,
-            start: "top 88%",
-            toggleActions: "play none none reverse",
-          },
-        });
-      });
     },
     { scope: sectionRef }
   );
@@ -92,10 +63,10 @@ export default function CompanyTimeline() {
 
         {/* Section header */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
           className="mx-auto mb-14 max-w-3xl text-center"
         >
           <div className="mb-5 inline-flex items-center gap-3 rounded-full border border-primary/20 bg-primary/10 px-3 py-1">
@@ -136,7 +107,6 @@ export default function CompanyTimeline() {
               return (
                 <div
                   key={item.year}
-                  ref={(el) => { cardsRef.current[index] = el; }}
                   className="relative"
                 >
 
@@ -146,8 +116,11 @@ export default function CompanyTimeline() {
                     {/* Card */}
                     <div className={!isEven ? "lg:[direction:ltr]" : ""}>
                       <motion.div
+                        initial={{ opacity: 0, x: isEven ? -40 : 40, y: 20 }}
+                        whileInView={{ opacity: 1, x: 0, y: 0 }}
+                        viewport={{ once: true, margin: "-100px" }}
                         whileHover={{ y: -6, scale: 1.015 }}
-                        transition={{ duration: 0.3 }}
+                        transition={{ duration: 0.6, delay: index * 0.05 }}
                         className="group rounded-3xl border border-border bg-card p-8 shadow-md hover:border-primary/40 hover:shadow-2xl transition-all"
                       >
                         {/* Badge */}
@@ -192,10 +165,10 @@ export default function CompanyTimeline() {
                   {/* ── MOBILE stacked layout ── */}
                   <div className="lg:hidden">
                     <motion.div
-                      initial={{ opacity: 0, y: 24 }}
+                      initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.6, delay: index * 0.08 }}
+                      viewport={{ once: true, margin: "-100px" }}
+                      transition={{ duration: 0.5, delay: index * 0.08 }}
                       whileHover={{ y: -4 }}
                       className="group relative rounded-3xl border border-border bg-card p-6 shadow-md hover:border-primary/40 hover:shadow-xl transition-all"
                     >

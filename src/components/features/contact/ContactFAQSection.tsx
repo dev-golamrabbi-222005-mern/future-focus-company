@@ -32,8 +32,8 @@ export default function FAQSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
           className="mb-12 md:mb-16 text-center max-w-3xl mx-auto space-y-4"
         >
           <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-primary">
@@ -62,8 +62,8 @@ export default function FAQSection() {
                 key={item.key}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
                 className={`overflow-hidden rounded-2xl border transition-all duration-300 shadow-sm ${isOpen
                     ? "border-primary/50 bg-card ring-1 ring-primary/20 shadow-md"
                     : "border-border bg-card/70 hover:border-primary/30 hover:bg-card"
@@ -112,7 +112,13 @@ export default function FAQSection() {
         </div>
 
         {/* View All FAQs Outline Button */}
-        <div className="mt-10 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-10 text-center"
+        >
           <Link
             href={`/${locale}/faq`}
             className="inline-flex items-center space-x-2 rtl:space-x-reverse font-bold text-primary border border-primary/30 bg-primary/5 px-6 py-3 rounded-xl hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-sm"
@@ -120,7 +126,7 @@ export default function FAQSection() {
             <span>{t("seeMoreFaqs")}</span>
             <ArrowRight className="w-4 h-4 rtl:rotate-180" />
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

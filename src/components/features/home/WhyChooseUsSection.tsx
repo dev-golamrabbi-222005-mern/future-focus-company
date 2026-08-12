@@ -2,9 +2,7 @@
 
 import * as React from "react";
 import { useTranslations } from "next-intl";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { motion } from "framer-motion";
 import {
   ShieldCheck,
   Star,
@@ -17,10 +15,6 @@ import {
   Lightbulb,
   Trophy,
 } from "lucide-react";
-
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
-}
 
 const items = [
   {
@@ -77,56 +71,9 @@ const items = [
 
 export function WhyChooseUs() {
   const t = useTranslations("WhyChooseUs");
-  const containerRef = React.useRef<HTMLDivElement>(null);
-  const headerRef = React.useRef<HTMLDivElement>(null);
-
-  useGSAP(
-    () => {
-      if (!containerRef.current) return;
-
-      // Animate header
-      gsap.fromTo(
-        headerRef.current,
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.9,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: headerRef.current,
-            start: "top 80%",
-          },
-        },
-      );
-
-      // Animate cards with stagger
-      const cards = containerRef.current.querySelectorAll(".wcu-card");
-      gsap.fromTo(
-        cards,
-        { opacity: 0, y: 48, scale: 0.95 },
-        {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: 0.65,
-          stagger: 0.08,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top 70%",
-          },
-        },
-      );
-    },
-    { scope: containerRef },
-  );
 
   return (
-    <section
-      ref={containerRef}
-      className="relative py-16 md:py-20 lg:py-24 overflow-hidden"
-    >
+    <section className="relative py-16 md:py-20 lg:py-24 overflow-hidden">
       {/* ── Background decorations ── */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         {/* large radial blob */}
@@ -145,7 +92,13 @@ export function WhyChooseUs() {
       <div className="mx-auto w-full max-w-[1380px] px-4 md:px-6 lg:px-8">
 
         {/* ── Section Header ── */}
-        <div ref={headerRef} className="mb-14 text-center md:mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="mb-14 text-center md:mb-16"
+        >
           <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-primary">
             <ShieldCheck className="h-3.5 w-3.5 shrink-0" />
             {t("tagline")}
@@ -156,13 +109,14 @@ export function WhyChooseUs() {
           <p className="mx-auto max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
             {t("subheading")}
           </p>
-        </div>
+        </motion.div>
 
         {/* ── Cards Grid ── */}
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 xl:gap-5">
           {items.map(({ key, icon: Icon, accent }, idx) => (
             <Card
               key={key}
+              index={idx}
               number={idx + 1}
               icon={Icon}
               accent={accent}
@@ -180,6 +134,7 @@ export function WhyChooseUs() {
    Card sub-component
 ───────────────────────────────────────────── */
 interface CardProps {
+  index: number;
   number: number;
   icon: React.ElementType;
   accent: string;
@@ -187,10 +142,15 @@ interface CardProps {
   desc: string;
 }
 
-function Card({ number, icon: Icon, accent, title, desc }: CardProps) {
+function Card({ index, number, icon: Icon, accent, title, desc }: CardProps) {
   return (
-    <div
-      className="wcu-card group relative flex flex-col gap-4 overflow-hidden rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-transparent hover:shadow-xl"
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      whileHover={{ y: -6 }}
+      transition={{ duration: 0.4, delay: (index % 5) * 0.08 }}
+      className="wcu-card group relative flex flex-col gap-4 overflow-hidden rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:border-transparent hover:shadow-xl cursor-pointer"
       style={
         {
           "--accent": accent,
@@ -242,6 +202,6 @@ function Card({ number, icon: Icon, accent, title, desc }: CardProps) {
         className="absolute bottom-0 left-0 h-0.5 w-0 rounded-full transition-all duration-500 group-hover:w-full"
         style={{ backgroundColor: accent }}
       />
-    </div>
+    </motion.div>
   );
 }

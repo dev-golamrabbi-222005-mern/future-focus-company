@@ -5,58 +5,20 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useTranslations, useLocale } from "next-intl";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
   ArrowRight,
-  BriefcaseBusiness,
-  Building2,
-  Users,
-  ShieldCheck,
-  CheckCircle2,
   Download,
 } from "lucide-react";
 import LightRays from "@/components/ui/LightRays";
-
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
-}
 
 export default function AboutCompany() {
   const t = useTranslations("AboutCompany");
   const locale = useLocale();
 
-  const sectionRef = React.useRef<HTMLDivElement>(null);
-  const textRef = React.useRef<HTMLDivElement>(null);
-  const imageRef = React.useRef<HTMLDivElement>(null);
-
-  const stats = [
-    { icon: Building2, value: t("experienceValue"), label: t("experience") },
-    { icon: Users, value: t("workersValue"), label: t("workers") },
-    { icon: BriefcaseBusiness, value: t("clientsValue"), label: t("clients") },
-    { icon: ShieldCheck, value: t("supportValue"), label: t("support") },
-  ];
-
-  useGSAP(
-    () => {
-      if (!sectionRef.current) return;
-      const tl = gsap.timeline({
-        scrollTrigger: { trigger: sectionRef.current, start: "top 75%" },
-      });
-      tl.from(textRef.current, { opacity: 0, x: -70, duration: 1, ease: "power3.out" })
-        .from(imageRef.current, { opacity: 0, x: 70, duration: 1, ease: "power3.out" }, "<0.2");
-    },
-    { scope: sectionRef }
-  );
-
   return (
     <section
-      ref={sectionRef}
       className="relative overflow-hidden pt-6 md:pt-8 lg:pt-10 pb-12 md:pb-16 lg:pb-20"
     >
-
-
       {/* LightRays decorative background */}
       <div className="absolute inset-0 -z-10 pointer-events-none [mask-image:linear-gradient(to_bottom,black_20%,transparent_100%)]">
         <LightRays
@@ -86,14 +48,14 @@ export default function AboutCompany() {
         <div className="grid items-center gap-10 lg:gap-16 lg:grid-cols-2">
 
           {/* ── LEFT: Text content ── */}
-          <div ref={textRef} className="space-y-8">
+          <div className="space-y-8">
 
             {/* Tag */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6 }}
               className="flex items-center gap-3"
             >
               <span className="h-[2px] w-10 rounded-full bg-primary" />
@@ -106,8 +68,8 @@ export default function AboutCompany() {
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6, delay: 0.1 }}
               className="text-3xl md:text-4xl lg:text-5xl font-black leading-[1.08] text-foreground"
             >
               {t("title1")}
@@ -118,10 +80,10 @@ export default function AboutCompany() {
 
             {/* Description */}
             <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.15, duration: 0.7 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               className="max-w-xl text-base md:text-lg leading-8 text-muted-foreground"
             >
               {t("description")}
@@ -129,10 +91,10 @@ export default function AboutCompany() {
 
             {/* CTAs */}
             <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.35 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-col gap-4 sm:flex-row"
             >
               <Link
@@ -154,12 +116,12 @@ export default function AboutCompany() {
           </div>
 
           {/* ── RIGHT: Image ── */}
-          <div ref={imageRef} className="relative flex justify-center lg:justify-end">
+          <div className="relative flex justify-center lg:justify-end">
             <motion.div
-              initial={{ opacity: 0, scale: 0.92, rotate: -1.5 }}
-              whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.85 }}
+              initial={{ opacity: 0, scale: 0.92 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, delay: 0.2 }}
               whileHover={{ scale: 1.015 }}
               className="relative w-full max-w-[740px]"
             >
@@ -186,8 +148,8 @@ export default function AboutCompany() {
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.4 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
                     className="rounded-2xl border border-white/20 bg-white/10 p-5 backdrop-blur-md"
                   >
                     <p className="text-lg font-bold text-white">{t("companyName")}</p>

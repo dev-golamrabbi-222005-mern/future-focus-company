@@ -91,7 +91,13 @@ export function StatsSection() {
 
       <div className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="text-center max-w-3xl mx-auto mb-14 md:mb-16"
+        >
           <div className="mb-6 flex justify-center">
             <span className="text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20 inline-flex items-center gap-2">
               <Award className="w-3.5 h-3.5 shrink-0 text-primary" />
@@ -104,7 +110,7 @@ export function StatsSection() {
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
             {t("description")}
           </p>
-        </div>
+        </motion.div>
 
         {/* 4-Column Metric Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
