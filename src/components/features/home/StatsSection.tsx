@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { useTranslations, useLocale } from "next-intl";
+import { motion } from "framer-motion";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -52,24 +53,6 @@ export function StatsSection() {
       if (!containerRef.current) return;
 
       const statItems = containerRef.current.querySelectorAll(".stat-card");
-
-      gsap.fromTo(
-        statItems,
-        { opacity: 0, y: 50, scale: 0.95 },
-        {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: 0.8,
-          stagger: 0.15,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top 80%",
-            toggleActions: "play none none reverse",
-          },
-        },
-      );
 
       statItems.forEach((card) => {
         const numElement = card.querySelector(".stat-number");
@@ -128,15 +111,25 @@ export function StatsSection() {
           {stats.map((stat, idx) => {
             const Icon = stat.icon;
             return (
-              <div
+              <motion.div
                 key={idx}
                 data-target={stat.targetNum}
-                className="stat-card relative group p-7 rounded-3xl border border-border/80 bg-card shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-primary/50 hover:scale-105 transition-all duration-300 flex flex-col items-center text-center space-y-4 overflow-hidden"
+                initial={{ opacity: 0, y: 35 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{
+                  duration: 0.2,
+                }}
+                whileHover={{ y: -8, scale: 1.05 }}
+                className="stat-card relative group p-7 rounded-3xl border border-border/80 bg-card shadow-sm hover:shadow-2xl hover:border-primary/50 transition-all duration-300 flex flex-col items-center text-center space-y-4 overflow-hidden cursor-pointer"
               >
+                {/* Top Gradient Strip */}
                 <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${stat.color}`} />
+                {/* Hover glow overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
 
-                <div className="p-4 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                {/* Icon Badge */}
+                <div className="p-4 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-110 transition-all duration-300">
                   <Icon className="h-7 w-7" />
                 </div>
 
@@ -149,7 +142,7 @@ export function StatsSection() {
                     {stat.label}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
@@ -157,3 +150,4 @@ export function StatsSection() {
     </section>
   );
 }
+

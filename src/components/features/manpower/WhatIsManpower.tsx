@@ -60,27 +60,6 @@ export default function WhatIsManpower() {
     { scope: sectionRef },
   );
 
-  useGSAP(
-    () => {
-      if (!cardsRef.current) return;
-
-      gsap.from(cardsRef.current.querySelectorAll(".wm-card"), {
-        opacity: 0,
-        y: 50,
-        scale: 0.96,
-        duration: 0.7,
-        stagger: 0.14,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: cardsRef.current,
-          start: "top 82%",
-          once: true,
-        },
-      });
-    },
-    { scope: cardsRef },
-  );
-
   const cards = Array.from({ length: 4 }, (_, i) => ({
     ...CARD_META[i],
     title: t(`cards.${i}.title`),
@@ -100,7 +79,7 @@ export default function WhatIsManpower() {
       </div>
 
       <div className="mx-auto max-w-[1380px] px-4 md:px-6 lg:px-8">
-        <div className="grid gap-16 lg:gap-20 lg:grid-cols-2 lg:items-start">
+        <div className="grid gap-16 lg:gap-20 lg:grid-cols-2 items-center">
 
           {/* ══════════ LEFT COLUMN ══════════ */}
           <div className="wm-left space-y-8">
@@ -132,18 +111,7 @@ export default function WhatIsManpower() {
               <p className="text-base leading-8 text-muted-foreground">{t("description2")}</p>
             </div>
 
-            {/* Feature pills
-            <div className="flex flex-wrap gap-2.5 pt-2">
-              {["BMET Certified", "Saudi Licensed", "10+ Countries", "End-to-End"].map((pill) => (
-                <span
-                  key={pill}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/8 px-4 py-1.5 text-xs font-bold text-primary"
-                >
-                  <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-                  {pill}
-                </span>
-              ))}
-            </div> */}
+            {/* Feature pills */}
 
             {/* Quote card */}
             <motion.div
@@ -177,8 +145,11 @@ export default function WhatIsManpower() {
               return (
                 <motion.div
                   key={index}
+                  initial={{ opacity: 0, y: 35, scale: 0.96 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true, amount: 0.1 }}
                   whileHover={{ y: -6, scale: 1.02 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="wm-card group relative overflow-hidden rounded-3xl border border-border/80 bg-card p-6 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300"
                 >
                   {/* Top gradient strip */}
