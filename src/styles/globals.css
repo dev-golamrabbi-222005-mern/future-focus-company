@@ -32,6 +32,9 @@
     --ring: #0369a1;
 
     --radius: 0.75rem;
+
+    /* Grid hover highlight */
+    --grid-highlight: rgba(3, 105, 161, 0.18);
   }
 
   .dark {
@@ -63,6 +66,9 @@
     --border: #1e293b;
     --input: #1e293b;
     --ring: #38bdf8;
+
+    /* Grid hover highlight */
+    --grid-highlight: rgba(56, 189, 248, 0.15);
   }
 }
 
@@ -142,6 +148,38 @@
 
   .animate-grid-move {
     animation: moveGrid 15s linear infinite;
+  }
+}
+
+/* Animated rotating gradient border */
+.animated-border-box {
+  position: relative;
+  border-radius: 1rem; /* rounded-2xl */
+  padding: 1.5px;
+  background: conic-gradient(
+    from var(--angle, 0deg),
+    #0369a1,
+    #38bdf8,
+    #06b6d4,
+    #0ea5e9,
+    #0369a1
+  );
+  animation: border-rotate 3s linear infinite;
+}
+
+.animated-border-box > div {
+  border-radius: calc(1rem - 1.5px);
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes border-rotate {
+  to {
+    --angle: 360deg;
   }
 }
 

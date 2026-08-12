@@ -25,19 +25,19 @@ export default function CompanyHighlights() {
       icon: BriefcaseBusiness,
       title: t("items.2.title"),
       subtitle: t("items.2.subtitle"),
-      color: "from-amber-500 to-amber-600",
+      color: "from-cyan-500 to-blue-600",
     },
     {
       icon: Globe2,
       title: t("items.3.title"),
       subtitle: t("items.3.subtitle"),
-      color: "from-emerald-500 to-teal-500",
+      color: "from-indigo-600 to-sky-500",
     },
     {
       icon: PhoneCall,
       title: t("items.4.title"),
       subtitle: t("items.4.subtitle"),
-      color: "from-indigo-600 to-sky-500",
+      color: "from-blue-600 to-cyan-500",
     },
   ];
 

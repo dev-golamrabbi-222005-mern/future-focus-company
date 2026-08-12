@@ -751,6 +751,11 @@
         "title": "General Workforce",
         "jobs": "Helpers • Cleaners • Drivers • Support Staff",
         "description": "Reliable workforce for commercial, industrial, and large-scale projects."
+      },
+      {
+        "title": "Technical Workforce",
+        "jobs": "HVAC • MEP • Civil • Scaffolders • Equipment Operators",
+        "description": "Specialist technical workers for infrastructure, facility, and megaproject demands."
       }
     ]
   },

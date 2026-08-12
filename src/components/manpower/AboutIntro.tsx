@@ -144,29 +144,31 @@ export default function AboutIntro() {
 
             {/* BD → SA route strip */}
             <div className="ai-route">
-              <div className="inline-flex items-stretch overflow-hidden rounded-2xl border border-border bg-card shadow-md">
-                <div className="flex items-center gap-3 px-5 py-4">
-                  <span className="text-xl">Asia</span>
-                  <div>
-                    <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Origin</p>
-                    <p className="text-sm font-extrabold text-foreground">{t("bangladesh")}</p>
+              <div className="animated-border-box inline-flex">
+                <div className="inline-flex items-stretch overflow-hidden rounded-2xl bg-card shadow-md">
+                  <div className="flex items-center gap-3 px-5 py-4">
+                    <span className="text-xl">Asia</span>
+                    <div>
+                      <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Origin</p>
+                      <p className="text-sm font-extrabold text-foreground">{t("bangladesh")}</p>
+                    </div>
                   </div>
-                </div>
 
-                <div className="flex items-center justify-center border-x border-border px-4 bg-primary/5">
-                  <motion.div
-                    animate={{ x: [0, 6, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                  >
-                    <ArrowRight className="h-4 w-4 text-primary" />
-                  </motion.div>
-                </div>
+                  <div className="flex items-center justify-center border-x border-border px-4 bg-primary/5">
+                    <motion.div
+                      animate={{ x: [0, 6, 0] }}
+                      transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                    >
+                      <ArrowRight className="h-4 w-4 text-primary" />
+                    </motion.div>
+                  </div>
 
-                <div className="flex items-center gap-3 px-5 py-4">
-                  <span className="text-xl">🇸🇦</span>
-                  <div>
-                    <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Destination</p>
-                    <p className="text-sm font-extrabold text-foreground">{t("saudi")}</p>
+                  <div className="flex items-center gap-3 px-5 py-4">
+                    <span className="text-xl">🇸🇦</span>
+                    <div>
+                      <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Destination</p>
+                      <p className="text-sm font-extrabold text-foreground">{t("saudi")}</p>
+                    </div>
                   </div>
                 </div>
               </div>
