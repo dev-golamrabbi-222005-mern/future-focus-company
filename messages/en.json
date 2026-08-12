@@ -257,7 +257,7 @@
             "desc": "Experienced HVAC technicians for servicing, installation, and preventive maintenance of air conditioning and ventilation systems."
           },
           "housekeepers": {
-            "title": "Housekeepers",
+            "title": "Housekeepers (Male and Female)",
             "badge": "Soft FM",
             "desc": "Trained housekeeping staff for daily cleaning, sanitization, and upkeep of offices, hotels, hospitals, and residential complexes."
           },
@@ -280,6 +280,16 @@
             "title": "Catering Staff",
             "badge": "Food & Beverage",
             "desc": "Professional catering and cafeteria staff for preparing, serving, and managing food operations in corporate and institutional facilities."
+          },
+           "officeBoy": {
+            "title": "Office Boy (Male & Female",
+            "badge": "Office Staff",
+            "desc": "Office Boy (Male and Female) for offices, airports, expos, hospitals, supermarkets, events, and other venues."
+          },
+           "receptionists": {
+            "title": "Receptionists (Male & Female",
+            "badge": "Office Staff",
+            "desc": "Receptionists (Male and Female) for offices, airports, expos, hospitals, supermarkets, events, and other venues."
           }
         }
       },

@@ -25,6 +25,7 @@ const SERVICES_SLUGS: Record<string, string[]> = {
     "security",
     "drivers",
     "catering",
+    "officeBoy",
   ],
 
   /* ─────────────────────────────────────────────
@@ -68,6 +69,7 @@ const SERVICE_IMAGES: Record<string, string> = {
   welders: "/images/workforce/welders.jpg",
   scaffolders: "/images/workforce/scaffolders.jpg",
   equipmentOperators: "/images/workforce/equipment-operators.jpg",
+   officeBoy: "/images/workforce/officeBoy.jpg",
 };
 
 /* ─────────────────────────────────────────────
