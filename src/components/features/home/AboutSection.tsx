@@ -51,7 +51,7 @@ export default function AboutSection() {
             className="absolute -bottom-8 right-2 sm:right-0"
           >
             <div className="w-24 h-24 sm:w-32 sm:h-32 p-2 rounded-full bg-primary text-primary-foreground border-[5px] sm:border-[6px] border-background shadow-xl flex flex-col justify-center items-center">
-              <h2 className="text-2xl sm:text-4xl font-black">05+</h2>
+              <h2 className="text-2xl sm:text-4xl font-black">{t("experienceValue")}</h2>
 
               <p className="text-[9px] sm:text-xs uppercase tracking-widest text-center">
                 {t("experience")}

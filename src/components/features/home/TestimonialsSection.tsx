@@ -9,6 +9,7 @@ import { Star, Quote, MessageSquareQuote, CheckCircle2 } from 'lucide-react';
 
 export function Testimonials() {
   const t = useTranslations('Testimonials');
+  const tCommon = useTranslations('CommonUI');
   const marqueeRef = React.useRef<HTMLDivElement>(null);
   const tweenRef = React.useRef<gsap.core.Tween | null>(null);
 
@@ -137,7 +138,7 @@ export function Testimonials() {
                           : 'bg-emerald-500/10 text-emerald-500 border-emerald-500/20'
                         }`}
                     >
-                      {isB2B ? 'Enterprise Employer' : 'Verified Candidate'}
+                      {isB2B ? tCommon('enterpriseEmployer') : tCommon('verifiedCandidate')}
                     </span>
                   </div>
 

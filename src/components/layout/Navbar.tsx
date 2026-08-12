@@ -84,7 +84,7 @@ export function Navbar() {
               "flex flex-col-reverse gap-2 items-center justify-center",
               // sm+ : restore per-locale logic
               locale === 'bn'
-                ? "sm:flex-col-reverse sm:gap-1 min-[1600px]:flex-row"
+                ? "sm:flex-col-reverse sm:gap-2 min-[1600px]:flex-row"
                 : "sm:flex-row sm:gap-2"
             )}>
               <LanguageSwitcher />

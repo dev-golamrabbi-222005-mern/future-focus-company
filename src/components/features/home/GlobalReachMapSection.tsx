@@ -16,7 +16,7 @@ export function GlobalReachMap() {
       flag: '🇸🇦',
       icon: Crown,
       iconColor: 'text-amber-500 bg-amber-500/10',
-      label: 'Active Workforce Solutions',
+      label: t('activeWorkforceLabel'),
     },
     {
       name: t('uaeLabel'),
@@ -24,7 +24,7 @@ export function GlobalReachMap() {
       flag: 'RYD',
       icon: Landmark,
       iconColor: 'text-sky-500 bg-sky-500/10',
-      label: 'Corporate Projects',
+      label: t('corporateProjectsLabel'),
     },
     {
       name: t('qatarLabel'),
@@ -32,7 +32,7 @@ export function GlobalReachMap() {
       flag: 'JED',
       icon: Gem,
       iconColor: 'text-violet-500 bg-violet-500/10',
-      label: 'Growing Operations',
+      label: t('growingOperationsLabel'),
     },
     {
       name: t('kuwaitLabel'),
@@ -40,7 +40,7 @@ export function GlobalReachMap() {
       flag: 'GCC',
       icon: Star,
       iconColor: 'text-emerald-500 bg-emerald-500/10',
-      label: 'COMING SOON',
+      label: t('comingSoonLabel'),
     },
   ];
 

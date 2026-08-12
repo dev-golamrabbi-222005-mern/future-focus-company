@@ -66,7 +66,7 @@
     "visionTitle": "Our Vision"
   },
   "AboutSnippet": {
-    "badge": "Government License: 7052268831",
+    "badge": "Government Licensed",
     "bmetBadge": "BMET Certified Agency",
     "cardTitle": "International Workforce Excellence",
     "ceoName": "Md. Rafiqul Islam",
@@ -221,6 +221,7 @@
     "close": "Close",
     "details": "Details",
     "emailLabel": "Email",
+    "enterpriseEmployer": "Enterprise Employer",
     "error404Badge": "Error 404 • Page Not Found",
     "freeReplacementBadge": "90 Days Free Replacement",
     "gamcaBadge": "GAMCA Medical Cleared",
@@ -229,6 +230,7 @@
     "jobType": "Job Type",
     "ksaBadge": "Saudi Arabia (KSA)",
     "licenseBadge": "MHRSD Licensed & Compliant",
+    "manpowerSuffix": "Manpower",
     "monthlySalary": "Monthly Salary",
     "other": "Other",
     "phoneLabel": "Phone",
@@ -243,6 +245,7 @@
     "uploadPassport": "Click to upload Passport Main Page Copy (PDF, JPG, PNG up to 5MB)",
     "uploadPdfDoc": "Click to upload PDF / DOC (Max 5MB)",
     "uploadResume": "Click to upload Resume / CV (PDF, DOC, DOCX up to 5MB)",
+    "verifiedCandidate": "Verified Candidate",
     "verifiedClient": "Verified Corporate Client",
     "workersEnterprise": "200+ Turnkey Mobilization",
     "workersLarge": "51 - 200 Workers",
@@ -548,7 +551,8 @@
         "question": "Can our HR team interview the candidates directly?"
       }
     },
-    "noResults": "No FAQs match your search query. Feel free to contact our support team.",
+    "noResults": "No matching questions found",
+    "noResultsDesc": "Try searching with different keywords or switch categories.",
     "searchPlaceholder": "Search FAQs (e.g., visa, medical, replacement guarantee, trade test)...",
     "seeMoreFaqs": "See More FAQs",
     "subheading": "Comprehensive answers for employers and candidates regarding international recruitment, visa compliance, trade testing, and deployment.",
@@ -690,11 +694,16 @@
       "workforceSizeSelect": "Select worker count"
     },
     "heading": "Ready to Scale Your Workforce with Premier Talent?",
+    "slaSubtext": "Our team reviews & responds to proposals on the same day.",
     "subheading": "Reach out to our Dubai business team today. Whether you need 10 specialist tradesmen or a 500-strong turnkey project crew, we deliver on time and fully compliant.",
     "tagline": "Let's Talk Business"
   },
   "GlobalReachMap": {
+    "activeWorkforceLabel": "Active Workforce Solutions",
     "author": "Eng. Tariq Al-Mansoor",
+    "comingSoonLabel": "COMING SOON",
+    "corporateProjectsLabel": "Corporate Projects",
+    "growingOperationsLabel": "Growing Operations",
     "heading": "Focused on Saudi Arabia. Ready for the GCC.",
     "kuwaitCount": "UAE • Qatar • Kuwait • Oman • Bahrain",
     "kuwaitLabel": "Future Expansion (GCC)",
@@ -785,12 +794,13 @@
     "experience": "Years Trusted",
     "feature1": "On-Time Deployment",
     "feature2": "Visa & Documentation",
-    "feature3": "Skilled & Unskilled Labour",
+    "feature3": "Skilled & Semi-Skilled Workforce",
     "feature4": "24/7 Employer Support",
     "feature5": "Transparent Pricing",
     "feature6": "Flexible Contract Terms",
     "tag": "Who We Are",
-    "title": "Your Trusted Partner for Global Workforce Solutions"
+    "title": "Your Trusted Partner for Global Workforce Solutions",
+    "experienceValue": "05+"
   },
   "JobsPage": {
     "applyBtn": "Apply Now",
@@ -943,6 +953,7 @@
     "step4Desc": "Cultural orientation, flight booking, and smooth airport reception by our local team.",
     "step4Num": "04",
     "step4Title": "Pre-Departure & Deployment",
+    "stepPrefix": "Step",
     "tagline": "Step-by-Step Excellence"
   },
   "SEO": {
@@ -1639,6 +1650,10 @@
     "plumber": "Plumber",
     "steelFixer": "Steel Fixer",
     "welder": "Welder"
+  },
+  "WelcomeLoader": {
+    "motto": "Your HR Partner & Resource Solutions",
+    "welcome": "Welcome to Future Focus Company"
   },
   "WhatIsManpower": {
     "cards": [

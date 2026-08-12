@@ -70,9 +70,9 @@ export default function AboutCompany() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-3xl md:text-4xl lg:text-5xl font-black leading-[1.08] text-foreground"
+              className="text-3xl md:text-4xl lg:text-5xl font-black leading-[1.08] text-foreground flex flex-col gap-1"
             >
-              {t("title1")}
+              <span>{t("title1")}</span>
               <span className="block bg-gradient-to-r from-primary via-sky-400 to-cyan-400 bg-clip-text text-transparent">
                 {t("title2")}
               </span>

@@ -196,10 +196,10 @@ export function FAQClient() {
           ) : (
             <div className="text-center py-16 bg-card border border-border rounded-3xl p-8 space-y-3">
               <p className="text-lg font-bold text-foreground">
-                No matching questions found
+                {t('noResults')}
               </p>
               <p className="text-sm text-muted-foreground">
-                Try searching with different keywords or switch categories.
+                {t('noResultsDesc')}
               </p>
             </div>
           )}

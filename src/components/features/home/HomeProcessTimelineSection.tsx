@@ -125,7 +125,7 @@ export function ProcessTimeline() {
                     <div className="p-5 sm:p-7 rounded-3xl border border-border bg-card shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 space-y-3">
                       <div className="flex items-center justify-between">
                         <span className="text-xs font-extrabold tracking-widest text-primary uppercase bg-primary/10 px-3 py-1 rounded-full">
-                          Step {step.num}
+                          {t('stepPrefix')} {step.num}
                         </span>
                         <div className="p-2.5 rounded-xl bg-primary/10 text-primary">
                           <Icon className="h-5 w-5" />

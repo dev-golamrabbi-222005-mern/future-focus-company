@@ -70,19 +70,19 @@ export function AboutSnippet() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="absolute -bottom-6 right-6 hidden max-w-xs items-center gap-4 rounded-2xl border border-primary/20 bg-card/90 p-5 shadow-2xl backdrop-blur-xl sm:flex"
+              className="absolute bottom-6 right-6 hidden max-w-xs items-center gap-4 rounded-2xl border border-primary/20 bg-card/90 p-3 shadow-2xl backdrop-blur-xl sm:flex"
             >
               <div className="rounded-xl bg-primary p-3 text-primary-foreground">
-                <ShieldCheck className="h-6 w-6" />
+                <ShieldCheck className="h-5 w-5" />
               </div>
-              <div>
+              {/* <div>
                 <span className="block text-xs font-bold uppercase text-primary">
                   {t("ministryApproved")}
                 </span>
                 <span className="text-sm font-extrabold text-foreground">
                   {t("rlLicense")}
                 </span>
-              </div>
+              </div> */}
             </motion.div>
           </motion.div>
 

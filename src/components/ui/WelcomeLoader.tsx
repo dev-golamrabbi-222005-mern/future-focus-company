@@ -3,6 +3,7 @@
 import * as React from 'react';
 import { useParams } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { Sparkles, ShieldCheck } from 'lucide-react';
 
 interface WelcomeLoaderProps {
@@ -10,6 +11,7 @@ interface WelcomeLoaderProps {
 }
 
 export function WelcomeLoader({ locale: propLocale }: WelcomeLoaderProps) {
+  const t = useTranslations('WelcomeLoader');
   const params = useParams();
   const locale = propLocale || (params?.locale as string) || 'en';
 
@@ -48,27 +50,10 @@ export function WelcomeLoader({ locale: propLocale }: WelcomeLoaderProps) {
 
   if (!mounted || !visible) return null;
 
-  // Language auto-detection text
-  const getGreeting = () => {
-    if (locale === 'bn' || (typeof navigator !== 'undefined' && navigator.language?.startsWith('bn'))) {
-      return {
-        welcome: 'ফিউচার ফোকাস কোম্পানিতে স্বাগতম',
-        motto: 'আপনার এইচআর পার্টনার ও সলিউশনস',
-      };
-    }
-    if (locale === 'ar' || (typeof navigator !== 'undefined' && navigator.language?.startsWith('ar'))) {
-      return {
-        welcome: 'مرحباً بكم في شركة فيوتشر فوكس',
-        motto: 'شريككم في الموارد البشرية والحلول',
-      };
-    }
-    return {
-      welcome: 'Welcome to Future Focus Company',
-      motto: 'Your HR Partner & Resource Solutions',
-    };
+  const text = {
+    welcome: t('welcome'),
+    motto: t('motto'),
   };
-
-  const text = getGreeting();
   const isDark = themeMode === 'dark';
 
   return (

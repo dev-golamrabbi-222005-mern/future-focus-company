@@ -144,7 +144,7 @@ export function GetInTouch() {
                   {t('badgeSla')}
                 </p>
                 <p className="text-xs text-muted-foreground">
-                  Our team reviews & responds to proposals on the same day.
+                  {t('slaSubtext')}
                 </p>
               </div>
             </div>
