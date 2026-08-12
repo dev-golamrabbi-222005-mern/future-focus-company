@@ -93,7 +93,7 @@ export function SectorsGrid() {
   );
 
   return (
-    <section ref={containerRef} className="max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-16">
+    <section ref={containerRef} className="max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
       {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16">
           <div className="mb-6 flex justify-center">

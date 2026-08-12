@@ -49,13 +49,13 @@ export function ProcessTimeline() {
   );
 
   return (
-    <section ref={containerRef} className="py-12 relative overflow-hidden">
+    <section ref={containerRef} className="py-12 md:py-16 lg:py-20 relative overflow-hidden">
       {/* Section Header */}
       <div className="text-center max-w-3xl mx-auto space-y-4 mb-14">
         <span className="text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-1.5 rounded-full border border-primary/20">
           {t('tagline')}
         </span>
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-foreground tracking-tight mt-4">
           {t('heading')}
         </h2>
         <p className="text-base text-muted-foreground leading-relaxed">

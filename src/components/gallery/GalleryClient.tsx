@@ -410,7 +410,7 @@ export function GalleryClient() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="cta-anim text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-foreground leading-[1.1] mb-6"
+            className="cta-anim text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-foreground leading-[1.1] mb-6"
           >
             {t('ctaHeading')}
           </motion.h2>
@@ -441,40 +441,8 @@ export function GalleryClient() {
               </Link>
             </motion.div>
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.4 }}
-            className="cta-anim mt-16 flex items-center justify-center gap-5"
-          >
-            <div className="hidden h-px flex-1 max-w-[180px] bg-gradient-to-r from-transparent via-primary/30 to-primary/10 md:block" />
-            <div className="flex flex-wrap items-center justify-center gap-4 text-center">
-              <span className="h-2.5 w-2.5 rotate-45 bg-primary/70 inline-block" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-primary">Govt. License 7052268831</span>
-              <span className="text-primary text-xs">•</span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-primary">BMET Certified</span>
-              <span className="text-primary text-xs">•</span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-primary">5000+ Deployed</span>
-              <span className="h-2.5 w-2.5 rotate-45 bg-primary/70 inline-block" />
-            </div>
-            <div className="hidden h-px flex-1 max-w-[180px] bg-gradient-to-l from-transparent via-primary/30 to-primary/10 md:block" />
-          </motion.div>
         </div>
       </section>
-
-      <AnimatePresence>
-        {lightboxIdx !== null && (
-          <Lightbox
-            items={filtered}
-            activeIdx={lightboxIdx}
-            onClose={closeLightbox}
-            onPrev={prevLightbox}
-            onNext={nextLightbox}
-          />
-        )}
-      </AnimatePresence>
     </>
   );
 }

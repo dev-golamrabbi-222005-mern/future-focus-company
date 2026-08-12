@@ -72,7 +72,7 @@ export default function WhyChoose() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden py-20 lg:py-28 bg-background"
+      className="relative overflow-hidden py-12 md:py-16 lg:py-20 bg-background"
     >
       {/* Background */}
       <div className="absolute inset-0 -z-10">
@@ -84,14 +84,14 @@ export default function WhyChoose() {
 
         {/* Header */}
         <div className="mb-14 max-w-3xl">
-          <div className="why-header-anim mb-5 inline-flex items-center gap-3 rounded-full border border-primary/20 bg-primary/10 px-5 py-2">
+          <div className="why-header-anim mb-5 inline-flex items-center gap-3 rounded-full border border-primary/20 bg-primary/10 px-3 py-1">
             <span className="h-2 w-2 rounded-full bg-primary" />
-            <span className="text-xs font-bold uppercase tracking-[0.35em] text-primary">
+            <span className="text-[10px] font-bold uppercase tracking-[0.35em] text-primary">
               {t("tag")}
             </span>
           </div>
 
-          <h2 className="why-header-anim text-3xl md:text-4xl lg:text-5xl font-black leading-tight text-foreground">
+          <h2 className="why-header-anim text-2xl md:text-3xl lg:text-4xl font-black leading-tight text-foreground">
             {t("title")}
           </h2>
 

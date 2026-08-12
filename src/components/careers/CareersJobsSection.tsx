@@ -423,7 +423,7 @@ export default function CareersJobsSection() {
 
   return (
     <>
-      <section ref={sectionRef} className="relative bg-background pt-12 md:pt-16 lg:pt-20 pb-6 md:pb-8 lg:pb-10">
+      <section ref={sectionRef} className="relative bg-background py-12 md:py-16 lg:py-20">
         <div className="absolute inset-0 -z-10 pointer-events-none">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(3,105,161,0.06),transparent_55%)]" />
         </div>

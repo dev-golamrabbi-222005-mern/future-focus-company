@@ -53,7 +53,7 @@ export default function AboutCompany() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-background pt-6 md:pt-8 lg:pt-10 pb-12 lg:pb-16"
+      className="relative overflow-hidden bg-background pt-6 md:pt-8 lg:pt-10 pb-12 md:pb-16 lg:pb-20"
     >
 
 
@@ -108,7 +108,7 @@ export default function AboutCompany() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-black leading-[1.08] text-foreground"
+              className="text-3xl md:text-4xl lg:text-5xl font-black leading-[1.08] text-foreground"
             >
               {t("title1")}
               <span className="block bg-gradient-to-r from-primary via-sky-400 to-cyan-400 bg-clip-text text-transparent">
@@ -151,28 +151,6 @@ export default function AboutCompany() {
             <span>{t('ctaDownload')}</span>
           </a>
             </motion.div>
-
-            {/* Stats grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4">
-              {stats.map((item, i) => {
-                const Icon = item.icon;
-                return (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.1 * i, duration: 0.5 }}
-                    whileHover={{ y: -6, scale: 1.03 }}
-                    className="group rounded-2xl border border-border bg-card p-5 shadow-sm hover:border-primary/40 hover:shadow-lg transition-all"
-                  >
-                    <Icon className="mb-3 h-7 w-7 text-primary group-hover:scale-110 transition-transform" />
-                    <p className="text-2xl font-black text-foreground">{item.value}</p>
-                    <p className="mt-1 text-xs text-muted-foreground leading-tight">{item.label}</p>
-                  </motion.div>
-                );
-              })}
-            </div>
           </div>
 
           {/* ── RIGHT: Image ── */}
@@ -217,48 +195,6 @@ export default function AboutCompany() {
                   </motion.div>
                 </div>
               </div>
-
-              {/* Experience badge — hidden on xs, shown sm+ */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.5 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
-                className="absolute -left-4 sm:-left-8 -top-5 sm:-top-10 z-10 hidden sm:block"
-              >
-                <motion.div
-                  animate={{ y: [-7, 0, -7] }}
-                  transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}
-                  className="flex h-24 w-24 sm:h-32 sm:w-32 flex-col items-center justify-center rounded-full border-[5px] border-background bg-primary text-primary-foreground shadow-2xl"
-                >
-                  <span className="text-2xl sm:text-3xl font-black">05+</span>
-                  <span className="mt-1 text-center text-[10px] uppercase tracking-[0.15em] leading-tight px-2">
-                    {t("experience")}
-                  </span>
-                </motion.div>
-              </motion.div>
-
-              {/* Govt badge */}
-              <motion.div
-                initial={{ opacity: 0, x: 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.65 }}
-                whileHover={{ scale: 1.05 }}
-                className="absolute -bottom-6 sm:-bottom-8 right-2 sm:right-4 z-10"
-              >
-                <div className="rounded-2xl border border-border bg-card/95 px-5 py-4 shadow-xl backdrop-blur-md">
-                  <div className="flex items-center gap-3">
-                    <div className="rounded-xl bg-primary p-2.5">
-                      <ShieldCheck className="h-6 w-6 text-primary-foreground" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-bold text-foreground">{t("approved")}</p>
-                      <p className="text-xs text-muted-foreground">License 7052268831</p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
             </motion.div>
           </div>
         </div>

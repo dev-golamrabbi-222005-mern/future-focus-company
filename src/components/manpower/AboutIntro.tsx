@@ -34,16 +34,16 @@ export default function AboutIntro() {
   const locale = useLocale();
 
   const sectionRef = React.useRef<HTMLDivElement>(null);
-  const imageRef   = React.useRef<HTMLDivElement>(null);
+  const imageRef = React.useRef<HTMLDivElement>(null);
 
   /* ── Parallax on scroll ── */
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end start"],
   });
-  const bgY     = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
-  const textY   = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
-  const imageY  = useTransform(scrollYProgress, [0, 1], ["0%", "-8%"]);
+  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
+  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "-8%"]);
 
   /* ── GSAP entrance ── */
   useGSAP(
@@ -52,13 +52,13 @@ export default function AboutIntro() {
 
       const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-      tl.from(".ai-tag",      { opacity: 0, y: -20, duration: 0.6 })
-        .from(".ai-heading",  { opacity: 0, y: 50, duration: 0.9 }, "-=0.3")
-        .from(".ai-sub",      { opacity: 0, y: 30, duration: 0.7 }, "-=0.5")
-        .from(".ai-badges",   { opacity: 0, y: 20, duration: 0.6 }, "-=0.4")
-        .from(".ai-route",    { opacity: 0, scale: 0.92, duration: 0.7 }, "-=0.3")
+      tl.from(".ai-tag", { opacity: 0, y: -20, duration: 0.6 })
+        .from(".ai-heading", { opacity: 0, y: 50, duration: 0.9 }, "-=0.3")
+        .from(".ai-sub", { opacity: 0, y: 30, duration: 0.7 }, "-=0.5")
+        .from(".ai-badges", { opacity: 0, y: 20, duration: 0.6 }, "-=0.4")
+        .from(".ai-route", { opacity: 0, scale: 0.92, duration: 0.7 }, "-=0.3")
         .from(".ai-ctas > *", { opacity: 0, y: 25, stagger: 0.12, duration: 0.55 }, "-=0.3")
-        .from(".ai-stat",     { opacity: 0, y: 30, stagger: 0.1, duration: 0.55 }, "-=0.2");
+        .from(".ai-stat", { opacity: 0, y: 30, stagger: 0.1, duration: 0.55 }, "-=0.2");
 
       gsap.from(imageRef.current, {
         opacity: 0,
@@ -100,7 +100,7 @@ export default function AboutIntro() {
       />
 
       {/* ── Main grid ── */}
-      <div className="relative z-10 mx-auto w-full max-w-[1380px] px-4 md:px-6 lg:px-8 pt-6 md:pt-8 lg:pt-10 pb-10 sm:pb-14 lg:pb-16">
+      <div className="relative z-10 mx-auto w-full max-w-[1380px] px-4 md:px-6 lg:px-8 pt-6 md:pt-8 lg:pt-10 pb-12 md:pb-16 lg:pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* ══════════ LEFT COLUMN ══════════ */}
@@ -116,22 +116,24 @@ export default function AboutIntro() {
 
             {/* Headline */}
             <div className="ai-heading">
-              <h1 className="text-3xl sm:text-4xl xl:text-5xl 2xl:text-5xl font-black leading-[1.04] tracking-tight text-foreground">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-black leading-[1.04] tracking-tight text-foreground">
                 <span className="block">{t("title1")}</span>
-                <span className="relative inline-flex items-center gap-4 my-1">
-                  {/* animated arrow between countries */}
-                  <motion.span
-                    animate={{ x: [0, 8, 0] }}
-                    transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-                    className="inline-flex h-10 w-10 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/30"
-                  >
-                    <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
-                  </motion.span>
-                  <span className="block">{t("title2")}</span>
-                </span>
-                <span className="block bg-gradient-to-r from-primary via-sky-400 to-cyan-400 bg-clip-text text-transparent">
-                  {t("title3")}
-                </span>
+                <div className="flex items-center gap-4">
+                  <span className="relative inline-flex items-center gap-4 my-1">
+                    {/* animated arrow between countries */}
+                    <motion.span
+                      animate={{ x: [0, 8, 0] }}
+                      transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+                      className="inline-flex h-10 w-10 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/30"
+                    >
+                      <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
+                    </motion.span>
+                    <span className="block">{t("title2")}</span>
+                  </span>
+                  <span className="block bg-gradient-to-r from-primary via-sky-400 to-cyan-400 bg-clip-text text-transparent">
+                    {t("title3")}
+                  </span>
+                </div>
               </h1>
             </div>
 
@@ -139,19 +141,6 @@ export default function AboutIntro() {
             <p className="ai-sub text-base sm:text-lg leading-8 text-muted-foreground max-w-xl">
               {t("description")}
             </p>
-
-            {/* Trust badges */}
-            <div className="ai-badges flex flex-wrap gap-2">
-              {TRUST_BADGES.map(({ label, icon: Icon, color }) => (
-                <span
-                  key={label}
-                  className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-bold ${color}`}
-                >
-                  <Icon className="h-3.5 w-3.5" />
-                  {label}
-                </span>
-              ))}
-            </div>
 
             {/* BD → SA route strip */}
             <div className="ai-route">
@@ -200,9 +189,10 @@ export default function AboutIntro() {
                 src="/images/about/manpower2.jpg"
                 alt="Future Focus Company — Manpower"
                 width={560}
-                height={100}
+                height={420}
                 priority
-                className="w-full h-auto object-cover min-h-[360px] sm:min-h-[400px] transition-transform duration-700 hover:scale-105"
+                className="w-full object-cover object-center max-h-[70vh] transition-transform duration-700 hover:scale-105"
+                style={{ height: "auto", maxHeight: "70vh" }}
               />
               {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
