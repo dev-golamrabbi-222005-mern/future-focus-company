@@ -86,7 +86,7 @@ export function ContactFormSection() {
 
   return (
     <div className="max-w-[1380px] mx-auto">
-      <div className="flex flex-col md:flex-row items-start gap-8 md:gap-10">
+      <div className="flex flex-col md:flex-row items-center gap-8 md:gap-10">
 
         {/* Left Column: Interactive Contact Form */}
         <div className="gsap-fade-up w-full md:flex-1 p-6 sm:p-10 rounded-3xl border border-border bg-card shadow-lg space-y-6">

@@ -51,7 +51,7 @@ export default function CareersCTA() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-background py-24 lg:py-32"
+      className="relative overflow-hidden bg-background py-12 md:py-16 lg:py-20"
     >
       {/* Glows */}
       <div className="absolute inset-0 -z-10 pointer-events-none">

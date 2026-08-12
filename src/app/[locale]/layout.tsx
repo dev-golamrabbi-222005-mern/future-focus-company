@@ -11,6 +11,7 @@ import WhatsAppFloat from '@/components/ui/WhatsAppFloat';
 import { ChatWidget } from '@/components/features/chat/ChatWidget';
 import { WelcomeLoader } from '@/components/common/WelcomeLoader';
 import { JsonLd } from '@/components/seo/JsonLd';
+import MovingGridBg from '@/components/ui/MovingGridBg';
 import '@/styles/globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -21,7 +22,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  
+
   if (!locales.includes(locale as any)) {
     return {};
   }
@@ -123,6 +124,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
             enableSystem
             disableTransitionOnChange
           >
+            <MovingGridBg />
             <WelcomeLoader locale={locale} />
             <Navbar />
             <main className="flex-1">{children}</main>

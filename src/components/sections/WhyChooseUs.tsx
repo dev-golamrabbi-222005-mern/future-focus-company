@@ -171,24 +171,6 @@ export function WhyChooseUs() {
             />
           ))}
         </div>
-
-        {/* ── Bottom accent bar ── */}
-        <div className="mt-14 flex flex-wrap items-center justify-center gap-6 md:mt-16">
-          {[
-            { label: "5,000+ Workers Deployed" },
-            { label: "150+ Satisfied Clients" },
-            { label: "15+ Years of Experience" },
-            { label: "Saudi Arabia Coverage" },
-          ].map((badge) => (
-            <div
-              key={badge.label}
-              className="flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2 text-xs font-semibold text-muted-foreground shadow-sm"
-            >
-              <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-              {badge.label}
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );

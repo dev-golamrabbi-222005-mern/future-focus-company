@@ -34,7 +34,7 @@ export function CareersClient() {
   return (
     <div className="w-full">
       <div className="relative flex overflow-hidden items-center justify-center">
-        <div style={{ width: "100%", height: "600px", position: "relative" }}
+        <div style={{ width: "100%", height: "500px", position: "relative" }}
         className="sticky"
         >
           <LightRays
@@ -55,7 +55,7 @@ export function CareersClient() {
         </div>
 
         {/* ══════════ HERO ══════════ */}
-        <section className="absolute overflow-hidden flex-col bg-background pt-6 md:pt-8 lg:pt-10 pb-12 md:pb-16">
+        <section className="absolute overflow-hidden flex-col bg-background pt-8 md:pt-10 lg:pt-12 pb-12 md:pb-16 lg:pb-20">
           <div className="absolute inset-0 -z-10 pointer-events-none">
             <div className="absolute -top-32 left-1/2 h-[560px] w-[560px] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px]" />
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(3,105,161,0.06),transparent_60%)]" />
@@ -79,7 +79,7 @@ export function CareersClient() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.08 }}
-              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.06] text-foreground"
+              className="text-3xl md:text-4xl lg:text-5xl font-black leading-[1.06] text-foreground"
             >
               {t("heroTitle1")}
               <span className="block mt-2 bg-gradient-to-r from-primary via-sky-400 to-cyan-400 bg-clip-text text-transparent">

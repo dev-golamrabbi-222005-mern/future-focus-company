@@ -73,17 +73,17 @@ export function AboutClient() {
       {/* ── Mission / Vision / License / MD — inline sections ── */}
       <div
         ref={containerRef}
-        className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8 py-16 md:py-20 lg:py-24 space-y-16 md:space-y-20 lg:space-y-24"
+        className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8 pt-12 md:pt-16 lg:pt-20 pb-8 md:pb-10 lg:pb-12"
       >
         {/* ════ SECTION HEADER ════ */}
-        <div className="text-center space-y-4 gsap-fade-up">
+        <div className="text-center space-y-4 gsap-fade-up mb-14">
           <div className="flex justify-center">
             <span className="text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20 inline-flex items-center gap-2">
               <ShieldCheck className="w-3.5 h-3.5 shrink-0 text-primary" />
               <span>{t("tagline")}</span>
             </span>
           </div>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground tracking-tight leading-tight text-center">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-black text-foreground tracking-tight leading-tight text-center">
             {t("title")}
           </h1>
           <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -92,37 +92,50 @@ export function AboutClient() {
         </div>
 
         {/* ════ MISSION & VISION ════ */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-15 md:mb-22 lg:mb-30">
           {/* Mission */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="group relative overflow-hidden rounded-3xl border border-border bg-card shadow-sm hover:-translate-y-2 hover:shadow-2xl hover:border-primary/30 transition-all duration-500"
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="group relative flex flex-col overflow-hidden rounded-[2.5rem] border border-border bg-card shadow-lg hover:shadow-2xl transition-all duration-500"
           >
-            <div className="h-1 w-full bg-gradient-to-r from-primary to-sky-400" />
-            <div className="p-8 space-y-5">
-              <div className="flex items-center gap-3">
-                <div className="p-3 rounded-2xl bg-primary/10 text-primary">
-                  <Target className="h-6 w-6" />
+            {/* Subtle Glow Background on Hover */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+
+            {/* Top Image Section */}
+            <div className="relative w-full aspect-[16/10] overflow-hidden bg-muted/20">
+              <img
+                src="/images/about/mission.jpg"
+                alt={t("missionTitle")}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              {/* Seamless blend gradient from image to card background */}
+              <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
+
+              {/* Floating Icon Overlapping Image & Content */}
+              <div className="absolute bottom-10 left-8 translate-y-1/2 z-10">
+                <div className="p-3 rounded-2xl bg-card border border-border shadow-xl group-hover:border-primary/30 transition-colors duration-500">
+                  <div className="p-3 rounded-xl bg-primary/10 text-primary">
+                    <Target className="h-6 w-6" />
+                  </div>
                 </div>
-                <h2 className="text-2xl font-extrabold text-foreground">
-                  {t("missionTitle")}
-                </h2>
               </div>
-              <div className="relative overflow-hidden rounded-2xl aspect-video">
-                <img
-                  src="/images/about/mission.jpg"
-                  alt={t("missionTitle")}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-              </div>
-              <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+            </div>
+
+            {/* Content Section */}
+            <div className="relative z-20 flex-1 px-8 pb-10 pt-14 space-y-4">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-foreground group-hover:text-primary transition-colors duration-300">
+                {t("missionTitle")}
+              </h2>
+              <p className="text-base text-muted-foreground leading-relaxed">
                 {t("missionDesc")}
               </p>
             </div>
+
+            {/* Animated Bottom Gradient Line */}
+            <div className="absolute bottom-0 left-0 h-1.5 w-0 bg-gradient-to-r from-primary to-sky-400 transition-all duration-500 ease-out group-hover:w-full" />
           </motion.div>
 
           {/* Vision */}
@@ -130,31 +143,44 @@ export function AboutClient() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.12 }}
-            className="group relative overflow-hidden rounded-3xl border border-border bg-card shadow-sm hover:-translate-y-2 hover:shadow-2xl hover:border-accent/30 transition-all duration-500"
+            transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
+            className="group relative flex flex-col overflow-hidden rounded-[2.5rem] border border-border bg-card shadow-lg hover:shadow-2xl transition-all duration-500"
           >
-            <div className="h-1 w-full bg-gradient-to-r from-cyan-400 to-sky-500" />
-            <div className="p-8 space-y-5">
-              <div className="flex items-center gap-3">
-                <div className="p-3 rounded-2xl bg-accent/10 text-accent">
-                  <Eye className="h-6 w-6" />
+            {/* Subtle Glow Background on Hover */}
+            <div className="absolute inset-0 bg-gradient-to-bl from-accent/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+
+            {/* Top Image Section */}
+            <div className="relative w-full aspect-[16/10] overflow-hidden bg-muted/20">
+              <img
+                src="/images/about/vision2.jpg"
+                alt={t("visionTitle")}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              {/* Seamless blend gradient from image to card background */}
+              <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
+
+              {/* Floating Icon Overlapping Image & Content */}
+              <div className="absolute bottom-10 left-8 translate-y-1/2 z-10">
+                <div className="p-3 rounded-2xl bg-card border border-border shadow-xl group-hover:border-accent/30 transition-colors duration-500">
+                  <div className="p-3 rounded-xl bg-accent/10 text-accent">
+                    <Eye className="h-6 w-6" />
+                  </div>
                 </div>
-                <h2 className="text-2xl font-extrabold text-foreground">
-                  {t("visionTitle")}
-                </h2>
               </div>
-              <div className="relative overflow-hidden rounded-2xl aspect-video">
-                <img
-                  src="/images/about/vision2.jpg"
-                  alt={t("visionTitle")}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-              </div>
-              <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+            </div>
+
+            {/* Content Section */}
+            <div className="relative z-20 flex-1 px-8 pb-10 pt-14 space-y-4">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-foreground group-hover:text-accent transition-colors duration-300">
+                {t("visionTitle")}
+              </h2>
+              <p className="text-base text-muted-foreground leading-relaxed">
                 {t("visionDesc")}
               </p>
             </div>
+
+            {/* Animated Bottom Gradient Line */}
+            <div className="absolute bottom-0 left-0 h-1.5 w-0 bg-gradient-to-r from-cyan-400 to-sky-500 transition-all duration-500 ease-out group-hover:w-full" />
           </motion.div>
         </div>
 
@@ -164,7 +190,7 @@ export function AboutClient() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.75 }}
-          className="gsap-fade-up relative overflow-hidden rounded-3xl border border-primary/25 bg-gradient-to-br from-primary/8 via-card to-sky-400/8 shadow-lg"
+          className="gsap-fade-up relative overflow-hidden rounded-3xl border border-primary/25 bg-gradient-to-br from-primary/8 via-card to-sky-400/8 shadow-lg my-12 md:my-16 lg:my-20"
         >
           <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_left,rgba(3,105,161,0.12),transparent_60%)]" />
 
@@ -202,7 +228,7 @@ export function AboutClient() {
         </motion.div>
 
         {/* ════ MANAGING DIRECTOR STATEMENT ════ */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-15 md:mt-22 lg:mt-30">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -239,6 +265,7 @@ export function AboutClient() {
               </div>
             </div>
           </motion.div>
+
           {/* CEO STATEMENT */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -277,33 +304,7 @@ export function AboutClient() {
             </div>
           </motion.div>
         </div>
-
-        {/* ════ QUICK NAVIGATE ════ */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="gsap-fade-up flex flex-col sm:flex-row items-center justify-center gap-4"
-        >
-          <Link
-            href={`/${locale}/contact`}
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-primary text-primary-foreground font-bold text-sm shadow-lg shadow-primary/30 hover:bg-primary/90 hover:scale-[1.02] transition-all"
-          >
-            {t("ctaHire")}
-            <ArrowRight className="h-4 w-4" />
-          </Link>
-          <Link
-            href={`/${locale}/manpower-solutions`}
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border border-border bg-card text-foreground font-semibold text-sm hover:border-primary/50 hover:text-primary transition-all"
-          >
-            {t("ctaServices")}
-          </Link>
-        </motion.div>
       </div>
-
-      {/* ── CTA ── */}
-      <CallToAction />
     </div>
   );
 }

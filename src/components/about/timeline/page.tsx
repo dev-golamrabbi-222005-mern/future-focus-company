@@ -80,7 +80,7 @@ export default function CompanyTimeline() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-muted/30 py-20 lg:py-28"
+      className="relative overflow-hidden bg-muted/30 py-12 md:py-16 lg:py-20"
     >
       {/* Background */}
       <div className="absolute inset-0 -z-10">
@@ -96,23 +96,23 @@ export default function CompanyTimeline() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mx-auto mb-20 max-w-3xl text-center"
+          className="mx-auto mb-14 max-w-3xl text-center"
         >
-          <div className="mb-5 inline-flex items-center gap-3 rounded-full border border-primary/20 bg-primary/10 px-5 py-2">
+          <div className="mb-5 inline-flex items-center gap-3 rounded-full border border-primary/20 bg-primary/10 px-3 py-1">
             <span className="h-2 w-2 rounded-full bg-primary" />
-            <span className="text-xs font-bold uppercase tracking-[0.35em] text-primary">
+            <span className="text-[10px] font-bold uppercase tracking-[0.35em] text-primary">
               {t("tag")}
             </span>
           </div>
 
-          <h2 className="text-4xl font-black leading-tight text-foreground md:text-5xl lg:text-6xl">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-black leading-tight text-foreground flex items-center gap-2 justify-center">
             {t("title1")}
             <span className="mt-1 block bg-gradient-to-r from-primary via-sky-400 to-cyan-400 bg-clip-text text-transparent">
               {t("title2")}
             </span>
           </h2>
 
-          <div className="mx-auto mt-6 h-[3px] w-24 rounded-full bg-gradient-to-r from-primary to-cyan-400" />
+          <div className="mx-auto mt-4 h-[3px] w-24 rounded-full bg-gradient-to-r from-primary to-cyan-400" />
 
           <p className="mx-auto mt-6 max-w-2xl text-base md:text-lg leading-8 text-muted-foreground">
             {t("description")}
