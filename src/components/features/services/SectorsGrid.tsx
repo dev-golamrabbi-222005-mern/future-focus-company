@@ -38,6 +38,8 @@ export function SectorsGrid() {
       "security",
       "drivers",
       "catering",
+      "officeBoy",
+      "receptionists"
     ],
   },
 
