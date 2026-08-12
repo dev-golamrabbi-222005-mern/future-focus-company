@@ -1,11 +1,13 @@
 'use client';
 
 import * as React from 'react';
+import { useTranslations } from 'next-intl';
 import { useTheme } from '@/providers/ThemeProvider';
 import { Sun, Moon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export function ThemeToggle() {
+  const t = useTranslations('CommonUI');
   const { theme, setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
 
@@ -26,13 +28,13 @@ export function ThemeToggle() {
       type="button"
       dir="ltr"
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
-      aria-label="Toggle theme"
+      aria-label={t('toggleTheme')}
       className={cn(
         'relative inline-flex h-8 w-16 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-300 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 select-none',
         isDark ? 'bg-slate-800' : 'bg-slate-200'
       )}
     >
-      <span className="sr-only">Toggle Dark/Light Theme</span>
+      <span className="sr-only">{t('toggleTheme')}</span>
       
       {/* Sun & Moon background icons */}
       <span className="absolute inset-0 flex items-center justify-between px-1.5 text-xs text-muted-foreground pointer-events-none">

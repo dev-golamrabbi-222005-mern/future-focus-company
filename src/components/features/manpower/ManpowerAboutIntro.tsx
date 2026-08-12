@@ -149,7 +149,7 @@ export default function AboutIntro() {
                   <div className="flex items-center gap-3 px-5 py-4">
                     <span className="text-xl">Asia</span>
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Origin</p>
+                      <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">{t("originLabel")}</p>
                       <p className="text-sm font-extrabold text-foreground">{t("bangladesh")}</p>
                     </div>
                   </div>
@@ -166,7 +166,7 @@ export default function AboutIntro() {
                   <div className="flex items-center gap-3 px-5 py-4">
                     <span className="text-xl">🇸🇦</span>
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Destination</p>
+                      <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">{t("destinationLabel")}</p>
                       <p className="text-sm font-extrabold text-foreground">{t("saudi")}</p>
                     </div>
                   </div>

@@ -107,7 +107,7 @@ export function ContactFormSection() {
                 onClick={resetForm}
                 className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold px-5 py-2.5 rounded-xl hover:bg-primary/90 transition-colors text-sm cursor-pointer"
               >
-                <span>Send Another</span>
+                <span>{t("sendAnother")}</span>
               </button>
             </div>
           ) : (
@@ -127,8 +127,8 @@ export function ContactFormSection() {
                   autoComplete="name"
                   value={form.fullName}
                   onChange={handleChange}
-                  placeholder="e.g. Abdullah Al-Otaibi"
-                  title="Name must be between 2 and 60 characters"
+                  placeholder={t("namePlaceholder")}
+                  title={t("nameTitle")}
                   className="w-full px-4 py-3 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground placeholder:text-muted-foreground/60"
                 />
               </div>
@@ -147,8 +147,8 @@ export function ContactFormSection() {
                     autoComplete="email"
                     value={form.email}
                     onChange={handleChange}
-                    placeholder="e.g. a.otaibi@company.sa"
-                    title="Please enter a valid email address"
+                    placeholder={t("emailPlaceholder")}
+                    title={t("emailTitle")}
                     className="w-full px-4 py-3 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground placeholder:text-muted-foreground/60"
                   />
                 </div>
@@ -168,8 +168,8 @@ export function ContactFormSection() {
                     pattern="^\+?[0-9\s\-()]{8,20}$"
                     value={form.phone}
                     onChange={handleChange}
-                    placeholder="+966 50 123 4567"
-                    title="Please enter a valid phone number"
+                    placeholder={t("phonePlaceholder")}
+                    title={t("phoneTitle")}
                     className="w-full px-4 py-3 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground placeholder:text-muted-foreground/60"
                   />
                 </div>
@@ -261,7 +261,7 @@ export function ContactFormSection() {
                   value={form.message}
                   onChange={handleChange}
                   placeholder={t("messagePlaceholder")}
-                  title="Message must be between 10 and 1000 characters"
+                  title={t("messageTitle")}
                   className="w-full px-4 py-3 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground placeholder:text-muted-foreground/60 resize-none"
                 />
               </div>
@@ -283,7 +283,7 @@ export function ContactFormSection() {
 
               {/* Privacy Note (from main) */}
               <p className="text-center text-[11px] text-muted-foreground">
-                Your information will be kept confidential and used only to respond to your inquiry.
+                {t("privacyNote")}
               </p>
 
             </form>

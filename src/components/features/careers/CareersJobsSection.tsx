@@ -122,10 +122,10 @@ function ApplyForm({
       {/* Full Name */}
       <div className="space-y-1.5">
         <label className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-muted-foreground">
-          <User className="h-3.5 w-3.5" /> Full Name (as per passport) *
+          <User className="h-3.5 w-3.5" /> {t("fullNameLabel")}
         </label>
         <input name="fullName" required value={form.fullName} onChange={handle}
-          placeholder="Md. Rahim Uddin"
+          placeholder={t("fullNamePlaceholder")}
           className="w-full rounded-xl border border-border bg-muted/30 px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary" />
       </div>
 
@@ -133,18 +133,18 @@ function ApplyForm({
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="space-y-1.5">
           <label className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-muted-foreground">
-            <Phone className="h-3.5 w-3.5" /> WhatsApp / Phone *
+            <Phone className="h-3.5 w-3.5" /> {t("phoneLabel")}
           </label>
           <input name="phone" type="tel" required value={form.phone} onChange={handle}
-            placeholder="+880 1712 345678"
+            placeholder={t("phonePlaceholder")}
             className="w-full rounded-xl border border-border bg-muted/30 px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary" />
         </div>
         <div className="space-y-1.5">
           <label className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-muted-foreground">
-            <Mail className="h-3.5 w-3.5" /> Email (optional)
+            <Mail className="h-3.5 w-3.5" /> {t("emailLabel")}
           </label>
           <input name="email" type="email" value={form.email} onChange={handle}
-            placeholder="rahim@email.com"
+            placeholder={t("emailPlaceholder")}
             className="w-full rounded-xl border border-border bg-muted/30 px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary" />
         </div>
       </div>
@@ -153,15 +153,15 @@ function ApplyForm({
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="space-y-1.5">
           <label className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-muted-foreground">
-            <FileText className="h-3.5 w-3.5" /> Passport Number *
+            <FileText className="h-3.5 w-3.5" /> {t("passportLabel")}
           </label>
           <input name="passportNo" required value={form.passportNo} onChange={handle}
-            placeholder="A12345678"
+            placeholder={t("passportPlaceholder")}
             className="w-full rounded-xl border border-border bg-muted/30 px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary" />
         </div>
         <div className="space-y-1.5">
           <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground block">
-            Years of Experience *
+            {t("expYearsLabel")}
           </label>
           <select name="experience" required value={form.experience} onChange={handle}
             className="w-full rounded-xl border border-border bg-muted/30 px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary">
@@ -175,12 +175,12 @@ function ApplyForm({
       {/* CV Upload */}
       <div className="space-y-1.5">
         <label className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-muted-foreground">
-          <Upload className="h-3.5 w-3.5" /> Upload CV / Resume *
+          <Upload className="h-3.5 w-3.5" /> {t("uploadCvLabel")}
         </label>
         <label className="flex flex-col items-center justify-center gap-2 rounded-2xl border-2 border-dashed border-border bg-muted/20 px-4 py-5 text-center cursor-pointer hover:border-primary/50 transition-colors">
           <Upload className="h-6 w-6 text-primary" />
           <span className="text-xs font-semibold text-foreground">
-            {cvFileName ? `Attached: ${cvFileName}` : tCommon('uploadPdfDoc')}
+            {cvFileName ? `${tCommon('attached')}${cvFileName}` : tCommon('uploadPdfDoc')}
           </span>
           <input type="file" accept=".pdf,.doc,.docx" onChange={handleFileChange} required className="hidden" />
         </label>
@@ -190,7 +190,7 @@ function ApplyForm({
       <div className="flex gap-3 pt-2">
         <button type="button" onClick={onClose}
           className="flex-1 rounded-xl border border-border bg-muted/40 py-3 text-sm font-semibold text-foreground hover:bg-muted transition-colors">
-          Cancel
+          {tCommon('cancel')}
         </button>
         <button type="submit" disabled={loading}
           className="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-primary py-3 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/25 hover:bg-primary/90 disabled:opacity-60 transition-all">
@@ -260,7 +260,7 @@ function JobModal({ job, onClose }: { job: Job; onClose: () => void }) {
               </span>
               {job.urgent && (
                 <span className="inline-flex items-center gap-1 rounded-full bg-red-500 px-2.5 py-1 text-[10px] font-bold text-white">
-                  <Zap className="h-3 w-3" /> Urgent
+                  <Zap className="h-3 w-3" /> {t("urgent")}
                 </span>
               )}
             </div>
@@ -284,7 +284,7 @@ function JobModal({ job, onClose }: { job: Job; onClose: () => void }) {
                   className={`flex-1 py-3.5 text-sm font-bold transition-colors ${view === tab
                     ? "border-b-2 border-primary text-primary"
                     : "text-muted-foreground hover:text-foreground"}`}>
-                  {tab === "details" ? "Job Details" : "Apply Now"}
+                  {tab === "details" ? t("jobDetailsTab") : t("applyNowTab")}
                 </button>
               ))}
             </div>
@@ -303,7 +303,7 @@ function JobModal({ job, onClose }: { job: Job; onClose: () => void }) {
                 <div>
                   <h3 className="text-xl font-extrabold text-foreground">{tCommon('appSubmitted')}</h3>
                   <p className="mt-2 text-sm text-muted-foreground max-w-sm mx-auto leading-relaxed">
-                    Our recruitment officers will review your application and call you for trade testing within 2–3 business days.
+                    {t("reviewMsg")}
                   </p>
                 </div>
                 <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 border border-primary/20 px-5 py-2 text-xs font-bold text-primary">
@@ -311,7 +311,7 @@ function JobModal({ job, onClose }: { job: Job; onClose: () => void }) {
                 </div>
                 <button onClick={onClose}
                   className="mt-2 rounded-xl bg-primary px-8 py-3 text-sm font-bold text-primary-foreground hover:bg-primary/90 transition-colors">
-                  Close
+                  {tCommon('close')}
                 </button>
               </motion.div>
             )}
@@ -359,7 +359,7 @@ function JobModal({ job, onClose }: { job: Job; onClose: () => void }) {
                 {/* CTA */}
                 <button onClick={() => setView("apply")}
                   className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-primary py-4 font-bold text-sm text-primary-foreground shadow-lg shadow-primary/25 hover:bg-primary/90 transition-all group">
-                  Apply for This Position
+                  {t("applyBtn")}
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </button>
               </div>
@@ -379,6 +379,7 @@ function JobModal({ job, onClose }: { job: Job; onClose: () => void }) {
 /* ─── Main Section ─── */
 export default function CareersJobsSection() {
   const t = useTranslations("CareersPage");
+  const tCommon = useTranslations("CommonUI");
   const sectionRef = React.useRef<HTMLDivElement>(null);
   const headerRef = React.useRef<HTMLDivElement>(null);
 
@@ -542,7 +543,7 @@ export default function CareersJobsSection() {
                         </span>
                         <button onClick={() => setSelectedJob(job)}
                           className="group/btn inline-flex items-center gap-1.5 rounded-xl bg-primary px-5 py-2.5 text-xs font-bold text-primary-foreground shadow-md shadow-primary/25 hover:bg-primary/90 transition-all">
-                          Details
+                          {tCommon("details")}
                           <ChevronRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover/btn:translate-x-0.5" />
                         </button>
                       </div>

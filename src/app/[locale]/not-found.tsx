@@ -10,9 +10,7 @@ export default function NotFoundPage() {
   const params = useParams();
   const locale = (params?.locale as string) || 'en';
   const tCommon = useTranslations('CommonUI');
-
-  const isBn = locale === 'bn';
-  const isAr = locale === 'ar';
+  const tNotFound = useTranslations('NotFoundPage');
 
   return (
     <div className="min-h-screen flex items-center justify-center pt-24 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -39,18 +37,10 @@ export default function NotFoundPage() {
         {/* Localized Message */}
         <div className="space-y-3 max-w-lg mx-auto">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
-            {isBn
-              ? 'পৃষ্ঠাটি পাওয়া যায়নি'
-              : isAr
-                ? 'الصفحة غير موجودة'
-                : 'Oops! Page Not Found'}
+            {tNotFound('heading')}
           </h2>
           <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-            {isBn
-              ? 'আপনি যে পৃষ্ঠাটি খুঁজছেন তা স্থানান্তরিত হয়েছে, মুছে ফেলা হয়েছে অথবা ভুল ইউআরএল প্রবেশ করানো হয়েছে।'
-              : isAr
-                ? 'الصفحة التي تبحث عنها قد تكون انتقلت، حُذفت، أو أدخلت عنواناً غير صحيح.'
-                : 'The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.'}
+            {tNotFound('desc')}
           </p>
         </div>
 
@@ -62,7 +52,7 @@ export default function NotFoundPage() {
           >
             <Home className="w-4 h-4" />
             <span>
-              {isBn ? 'হোমপেজে ফিরে যান' : isAr ? 'العودة للرئيسية' : 'Return to Home'}
+              {tNotFound('returnHome')}
             </span>
           </Link>
 
@@ -72,7 +62,7 @@ export default function NotFoundPage() {
           >
             <Briefcase className="w-4 h-4 text-primary" />
             <span>
-              {isBn ? 'সেবাসমূহ দেখুন' : isAr ? 'استكشف الخدمات' : 'Explore Services'}
+              {tNotFound('exploreServices')}
             </span>
           </Link>
         </div>
