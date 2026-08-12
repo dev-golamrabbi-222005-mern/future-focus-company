@@ -22,9 +22,9 @@ if (typeof window !== "undefined") {
 }
 
 export default function CareersCTA() {
-  const t      = useTranslations("CareersPage");
+  const t = useTranslations("CareersPage");
   const locale = useLocale();
-  const ref    = React.useRef<HTMLDivElement>(null);
+  const ref = React.useRef<HTMLDivElement>(null);
 
   useGSAP(
     () => {
@@ -42,16 +42,16 @@ export default function CareersCTA() {
   );
 
   const benefits = [
-    { icon: Plane,        label: t("ctaBenefit1") },
-    { icon: CreditCard,   label: t("ctaBenefit2") },
-    { icon: HeartPulse,   label: t("ctaBenefit3") },
-    { icon: HandHelping,  label: t("ctaBenefit4") },
+    { icon: Plane, label: t("ctaBenefit1") },
+    { icon: CreditCard, label: t("ctaBenefit2") },
+    { icon: HeartPulse, label: t("ctaBenefit3") },
+    { icon: HandHelping, label: t("ctaBenefit4") },
   ];
 
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-background py-12 md:py-16 lg:py-20"
+      className="relative overflow-hidden py-12 md:py-16 lg:py-20"
     >
       {/* Glows */}
       <div className="absolute inset-0 -z-10 pointer-events-none">

@@ -80,9 +80,9 @@ export function FAQClient() {
   };
 
   return (
-    <div className="min-h-screen bg-background pt-6 md:pt-8 lg:pt-10 pb-6 md:pb-8 lg:pb-10 relative overflow-hidden">
+    <div className="min-h-screen pt-6 md:pt-8 lg:pt-10 pb-6 md:pb-8 lg:pb-10 relative overflow-hidden">
       {/* Background Glows */}
-      <div className="absolute top-0 inset-x-0 h-96 bg-gradient-to-b from-primary/10 via-background/60 to-background pointer-events-none -z-10" />
+      <div className="absolute top-0 inset-x-0 h-96 bg-gradient-to-b from-primary/10 via-transparent to-transparent pointer-events-none -z-10" />
       <div className="absolute top-1/3 left-10 w-96 h-96 bg-primary/10 rounded-full blur-[140px] pointer-events-none -z-10" />
       <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-accent/10 rounded-full blur-[140px] pointer-events-none -z-10" />
 
@@ -129,11 +129,10 @@ export function FAQClient() {
                   setSelectedCategory(cat.id);
                   setOpenIndex(null);
                 }}
-                className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all shadow-sm ${
-                  isSelected
-                    ? 'bg-primary text-primary-foreground shadow-primary/20'
-                    : 'bg-card border border-border hover:bg-muted text-foreground/80'
-                }`}
+                className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all shadow-sm ${isSelected
+                  ? 'bg-primary text-primary-foreground shadow-primary/20'
+                  : 'bg-card border border-border hover:bg-muted text-foreground/80'
+                  }`}
               >
                 <Icon className="w-4 h-4 shrink-0" />
                 <span>{cat.label}</span>
@@ -160,11 +159,10 @@ export function FAQClient() {
                       {faq.question}
                     </span>
                     <div
-                      className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${
-                        isOpen
-                          ? 'bg-primary text-primary-foreground rotate-180'
-                          : 'bg-muted text-foreground/70'
-                      }`}
+                      className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${isOpen
+                        ? 'bg-primary text-primary-foreground rotate-180'
+                        : 'bg-muted text-foreground/70'
+                        }`}
                     >
                       <ChevronDown className="w-4 h-4" />
                     </div>

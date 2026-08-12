@@ -97,7 +97,10 @@
     color: var(--foreground);
     transition-property: color, background-color;
     transition-duration: 300ms;
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family:
+      system-ui,
+      -apple-system,
+      sans-serif;
     -webkit-font-smoothing: antialiased;
   }
 }
@@ -122,20 +125,19 @@
   transform: scaleX(-1);
 }
 
-
 /* Grid Pattern & Animation */
 @layer utilities {
   .bg-grid-pattern {
     background-size: 50px 50px;
-    background-image: 
-      linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-image:
+      linear-gradient(to right, rgba(3, 105, 161, 0.12) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(3, 105, 161, 0.12) 1px, transparent 1px);
   }
 
   .dark .bg-grid-pattern {
-    background-image: 
-      linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-image:
+      linear-gradient(to right, rgba(56, 189, 248, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(56, 189, 248, 0.1) 1px, transparent 1px);
   }
 
   .animate-grid-move {

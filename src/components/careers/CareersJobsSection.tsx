@@ -32,14 +32,14 @@ const JOB_IMAGES: Record<string, string> = {
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
-  Hospitality:    "bg-amber-500/15 text-amber-600 border-amber-500/25",
-  Cleaning:       "bg-sky-500/15 text-sky-600 border-sky-500/25",
-  Security:       "bg-red-500/15 text-red-600 border-red-500/25",
-  Transport:      "bg-violet-500/15 text-violet-600 border-violet-500/25",
-  "Support Staff":"bg-emerald-500/15 text-emerald-600 border-emerald-500/25",
+  Hospitality: "bg-amber-500/15 text-amber-600 border-amber-500/25",
+  Cleaning: "bg-sky-500/15 text-sky-600 border-sky-500/25",
+  Security: "bg-red-500/15 text-red-600 border-red-500/25",
+  Transport: "bg-violet-500/15 text-violet-600 border-violet-500/25",
+  "Support Staff": "bg-emerald-500/15 text-emerald-600 border-emerald-500/25",
 };
 
-const FILTER_KEYS = ["All","Hospitality","Security","Support Staff","Transport","Cleaning"] as const;
+const FILTER_KEYS = ["All", "Hospitality", "Security", "Support Staff", "Transport", "Cleaning"] as const;
 type FilterKey = typeof FILTER_KEYS[number];
 
 const FILTER_LABEL_KEYS: Record<FilterKey, string> = {
@@ -380,7 +380,7 @@ function JobModal({ job, onClose }: { job: Job; onClose: () => void }) {
 export default function CareersJobsSection() {
   const t = useTranslations("CareersPage");
   const sectionRef = React.useRef<HTMLDivElement>(null);
-  const headerRef  = React.useRef<HTMLDivElement>(null);
+  const headerRef = React.useRef<HTMLDivElement>(null);
 
   const [activeFilter, setActiveFilter] = React.useState<FilterKey>("All");
   const [search, setSearch] = React.useState("");
@@ -392,19 +392,19 @@ export default function CareersJobsSection() {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const tx = t as (key: any) => string;
     return ids.map((n) => ({
-      key:      `job${n}`,
-      title:    tx(`job${n}Title`),
+      key: `job${n}`,
+      title: tx(`job${n}Title`),
       location: tx(`job${n}Location`),
-      salary:   tx(`job${n}Salary`),
+      salary: tx(`job${n}Salary`),
       category: tx(`job${n}Category`) as string,
-      desc:     tx(`job${n}Desc`),
-      image:    JOB_IMAGES[`job${n}`],
-      urgent:   n <= 3,
+      desc: tx(`job${n}Desc`),
+      image: JOB_IMAGES[`job${n}`],
+      urgent: n <= 3,
     }));
   }, [t]);
 
   const filtered = React.useMemo(() => allJobs.filter((j) => {
-    const matchCat    = activeFilter === "All" || j.category === activeFilter;
+    const matchCat = activeFilter === "All" || j.category === activeFilter;
     const matchSearch = search === "" ||
       j.title.toLowerCase().includes(search.toLowerCase()) ||
       j.location.toLowerCase().includes(search.toLowerCase());
@@ -416,14 +416,16 @@ export default function CareersJobsSection() {
     gsap.fromTo(
       headerRef.current.querySelectorAll(".gsap-up"),
       { opacity: 0, y: 40 },
-      { opacity: 1, y: 0, duration: 0.8, stagger: 0.12, ease: "power3.out",
-        scrollTrigger: { trigger: headerRef.current, start: "top 80%" } }
+      {
+        opacity: 1, y: 0, duration: 0.8, stagger: 0.12, ease: "power3.out",
+        scrollTrigger: { trigger: headerRef.current, start: "top 80%" }
+      }
     );
   }, { scope: headerRef });
 
   return (
     <>
-      <section ref={sectionRef} className="relative bg-background py-12 md:py-16 lg:py-20">
+      <section ref={sectionRef} className="relative py-12 md:py-16 lg:py-20">
         <div className="absolute inset-0 -z-10 pointer-events-none">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(3,105,161,0.06),transparent_55%)]" />
         </div>
@@ -457,11 +459,10 @@ export default function CareersJobsSection() {
             <div className="flex flex-wrap gap-2">
               {FILTER_KEYS.map((key) => (
                 <button key={key} onClick={() => setActiveFilter(key)}
-                  className={`rounded-full px-3.5 py-2 text-xs font-bold transition-all border ${
-                    activeFilter === key
+                  className={`rounded-full px-3.5 py-2 text-xs font-bold transition-all border ${activeFilter === key
                       ? "bg-primary text-primary-foreground border-primary shadow-lg shadow-primary/25"
                       : "bg-card text-muted-foreground border-border hover:border-primary/40 hover:text-primary"
-                  }`}>
+                    }`}>
                   {t(FILTER_LABEL_KEYS[key])}
                 </button>
               ))}

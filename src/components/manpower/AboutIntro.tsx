@@ -75,7 +75,7 @@ export default function AboutIntro() {
   return (
     <section
       ref={sectionRef}
-      className="relative flex flex-col justify-center overflow-hidden bg-background"
+      className="relative flex flex-col justify-center overflow-hidden"
     >
       {/* ── Animated grid bg ── */}
       <motion.div

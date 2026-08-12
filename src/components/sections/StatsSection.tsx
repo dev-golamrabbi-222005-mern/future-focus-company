@@ -6,7 +6,6 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Award, FileCheck2, Globe, Users } from "lucide-react";
-import DotGrid from "@/app/reactBit/dotGrid";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -101,76 +100,60 @@ export function StatsSection() {
   );
 
   return (
-    <div className="relative flex bg-muted/40 border-y border-border/60 overflow-hidden">
-      <div style={{ width: "100%", height: "600px", position: "relative" }}>
-        <DotGrid
-          dotSize={5}
-          gap={15}
-          baseColor="#030712"
-          activeColor="#3b2887"
-          proximity={120}
-          shockRadius={250}
-          shockStrength={5}
-          resistance={750}
-          returnDuration={1.5}
-        />
-      </div>
-      <section
-        ref={containerRef}
-        className="absolute p-4 flex flex-col items-center justify-center w-full h-full"
-      >
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[250px] bg-primary/10 rounded-full blur-[140px] pointer-events-none -z-10" />
+    <section
+      ref={containerRef}
+      className="py-16 md:py-20 lg:py-24 bg-muted/15 border-y border-border/60 relative overflow-hidden"
+    >
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[250px] bg-primary/10 rounded-full blur-[140px] pointer-events-none -z-10" />
 
-        <div className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8">
-          {/* Section Header */}
-          <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16">
-            <div className="mb-6 flex justify-center">
-              <span className="text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20 inline-flex items-center gap-2">
-                <Award className="w-3.5 h-3.5 shrink-0 text-primary" />
-                <span>{t("tagline")}</span>
-              </span>
-            </div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground tracking-tight mb-4 text-center">
-              {t("heading")}
-            </h2>
-            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-              {t("description")}
-            </p>
+      <div className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16">
+          <div className="mb-6 flex justify-center">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20 inline-flex items-center gap-2">
+              <Award className="w-3.5 h-3.5 shrink-0 text-primary" />
+              <span>{t("tagline")}</span>
+            </span>
           </div>
-
-          {/* 4-Column Metric Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {stats.map((stat, idx) => {
-              const Icon = stat.icon;
-              return (
-                <div
-                  key={idx}
-                  data-target={stat.targetNum}
-                  className="stat-card p-8 rounded-3xl border border-border/80 bg-card shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 flex flex-col items-center text-center space-y-4 group relative overflow-hidden"
-                >
-                  <div
-                    className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${stat.color}`}
-                  />
-
-                  <div className="p-4 rounded-2xl bg-primary/10 text-primary group-hover:scale-110 transition-transform duration-300">
-                    <Icon className="h-7 w-7" />
-                  </div>
-
-                  <div className="space-y-1">
-                    <div className="text-4xl sm:text-5xl font-extrabold text-foreground tracking-tight flex items-center justify-center">
-                      <span className="stat-number">0</span>
-                      <span className="text-primary ml-0.5">{stat.suffix}</span>
-                    </div>
-                    <p className="text-sm font-semibold text-muted-foreground pt-1">
-                      {stat.label}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground tracking-tight mb-4 text-center">
+            {t("heading")}
+          </h2>
+          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+            {t("description")}
+          </p>
         </div>
-      </section>
-    </div>
+
+        {/* 4-Column Metric Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {stats.map((stat, idx) => {
+            const Icon = stat.icon;
+            return (
+              <div
+                key={idx}
+                data-target={stat.targetNum}
+                className="stat-card relative group p-7 rounded-3xl border border-border/80 bg-card shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-primary/50 hover:scale-105 transition-all duration-300 flex flex-col items-center text-center space-y-4 overflow-hidden"
+              >
+                <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${stat.color}`} />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
+
+                <div className="p-4 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                  <Icon className="h-7 w-7" />
+                </div>
+
+                <div className="space-y-1">
+                  <div className="text-4xl sm:text-5xl font-black text-foreground tracking-tight flex items-center justify-center">
+                    <span className="stat-number">0</span>
+                    <span className="text-primary ml-0.5">{stat.suffix}</span>
+                  </div>
+                  <p className="text-sm font-medium text-muted-foreground pt-1">
+                    {stat.label}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
   );
 }

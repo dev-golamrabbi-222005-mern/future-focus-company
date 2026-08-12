@@ -42,7 +42,7 @@ export default function CompanyHighlights() {
   ];
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-muted/40 border-y border-border/60 relative overflow-hidden">
+    <section className="py-12 md:py-16 lg:py-20 bg-muted/15 border-y border-border/60 relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[250px] bg-primary/10 rounded-full blur-[140px] pointer-events-none -z-10" />
 
       <div className="w-full max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,13 +60,15 @@ export default function CompanyHighlights() {
                   duration: 0.6,
                   delay: index * 0.1,
                 }}
-                className="p-8 rounded-3xl border border-border/80 bg-card shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 flex flex-col items-center text-center space-y-4 group relative overflow-hidden"
+                className="relative group p-7 rounded-3xl border border-border/80 bg-card shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-primary/50 hover:scale-105 transition-all duration-300 flex flex-col items-center text-center space-y-4 overflow-hidden"
               >
                 {/* Top Gradient Strip */}
                 <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${item.color}`} />
+                {/* Hover glow overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
 
                 {/* Icon Badge */}
-                <div className="p-4 rounded-2xl bg-primary/10 text-primary group-hover:scale-110 transition-transform duration-300">
+                <div className="p-4 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                   <Icon className="h-7 w-7" />
                 </div>
 

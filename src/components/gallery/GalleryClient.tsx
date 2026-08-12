@@ -109,7 +109,7 @@ export function GalleryClient() {
     return () => clearInterval(id);
   }, []);
 
-  const CATEGORIES = ['All', 'Training', 'Departure', 'Office', 'Events'] as const;
+  const CATEGORIES = ['All', 'Construction', 'Civil', 'Facility Mgmt', 'Hospitality'] as const;
   type Cat = typeof CATEGORIES[number];
   const [activeFilter, setActiveFilter] = React.useState<Cat>('All');
 
@@ -192,33 +192,36 @@ export function GalleryClient() {
   }, { scope: statsRef });
 
   const stats = [
-    { numKey: 'stat1Num', suffix: t('stat1Suffix'), label: t('stat1Label'), icon: STAT_ICONS[0] },
-    { numKey: 'stat2Num', suffix: t('stat2Suffix'), label: t('stat2Label'), icon: STAT_ICONS[1] },
-    { numKey: 'stat3Num', suffix: t('stat3Suffix'), label: t('stat3Label'), icon: STAT_ICONS[2] },
-    { numKey: 'stat4Num', suffix: t('stat4Suffix'), label: t('stat4Label'), icon: STAT_ICONS[3] },
+    { numKey: 'stat1Num', suffix: t('stat1Suffix'), label: t('stat1Label'), icon: STAT_ICONS[0], color: 'from-blue-600 to-cyan-500' },
+    { numKey: 'stat2Num', suffix: t('stat2Suffix'), label: t('stat2Label'), icon: STAT_ICONS[1], color: 'from-sky-500 to-indigo-600' },
+    { numKey: 'stat3Num', suffix: t('stat3Suffix'), label: t('stat3Label'), icon: STAT_ICONS[2], color: 'from-cyan-500 to-blue-600' },
+    { numKey: 'stat4Num', suffix: t('stat4Suffix'), label: t('stat4Label'), icon: STAT_ICONS[3], color: 'from-indigo-600 to-sky-500' },
   ] as const;
 
   return (
     <>
-      <section ref={heroRef} className="relative min-h-[80vh] pt-6 md:pt-8 lg:pt-10 flex items-center justify-center overflow-hidden bg-background">
+      <section ref={heroRef} className="relative h-[70vh] pt-6 md:pt-8 lg:pt-10 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <AnimatePresence mode="wait">
             <motion.div
               key={heroIdx}
               initial={{ opacity: 0, scale: 1.08 }}
-              animate={{ opacity: 0.22, scale: 1 }}
+              animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 1.6, ease: 'easeInOut' }}
-              className="w-full h-full"
+              className="absolute inset-0"
             >
               <img src={SLIDE_IMAGES[heroIdx]} alt="" className="w-full h-full object-cover" />
             </motion.div>
           </AnimatePresence>
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/60 to-background" />
+          {/* Neutral scrim — keeps text readable without blocking the grid */}
+          <div className="absolute inset-0 bg-black/35 dark:bg-black/50" />
+          {/* Bottom fade */}
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/30 to-transparent" />
           <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-primary/15 rounded-full blur-[130px] pointer-events-none" />
         </div>
 
-        <div className="relative z-10 w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8 py-20 md:py-28 text-center">
+        <div className="relative z-10 w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8 py-10 md:py-14 text-center">
           <div className="hero-anim mb-6 flex justify-center">
             <span className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
               <Camera className="h-3.5 w-3.5" />
@@ -263,7 +266,7 @@ export function GalleryClient() {
         </div>
       </section>
 
-      <section id="gallery-grid" ref={filterRef} className="py-16 md:py-20 lg:py-24 bg-background">
+      <section id="gallery-grid" ref={filterRef} className="py-16 md:py-20 lg:py-24">
         <div className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8">
           <div className="text-center mb-12 filter-anim">
             <div className="mb-4 flex justify-center">
@@ -285,17 +288,16 @@ export function GalleryClient() {
                 key={cat}
                 whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }}
                 onClick={() => setActiveFilter(cat)}
-                className={`px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider border transition-all duration-200 ${
-                  activeFilter === cat
-                    ? 'bg-primary text-primary-foreground border-primary shadow-lg shadow-primary/25'
-                    : 'bg-card text-muted-foreground border-border hover:border-primary/40 hover:text-primary'
-                }`}
+                className={`px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider border transition-all duration-200 ${activeFilter === cat
+                  ? 'bg-primary text-primary-foreground border-primary shadow-lg shadow-primary/25'
+                  : 'bg-card text-muted-foreground border-border hover:border-primary/40 hover:text-primary'
+                  }`}
               >
                 {cat === 'All' ? t('filterAll')
-                  : cat === 'Training' ? t('filterTraining')
-                  : cat === 'Departure' ? t('filterDeparture')
-                  : cat === 'Office' ? t('filterOffice')
-                  : t('filterEvent')}
+                  : cat === 'Construction' ? t('filterTraining')
+                    : cat === 'Civil' ? t('filterDeparture')
+                      : cat === 'Facility Mgmt' ? t('filterOffice')
+                        : t('filterEvent')}
               </motion.button>
             ))}
           </div>
@@ -326,11 +328,11 @@ export function GalleryClient() {
                       {item.category}
                     </span>
                   </div>
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {/* <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="p-4 rounded-full bg-white/20 backdrop-blur-md border border-white/30">
                       <Play className="h-7 w-7 text-white fill-white" />
                     </div>
-                  </div>
+                  </div> */}
                   <div className="absolute bottom-0 inset-x-0 p-5 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-400">
                     <h3 className="text-base font-extrabold text-white mb-1">{item.title}</h3>
                     <p className="text-xs text-white/70 leading-relaxed line-clamp-2">{item.desc}</p>
@@ -342,7 +344,7 @@ export function GalleryClient() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-muted/40 border-y border-border/60 relative overflow-hidden">
+      <section className="py-16 md:py-20 bg-muted/15 border-y border-border/60 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[220px] bg-primary/10 rounded-full blur-[130px] pointer-events-none" />
 
         <div ref={statsRef} className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8">
@@ -358,7 +360,7 @@ export function GalleryClient() {
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {stats.map(({ numKey, suffix, label, icon: Icon }, idx) => {
+            {stats.map(({ numKey, suffix, label, icon: Icon, color }, idx) => {
               const rawNum = t(numKey);
               const num = parseInt(rawNum.replace(/[^\d]/g, ''), 10) || 0;
               return (
@@ -368,8 +370,9 @@ export function GalleryClient() {
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   viewport={{ once: true, amount: 0.4 }}
                   transition={{ duration: 0.7, delay: idx * 0.12, ease: 'easeOut' }}
-                  className="relative group p-7 rounded-3xl border border-border bg-card shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center overflow-hidden"
+                  className="relative group p-7 rounded-3xl border border-border/80 bg-card shadow-sm hover:shadow-xl hover:-translate-y-2  hover:border-primary/50 hover:scale-105 transition-all duration-300 text-center overflow-hidden"
                 >
+                  <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${color}`} />
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
                   <div className="mb-4 inline-flex items-center justify-center h-12 w-12 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 mx-auto">
                     <Icon className="h-6 w-6" />
@@ -385,7 +388,7 @@ export function GalleryClient() {
         </div>
       </section>
 
-      <section ref={ctaRef} className="relative py-16 md:py-24 lg:py-32 overflow-hidden">
+      <section ref={ctaRef} className="relative pt-12 md:pt-16 lg:pt-20 pb-8 md:pb-10 lg:pb-12 overflow-hidden">
         {/* --- 1. Global Background Glows (Outer Layer) --- */}
         <div className="absolute inset-0 -z-10 pointer-events-none flex items-center justify-center">
           {/* Central massive elliptical glow (Angled for dynamic look) */}
@@ -405,7 +408,7 @@ export function GalleryClient() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative overflow-hidden rounded-[2.5rem] md:rounded-[3.5rem] bg-card/60 backdrop-blur-2xl border border-border shadow-2xl px-6 py-16 md:py-24 text-center z-10 group"
+            className="relative overflow-hidden rounded-[2.5rem] md:rounded-[3.5rem] bg-card/60 backdrop-blur-2xl border border-border shadow-2xl px-6 py-12 md:py-16 text-center z-10 group"
           >
             {/* --- 2. Inner Card Glows & Edge Highlights --- */}
             {/* Top glowing border edge */}

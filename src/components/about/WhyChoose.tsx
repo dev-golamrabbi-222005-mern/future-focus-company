@@ -19,7 +19,7 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-const ICONS = [ SearchCheck, BadgeDollarSign, FileCheck2, Clock3, Handshake, ShieldCheck];
+const ICONS = [SearchCheck, BadgeDollarSign, FileCheck2, Clock3, Handshake, ShieldCheck];
 
 const GRADIENTS = [
   "from-blue-500/15 to-sky-400/10 border-blue-500/20 text-blue-500",
@@ -72,7 +72,7 @@ export default function WhyChoose() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden py-12 md:py-16 lg:py-20 bg-background"
+      className="relative overflow-hidden py-12 md:py-16 lg:py-20"
     >
       {/* Background */}
       <div className="absolute inset-0 -z-10">

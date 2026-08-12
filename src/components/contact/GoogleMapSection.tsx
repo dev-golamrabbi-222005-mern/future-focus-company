@@ -7,7 +7,7 @@ export default function GoogleMapSection() {
   const t = useTranslations("GoogleMap");
 
   return (
-    <section className="pt-12 md:pt-16 lg:pt-20 pb-8 md:pb-10 lg:pb-12 bg-background">
+    <section className="pt-12 md:pt-16 lg:pt-20 pb-8 md:pb-10 lg:pb-12">
       <div className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8">
 
         {/* Header */}
@@ -58,7 +58,7 @@ export default function GoogleMapSection() {
 
                 <div className="flex items-center gap-3 mb-5">
 
-                  <Phone className="text-primary h-5 w-5"/>
+                  <Phone className="text-primary h-5 w-5" />
 
                   <span>+966 5X XXX XXXX</span>
 
@@ -66,7 +66,7 @@ export default function GoogleMapSection() {
 
                 <div className="flex items-center gap-3 mb-5">
 
-                  <Mail className="text-primary h-5 w-5"/>
+                  <Mail className="text-primary h-5 w-5" />
 
                   <span>info@futurefocus.com</span>
 
@@ -74,7 +74,7 @@ export default function GoogleMapSection() {
 
                 <div className="flex items-center gap-3">
 
-                  <Clock className="text-primary h-5 w-5"/>
+                  <Clock className="text-primary h-5 w-5" />
 
                   <span>{t("time")}</span>
 

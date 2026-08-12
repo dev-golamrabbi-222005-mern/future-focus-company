@@ -23,7 +23,7 @@ export default function FAQSection() {
   ];
 
   return (
-    <section className="relative py-12 md:py-16 lg:py-20 bg-background overflow-hidden">
+    <section className="relative py-12 md:py-16 lg:py-20 overflow-hidden">
       {/* Background Accent Blur */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-primary/10 rounded-full blur-[140px] pointer-events-none -z-10" />
 
@@ -64,11 +64,10 @@ export default function FAQSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
-                className={`overflow-hidden rounded-2xl border transition-all duration-300 shadow-sm ${
-                  isOpen
+                className={`overflow-hidden rounded-2xl border transition-all duration-300 shadow-sm ${isOpen
                     ? "border-primary/50 bg-card ring-1 ring-primary/20 shadow-md"
                     : "border-border bg-card/70 hover:border-primary/30 hover:bg-card"
-                }`}
+                  }`}
               >
                 {/* Accordion Question Button */}
                 <button
@@ -82,11 +81,10 @@ export default function FAQSection() {
                   </span>
 
                   <span
-                    className={`shrink-0 w-9 h-9 rounded-full flex items-center justify-center border transition-all duration-300 ${
-                      isOpen
+                    className={`shrink-0 w-9 h-9 rounded-full flex items-center justify-center border transition-all duration-300 ${isOpen
                         ? "bg-primary text-primary-foreground border-primary"
                         : "bg-muted/80 text-muted-foreground border-border group-hover:border-primary/40 group-hover:text-foreground"
-                    }`}
+                      }`}
                   >
                     {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                   </span>

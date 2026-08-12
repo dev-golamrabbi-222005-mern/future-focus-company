@@ -24,9 +24,9 @@ export function TermsOfServiceClient() {
   const tCommon = useTranslations('CommonUI');
 
   return (
-    <div className="min-h-screen bg-background pt-6 md:pt-8 lg:pt-10 pb-6 md:pb-8 lg:pb-10 relative overflow-hidden">
+    <div className="min-h-screen pt-6 md:pt-8 lg:pt-10 pb-6 md:pb-8 lg:pb-10 relative overflow-hidden">
       {/* Ambient background glows */}
-      <div className="absolute top-0 inset-x-0 h-96 bg-gradient-to-b from-primary/10 via-background/60 to-background pointer-events-none -z-10" />
+      <div className="absolute top-0 inset-x-0 h-96 bg-gradient-to-b from-primary/10 via-transparent to-transparent pointer-events-none -z-10" />
       <div className="absolute top-1/3 left-10 w-96 h-96 bg-primary/10 rounded-full blur-[140px] pointer-events-none -z-10" />
 
       <div className="max-w-[1050px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,7 +52,7 @@ export function TermsOfServiceClient() {
 
         {/* Content Container Card */}
         <div className="bg-card border border-border rounded-3xl p-6 sm:p-10 md:p-12 space-y-10 shadow-sm text-foreground/90 leading-relaxed text-sm sm:text-base">
-          
+
           {/* Section 1: Acceptance of Terms */}
           <section className="space-y-3">
             <h2 className="text-xl sm:text-2xl font-bold text-foreground border-b border-border/60 pb-3">

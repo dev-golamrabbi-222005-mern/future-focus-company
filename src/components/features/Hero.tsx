@@ -61,7 +61,7 @@ export default function Hero1() {
   }, [slides.length]);
 
   return (
-    <section className="relative min-h-[560px] h-auto md:h-[70vh] md:max-h-[70vh] pt-6 md:pt-8 lg:pt-10 pb-10 md:pb-8 w-full bg-background overflow-hidden flex items-center justify-center">
+    <section className="relative min-h-[560px] h-auto md:h-[70vh] md:max-h-[70vh] pt-6 md:pt-8 lg:pt-10 pb-10 md:pb-8 w-full overflow-hidden flex items-center justify-center">
       {/* Dynamic Background Image */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence mode="wait">
@@ -78,14 +78,14 @@ export default function Hero1() {
               className="object-cover w-full h-full"
               alt="Background"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-background via-background/50 to-background" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/20 to-transparent" />
           </motion.div>
         </AnimatePresence>
       </div>
 
       <div className="relative z-10 w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8 my-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16 py-4 lg:py-0">
-          
+
           {/* Left Column Text Content */}
           <div className="w-full lg:w-1/2 space-y-5 text-center lg:text-left">
             <AnimatePresence mode="wait">
@@ -178,11 +178,10 @@ export default function Hero1() {
                             type="button"
                             onClick={() => setIndex(i)}
                             aria-label={`Go to slide ${i + 1}`}
-                            className={`h-2 rounded-full transition-all duration-500 ${
-                              index === i
-                                ? 'w-10 bg-primary'
-                                : 'w-4 bg-white/30 hover:bg-white/50'
-                            }`}
+                            className={`h-2 rounded-full transition-all duration-500 ${index === i
+                              ? 'w-10 bg-primary'
+                              : 'w-4 bg-white/30 hover:bg-white/50'
+                              }`}
                           />
                         ))}
                       </div>

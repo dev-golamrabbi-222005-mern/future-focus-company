@@ -86,7 +86,7 @@ export function FAQ() {
   return (
     <section
       ref={containerRef}
-      className="py-16 md:py-24 bg-background relative overflow-hidden"
+      className="py-16 md:py-24 relative overflow-hidden"
     >
       <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[120px] pointer-events-none -z-10" />
       <div className="absolute bottom-10 left-0 w-[350px] h-[350px] bg-accent/5 rounded-full blur-[100px] pointer-events-none -z-10" />
@@ -121,11 +121,10 @@ export function FAQ() {
             return (
               <div
                 key={item.key}
-                className={`faq-item border rounded-2xl transition-all duration-300 overflow-hidden shadow-sm ${
-                  isOpen
+                className={`faq-item border rounded-2xl transition-all duration-300 overflow-hidden shadow-sm ${isOpen
                     ? "border-primary/50 bg-card shadow-md ring-1 ring-primary/20"
                     : "border-border bg-card/60 hover:border-primary/30 hover:bg-card"
-                }`}
+                  }`}
               >
                 <button
                   type="button"
@@ -138,22 +137,20 @@ export function FAQ() {
                   </span>
 
                   <span
-                    className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center border transition-all duration-300 ${
-                      isOpen
+                    className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center border transition-all duration-300 ${isOpen
                         ? "bg-primary text-primary-foreground border-primary rotate-180"
                         : "bg-muted/80 text-muted-foreground border-border group-hover:border-primary/40 group-hover:text-foreground"
-                    }`}
+                      }`}
                   >
                     <ChevronDown className="w-4 h-4" />
                   </span>
                 </button>
 
                 <div
-                  className={`grid transition-all duration-300 ease-in-out ${
-                    isOpen
+                  className={`grid transition-all duration-300 ease-in-out ${isOpen
                       ? "grid-rows-[1fr] opacity-100"
                       : "grid-rows-[0fr] opacity-0 pointer-events-none"
-                  }`}
+                    }`}
                 >
                   <div className="overflow-hidden">
                     <div className="pt-1 pb-6 px-6 sm:px-8 text-muted-foreground text-sm sm:text-base leading-relaxed border-t border-border/40 mt-1">

@@ -30,7 +30,7 @@ export function Navbar() {
     <header className="glass-nav sticky top-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/60">
       <div className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          
+
           {/* Logo */}
           <Link
             href={`/${locale}`}
@@ -80,9 +80,12 @@ export function Navbar() {
           {/* Right Actions: Language Dropdown + Theme Toggle + Always-Visible Primary CTA + Mobile Trigger */}
           <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3 shrink-0">
             <div className={cn(
+              // Mobile (all locales): always stacked col-reverse
+              "flex flex-col-reverse gap-2 items-center justify-center",
+              // sm+ : restore per-locale logic
               locale === 'bn'
-                ? "flex flex-col-reverse gap-1 justify-center items-center min-[1600px]:flex-row"
-                : "flex flex-row items-center gap-2"
+                ? "sm:flex-col-reverse sm:gap-1 min-[1600px]:flex-row"
+                : "sm:flex-row sm:gap-2"
             )}>
               <LanguageSwitcher />
               <ThemeToggle />

@@ -32,10 +32,10 @@ export default function AboutCompany() {
   const imageRef = React.useRef<HTMLDivElement>(null);
 
   const stats = [
-    { icon: Building2,  value: t("experienceValue"),  label: t("experience") },
-    { icon: Users,      value: t("workersValue"),  label: t("workers")    },
+    { icon: Building2, value: t("experienceValue"), label: t("experience") },
+    { icon: Users, value: t("workersValue"), label: t("workers") },
     { icon: BriefcaseBusiness, value: t("clientsValue"), label: t("clients") },
-    { icon: ShieldCheck, value: t("supportValue"), label: t("support")   },
+    { icon: ShieldCheck, value: t("supportValue"), label: t("support") },
   ];
 
   useGSAP(
@@ -53,12 +53,12 @@ export default function AboutCompany() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-background pt-6 md:pt-8 lg:pt-10 pb-12 md:pb-16 lg:pb-20"
+      className="relative overflow-hidden pt-6 md:pt-8 lg:pt-10 pb-12 md:pb-16 lg:pb-20"
     >
 
 
       {/* LightRays decorative background */}
-      <div className="absolute inset-0 -z-10 pointer-events-none h-[300px] sm:h-[400px] lg:h-[600px]">
+      <div className="absolute inset-0 -z-10 pointer-events-none [mask-image:linear-gradient(to_bottom,black_20%,transparent_100%)]">
         <LightRays
           raysOrigin="top-center"
           raysColor="#ffffff"
@@ -143,13 +143,13 @@ export default function AboutCompany() {
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
               <a
-            href="/doc/Profile(FFC).pdf"
-            download
-            className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 rtl:space-x-reverse border border-border bg-card hover:bg-muted/50 text-foreground font-bold px-8 py-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer"
-          >
-            <Download className="w-5 h-5 text-primary" />
-            <span>{t('ctaDownload')}</span>
-          </a>
+                href="/doc/Profile(FFC).pdf"
+                download
+                className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 rtl:space-x-reverse border border-border bg-card hover:bg-muted/50 text-foreground font-bold px-8 py-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer"
+              >
+                <Download className="w-5 h-5 text-primary" />
+                <span>{t('ctaDownload')}</span>
+              </a>
             </motion.div>
           </div>
 

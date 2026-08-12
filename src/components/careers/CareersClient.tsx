@@ -17,25 +17,33 @@ export function CareersClient() {
       icon: Briefcase,
       value: t("heroStatJobsValue"),
       label: t("heroStatJobs"),
+      color: "from-blue-600 to-cyan-500",
     },
     {
       icon: Users,
       value: t("heroStatPlacedValue"),
       label: t("heroStatPlaced"),
+      color: "from-sky-500 to-indigo-600",
     },
     {
       icon: DollarSign,
       value: t("heroStatSalaryValue"),
       label: t("heroStatSalary"),
+      color: "from-cyan-500 to-blue-600",
     },
-    { icon: Clock, value: t("heroStatDaysValue"), label: t("heroStatDays") },
+    {
+      icon: Clock,
+      value: t("heroStatDaysValue"),
+      label: t("heroStatDays"),
+      color: "from-indigo-600 to-sky-500",
+    },
   ];
 
   return (
     <div className="w-full">
       <div className="relative flex overflow-hidden items-center justify-center">
         <div style={{ width: "100%", height: "500px", position: "relative" }}
-        className="sticky"
+          className="sticky [mask-image:linear-gradient(to_bottom,black_20%,transparent_100%)]"
         >
           <LightRays
             raysOrigin="top-center"
@@ -55,7 +63,7 @@ export function CareersClient() {
         </div>
 
         {/* ══════════ HERO ══════════ */}
-        <section className="absolute overflow-hidden flex-col bg-background pt-8 md:pt-10 lg:pt-12 pb-12 md:pb-16 lg:pb-20">
+        <section className="absolute overflow-hidden flex-col pt-8 md:pt-10 lg:pt-12 pb-12 md:pb-16 lg:pb-20">
           <div className="absolute inset-0 -z-10 pointer-events-none">
             <div className="absolute -top-32 left-1/2 h-[560px] w-[560px] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px]" />
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(3,105,161,0.06),transparent_60%)]" />
@@ -107,16 +115,16 @@ export function CareersClient() {
                 return (
                   <motion.div
                     key={i}
-                    whileHover={{ y: -5, scale: 1.03 }}
-                    className="group rounded-2xl border border-border bg-card p-5 shadow-sm hover:border-primary/40 hover:shadow-lg transition-all text-center"
+                    whileHover={{ y: -8, scale: 1.05 }}
+                    className="relative group rounded-3xl border border-border/80 bg-card p-7 shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 text-center overflow-hidden"
                   >
-                    <Icon className="mx-auto mb-2 h-6 w-6 text-primary group-hover:scale-110 transition-transform" />
-                    <p className="text-2xl font-black text-foreground">
-                      {s.value}
-                    </p>
-                    <p className="mt-1 text-[11px] text-muted-foreground leading-tight font-medium">
-                      {s.label}
-                    </p>
+                    <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${s.color}`} />
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
+                    <div className="mb-4 inline-flex items-center justify-center h-12 w-12 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 mx-auto">
+                      <Icon className="h-6 w-6" />
+                    </div>
+                    <p className="text-2xl font-black text-foreground">{s.value}</p>
+                    <p className="mt-1 text-sm font-medium text-muted-foreground leading-tight">{s.label}</p>
                   </motion.div>
                 );
               })}

@@ -125,7 +125,7 @@ export function WhyChooseUs() {
   return (
     <section
       ref={containerRef}
-      className="relative py-16 md:py-20 lg:py-24 overflow-hidden bg-background"
+      className="relative py-16 md:py-20 lg:py-24 overflow-hidden"
     >
       {/* ── Background decorations ── */}
       <div className="pointer-events-none absolute inset-0 -z-10">

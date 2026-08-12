@@ -34,7 +34,7 @@ export default function WhatIsManpower() {
           once: true,
         },
       });
-     
+
       const section = sectionRef.current;
       const glow = glowRef.current;
 
@@ -85,7 +85,7 @@ export default function WhatIsManpower() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-background py-12 md:py-16 lg:py-20"
+      className="relative overflow-hidden py-12 md:py-16 lg:py-20"
     >
       {/* Background Glow */}
 
@@ -213,7 +213,7 @@ export default function WhatIsManpower() {
                   {/* Hover Glow */}
 
                   <div
-                    className="absolute -right-16 -top-16 h-44 w-44 rounded-full bg-primary/10 blur-3xl transition-all duration-700 group-hover:scale-150"/>
+                    className="absolute -right-16 -top-16 h-44 w-44 rounded-full bg-primary/10 blur-3xl transition-all duration-700 group-hover:scale-150" />
 
                   <div className="relative flex gap-6">
                     {/* Icon */}
@@ -257,7 +257,7 @@ export default function WhatIsManpower() {
                       duration: 1,
                       delay: index * 0.2,
                     }}
-                    className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-primary via-yellow-400 to-primary"/>
+                    className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-primary via-yellow-400 to-primary" />
                 </motion.div>
               );
             })}

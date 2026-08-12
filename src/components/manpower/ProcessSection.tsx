@@ -117,7 +117,7 @@ export default function ProcessSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-background pt-12 md:pt-16 lg:pt-20 pb-6 md:pb-8 lg:pb-10"
+      className="relative overflow-hidden pt-12 md:pt-16 lg:pt-20 pb-6 md:pb-8 lg:pb-10"
     >
       {/* Mouse Glow */}
 

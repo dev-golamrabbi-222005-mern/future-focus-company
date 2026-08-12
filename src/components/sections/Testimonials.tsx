@@ -81,8 +81,8 @@ export function Testimonials() {
         onMouseLeave={handleMouseLeave}
       >
         {/* Left & Right Gradient Fades */}
-        <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-background/60 to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-background/60 to-transparent z-10 pointer-events-none" />
 
         <div
           ref={marqueeRef}
@@ -124,11 +124,10 @@ export function Testimonials() {
                       ))}
                     </div>
                     <span
-                      className={`text-[11px] font-bold px-2.5 py-1 rounded-full border ${
-                        isB2B
+                      className={`text-[11px] font-bold px-2.5 py-1 rounded-full border ${isB2B
                           ? 'bg-sky-500/10 text-sky-500 border-sky-500/20'
                           : 'bg-emerald-500/10 text-emerald-500 border-emerald-500/20'
-                      }`}
+                        }`}
                     >
                       {isB2B ? 'Enterprise Employer' : 'Verified Candidate'}
                     </span>
@@ -145,11 +144,10 @@ export function Testimonials() {
                   <div className="flex items-center space-x-3.5 rtl:space-x-reverse">
                     <div className="relative shrink-0">
                       <div
-                        className={`w-11 h-11 rounded-full bg-gradient-to-br ${
-                          isB2B
+                        className={`w-11 h-11 rounded-full bg-gradient-to-br ${isB2B
                             ? 'from-blue-600 to-sky-500'
                             : 'from-emerald-600 to-teal-500'
-                        } text-white font-bold flex items-center justify-center text-xs tracking-wider shadow-sm`}
+                          } text-white font-bold flex items-center justify-center text-xs tracking-wider shadow-sm`}
                       >
                         {initials}
                       </div>
