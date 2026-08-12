@@ -8,6 +8,9 @@ import { sendCvEmail, fileToBase64 } from "@/lib/emailjs";
 export function SubmitCvSection() {
   const t = useTranslations("SubmitCvPage");
   const tCommon = useTranslations("CommonUI");
+  const tCountries = useTranslations("Countries");
+  const tTrades = useTranslations("Trades");
+  const tExperience = useTranslations("Experience");
   const [cvSubmitted, setCvSubmitted] = React.useState(false);
   const [loading, setLoading] = React.useState(false);
 
@@ -150,7 +153,7 @@ export function SubmitCvSection() {
                       minLength={2}
                       maxLength={60}
                       autoComplete="name"
-                      placeholder="Md. Rahim Uddin"
+                      placeholder={t("namePlaceholder")}
                       className="w-full px-4 py-3.5 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground"
                     />
                   </div>
@@ -169,7 +172,7 @@ export function SubmitCvSection() {
                         required
                         maxLength={100}
                         autoComplete="email"
-                        placeholder="name@example.com"
+                        placeholder={t("emailPlaceholder")}
                         className="w-full px-4 py-3.5 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground"
                       />
                     </div>
@@ -186,7 +189,7 @@ export function SubmitCvSection() {
                         minLength={8}
                         maxLength={20}
                         autoComplete="tel"
-                        placeholder="+880 1712 345678"
+                        placeholder={t("phonePlaceholder")}
                         pattern="[+]?[0-9\s\-()]{8,20}"
                         className="w-full px-4 py-3.5 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground"
                       />
@@ -207,16 +210,16 @@ export function SubmitCvSection() {
                         className="w-full px-4 py-3.5 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground"
                       >
                         <option value="">{tCommon("selectCountry")}</option>
-                        <option value="bangladesh">Bangladesh</option>
-                        <option value="india">India</option>
-                        <option value="pakistan">Pakistan</option>
-                        <option value="nepal">Nepal</option>
-                        <option value="philippines">Philippines</option>
-                        <option value="indonesia">Indonesia</option>
-                        <option value="uganda">Uganda</option>
-                        <option value="sudan">Sudan</option>
-                        <option value="ethiopia">Ethiopia</option>
-                        <option value="sri-lanka">Sri Lanka</option>
+                        <option value="bangladesh">{tCountries("bangladesh")}</option>
+                        <option value="india">{tCountries("india")}</option>
+                        <option value="pakistan">{tCountries("pakistan")}</option>
+                        <option value="nepal">{tCountries("nepal")}</option>
+                        <option value="philippines">{tCountries("philippines")}</option>
+                        <option value="indonesia">{tCountries("indonesia")}</option>
+                        <option value="uganda">{tCountries("uganda")}</option>
+                        <option value="sudan">{tCountries("sudan")}</option>
+                        <option value="ethiopia">{tCountries("ethiopia")}</option>
+                        <option value="sri-lanka">{tCountries("sriLanka")}</option>
                         <option value="other">{tCommon("other")}</option>
                       </select>
                     </div>
@@ -233,7 +236,7 @@ export function SubmitCvSection() {
                         minLength={6}
                         maxLength={20}
                         autoComplete="off"
-                        placeholder="A01234567"
+                        placeholder={t("passportPlaceholder")}
                         className="w-full px-4 py-3.5 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground uppercase"
                       />
                     </div>
@@ -261,17 +264,17 @@ export function SubmitCvSection() {
                         className="w-full px-4 py-3.5 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground"
                       >
                         <option value="">{tCommon("selectCategory")}</option>
-                        <option value="electrician">MEP Electrician</option>
-                        <option value="welder">Welder</option>
-                        <option value="plumber">Plumber</option>
-                        <option value="mason">Mason</option>
-                        <option value="steel-fixer">Steel Fixer</option>
-                        <option value="hvac">HVAC Technician</option>
-                        <option value="driver">Heavy Trailer Driver</option>
-                        <option value="cook">Hospitality Line Cook</option>
-                        <option value="cleaner">Cleaner / Janitor</option>
-                        <option value="general-helper">General Helper</option>
-                        <option value="other">Other Skilled Trade</option>
+                        <option value="electrician">{tTrades("electrician")}</option>
+                        <option value="welder">{tTrades("welder")}</option>
+                        <option value="plumber">{tTrades("plumber")}</option>
+                        <option value="mason">{tTrades("mason")}</option>
+                        <option value="steel-fixer">{tTrades("steelFixer")}</option>
+                        <option value="hvac">{tTrades("hvac")}</option>
+                        <option value="driver">{tTrades("driver")}</option>
+                        <option value="cook">{tTrades("cook")}</option>
+                        <option value="cleaner">{tTrades("cleaner")}</option>
+                        <option value="general-helper">{tTrades("generalHelper")}</option>
+                        <option value="other">{tTrades("otherTrade")}</option>
                       </select>
                     </div>
                     <div className="space-y-2">
@@ -286,10 +289,10 @@ export function SubmitCvSection() {
                         className="w-full px-4 py-3.5 rounded-xl border border-border bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary text-sm font-medium text-foreground"
                       >
                         <option value="">{tCommon("selectExperience")}</option>
-                        <option value="0-1">0–1 Years</option>
+                        <option value="0-1">{tExperience("years0_1")}</option>
                         <option value="1-3">{tCommon("years1_3")}</option>
                         <option value="3-5">{tCommon("years3_5")}</option>
-                        <option value="5-10">5–10 Years</option>
+                        <option value="5-10">{tExperience("years5_10")}</option>
                         <option value="5+">{tCommon("years5Plus")}</option>
                       </select>
                     </div>
@@ -314,7 +317,7 @@ export function SubmitCvSection() {
                     >
                       <Upload className="h-8 w-8 text-primary" />
                       <p className="text-xs font-semibold text-foreground">
-                        {cvFileName ? `Attached: ${cvFileName}` : tCommon("uploadResume")}
+                        {cvFileName ? `${tCommon("attached")}${cvFileName}` : tCommon("uploadResume")}
                       </p>
                       <input
                         id="cv-upload-input"
@@ -339,7 +342,7 @@ export function SubmitCvSection() {
                     >
                       <FileText className="h-8 w-8 text-accent" />
                       <p className="text-xs font-semibold text-foreground">
-                        {passportFileName ? `Attached: ${passportFileName}` : tCommon("uploadPassport")}
+                        {passportFileName ? `${tCommon("attached")}${passportFileName}` : tCommon("uploadPassport")}
                       </p>
                       <input
                         id="passport-upload-input"

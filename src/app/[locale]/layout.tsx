@@ -9,7 +9,7 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import WhatsAppFloat from '@/components/ui/WhatsAppFloat';
 import { ChatWidget } from '@/components/features/chat/ChatWidget';
-import { WelcomeLoader } from '@/components/common/WelcomeLoader';
+import { WelcomeLoader } from '@/components/ui/WelcomeLoader';
 import { JsonLd } from '@/components/seo/JsonLd';
 import MovingGridBg from '@/components/ui/MovingGridBg';
 import '@/styles/globals.css';

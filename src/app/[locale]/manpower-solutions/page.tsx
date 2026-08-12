@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import AboutIntro from '@/components/manpower/AboutIntro';
-import CompanyHighlights from '@/components/manpower/CompanyHighlights';
-import { SectorsGrid } from '@/components/features/services/SectorsGrid';
-import WhatIsManpower from '@/components/manpower/WhatIsManpower';
-import { ProcessTimeline as ServicesProcessTimeline } from '@/components/features/services/ProcessTimeline';
+import AboutIntro from '@/components/features/manpower/ManpowerAboutIntro';
+import CompanyHighlights from '@/components/features/manpower/ManpowerCompanyHighlights';
+import { SectorsGrid } from '@/components/features/services/ServicesSectorsGrid';
+import WhatIsManpower from '@/components/features/manpower/WhatIsManpower';
+import { ProcessTimeline as ServicesProcessTimeline } from '@/components/features/services/ServicesProcessTimeline';
 import { ComplianceBanner } from '@/components/features/services/ComplianceBanner';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {

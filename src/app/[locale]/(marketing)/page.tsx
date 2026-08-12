@@ -1,16 +1,16 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import Hero1 from '@/components/features/Hero';
-import AboutSection from '@/components/sections/AboutSection';
-import { StatsSection } from '@/components/sections/StatsSection';
-import { WhyChooseUs } from '@/components/sections/WhyChooseUs';
-import { AboutSnippet } from '@/components/sections/AboutSnippet';
-import { SectorsGrid } from '@/components/features/services/SectorsGrid';
-import { GlobalReachMap } from '@/components/sections/GlobalReachMap';
-import { ProcessTimeline } from '@/components/sections/ProcessTimeline';
-import { Testimonials } from '@/components/sections/Testimonials';
-import { FAQ } from '@/components/sections/FAQ';
-import { GetInTouch } from '@/components/sections/GetInTouch';
+import Hero1 from '@/components/features/home/HeroSection';
+import AboutSection from '@/components/features/home/AboutSection';
+import { StatsSection } from '@/components/features/home/StatsSection';
+import { WhyChooseUs } from '@/components/features/home/WhyChooseUsSection';
+import { AboutSnippet } from '@/components/features/home/AboutSnippetSection';
+import { SectorsGrid } from '@/components/features/services/ServicesSectorsGrid';
+import { GlobalReachMap } from '@/components/features/home/GlobalReachMapSection';
+import { ProcessTimeline } from '@/components/features/home/HomeProcessTimelineSection';
+import { Testimonials } from '@/components/features/home/TestimonialsSection';
+import { FAQ } from '@/components/features/home/HomeFAQSection';
+import { GetInTouch } from '@/components/features/home/GetInTouchSection';
 
 interface HomePageProps {
   params: Promise<{ locale: string }>;
