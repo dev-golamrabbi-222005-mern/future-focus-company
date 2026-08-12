@@ -16,10 +16,10 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-import WhyChoose from "./WhyChoose";
-import AboutCompany from "@/components/about/aboutUs/page";
-import CompanyTimeline from "@/components/about/timeline/page";
-import CallToAction from "@/components/about/CallToAction";
+import WhyChoose from "./AboutWhyChoose";
+import AboutCompany from "@/components/features/about/AboutUsSection";
+import CompanyTimeline from "@/components/features/about/CompanyTimelineSection";
+import CallToAction from "@/components/features/about/AboutCTA";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);

@@ -4,10 +4,10 @@ import * as React from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Briefcase, Users, DollarSign, Clock } from "lucide-react";
-import CareersJobsSection from "@/components/careers/CareersJobsSection";
-import CareersCTA from "@/components/careers/CareersCTA";
+import CareersJobsSection from "@/components/features/careers/CareersJobsSection";
+import CareersCTA from "@/components/features/careers/CareersCTA";
 import { SubmitCvSection } from "@/components/features/contact/SubmitCvSection";
-import LightRays from "../ui/LightRays";
+import LightRays from "@/components/ui/LightRays";
 
 export function CareersClient() {
   const t = useTranslations("CareersPage");

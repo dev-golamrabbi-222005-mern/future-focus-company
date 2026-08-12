@@ -6,10 +6,10 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { HardHat, Wrench, Utensils, Truck, ShieldCheck, ArrowRight } from 'lucide-react';
-import AboutIntro from '@/components/manpower/AboutIntro';
-import WhatIsManpower from '@/components/manpower/WhatIsManpower';
-import CompanyHighlights from '@/components/manpower/CompanyHighlights';
-import ProcessSection from '@/components/manpower/ProcessSection';
+import AboutIntro from '@/components/features/manpower/ManpowerAboutIntro';
+import WhatIsManpower from '@/components/features/manpower/WhatIsManpower';
+import CompanyHighlights from '@/components/features/manpower/ManpowerCompanyHighlights';
+import ProcessSection from '@/components/features/manpower/ManpowerProcessSection';
 import {useLocale } from "next-intl";
 import Link from 'next/link';
 

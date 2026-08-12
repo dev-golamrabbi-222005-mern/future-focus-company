@@ -6,8 +6,8 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ContactFormSection } from "@/components/features/contact/ContactFormSection";
-import GoogleMapSection from "@/components/contact/GoogleMapSection";
-import FAQSection from "@/components/contact/FAQSection";
+import GoogleMapSection from "@/components/features/contact/GoogleMapSection";
+import FAQSection from "@/components/features/contact/ContactFAQSection";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
