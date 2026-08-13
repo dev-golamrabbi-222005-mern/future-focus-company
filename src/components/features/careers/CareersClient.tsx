@@ -40,30 +40,52 @@ export function CareersClient() {
   ];
 
   return (
-    <div className="w-full">
-      <div className="relative flex overflow-hidden items-center justify-center pb-15 md:pb-20 lg:pb-25">
-        <div style={{ width: "100%", height: "500px", position: "relative" }}
-          className="sticky [mask-image:linear-gradient(to_bottom,black_20%,transparent_100%)]"
-        >
-          <LightRays
-            raysOrigin="top-center"
-            raysColor="#ffffff"
-            raysSpeed={1}
-            lightSpread={0.5}
-            rayLength={3}
-            followMouse={true}
-            mouseInfluence={0.1}
-            noiseAmount={0}
-            distortion={0}
-            className="custom-rays"
-            pulsating={false}
-            fadeDistance={1}
-            saturation={1}
-          />
-        </div>
+    <div className="w-full overflow-hidden">
+      <div className="relative
+      flex
+      items-center
+      justify-center
+      overflow-hidden
+      min-h-[720px]
+      sm:min-h-[700px]
+      md:min-h-[650px]
+      lg:min-h-[600px]
+      pb-10
+      sm:pb-14
+      md:pb-20
+      lg:pb-24">
+        <div
+      className="
+        absolute
+        inset-x-0
+        top-0
+        h-[420px]
+        sm:h-[480px]
+        md:h-[520px]
+        lg:h-[560px]
+        pointer-events-none
+        [mask-image:linear-gradient(to_bottom,black_20%,transparent_100%)]
+      "
+    >
+      <LightRays
+        raysOrigin="top-center"
+        raysColor="#ffffff"
+        raysSpeed={1}
+        lightSpread={0.5}
+        rayLength={3}
+        followMouse={true}
+        mouseInfluence={0.1}
+        noiseAmount={0}
+        distortion={0}
+        className="custom-rays"
+        pulsating={false}
+        fadeDistance={1}
+        saturation={1}
+      />
+    </div>
 
         {/* ══════════ HERO ══════════ */}
-        <section className="absolute overflow-hidden flex-col pt-10 md:pt-12 lg:pt-16">
+        <section className="relative w-full overflow-hidden pt-16 sm:pt-18 md:pt-20 lg:pt-24 pb-8 sm:pb-10 md:pb-12">
           <div className="absolute inset-0 -z-10 pointer-events-none">
             <div className="absolute -top-32 left-1/2 h-[560px] w-[560px] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px]" />
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(3,105,161,0.06),transparent_60%)]" />
@@ -116,14 +138,32 @@ export function CareersClient() {
                   <motion.div
                     key={i}
                     whileHover={{ y: -8, scale: 1.05 }}
-                    className="relative group rounded-3xl border border-border/80 bg-card p-7 shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 text-center overflow-hidden"
+                    className="relative
+                  group
+                  rounded-2xl
+                  sm:rounded-3xl
+                  border
+                  border-border/80
+                  bg-card
+                  px-3
+                  py-5
+                  sm:p-6
+                  md:p-7
+                  shadow-sm
+                  hover:shadow-xl
+                  hover:border-primary/50
+                  transition-all
+                  duration-300
+                  text-center
+                  overflow-hidden
+                  min-w-0"
                   >
                     <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${s.color}`} />
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
                     <div className="mb-4 inline-flex items-center justify-center h-12 w-12 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 mx-auto">
                       <Icon className="h-6 w-6" />
                     </div>
-                    <p className="text-2xl font-black text-foreground">{s.value}</p>
+                    <p className="text-xl lg:text-2xl font-black text-foreground">{s.value}</p>
                     <p className="mt-1 text-sm font-medium text-muted-foreground leading-tight">{s.label}</p>
                   </motion.div>
                 );
