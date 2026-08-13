@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: 'Future Focus Company',
   description: 'Premier government-approved manpower recruitment agency connecting Bangladeshi talent with top employers across Saudi Arabia & the Middle East.',
-  license: 'RL-1428',
+  license: '7052268831',
   navLinks: [
     { href: '', key: 'home' },
     { href: '/manpower-solutions', key: 'manpowerSolutions' },
@@ -18,8 +18,8 @@ export const siteConfig = {
       email: 'operations@ffccom.net'
     },
     bangladesh: {
-      address: 'House 12, Road 04, Block B, Banani, Dhaka-1213, Bangladesh',
-      phone: '+966 56 616 7562',
+      address: '204 Shahid Syed Nazrul Islam Avenue 89 (12/B Old) Bijoy Nagar, Aziz Co-operative Market - 2nd floor, Dhaka 1000, Bangladesh',
+      phone: '+88 01753 471575',
       Whatsapp: 'https://wa.me/966533248473',
       email: 'Operations@ffccom.net'
     }

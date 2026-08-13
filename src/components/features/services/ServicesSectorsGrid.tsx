@@ -90,7 +90,7 @@ export function SectorsGrid() {
               className="sector-card bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300 group shadow-sm hover:shadow-xl cursor-pointer"
             >
               {/* Image */}
-              <div className="relative h-52 overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
                 <img
                   src={sector.image}
                   alt={title}

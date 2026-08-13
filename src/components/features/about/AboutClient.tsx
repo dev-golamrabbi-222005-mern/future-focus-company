@@ -252,7 +252,7 @@ export function AboutClient() {
 
               <div className="pt-4 border-t border-border/60 flex items-center gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary to-sky-400 text-primary-foreground font-black text-lg shadow-md">
-                  A
+                  M
                 </div>
                 <div>
                   <p className="text-base font-extrabold text-foreground">
@@ -290,7 +290,7 @@ export function AboutClient() {
 
               <div className="pt-4 border-t border-border/60 flex items-center gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary to-sky-400 text-primary-foreground font-black text-lg shadow-md">
-                  A
+                  S
                 </div>
                 <div>
                   <p className="text-base font-extrabold text-foreground">

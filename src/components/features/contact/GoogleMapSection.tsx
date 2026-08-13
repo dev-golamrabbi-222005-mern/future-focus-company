@@ -60,7 +60,7 @@ export default function GoogleMapSection() {
 
                   <Phone className="text-primary h-5 w-5" />
 
-                  <span>+966 5X XXX XXXX</span>
+                  <span>+966 56 616 7562</span>
 
                 </div>
 
@@ -68,7 +68,7 @@ export default function GoogleMapSection() {
 
                   <Mail className="text-primary h-5 w-5" />
 
-                  <span>info@futurefocus.com</span>
+                  <span>operations@ffccom.net</span>
 
                 </div>
 
