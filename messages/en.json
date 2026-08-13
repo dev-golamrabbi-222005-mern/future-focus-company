@@ -116,7 +116,7 @@
     "filterCleaning": "Cleaning",
     "filterHospitality": "Hospitality",
     "filterSecurity": "Security",
-    "filterSubtitle": "All positions include free visa, free accommodation, GAMCA medical clearance, and BMET documentation support.",
+    "filterSubtitle": "Reliable and professional manpower solutions tailored to meet the diverse workforce needs of businesses across the Kingdom.",
     "filterSupport": "Support Staff",
     "filterTag": "Job Listings",
     "filterTitle": "Current Openings in Saudi Arabia",
@@ -648,11 +648,11 @@
   "GetInTouch": {
     "badgeSla": "Guaranteed 24-Hour Response",
     "contactInfo": {
-      "address": "Level 18, Commercial Tower, Business Bay, Dubai, UAE",
+      "address": "Suite 402, Business Bay Tower, Al A'amal St, Business Bay, Riyadh, KSA",
       "addressTitle": "Headquarters & Office",
-      "email": "manpower@futurefocus.ae",
+      "email": "operations@ffccom.net",
       "emailTitle": "Corporate Inquiries",
-      "hours": "Monday - Saturday: 8:00 AM - 6:00 PM (GST)",
+      "hours": "Sunday - Thursday: 9:00 AM - 6:00 PM (GST)",
       "hoursTitle": "Operating Hours",
       "phone": "+971 4 388 9200 / +971 50 123 4567",
       "phoneTitle": "Direct Phone / WhatsApp"
@@ -695,7 +695,7 @@
     },
     "heading": "Ready to Scale Your Workforce with Premier Talent?",
     "slaSubtext": "Our team reviews & responds to proposals on the same day.",
-    "subheading": "Reach out to our Dubai business team today. Whether you need 10 specialist tradesmen or a 500-strong turnkey project crew, we deliver on time and fully compliant.",
+    "subheading": "Reach out to our Saudi business team today. Whether you need 10 specialist tradesmen or a 500-strong turnkey project crew, we deliver on time and fully compliant.",
     "tagline": "Let's Talk Business"
   },
   "GlobalReachMap": {
@@ -724,7 +724,7 @@
     "description": "Future Focus Company proudly serves clients across Saudi Arabia from our Riyadh office. We are ready to assist you with reliable manpower recruitment solutions.",
     "office": "Head Office",
     "tag": "OUR LOCATION",
-    "time": "Sunday - Thursday : 9:00 AM - 6:00 PM",
+    "time": "Sunday - Thursday: 9:00 AM - 6:00 PM",
     "title": "Visit Our Office"
   },
   "Hero": {
