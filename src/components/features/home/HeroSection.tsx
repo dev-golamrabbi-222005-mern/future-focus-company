@@ -12,10 +12,10 @@ export default function Hero1() {
   const [index, setIndex] = useState(0);
 
   const slideImages = [
-    'https://i.postimg.cc/6p88Qg5V/Hero-1.png',
-    'https://i.postimg.cc/X7HZ443s/Hero-2.jpg',
-    'https://i.postimg.cc/sgMM2qDY/Hero-3.png',
-    'https://i.postimg.cc/QdFFMwxp/Hero-4.png',
+    'https://i.postimg.cc/HkVGvXfm/Hero-1.png',
+    'https://i.postimg.cc/y8kqpcwB/Hero-2.jpg',
+    'https://i.postimg.cc/YChcDYJ0/Hero-3.png',
+    'https://i.postimg.cc/P5PGVYBq/Hero-4.png',
   ];
 
   const slides = [
