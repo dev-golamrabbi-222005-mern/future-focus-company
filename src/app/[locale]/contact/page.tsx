@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import { ContactClient } from '@/components/contact/ContactClient';
+import { ContactClient } from '@/components/features/contact/ContactClient';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;

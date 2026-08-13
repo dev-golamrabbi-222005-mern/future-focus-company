@@ -6,7 +6,7 @@ import { ShieldAlert, Home, Briefcase } from 'lucide-react';
 
 export default function RootNotFound() {
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center pt-24 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <div className="min-h-screen flex items-center justify-center pt-24 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-primary/10 rounded-full blur-[150px] pointer-events-none -z-10" />
 
       <div className="max-w-2xl w-full text-center space-y-8 bg-card/60 backdrop-blur-xl border border-border/80 p-8 sm:p-12 md:p-14 rounded-3xl shadow-2xl relative">

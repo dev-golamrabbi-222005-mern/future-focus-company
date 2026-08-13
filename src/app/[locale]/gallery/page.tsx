@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import { GalleryClient } from '@/components/gallery/GalleryClient';
+import { GalleryClient } from '@/components/features/gallery/GalleryClient';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;

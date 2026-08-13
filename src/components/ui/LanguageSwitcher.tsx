@@ -55,7 +55,7 @@ export function LanguageSwitcher() {
         className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg border border-border bg-card hover:bg-muted text-foreground transition-all duration-200 shadow-sm"
       >
         <Globe className="h-3.5 w-3.5 text-primary" />
-        <span>{currentLang.flag}</span>
+        {/* <span>{currentLang.flag}</span> */}
         <span className="uppercase">{currentLang.code}</span>
         <ChevronDown className={cn("h-3 w-3 text-muted-foreground transition-transform duration-200", isOpen && "rotate-180")} />
       </button>

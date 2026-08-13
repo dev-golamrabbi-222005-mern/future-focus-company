@@ -48,7 +48,7 @@ export function ComplianceBanner() {
   return (
     <div
       ref={bannerRef}
-      className="p-8 sm:p-10 md:p-12 rounded-3xl bg-card border border-border/80 shadow-xl relative overflow-hidden"
+      className="p-8 sm:p-10 md:p-12 rounded-3xl bg-card border border-border/80 shadow-xl relative overflow-hidden mt-12 md:mt-16 lg:mt-20 mb-8 md:mb-10 lg:mb-12"
     >
       {/* Top Gradient Highlight Accent */}
       <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-emerald-500 via-primary to-accent" />
@@ -64,7 +64,7 @@ export function ComplianceBanner() {
             <span>{t('tagline')}</span>
           </div>
 
-          <h3 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight leading-tight">
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-foreground tracking-tight leading-tight">
             {t('heading')}
           </h3>
 

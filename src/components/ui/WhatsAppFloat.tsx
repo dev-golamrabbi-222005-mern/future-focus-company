@@ -1,10 +1,12 @@
 "use client";
 
 import * as React from "react";
+import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { siteConfig } from "@/config/site";
 
 export default function WhatsAppFloat() {
+  const t = useTranslations("CommonUI");
   const [hovered, setHovered] = React.useState(false);
 
   return (
@@ -19,7 +21,7 @@ export default function WhatsAppFloat() {
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="rounded-xl bg-[#25D366] px-4 py-2 text-sm font-bold text-white shadow-lg whitespace-nowrap"
           >
-            Chat on WhatsApp
+            {t("chatWhatsApp")}
           </motion.div>
         )}
       </AnimatePresence>
@@ -29,7 +31,7 @@ export default function WhatsAppFloat() {
         href={siteConfig.offices.saudi.Whatsapp}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Chat with us on WhatsApp"
+        aria-label={t("chatWhatsApp")}
         onHoverStart={() => setHovered(true)}
         onHoverEnd={() => setHovered(false)}
         initial={{ scale: 0, opacity: 0 }}

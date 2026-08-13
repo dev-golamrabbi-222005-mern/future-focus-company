@@ -54,7 +54,7 @@ export function SectorDetailHero({ slug, locale }: SectorDetailHeroProps) {
       </div>
 
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground tracking-tight leading-tight mb-4">
-        {title} Manpower
+        {title} {tCommon('manpowerSuffix')}
       </h1>
 
       <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-6">
