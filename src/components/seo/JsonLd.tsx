@@ -20,19 +20,19 @@ export function JsonLd({ siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://
     identifier: '7052268831',
     taxID: '7052268831',
     telephone: '+8801700000000',
-    email: 'info@futurefocuscompany.com',
+    email: 'operations@ffccom.net',
     priceRange: '$$',
     address: [
       {
         '@type': 'PostalAddress',
-        streetAddress: 'House 12, Road 04, Block B, Banani',
+        streetAddress: '204 Shahid Syed Nazrul Islam Avenue, 89 (12/B Old) Bijoy Nagar, Aziz Co-operative Marker - 2nd floor, Dhaka 1000, Bangladesh',
         addressLocality: 'Dhaka',
         postalCode: '1213',
         addressCountry: 'BD',
       },
       {
         '@type': 'PostalAddress',
-        streetAddress: 'Suite 402, Business Bay Tower, Al Amal Street, Business Bay',
+        streetAddress: 'Building 3183, Saeed bin Al-Aas Street, Al-Quds District, Riyadh 13214, Kingdom of Saudi Arabia',
         addressLocality: 'Riyadh',
         addressCountry: 'SA',
       },

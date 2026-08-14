@@ -182,7 +182,7 @@ export function PrivacyPolicyClient() {
               <div className="space-y-2 text-start">
                 <p className="flex items-center gap-3 text-sm font-bold text-foreground">
                   <Mail className="w-4 h-4 text-primary" />
-                  <span>{tCommon('emailLabel')}: Operations@ffccom.net</span>
+                  <span>{tCommon('emailLabel')}: operations@ffccom.net</span>
                 </p>
                 <p className="flex items-center gap-3 text-sm font-bold text-foreground">
                   <Phone className="w-4 h-4 text-primary" />
