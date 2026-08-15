@@ -14,8 +14,8 @@ export default function Hero1() {
   const slideImages = [
     'https://i.postimg.cc/HkVGvXfm/Hero-1.png',
     'https://i.postimg.cc/y8kqpcwB/Hero-2.jpg',
-    'https://i.postimg.cc/YChcDYJ0/Hero-3.png',
-    'https://i.postimg.cc/P5PGVYBq/Hero-4.png',
+    'https://i.postimg.cc/yYMLCbZX/Hero-1-1.jpg',
+    'https://i.postimg.cc/hPk2R5d8/Hero-2.jpg',
   ];
 
   const slides = [

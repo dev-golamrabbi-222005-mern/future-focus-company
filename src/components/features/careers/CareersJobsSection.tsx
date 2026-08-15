@@ -29,28 +29,32 @@ const JOB_IMAGES: Record<string, string> = {
   job7: "https://i.postimg.cc/SRXWps57/General-Helper.png",
   job8: "https://i.postimg.cc/yxJFzd5c/Even-staff.png",
   job9: "https://i.postimg.cc/t4dFb8ST/Golf-Cart-Driver.png",
+  job10: "/images/workforce/electricians.jpg",
+  job11: "/images/workforce/masons.jpg",
+  job12: "/images/workforce/plumbers.jpg",
+  job13: "/images/workforce/welders.jpg",
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
-  Hospitality: "bg-amber-500 text-slate-950 font-black shadow-lg border border-amber-300/40",
-  Cleaning: "bg-sky-500 text-slate-950 font-black shadow-lg border border-sky-300/40",
-  Security: "bg-rose-600 text-white font-black shadow-lg border border-rose-300/40",
-  Transport: "bg-violet-600 text-white font-black shadow-lg border border-violet-300/40",
-  "Support Staff": "bg-emerald-500 text-slate-950 font-black shadow-lg border border-emerald-300/40",
+  Hospitality: "bg-amber-500/15 text-amber-600 border-amber-500/25",
+  Cleaning: "bg-sky-500/15 text-sky-600 border-sky-500/25",
+  Security: "bg-red-500/15 text-red-600 border-red-500/25",
+  Transport: "bg-violet-500/15 text-violet-600 border-violet-500/25",
+  "Support Staff": "bg-emerald-500/15 text-emerald-600 border-emerald-500/25",
+  Electrical: "bg-yellow-500/15 text-yellow-600 border-yellow-500/25",
+  Construction: "bg-orange-500/15 text-orange-600 border-orange-500/25",
+  Plumbing: "bg-cyan-500/15 text-cyan-600 border-cyan-500/25",
 };
 
-const RAW_CATEGORIES = [
-  "Hospitality", "Cleaning", "Security", "Transport", "Support Staff",
-  "Support Staff", "Support Staff", "Hospitality", "Transport"
-] as const;
-
-const FILTER_KEYS = ["All", "Hospitality", "Security", "Support Staff", "Transport", "Cleaning"] as const;
+const FILTER_KEYS = ["All", "Hospitality", "Security", "Support Staff", "Transport", "Cleaning", "Electrical", "Construction", "Plumbing"] as const;
 type FilterKey = typeof FILTER_KEYS[number];
 
 const FILTER_LABEL_KEYS: Record<FilterKey, string> = {
   All: "filterAll", Hospitality: "filterHospitality",
   Security: "filterSecurity", "Support Staff": "filterSupport",
   Transport: "filterTransport", Cleaning: "filterCleaning",
+  Electrical: "filterElectrical", Construction: "filterConstruction",
+  Plumbing: "filterPlumbing",
 };
 
 /* ─── Job type ─── */
@@ -395,7 +399,7 @@ export default function CareersJobsSection() {
 
   /* ── Build jobs array from translations ── */
   const allJobs = React.useMemo(() => {
-    const ids = [1, 2, 3, 4, 5, 6, 7, 8, 9] as const;
+    const ids = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] as const;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const tx = t as (key: any) => string;
     return ids.map((n, idx) => ({
