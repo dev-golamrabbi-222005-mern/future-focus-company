@@ -4,14 +4,14 @@ import { locales } from '@/i18n';
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://futurefocuscompany.com';
 
-  const routes = ['', '/manpower-solutions', '/about', '/careers', '/gallery', '/contact'];
+  const routes = ['', '/our-services', '/about', '/careers', '/gallery', '/contact'];
 
   const sitemapEntries: MetadataRoute.Sitemap = [];
 
   routes.forEach((route) => {
     locales.forEach((locale) => {
       const isHome = route === '';
-      const priority = isHome ? 1.0 : route === '/manpower-solutions' ? 0.9 : 0.8;
+      const priority = isHome ? 1.0 : route === '/our-services' ? 0.9 : 0.8;
 
       const languageAlternates: Record<string, string> = {};
       locales.forEach((l) => {

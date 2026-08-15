@@ -81,7 +81,7 @@ export function ContactFormSection() {
   const bdOffice = siteConfig.offices.bangladesh || {
     address: "House 12, Road 04, Block B, Banani, Dhaka-1213, Bangladesh",
     phone: "+880 2 987 6543",
-    email: "dhaka@globalmanpower.com",
+    email: "operations@ffccom.net",
   };
 
   return (

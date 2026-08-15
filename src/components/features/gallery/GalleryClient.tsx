@@ -16,23 +16,23 @@ if (typeof window !== 'undefined') {
 
 /* ── Hero slideshow images ── */
 const SLIDE_IMAGES = [
-  { src: 'https://i.postimg.cc/HkVGvXfm/Hero-1.png',  alt: 'Hero 1' },
-  { src: 'https://i.postimg.cc/y8kqpcwB/Hero-2.jpg',  alt: 'Hero 2' },
-  { src: 'https://i.postimg.cc/YChcDYJ0/Hero-3.png',  alt: 'Hero 3' },
-  { src: 'https://i.postimg.cc/P5PGVYBq/Hero-4.png',  alt: 'Hero 4' },
+  { src: 'https://i.postimg.cc/yYMLCbZX/Hero-1-1.jpg',  alt: 'Hero 1' },
+  { src: 'https://i.postimg.cc/hPk2R5d8/Hero-2.jpg',  alt: 'Hero 2' },
+  { src: 'https://i.postimg.cc/qMP1H53x/Hero-3.jpg',  alt: 'Hero 3' },
+  { src: 'https://i.postimg.cc/FsMTXBLD/Hero-4.jpg',  alt: 'Hero 4' },
 ];
 
 /* ── Gallery grid images ── */
 const ITEM_IMAGES = [
-  'https://i.postimg.cc/bw6qvjm3/Training.png',
-  'https://i.postimg.cc/Y0XdW8Tj/Departure.png',
-  'https://i.postimg.cc/PrsJGh7g/Office.png',
-  'https://i.postimg.cc/Zn5gpXdX/Training2.png',
-  'https://i.postimg.cc/C5xtk9qW/Training3.png',
-  'https://i.postimg.cc/qBLKGNqb/Evnt.png',
-  'https://i.postimg.cc/Tw9FyTpq/Evnt2.png',
-  'https://i.postimg.cc/Y0XdW8Tj/Departure.png',
-  'https://i.postimg.cc/2ySJhgZH/Office2.png',
+  'https://i.postimg.cc/7h3HL7fr/steel-fixers.jpg',
+  'https://i.postimg.cc/QCQ8M5HG/civil-engineers.jpg',
+  'https://i.postimg.cc/y8XQsTB0/electricians.jpg',
+  'https://i.postimg.cc/HxmPgyDQ/masons.jpg',
+  'https://i.postimg.cc/FzyrKc7t/site-engineers.jpg',
+  'https://i.postimg.cc/qvdJW1Dn/Hospital-Cleaner.png',
+  'https://i.postimg.cc/y8XQsTBc/housekeepers.jpg',
+  'https://i.postimg.cc/cHW5SnyR/supervisors.jpg',
+  'https://i.postimg.cc/0y8364Vt/Hospitality.png',
 ];
 
 /* ─────────────────────────────────────────────

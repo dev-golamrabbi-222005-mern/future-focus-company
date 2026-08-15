@@ -57,7 +57,7 @@ export default function NotFoundPage() {
           </Link>
 
           <Link
-            href={`/${locale}/manpower-solutions`}
+            href={`/${locale}/our-services`}
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-border bg-card hover:bg-muted text-foreground font-bold text-sm px-8 py-3.5 rounded-xl transition-all shadow-sm"
           >
             <Briefcase className="w-4 h-4 text-primary" />
