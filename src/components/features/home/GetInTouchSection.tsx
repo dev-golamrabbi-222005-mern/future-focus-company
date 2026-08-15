@@ -102,7 +102,7 @@ export function GetInTouch() {
   return (
     <section
       id="get-in-touch"
-      className="pt-12 md:pt-16 lg:pt-20 pb-8 md:pb-10 lg:pb-12 bg-muted/20 border-t border-border/60 relative overflow-hidden"
+      className="pt-12 md:pt-16 lg:pt-20 pb-8 md:pb-10 lg:pb-12 border-t border-border/60 relative overflow-hidden"
     >
       {/* Background Decorative Blur */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[140px] pointer-events-none -z-10" />

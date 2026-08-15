@@ -67,7 +67,7 @@ export function ProcessTimeline() {
   );
 
   return (
-    <section ref={containerRef} className="pt-12 md:pt-16 lg:pt-20 pb-8 md:pb-10 lg:pb-12 relative overflow-hidden">
+    <section ref={containerRef} className="py-12 md:py-16 lg:py-20 bg-muted/15 border-y border-border/60 relative overflow-hidden">
       <div className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div

@@ -17,7 +17,7 @@ export function Footer() {
       <div className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8">
         
         {/* 4 Columns Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-border/60">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12">
           
           {/* Column 1: Agency Brand & Govt License */}
           <div className="space-y-4">
@@ -81,7 +81,7 @@ export function Footer() {
               </p>
               <p className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-primary shrink-0" />
-                <span>{siteConfig.offices.saudi.phone}</span>
+                <span>{t('saudiPhone')}</span>
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-primary shrink-0" />
@@ -99,7 +99,7 @@ export function Footer() {
               </p>
               <p className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-primary shrink-0" />
-                <span>{siteConfig.offices.bangladesh.phone}</span>
+                <span>{t('bdPhone')}</span>
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-primary shrink-0" />
@@ -165,8 +165,14 @@ export function Footer() {
 
         </div>
 
-        {/* Bottom Copyright */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
+      </div>
+
+      {/* Full-width border line above copyright */}
+      <div className="w-full border-t border-border/60" />
+
+      {/* Bottom Copyright */}
+      <div className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
           <p>© {new Date().getFullYear()} {tNav('companyName')}. {t('rights')}</p>
           <div className="flex items-center gap-6">
             <Link href={`/${locale}/faq`} className="hover:text-primary transition-colors">
@@ -180,7 +186,6 @@ export function Footer() {
             </Link>
           </div>
         </div>
-
       </div>
     </footer>
   );

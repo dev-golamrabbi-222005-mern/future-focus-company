@@ -10,12 +10,6 @@ export default function CompanyHighlights() {
 
   const highlights = [
     {
-      icon: ShieldCheck,
-      title: t("items.0.title"),
-      subtitle: t("items.0.subtitle"),
-      color: "from-blue-600 to-cyan-500",
-    },
-    {
       icon: Zap,
       title: t("items.1.title"),
       subtitle: t("items.1.subtitle"),
@@ -46,7 +40,7 @@ export default function CompanyHighlights() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[250px] bg-primary/10 rounded-full blur-[140px] pointer-events-none -z-10" />
 
       <div className="w-full max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {highlights.map((item, index) => {
             const Icon = item.icon;
 

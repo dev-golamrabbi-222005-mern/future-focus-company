@@ -61,7 +61,7 @@ export default function Hero1() {
   }, [slides.length]);
 
   return (
-    <section className="relative min-h-[560px] h-auto md:h-[70vh] md:max-h-[70vh] pt-6 md:pt-8 lg:pt-10 pb-10 md:pb-8 w-full overflow-hidden flex items-center justify-center">
+    <section className="relative flex items-center justify-center overflow-hidden w-full h-auto lg:max-h-[750px] pt-8 md:pt-10 lg:pt-12 pb-12 md:pb-16 lg:pb-20">
       {/* Dynamic Background Image */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence mode="wait">
@@ -84,7 +84,7 @@ export default function Hero1() {
       </div>
 
       <div className="relative z-10 w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8 my-auto">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16 py-4 lg:py-0">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16">
 
           {/* Left Column Text Content */}
           <div className="w-full lg:w-1/2 space-y-5 text-center lg:text-left">

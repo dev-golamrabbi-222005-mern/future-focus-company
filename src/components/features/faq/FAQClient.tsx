@@ -105,13 +105,13 @@ export function FAQClient() {
           {/* Search Box */}
           <div className="relative max-w-xl mx-auto pt-4">
             <div className="relative flex items-center">
-              <Search className="absolute left-4 w-5 h-5 text-muted-foreground pointer-events-none" />
+              <Search className="absolute left-4 rtl:left-auto rtl:right-4 w-5 h-5 text-muted-foreground pointer-events-none" />
               <input
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder={t('searchPlaceholder')}
-                className="w-full pl-12 pr-4 py-3.5 bg-card/80 backdrop-blur-md border border-border/80 rounded-2xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/50 transition-all text-sm sm:text-base shadow-sm"
+                className="w-full pl-12 pr-4 rtl:pl-4 rtl:pr-12 py-3.5 bg-card/80 backdrop-blur-md border border-border/80 rounded-2xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/50 transition-all text-sm sm:text-base shadow-sm"
               />
             </div>
           </div>

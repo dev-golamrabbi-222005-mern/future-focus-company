@@ -49,7 +49,7 @@ export default function GoogleMapSection() {
                 </div>
 
                 <p className="text-muted-foreground leading-7">
-                  Riyadh, Kingdom of Saudi Arabia
+                  {t("address")}
                 </p>
 
               </div>
@@ -60,7 +60,7 @@ export default function GoogleMapSection() {
 
                   <Phone className="text-primary h-5 w-5" />
 
-                  <span>+966 56 616 7562</span>
+                  <span>{t("phone")}</span>
 
                 </div>
 

@@ -32,12 +32,17 @@ const JOB_IMAGES: Record<string, string> = {
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
-  Hospitality: "bg-amber-500/15 text-amber-600 border-amber-500/25",
-  Cleaning: "bg-sky-500/15 text-sky-600 border-sky-500/25",
-  Security: "bg-red-500/15 text-red-600 border-red-500/25",
-  Transport: "bg-violet-500/15 text-violet-600 border-violet-500/25",
-  "Support Staff": "bg-emerald-500/15 text-emerald-600 border-emerald-500/25",
+  Hospitality: "bg-amber-500 text-slate-950 font-black shadow-lg border border-amber-300/40",
+  Cleaning: "bg-sky-500 text-slate-950 font-black shadow-lg border border-sky-300/40",
+  Security: "bg-rose-600 text-white font-black shadow-lg border border-rose-300/40",
+  Transport: "bg-violet-600 text-white font-black shadow-lg border border-violet-300/40",
+  "Support Staff": "bg-emerald-500 text-slate-950 font-black shadow-lg border border-emerald-300/40",
 };
+
+const RAW_CATEGORIES = [
+  "Hospitality", "Cleaning", "Security", "Transport", "Support Staff",
+  "Support Staff", "Support Staff", "Hospitality", "Transport"
+] as const;
 
 const FILTER_KEYS = ["All", "Hospitality", "Security", "Support Staff", "Transport", "Cleaning"] as const;
 type FilterKey = typeof FILTER_KEYS[number];
@@ -54,6 +59,7 @@ type Job = {
   title: string;
   location: string;
   salary: string;
+  categoryKey: string;
   category: string;
   desc: string;
   image: string;
@@ -255,7 +261,7 @@ function JobModal({ job, onClose }: { job: Job; onClose: () => void }) {
 
             {/* Badges */}
             <div className="absolute top-4 left-4 flex gap-2">
-              <span className={`rounded-full border px-3 py-1 text-[10px] font-bold uppercase tracking-wide backdrop-blur-sm ${CATEGORY_COLORS[job.category] ?? "bg-primary/15 text-primary border-primary/25"}`}>
+              <span className={`rounded-full border px-3 py-1 text-[10px] font-extrabold uppercase tracking-wide shadow-md ${CATEGORY_COLORS[job.categoryKey] ?? "bg-primary text-primary-foreground font-black"}`}>
                 {job.category}
               </span>
               {job.urgent && (
@@ -392,11 +398,12 @@ export default function CareersJobsSection() {
     const ids = [1, 2, 3, 4, 5, 6, 7, 8, 9] as const;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const tx = t as (key: any) => string;
-    return ids.map((n) => ({
+    return ids.map((n, idx) => ({
       key: `job${n}`,
       title: tx(`job${n}Title`),
       location: tx(`job${n}Location`),
       salary: tx(`job${n}Salary`),
+      categoryKey: RAW_CATEGORIES[idx],
       category: tx(`job${n}Category`) as string,
       desc: tx(`job${n}Desc`),
       image: JOB_IMAGES[`job${n}`],
@@ -405,7 +412,7 @@ export default function CareersJobsSection() {
   }, [t]);
 
   const filtered = React.useMemo(() => allJobs.filter((j) => {
-    const matchCat = activeFilter === "All" || j.category === activeFilter;
+    const matchCat = activeFilter === "All" || j.categoryKey === activeFilter;
     const matchSearch = search === "" ||
       j.title.toLowerCase().includes(search.toLowerCase()) ||
       j.location.toLowerCase().includes(search.toLowerCase());
@@ -426,7 +433,7 @@ export default function CareersJobsSection() {
 
   return (
     <>
-      <section ref={sectionRef} className="relative py-12 md:py-16 lg:py-20">
+      <section ref={sectionRef} className="relative py-12 md:py-16 lg:py-20 bg-muted/15 border-y border-border/60">
         <div className="absolute inset-0 -z-10 pointer-events-none">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(3,105,161,0.06),transparent_55%)]" />
         </div>
@@ -499,7 +506,7 @@ export default function CareersJobsSection() {
 
                       {/* Badges */}
                       <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
-                        <span className={`rounded-full border px-3 py-1 text-[10px] font-bold uppercase tracking-wide backdrop-blur-sm ${CATEGORY_COLORS[job.category] ?? "bg-primary/15 text-primary border-primary/25"}`}>
+                        <span className={`rounded-full px-3 py-1 text-[10px] font-extrabold uppercase tracking-wide shadow-md ${CATEGORY_COLORS[job.categoryKey] ?? "bg-primary text-primary-foreground font-black"}`}>
                           {job.category}
                         </span>
                         {job.urgent && (

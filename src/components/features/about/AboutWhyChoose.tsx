@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { motion } from "framer-motion";
 import {
   Clock3,
@@ -25,9 +25,10 @@ const GRADIENTS = [
 
 export default function WhyChoose() {
   const t = useTranslations("WhyChoose");
+  const locale = useLocale();
 
   const features = Array.from({ length: 6 }, (_, i) => ({
-    number: String(i + 1).padStart(2, "0"),
+    number: new Intl.NumberFormat(locale, { minimumIntegerDigits: 2, useGrouping: false }).format(i + 1),
     title: t(`feature${i + 1}.title`),
     description: t(`feature${i + 1}.description`),
     icon: ICONS[i],

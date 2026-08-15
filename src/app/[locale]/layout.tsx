@@ -112,7 +112,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://futurefocuscompany.com';
 
   return (
-    <html lang={locale} dir={direction} suppressHydrationWarning>
+    <html lang={locale} dir={direction} className="scroll-smooth" suppressHydrationWarning>
       <head>
         <JsonLd siteUrl={baseUrl} />
       </head>
