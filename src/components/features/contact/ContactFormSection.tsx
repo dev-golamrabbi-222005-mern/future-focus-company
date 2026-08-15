@@ -73,7 +73,7 @@ export function ContactFormSection() {
 
   const primaryOffice = siteConfig.offices.saudi || {
     address:
-      "Suite 402, Business Bay Tower, Al A'amal St, Business Bay, Riyadh, KSA",
+      "Building 3183, Saeed bin Al-Aas Street, Al-Quds District, Riyadh 13214, Kingdom of Saudi Arabia",
     phone: "+971 4 123 4567",
     email: "saudi@futurefocus.com",
   };

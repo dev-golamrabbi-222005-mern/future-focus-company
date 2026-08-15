@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌍 Future Focus Company - Your HR Partner & Resource Solutions
+# 🌍 Future Focus Company - Your HR Partner & Resources Solutions
 **Premium Manpower & Workforce Solutions Portal for Saudi Arabia and the GCC**
 
 [![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)

@@ -571,7 +571,7 @@
     "privacy": "Privacy Policy",
     "quickLinks": "Quick Links",
     "rights": "All rights reserved.",
-    "saudiAddress": "Suite 402, Business Bay Tower, Al A'amal St, Business Bay, Riyadh, KSA",
+    "saudiAddress": "Building 3183, Saeed bin Al-Aas Street, Al-Quds District, Riyadh 13214, Kingdom of Saudi Arabia",
     "saudiOffice": "Riyadh Office (KSA)",
     "tagline": "Leading government-approved manpower recruitment agency specializing in skilled workforce deployment across Saudi Arabia and the Middle East.",
     "terms": "Terms of Service",
@@ -634,7 +634,7 @@
     "stat1Num": "5000",
     "stat1Suffix": "+",
     "stat2Label": "Corporate Clients Served",
-    "stat2Num": "150",
+    "stat2Num": "45",
     "stat2Suffix": "+",
     "stat3Label": "Years of Trusted Service",
     "stat3Num": "05",
@@ -648,7 +648,7 @@
   "GetInTouch": {
     "badgeSla": "Guaranteed 24-Hour Response",
     "contactInfo": {
-      "address": "Suite 402, Business Bay Tower, Al A'amal St, Business Bay, Riyadh, KSA",
+      "address": "Building 3183, Saeed bin Al-Aas Street, Al-Quds District, Riyadh 13214, Kingdom of Saudi Arabia",
       "addressTitle": "Headquarters & Office",
       "email": "operations@ffccom.net",
       "emailTitle": "Corporate Inquiries",
@@ -858,8 +858,8 @@
     "gallery": "Gallery",
     "globalization": "Globalization",
     "home": "Home",
-    "manpowerSolutions": "Manpower Solutions",
-    "motto": "Your HR Partner & Resource Solutions",
+    "ourServices": "Our Services",
+    "motto": "Your HR Partner & Resources Solutions",
     "requestManpower": "Request Manpower",
     "services": "Services",
     "submitCv": "Submit CV",
@@ -902,7 +902,7 @@
     "sec4Title": "4. How We Share Your Information",
     "sec5Desc": "We implement strict technical and organizational security measures to protect your data from unauthorized access. We retain candidate and client data only for as long as necessary to fulfill our recruitment services or to comply with legal obligations.",
     "sec5Title": "5. Data Security and Retention",
-    "sec6Desc": "Candidates and employers have the right to request access to, correction, or deletion of their personal/corporate data held by us. To exercise these rights, please contact us at Operations@ffccom.net or +966 56 616 7562.",
+    "sec6Desc": "Candidates and employers have the right to request access to, correction, or deletion of their personal/corporate data held by us. To exercise these rights, please contact us at operations@ffccom.net or +966 56 616 7562.",
     "sec6Title": "6. Your Rights & Contact Information"
   },
   "Process": {
@@ -1501,7 +1501,7 @@
     "sec6Title": "6. Limitation of Liability",
     "sec7Desc": "These terms are governed by and construed in accordance with the laws of Bangladesh and the operational compliance laws of the Kingdom of Saudi Arabia (KSA).",
     "sec7Title": "7. Governing Law",
-    "sec8Desc": "For any questions regarding these Terms of Service, please contact us at Operations@ffccom.net or +966 56 616 7562.",
+    "sec8Desc": "For any questions regarding these Terms of Service, please contact us at operations@ffccom.net or +966 56 616 7562.",
     "sec8Title": "8. Contact Information",
     "termsSubtitle": "Terms, conditions, and operational framework governing workforce recruitment, candidate deployment, and agency services.",
     "termsTitle": "Terms of Service"
@@ -1652,7 +1652,7 @@
     "welder": "Welder"
   },
   "WelcomeLoader": {
-    "motto": "Your HR Partner & Resource Solutions",
+    "motto": "Your HR Partner & Resources Solutions",
     "welcome": "Welcome to Future Focus Company"
   },
   "WhatIsManpower": {
