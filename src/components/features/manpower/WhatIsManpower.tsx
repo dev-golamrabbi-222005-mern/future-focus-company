@@ -70,7 +70,7 @@ export default function WhatIsManpower() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden py-16 md:py-20 lg:py-24"
+      className="relative overflow-hidden py-16 md:py-20 lg:py-24 bg-muted/15 border-y border-border/60"
     >
       {/* Background glows */}
       <div className="pointer-events-none absolute inset-0 -z-10">

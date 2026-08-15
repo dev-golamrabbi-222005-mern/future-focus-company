@@ -37,7 +37,7 @@ export function GalleryCTA() {
   return (
     <section
       ref={ctaRef}
-      className="relative pt-12 md:pt-16 lg:pt-20 pb-8 md:pb-10 lg:pb-12 overflow-hidden"
+      className="relative py-12 md:py-16 lg:py-20 bg-muted/15 border-y border-border/60 overflow-hidden"
     >
       {/* Background glows */}
       <div className="absolute inset-0 -z-10 pointer-events-none flex items-center justify-center">

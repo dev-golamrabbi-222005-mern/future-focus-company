@@ -4,7 +4,7 @@ export const siteConfig = {
   license: '7052268831',
   navLinks: [
     { href: '', key: 'home' },
-    { href: '/Our Services', key: 'ourServices' },
+    { href: '/our-services', key: 'ourServices' },
     { href: '/about', key: 'about' },
     { href: '/careers', key: 'careers' },
     { href: '/gallery', key: 'gallery' },

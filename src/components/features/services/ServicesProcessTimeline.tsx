@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { motion } from 'framer-motion';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
@@ -14,15 +14,16 @@ if (typeof window !== 'undefined') {
 
 export function ProcessTimeline() {
   const t = useTranslations('ServicesPage.process');
+  const locale = useLocale();
   const containerRef = React.useRef<HTMLDivElement>(null);
   const progressBarRef = React.useRef<HTMLDivElement>(null);
 
   const steps = [
-    { key: 'step1', icon: ClipboardCheck, number: '01' },
-    { key: 'step2', icon: Users, number: '02' },
-    { key: 'step3', icon: Wrench, number: '03' },
-    { key: 'step4', icon: ShieldCheck, number: '04' },
-    { key: 'step5', icon: PlaneTakeoff, number: '05' },
+    { key: 'step1', icon: ClipboardCheck },
+    { key: 'step2', icon: Users },
+    { key: 'step3', icon: Wrench },
+    { key: 'step4', icon: ShieldCheck },
+    { key: 'step5', icon: PlaneTakeoff },
   ];
 
   useGSAP(
@@ -104,7 +105,7 @@ export function ProcessTimeline() {
                 <div className="flex-1 bg-card border border-border/80 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-xs font-black uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full">
-                      {t('stepLabel')} {step.number}
+                      {t('stepLabel')} {new Intl.NumberFormat(locale, { minimumIntegerDigits: 2, useGrouping: false }).format(idx + 1)}
                     </span>
                   </div>
                   <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2">

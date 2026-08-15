@@ -61,7 +61,7 @@ export default async function HomePage({ params }: HomePageProps) {
       <AboutSnippet />
 
       {/* Industry Sectors Grid Section */}
-      <SectorsGrid />
+      <SectorsGrid className="bg-muted/15 border-y border-border/60" />
 
       {/* GCC Deployment Reach & Testimonials */}
       <GlobalReachMap />

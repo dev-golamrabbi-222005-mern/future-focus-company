@@ -71,10 +71,11 @@ export function AboutClient() {
       <WhyChoose />
 
       {/* ── Mission / Vision / License / MD — inline sections ── */}
-      <div
-        ref={containerRef}
-        className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8 pt-12 md:pt-16 lg:pt-20 pb-8 md:pb-10 lg:pb-12"
-      >
+      <section className="py-12 md:py-16 lg:py-20 bg-muted/15 border-y border-border/60 relative overflow-hidden">
+        <div
+          ref={containerRef}
+          className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8"
+        >
         {/* ════ SECTION HEADER ════ */}
         <div className="text-center space-y-4 gsap-fade-up mb-14">
           <div className="flex justify-center">
@@ -252,7 +253,7 @@ export function AboutClient() {
 
               <div className="pt-4 border-t border-border/60 flex items-center gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary to-sky-400 text-primary-foreground font-black text-lg shadow-md">
-                  M
+                  {t("ceoName").slice(0, 1)}
                 </div>
                 <div>
                   <p className="text-base font-extrabold text-foreground">
@@ -290,7 +291,7 @@ export function AboutClient() {
 
               <div className="pt-4 border-t border-border/60 flex items-center gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary to-sky-400 text-primary-foreground font-black text-lg shadow-md">
-                  S
+                  {t("mdName").slice(0, 1)}
                 </div>
                 <div>
                   <p className="text-base font-extrabold text-foreground">
@@ -305,6 +306,7 @@ export function AboutClient() {
           </motion.div>
         </div>
       </div>
-    </div>
-  );
+    </section>
+  </div>
+);
 }

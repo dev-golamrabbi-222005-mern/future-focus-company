@@ -121,7 +121,7 @@ export function GalleryImpactNumbers() {
   ] as const;
 
   return (
-    <section className="py-16 md:py-20 bg-muted/15 border-y border-border/60 relative overflow-hidden">
+    <section className="py-16 md:py-20 relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[220px] bg-primary/10 rounded-full blur-[130px] pointer-events-none" />
 
       <div className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8">

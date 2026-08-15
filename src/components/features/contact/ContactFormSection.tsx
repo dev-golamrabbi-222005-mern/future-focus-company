@@ -309,11 +309,7 @@ export function ContactFormSection() {
               </p>
               <p className="flex items-center gap-2.5">
                 <Phone className="h-4 w-4 text-primary shrink-0" />
-                <span>{primaryOffice.phone}</span>
-              </p>
-              <p className="flex items-center gap-2.5">
-                <Phone className="h-4 w-4 text-primary shrink-0" />
-                <span>{primaryOffice.Whatsapp}</span>
+                <span>{tFooter("saudiPhone")}</span>
               </p>
               <p className="flex items-center gap-2.5">
                 <Mail className="h-4 w-4 text-primary shrink-0" />
@@ -339,11 +335,7 @@ export function ContactFormSection() {
               </p>
               <p className="flex items-center gap-2.5">
                 <Phone className="h-4 w-4 text-accent shrink-0" />
-                <span>{bdOffice.phone}</span>
-              </p>
-              <p className="flex items-center gap-2.5">
-                <Phone className="h-4 w-4 text-primary shrink-0" />
-                <span>{primaryOffice.Whatsapp}</span>
+                <span>{tFooter("bdPhone")}</span>
               </p>
               <p className="flex items-center gap-2.5">
                 <Mail className="h-4 w-4 text-accent shrink-0" />

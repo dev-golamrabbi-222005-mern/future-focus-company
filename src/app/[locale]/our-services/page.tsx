@@ -41,9 +41,7 @@ export default function ManpowerSolutionsPage() {
       <CompanyHighlights />
 
       {/* 3. Specialized Workforce Sectors Section (from old Services page) */}
-      <section className="w-full max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
-        <SectorsGrid />
-      </section>
+      <SectorsGrid />
 
       {/* 4. What We Do Section (from old Globalization page) */}
       <WhatIsManpower />
@@ -54,8 +52,10 @@ export default function ManpowerSolutionsPage() {
       </section>
 
       {/* 6. Recruitment Guarantee Section (from old Globalization / Services page) */}
-      <section className="w-full max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
-        <ComplianceBanner />
+      <section className="py-12 md:py-16 lg:py-20 bg-muted/15 border-y border-border/60 relative overflow-hidden">
+        <div className="w-full max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
+          <ComplianceBanner />
+        </div>
       </section>
     </main>
   );
