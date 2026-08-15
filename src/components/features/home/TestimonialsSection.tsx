@@ -53,7 +53,7 @@ export function Testimonials() {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-muted/30 border-y border-border/60 relative overflow-hidden">
+    <section className="py-16 md:py-24 relative overflow-hidden">
       {/* Ambient background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-primary/10 rounded-full blur-[150px] pointer-events-none -z-10" />
 

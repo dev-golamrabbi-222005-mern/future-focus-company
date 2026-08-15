@@ -76,7 +76,7 @@ export function GlobalReachMap() {
     </motion.div>
 
     {/* Main Grid */}
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 items-start">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 items-center">
 
       {/* Left Column */}
       <div className="space-y-3 sm:space-y-4 min-w-0">

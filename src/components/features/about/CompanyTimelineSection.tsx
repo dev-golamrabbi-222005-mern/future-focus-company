@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -14,9 +14,13 @@ if (typeof window !== "undefined") {
 
 export default function CompanyTimeline() {
   const t = useTranslations("CompanyTimeline");
+  const locale = useLocale();
 
   const sectionRef  = React.useRef<HTMLDivElement>(null);
   const lineRef     = React.useRef<HTMLDivElement>(null);
+
+  const formatYear = (yrStr: string) =>
+    new Intl.NumberFormat(locale, { useGrouping: false }).format(Number(yrStr));
 
   const timeline = [
     { year: "2022", badge: t("timeline2022.badge"), title: t("timeline2022.title"), description: t("timeline2022.description"), icon: Building2 },
@@ -51,7 +55,7 @@ export default function CompanyTimeline() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-muted/30 py-12 md:py-16 lg:py-20"
+      className="relative overflow-hidden bg-muted/15 border-y border-border/60 py-12 md:py-16 lg:py-20"
     >
       {/* Background */}
       <div className="absolute inset-0 -z-10">
@@ -133,7 +137,7 @@ export default function CompanyTimeline() {
 
                         {/* Year accent */}
                         <p className="text-5xl font-black text-primary/15 leading-none mb-2 select-none">
-                          {item.year}
+                          {formatYear(item.year)}
                         </p>
 
                         <h3 className="text-2xl font-extrabold text-foreground -mt-3">
@@ -157,7 +161,7 @@ export default function CompanyTimeline() {
                           isEven ? "left-[-7.5rem]" : "right-[-7.5rem]"
                         }`}
                       >
-                        {item.year.slice(2)}
+                        {formatYear(item.year.slice(2))}
                       </div>
                     </div>
                   </div>
@@ -180,7 +184,7 @@ export default function CompanyTimeline() {
                           <Icon className="h-5 w-5" />
                         </div>
                         <div>
-                          <p className="text-2xl font-black text-primary">{item.year}</p>
+                          <p className="text-2xl font-black text-primary">{formatYear(item.year)}</p>
                           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">{item.badge}</p>
                         </div>
                       </div>

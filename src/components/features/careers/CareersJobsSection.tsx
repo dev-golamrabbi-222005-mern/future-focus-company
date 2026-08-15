@@ -63,6 +63,7 @@ type Job = {
   title: string;
   location: string;
   salary: string;
+  categoryKey: string;
   category: string;
   desc: string;
   image: string;
@@ -264,7 +265,7 @@ function JobModal({ job, onClose }: { job: Job; onClose: () => void }) {
 
             {/* Badges */}
             <div className="absolute top-4 left-4 flex gap-2">
-              <span className={`rounded-full border px-3 py-1 text-[10px] font-bold uppercase tracking-wide backdrop-blur-sm ${CATEGORY_COLORS[job.category] ?? "bg-primary/15 text-primary border-primary/25"}`}>
+              <span className={`rounded-full border px-3 py-1 text-[10px] font-extrabold uppercase tracking-wide shadow-md ${CATEGORY_COLORS[job.categoryKey] ?? "bg-primary text-primary-foreground font-black"}`}>
                 {job.category}
               </span>
               {job.urgent && (
@@ -401,11 +402,12 @@ export default function CareersJobsSection() {
     const ids = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] as const;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const tx = t as (key: any) => string;
-    return ids.map((n) => ({
+    return ids.map((n, idx) => ({
       key: `job${n}`,
       title: tx(`job${n}Title`),
       location: tx(`job${n}Location`),
       salary: tx(`job${n}Salary`),
+      categoryKey: RAW_CATEGORIES[idx],
       category: tx(`job${n}Category`) as string,
       desc: tx(`job${n}Desc`),
       image: JOB_IMAGES[`job${n}`],
@@ -414,7 +416,7 @@ export default function CareersJobsSection() {
   }, [t]);
 
   const filtered = React.useMemo(() => allJobs.filter((j) => {
-    const matchCat = activeFilter === "All" || j.category === activeFilter;
+    const matchCat = activeFilter === "All" || j.categoryKey === activeFilter;
     const matchSearch = search === "" ||
       j.title.toLowerCase().includes(search.toLowerCase()) ||
       j.location.toLowerCase().includes(search.toLowerCase());
@@ -435,7 +437,7 @@ export default function CareersJobsSection() {
 
   return (
     <>
-      <section ref={sectionRef} className="relative py-12 md:py-16 lg:py-20">
+      <section ref={sectionRef} className="relative py-12 md:py-16 lg:py-20 bg-muted/15 border-y border-border/60">
         <div className="absolute inset-0 -z-10 pointer-events-none">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(3,105,161,0.06),transparent_55%)]" />
         </div>
@@ -508,7 +510,7 @@ export default function CareersJobsSection() {
 
                       {/* Badges */}
                       <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
-                        <span className={`rounded-full border px-3 py-1 text-[10px] font-bold uppercase tracking-wide backdrop-blur-sm ${CATEGORY_COLORS[job.category] ?? "bg-primary/15 text-primary border-primary/25"}`}>
+                        <span className={`rounded-full px-3 py-1 text-[10px] font-extrabold uppercase tracking-wide shadow-md ${CATEGORY_COLORS[job.categoryKey] ?? "bg-primary text-primary-foreground font-black"}`}>
                           {job.category}
                         </span>
                         {job.urgent && (

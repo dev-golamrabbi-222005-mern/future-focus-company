@@ -209,7 +209,7 @@ export function GalleryClient() {
       ══════════════════════════════════════ */}
       <section
         ref={heroRef}
-        className="relative h-[70vh] pt-6 md:pt-8 lg:pt-10 flex items-center justify-center overflow-hidden"
+        className="relative flex items-center justify-center overflow-hidden w-full h-auto lg:max-h-[750px] pt-8 md:pt-10 lg:pt-12 pb-12 md:pb-16 lg:pb-20"
       >
         {/* Slideshow background */}
         <div className="absolute inset-0 z-0">
@@ -245,7 +245,7 @@ export function GalleryClient() {
         </div>
 
         {/* Hero content */}
-        <div className="relative z-10 w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8 py-10 md:py-14 text-center">
+        <div className="relative z-10 w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8 text-center">
           <div className="hero-anim mb-6 flex justify-center">
             <span className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
               <Camera className="h-3.5 w-3.5" />
@@ -260,11 +260,11 @@ export function GalleryClient() {
             </span>
           </h1>
 
-          <p className="hero-anim text-lg sm:text-xl text-white/75 max-w-2xl mx-auto leading-relaxed mb-10">
+          <p className="hero-anim text-lg sm:text-xl text-white/75 max-w-2xl mx-auto leading-relaxed mb-8 md:mb-10">
             {t('heroSubheading')}
           </p>
 
-          <div className="hero-anim flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+          <div className="hero-anim flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 md:mb-12">
             <motion.a
               href="#gallery-grid"
               whileHover={{ scale: 1.04 }}
@@ -276,7 +276,7 @@ export function GalleryClient() {
             </motion.a>
           </div>
 
-          <div className="hero-anim flex flex-wrap items-center justify-center gap-4">
+          <div className="hero-anim flex flex-wrap items-center justify-center gap-3 sm:gap-4">
             {[
               { num: t('heroStat1Num'), label: t('heroStat1Label') },
               { num: t('heroStat2Num'), label: t('heroStat2Label') },
@@ -297,7 +297,7 @@ export function GalleryClient() {
       {/* ══════════════════════════════════════
           2. GALLERY GRID
       ══════════════════════════════════════ */}
-      <section id="gallery-grid" ref={filterRef} className="py-16 md:py-20 lg:py-24">
+      <section id="gallery-grid" ref={filterRef} className="py-16 md:py-20 lg:py-24 bg-muted/15 border-y border-border/60">
         <div className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-12 filter-anim">

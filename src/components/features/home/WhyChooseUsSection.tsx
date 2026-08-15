@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { motion } from "framer-motion";
 import {
   ShieldCheck,
@@ -71,9 +71,10 @@ const items = [
 
 export function WhyChooseUs() {
   const t = useTranslations("WhyChooseUs");
+  const locale = useLocale();
 
   return (
-    <section className="relative py-16 md:py-20 lg:py-24 overflow-hidden">
+    <section className="relative py-16 md:py-20 lg:py-24 bg-muted/15 border-y border-border/60 overflow-hidden">
       {/* ── Background decorations ── */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         {/* large radial blob */}
@@ -122,6 +123,7 @@ export function WhyChooseUs() {
               accent={accent}
               title={t(`${key}Title`)}
               desc={t(`${key}Desc`)}
+              locale={locale}
             />
           ))}
         </div>
@@ -140,9 +142,15 @@ interface CardProps {
   accent: string;
   title: string;
   desc: string;
+  locale: string;
 }
 
-function Card({ index, number, icon: Icon, accent, title, desc }: CardProps) {
+function Card({ index, number, icon: Icon, accent, title, desc, locale }: CardProps) {
+  const formattedNumber = new Intl.NumberFormat(locale, {
+    minimumIntegerDigits: 2,
+    useGrouping: false,
+  }).format(number);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -183,7 +191,7 @@ function Card({ index, number, icon: Icon, accent, title, desc }: CardProps) {
             color: accent,
           }}
         >
-          {String(number).padStart(2, "0")}
+          {formattedNumber}
         </span>
       </div>
 

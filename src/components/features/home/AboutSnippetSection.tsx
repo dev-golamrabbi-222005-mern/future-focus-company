@@ -13,7 +13,6 @@ export function AboutSnippet() {
   const points = [
     { title: t('point1Title'), desc: t('point1Desc') },
     { title: t('point2Title'), desc: t('point2Desc') },
-    { title: t('point3Title'), desc: t('point3Desc') },
   ];
 
   return (
