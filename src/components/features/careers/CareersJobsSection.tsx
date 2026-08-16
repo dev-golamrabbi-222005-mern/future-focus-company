@@ -13,6 +13,14 @@ import {
   FileText, Upload, ArrowRight,
 } from "lucide-react";
 import { sendCvEmail, fileToBase64 } from "@/lib/emailjs";
+const RAW_CATEGORIES = [
+  "engineering",
+  "marketing",
+  "sales",
+  "humanResources",
+  "finance",
+  "operations",
+];
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -20,15 +28,15 @@ if (typeof window !== "undefined") {
 
 /* ─── Job images ─── */
 const JOB_IMAGES: Record<string, string> = {
-  job1: "https://i.postimg.cc/sXLhKzXG/Hospitality.png",
-  job2: "https://i.postimg.cc/RhnnDY6P/Housekeeper.png",
-  job3: "https://i.postimg.cc/Fs3TfWWG/Security-Guard.png",
-  job4: "https://i.postimg.cc/8CDBrTJj/Driver.png",
-  job5: "https://i.postimg.cc/VLnKSGGF/Office-Boy.png",
-  job6: "https://i.postimg.cc/Bb8xG6kG/Gardener.png",
-  job7: "https://i.postimg.cc/SRXWps57/General-Helper.png",
-  job8: "https://i.postimg.cc/yxJFzd5c/Even-staff.png",
-  job9: "https://i.postimg.cc/t4dFb8ST/Golf-Cart-Driver.png",
+  job1: "/images/workforce/Hospitality.png",
+  job2: "/images/workforce/Housekeeper.png",
+   job3: "/images/workforce/Security-Guard.png",
+  job4: "/images/workforce/Driver.png",
+  job5: "/images/workforce/Office-Boy.png",
+  job6: "/images/workforce/Gardener.png",
+  job7: "/images/workforce/General-Helper.png",
+  job8: "/images/workforce/Even-staff.png",
+  job9: "/images/workforce/Golf-Cart-Driver.png",
   job10: "/images/workforce/electricians.jpg",
   job11: "/images/workforce/masons.jpg",
   job12: "/images/workforce/plumbers.jpg",
