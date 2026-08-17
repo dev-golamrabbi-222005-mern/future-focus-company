@@ -4,7 +4,7 @@ interface JsonLdProps {
   siteUrl?: string;
 }
 
-export function JsonLd({ siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://futurefocuscompany.com' }: JsonLdProps) {
+export function JsonLd({ siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ffccom.net' }: JsonLdProps) {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': ['RecruitmentAgency', 'LocalBusiness', 'Organization'],

@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { locales } from '@/i18n';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://futurefocuscompany.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ffccom.net';
 
   const routes = ['', '/our-services', '/about', '/careers', '/gallery', '/contact'];
 
