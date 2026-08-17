@@ -5,16 +5,17 @@ interface JsonLdProps {
 }
 
 export function JsonLd({ siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ffccom.net' }: JsonLdProps) {
+  const cleanSiteUrl = siteUrl.replace(/\/+$/, '');
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': ['RecruitmentAgency', 'LocalBusiness', 'Organization'],
-    '@id': `${siteUrl}/#organization`,
+    '@id': `${cleanSiteUrl}/#organization`,
     name: 'Future Focus Company',
     legalName: 'Future Focus Company (Govt. Approved 7052268831)',
     alternateName: ['Future Focus Recruitment Agency', 'Future Focus Manpower'],
-    url: siteUrl,
-    logo: `${siteUrl}/logo.jpg`,
-    image: `${siteUrl}/logo.jpg`,
+    url: cleanSiteUrl,
+    logo: `${cleanSiteUrl}/logo.jpg`,
+    image: `${cleanSiteUrl}/logo.jpg`,
     description:
       'Government Approved Recruitment Agency (7052268831) in Bangladesh connecting skilled Bangladeshi workers with top employers in Saudi Arabia, UAE, Qatar, and GCC countries.',
     identifier: '7052268831',
@@ -87,11 +88,11 @@ export function JsonLd({ siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    '@id': `${siteUrl}/#website`,
-    url: siteUrl,
+    '@id': `${cleanSiteUrl}/#website`,
+    url: cleanSiteUrl,
     name: 'Future Focus Company',
     publisher: {
-      '@id': `${siteUrl}/#organization`,
+      '@id': `${cleanSiteUrl}/#organization`,
     },
     inLanguage: ['en', 'bn', 'ar'],
   };
