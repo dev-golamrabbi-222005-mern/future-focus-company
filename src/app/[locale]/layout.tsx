@@ -28,7 +28,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   }
 
   const t = await getTranslations({ locale, namespace: 'SEO' });
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ffccom.net';
+  const rawBaseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ffccom.net';
+  const baseUrl = rawBaseUrl.replace(/\/+$/, '');
 
   return {
     metadataBase: new URL(baseUrl),
@@ -109,7 +110,8 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
   const isRtl = locale === 'ar';
   const direction = isRtl ? 'rtl' : 'ltr';
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ffccom.net';
+  const rawBaseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ffccom.net';
+  const baseUrl = rawBaseUrl.replace(/\/+$/, '');
 
   return (
     <html lang={locale} dir={direction} className="scroll-smooth" suppressHydrationWarning>
