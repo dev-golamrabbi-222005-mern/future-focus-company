@@ -132,12 +132,12 @@ export function JobRolesGrid({ slug, locale }: JobRolesGridProps) {
   return (
     <div ref={containerRef} className="space-y-6">
       {/* Header */}
-      <div>
-        <h2 className="text-2xl font-extrabold text-foreground tracking-tight">
+      <div className="mb-10">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-foreground tracking-tight">
           {t("availableRolesTitle")}
         </h2>
 
-        <p className="text-sm text-muted-foreground mt-1">
+        <p className="text-sm text-muted-foreground mt-2">
           {t("availableRolesSubtitle")}
         </p>
       </div>
