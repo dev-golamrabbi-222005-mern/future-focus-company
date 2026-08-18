@@ -29,14 +29,14 @@ export function Navbar() {
   return (
     <header className="glass-nav sticky top-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/60">
       <div className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-20 flex-row-reverse xl:flex-row rtl:flex-row gap-2 sm:gap-4">
 
           {/* Logo */}
           <Link
             href={`/${locale}`}
-            className="flex items-center gap-2.5 group min-w-0"
+            className="flex items-center gap-2 sm:gap-2.5 group min-w-0 shrink"
           >
-            <div className="relative h-9 w-9 rounded-xl overflow-hidden shadow-md shadow-primary/25 transition-transform group-hover:scale-105 border border-border shrink-0">
+            <div className="relative h-8 w-8 sm:h-9 sm:w-9 rounded-xl overflow-hidden shadow-md shadow-primary/25 transition-transform group-hover:scale-105 border border-border shrink-0">
               <Image
                 src="/logo.jpg"
                 alt={siteConfig.name}
@@ -45,11 +45,11 @@ export function Navbar() {
                 className="object-cover"
               />
             </div>
-            <div className="flex flex-col min-w-0 hidden xs:flex sm:flex">
-              <span className="font-extrabold text-base sm:text-lg tracking-tight text-foreground flex items-center gap-1.5 truncate">
+            <div className="flex flex-col min-w-0">
+              <span className="font-extrabold text-xs sm:text-base md:text-lg tracking-tight text-foreground flex items-center gap-1.5 truncate max-w-[130px] xs:max-w-[170px] sm:max-w-none">
                 {t('companyName')}
               </span>
-              <span className="text-[10px] font-semibold tracking-wider text-muted-foreground hidden sm:block">
+              <span className="text-[9px] sm:text-[10px] font-semibold tracking-wider text-muted-foreground hidden sm:block">
                 {t('motto')}
               </span>
             </div>
