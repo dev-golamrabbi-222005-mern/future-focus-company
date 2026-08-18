@@ -61,7 +61,7 @@ export function SectorDetailHero({ slug, locale }: SectorDetailHeroProps) {
         {subtitle}
       </p>
 
-      <div className="flex flex-wrap items-center justify-center gap-3 text-xs font-bold">
+      {/* <div className="flex flex-wrap items-center justify-center gap-3 text-xs font-bold">
         <span className="inline-flex items-center space-x-1.5 rtl:space-x-reverse bg-primary/10 text-primary border border-primary/20 px-3.5 py-1.5 rounded-full">
           <ShieldCheck className="w-4 h-4" />
           <span>{tCommon('licenseBadge')}</span>
@@ -74,7 +74,7 @@ export function SectorDetailHero({ slug, locale }: SectorDetailHeroProps) {
           <MapPin className="w-4 h-4" />
           <span>{tCommon('ksaBadge')}</span>
         </span>
-      </div>
+      </div> */}
     </div>
   );
 }

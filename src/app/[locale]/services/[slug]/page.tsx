@@ -2,7 +2,7 @@ import * as React from 'react';
 import { notFound } from 'next/navigation';
 import { SectorDetailHero } from '@/components/features/services/SectorDetailHero';
 import { JobRolesGrid } from '@/components/features/services/JobRolesGrid';
-import { ServiceSidebar } from '@/components/features/services/ServiceSidebar';
+// import { ServiceSidebar } from '@/components/features/services/ServiceSidebar';
 
 const validSlugs = ['facility-management', 'construction', 'hospitality', 'it', 'healthcare', 'driving'];
 
@@ -20,22 +20,43 @@ export default async function ServiceDetailsPage({
   }
 
   return (
+    // <main className="py-8 md:py-10 lg:py-12">
+    //   <div className="w-full max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
+    //     {/* Dynamic Sector Hero Header */}
+    //     <SectorDetailHero slug={slug} locale={locale} />
+
+    //     {/* Main Content Grid */}
+    //     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+    //       <div className="lg:col-span-8">
+    //         <JobRolesGrid slug={slug} locale={locale} />
+    //       </div>
+
+    //       <div className="lg:col-span-4">
+    //         <ServiceSidebar slug={slug} />
+    //       </div>
+    //     </div>
+    //   </div>
+    // </main>
+
     <main className="py-8 md:py-10 lg:py-12">
-      <div className="w-full max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Dynamic Sector Hero Header */}
-        <SectorDetailHero slug={slug} locale={locale} />
+  <div className="w-full max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          <div className="lg:col-span-8">
-            <JobRolesGrid slug={slug} locale={locale} />
-          </div>
+    {/* Dynamic Sector Hero Header */}
+    <SectorDetailHero
+      slug={slug}
+      locale={locale}
+    />
 
-          <div className="lg:col-span-4">
-            <ServiceSidebar slug={slug} />
-          </div>
-        </div>
-      </div>
-    </main>
+    {/* Job Roles */}
+    <div className="w-full mt-8 md:mt-10">
+      <JobRolesGrid
+        slug={slug}
+        locale={locale}
+      />
+    </div>
+
+  </div>
+</main>
+    
   );
 }
