@@ -117,19 +117,21 @@ export function ChatWidget() {
   const [isOpen, setIsOpen] = React.useState(false);
   const [input, setInput] = React.useState("");
   const [loading, setLoading] = React.useState(false);
-  const [messages, setMessages] = React.useState<Message[]>([]);
+  const [messages, setMessages] = React.useState<Message[]>(() => [
+    {
+      id: "welcome-1",
+      role: "bot",
+      content: t("welcomeMessage"),
+    },
+  ]);
   const messagesEndRef = React.useRef<HTMLDivElement>(null);
+  const sessionIdRef = React.useRef<string>("");
 
-  // Initialize welcome message once on client mount
   React.useEffect(() => {
-    setMessages([
-      {
-        id: "welcome-1",
-        role: "bot",
-        content: t("welcomeMessage"),
-      },
-    ]);
-  }, [t]);
+    if (!sessionIdRef.current) {
+      sessionIdRef.current = "ffc-" + Math.random().toString(36).substring(2, 11);
+    }
+  }, []);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -140,11 +142,6 @@ export function ChatWidget() {
       scrollToBottom();
     }
   }, [messages, loading, isOpen]);
-
-  const sessionIdRef = React.useRef<string>("");
-  if (!sessionIdRef.current) {
-    sessionIdRef.current = "ffc-" + Math.random().toString(36).substring(2, 11);
-  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
