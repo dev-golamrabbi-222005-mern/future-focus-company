@@ -79,24 +79,25 @@ export function Testimonials() {
         </p>
       </motion.div>
 
-      {/* Infinite Marquee Wrapper */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        className="relative w-full overflow-hidden py-4 cursor-grab active:cursor-grabbing"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        {/* Left & Right Gradient Fades */}
-        <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-background/60 to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-background/60 to-transparent z-10 pointer-events-none" />
-
-        <div
-          ref={marqueeRef}
-          className="flex gap-6 w-max items-stretch"
+      {/* Infinite Marquee Wrapper inside max-w-[1380px] container */}
+      <div className="w-full max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="relative w-full overflow-hidden py-4 cursor-grab active:cursor-grabbing rounded-3xl"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
+          {/* Left & Right Gradient Fades */}
+          <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-20 md:w-28 bg-gradient-to-r from-background via-background/80 to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-20 md:w-28 bg-gradient-to-l from-background via-background/80 to-transparent z-10 pointer-events-none" />
+
+          <div
+            ref={marqueeRef}
+            className="flex gap-6 w-max items-stretch"
+          >
           {marqueeItems.map((itemKey, idx) => {
             const quote = t(`items.${itemKey}.quote`);
             const name = t(`items.${itemKey}.name`);
@@ -185,6 +186,7 @@ export function Testimonials() {
           })}
         </div>
       </motion.div>
+      </div>
     </section>
   );
 }
