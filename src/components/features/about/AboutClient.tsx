@@ -71,7 +71,7 @@ export function AboutClient() {
       <WhyChoose />
 
       {/* ── Mission / Vision / License / MD — inline sections ── */}
-      <section className="py-12 md:py-16 lg:py-20 bg-muted/15 border-y border-border/60 relative overflow-hidden">
+      <section className="pt-12 md:pt-16 lg:pt-20 bg-muted/15 border-y border-border/60 relative overflow-hidden">
         <div
           ref={containerRef}
           className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8"
@@ -229,7 +229,7 @@ export function AboutClient() {
         </motion.div>
 
         {/* ════ MANAGING DIRECTOR STATEMENT ════ */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-15 md:mt-22 lg:mt-30">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-15 md:mt-22 lg:mt-30 mb-8 md:mb-10 lg:mb-12">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}

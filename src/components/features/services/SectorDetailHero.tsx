@@ -36,7 +36,7 @@ export function SectorDetailHero({ slug, locale }: SectorDetailHeroProps) {
   return (
     <div
       ref={heroRef}
-      className="relative p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-[#0a0f1c] via-background to-card border border-white/10 shadow-2xl overflow-hidden mb-12 text-center"
+      className="relative p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-[#0a0f1c] via-background to-card border border-white/10 shadow-2xl overflow-hidden mb-12 md:mb-16 lg:mb-20 text-center"
     >
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[140px] pointer-events-none -z-10" />
 
@@ -53,7 +53,7 @@ export function SectorDetailHero({ slug, locale }: SectorDetailHeroProps) {
         <span className="text-primary font-bold">{title}</span>
       </div>
 
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground tracking-tight leading-tight mb-4">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground tracking-tight leading-tight mb-4">
         {title} {tCommon('manpowerSuffix')}
       </h1>
 

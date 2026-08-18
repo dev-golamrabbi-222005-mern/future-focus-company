@@ -5,6 +5,7 @@ import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18n';
 import { ThemeProvider } from '@/providers/ThemeProvider';
+import { SmoothScrollProvider } from '@/providers/SmoothScrollProvider';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import WhatsAppFloat from '@/components/ui/WhatsAppFloat';
@@ -114,7 +115,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
   const baseUrl = rawBaseUrl.replace(/\/+$/, '');
 
   return (
-    <html lang={locale} dir={direction} className="scroll-smooth" suppressHydrationWarning>
+    <html lang={locale} dir={direction} suppressHydrationWarning>
       <head>
         <JsonLd siteUrl={baseUrl} />
       </head>
@@ -126,13 +127,15 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
             enableSystem
             disableTransitionOnChange
           >
-            <MovingGridBg />
-            <WelcomeLoader locale={locale} />
-            <Navbar />
-            <main className="flex-1">{children}</main>
-            <Footer />
-            <WhatsAppFloat />
-            <ChatWidget />
+            <SmoothScrollProvider>
+              <MovingGridBg />
+              <WelcomeLoader locale={locale} />
+              <Navbar />
+              <main className="flex-1">{children}</main>
+              <Footer />
+              <WhatsAppFloat />
+              <ChatWidget />
+            </SmoothScrollProvider>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

@@ -52,10 +52,8 @@ export default function ManpowerSolutionsPage() {
       </section>
 
       {/* 6. Recruitment Guarantee Section (from old Globalization / Services page) */}
-      <section className="py-12 md:py-16 lg:py-20 bg-muted/15 border-y border-border/60 relative overflow-hidden">
-        <div className="w-full max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
-          <ComplianceBanner />
-        </div>
+      <section className="w-full max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
+        <ComplianceBanner />
       </section>
     </main>
   );

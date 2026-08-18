@@ -20,7 +20,7 @@ export default async function ServiceDetailsPage({
   }
 
   return (
-    <main className="py-8 sm:py-12 md:py-16">
+    <main className="py-8 md:py-10 lg:py-12">
       <div className="w-full max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Dynamic Sector Hero Header */}
         <SectorDetailHero slug={slug} locale={locale} />
