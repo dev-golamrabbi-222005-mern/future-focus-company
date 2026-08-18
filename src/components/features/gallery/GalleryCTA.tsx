@@ -37,7 +37,7 @@ export function GalleryCTA() {
   return (
     <section
       ref={ctaRef}
-      className="relative py-12 md:py-16 lg:py-20 bg-muted/15 border-y border-border/60 overflow-hidden"
+      className="relative pt-12 md:pt-16 lg:pt-20 pb-8 md:pb-10 lg:pb-12 bg-muted/15 border-y border-border/60 overflow-hidden"
     >
       {/* Background glows */}
       <div className="absolute inset-0 -z-10 pointer-events-none flex items-center justify-center">
@@ -51,7 +51,7 @@ export function GalleryCTA() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative overflow-hidden rounded-[2.5rem] md:rounded-[3.5rem] bg-card/60 backdrop-blur-2xl border border-border shadow-2xl px-6 py-12 md:py-16 text-center z-10 group"
         >
           {/* Inner card accents */}
@@ -73,7 +73,7 @@ export function GalleryCTA() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
                 </span>
-                {t('ctaTagline')}
+                {t("ctaTagline")}
               </motion.span>
             </div>
 
@@ -85,7 +85,7 @@ export function GalleryCTA() {
               transition={{ duration: 0.7, delay: 0.3 }}
               className="cta-anim text-3xl md:text-5xl lg:text-6xl font-black tracking-tight text-foreground leading-tight md:leading-[1.15] mb-8 max-w-4xl mx-auto"
             >
-              {t('ctaHeading')}
+              {t("ctaHeading")}
             </motion.h2>
 
             {/* Divider */}
@@ -93,27 +93,33 @@ export function GalleryCTA() {
 
             {/* Subheading */}
             <p className="cta-anim text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-12">
-              {t('ctaSubheading')}
+              {t("ctaSubheading")}
             </p>
 
             {/* Buttons */}
             <div className="cta-anim flex flex-col sm:flex-row items-center justify-center gap-5">
-              <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+              <motion.div
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+              >
                 <Link
                   href={`/${locale}/contact`}
                   className="group/btn inline-flex items-center justify-center gap-2.5 px-9 py-4 rounded-2xl bg-gradient-to-r from-primary to-sky-500 text-white font-bold text-sm md:text-base shadow-[0_0_20px_rgba(3,105,161,0.4)] hover:shadow-[0_0_30px_rgba(3,105,161,0.6)] transition-all duration-300 w-full sm:w-auto"
                 >
                   <Briefcase className="h-5 w-5 transition-transform duration-300 group-hover/btn:-translate-y-0.5" />
-                  {t('ctaHire')}
+                  {t("ctaHire")}
                 </Link>
               </motion.div>
 
-              <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+              <motion.div
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+              >
                 <Link
                   href={`/${locale}/careers`}
                   className="group/btn inline-flex items-center justify-center gap-2.5 px-9 py-4 rounded-2xl border border-border bg-background/50 backdrop-blur-sm text-foreground font-bold text-sm md:text-base hover:bg-muted hover:border-primary/50 hover:text-primary transition-all duration-300 w-full sm:w-auto"
                 >
-                  {t('ctaApply')}
+                  {t("ctaApply")}
                   <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1 rtl:group-hover/btn:-translate-x-1" />
                 </Link>
               </motion.div>

@@ -88,7 +88,7 @@ export function SubmitCvSection() {
   };
 
   return (
-    <section id="submit-cv" className="py-12 md:py-16 lg:py-20 bg-muted/15 border-y border-border/60">
+    <section id="submit-cv" className="pt-12 md:pt-16 lg:pt-20 mb-8 md:mb-10 lg:mb-12 bg-muted/15 border-y border-border/60">
       <div className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8">
         
         {/* Section Header */}
