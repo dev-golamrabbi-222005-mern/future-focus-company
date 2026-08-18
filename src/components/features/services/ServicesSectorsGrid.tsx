@@ -74,7 +74,7 @@ export function SectorsGrid({ className }: { className?: string }) {
         </motion.div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
           {sectors.map((sector, idx) => {
             const title = t(`sectors.${sector.slug}.title`);
             const desc = t(`sectors.${sector.slug}.description`);
@@ -88,10 +88,10 @@ export function SectorsGrid({ className }: { className?: string }) {
                 viewport={{ once: true, margin: "-100px" }}
                 whileHover={{ y: -6 }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="sector-card bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300 group shadow-sm hover:shadow-xl cursor-pointer"
+                className="sector-card bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300 group shadow-sm hover:shadow-xl flex flex-col h-full"
               >
                 {/* Image */}
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-48 overflow-hidden shrink-0">
                   <img
                     src={sector.image}
                     alt={title}
@@ -111,7 +111,7 @@ export function SectorsGrid({ className }: { className?: string }) {
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-1">
                   <div>
                     <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
                       {title}
@@ -123,7 +123,7 @@ export function SectorsGrid({ className }: { className?: string }) {
                   </div>
 
                   {/* Sub Services */}
-                  <div className="mt-5">
+                  <div className="mt-5 flex-1 flex flex-col">
                     <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-3">
                       {t("subServices")}
                     </h4>
@@ -143,18 +143,18 @@ export function SectorsGrid({ className }: { className?: string }) {
                     </div>
                   </div>
 
-                  {/* Bottom */}
-                  <div className="pt-4 mt-5 border-t border-border/60 flex items-center justify-between text-xs">
-                    <span className="text-muted-foreground font-medium">
+                  {/* Bottom / Footer aligned to baseline */}
+                  <div className="pt-4 mt-6 border-t border-border/60 flex items-center justify-between gap-4">
+                    <span className="text-xs text-muted-foreground font-semibold">
                       {t("targetSector")}
                     </span>
 
                     <Link
                       href={`/${locale}/services/${sector.slug}`}
-                      className="inline-flex items-center gap-1 text-primary font-bold hover:underline group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform"
+                      className="inline-flex items-center justify-center gap-2 px-4 py-2 sm:py-2.5 rounded-xl bg-primary text-primary-foreground font-bold text-xs sm:text-sm shadow-md shadow-primary/25 hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30 active:scale-95 transition-all group/btn"
                     >
                       <span>{t("viewDetails")}</span>
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform group-hover/btn:translate-x-1 rtl:group-hover/btn:-translate-x-1 rtl-flip" />
                     </Link>
                   </div>
                 </div>
