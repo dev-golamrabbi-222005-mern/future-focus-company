@@ -31,10 +31,10 @@ export function Navbar() {
       <div className="w-full max-w-[1380px] mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 flex-row-reverse xl:flex-row rtl:flex-row gap-2 sm:gap-4">
 
-          {/* Logo */}
+          {/* Logo & Brand (Far right on mobile/tablet, Left on desktop in LTR) */}
           <Link
             href={`/${locale}`}
-            className="flex items-center gap-2 sm:gap-2.5 group min-w-0 shrink"
+            className="flex items-center gap-2 sm:gap-2.5 group min-w-0 shrink-0 flex-row-reverse xl:flex-row rtl:flex-row"
           >
             <div className="relative h-8 w-8 sm:h-9 sm:w-9 rounded-xl overflow-hidden shadow-md shadow-primary/25 transition-transform group-hover:scale-105 border border-border shrink-0">
               <Image
@@ -45,11 +45,12 @@ export function Navbar() {
                 className="object-cover"
               />
             </div>
-            <div className="flex flex-col min-w-0">
-              <span className="font-extrabold text-xs sm:text-base md:text-lg tracking-tight text-foreground flex items-center gap-1.5 truncate max-w-[130px] xs:max-w-[170px] sm:max-w-none">
+            {/* Name & Motto: Hidden on mobile (<sm), shown on left of logo on tablet (sm->xl), and standard on desktop */}
+            <div className="flex-col min-w-0 hidden sm:flex text-right xl:text-left rtl:text-right">
+              <span className="font-extrabold text-sm sm:text-base md:text-lg tracking-tight text-foreground flex items-center gap-1.5 truncate">
                 {t('companyName')}
               </span>
-              <span className="text-[9px] sm:text-[10px] font-semibold tracking-wider text-muted-foreground hidden sm:block">
+              <span className="text-[9px] sm:text-[10px] font-semibold tracking-wider text-muted-foreground hidden md:block">
                 {t('motto')}
               </span>
             </div>
@@ -77,9 +78,34 @@ export function Navbar() {
             })}
           </nav>
 
-          {/* Right Actions: Language Dropdown + Theme Toggle + Always-Visible Primary CTA + Mobile Trigger */}
+          {/* Left Actions on Mobile (Menu -> CTA -> Togglers) / Right Actions on Desktop */}
           <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3 shrink-0">
+            {/* Mobile / Tablet Menu Toggle Button (First on mobile/tablet!) */}
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="xl:hidden order-1 p-2 sm:p-2.5 rounded-xl border border-border text-foreground hover:bg-muted transition-colors cursor-pointer shrink-0"
+              aria-label={t('toggleMenu')}
+            >
+              {mobileMenuOpen ? (
+                <X className="h-4 w-4 sm:h-5 sm:w-5" />
+              ) : (
+                <Menu className="h-4 w-4 sm:h-5 sm:w-5" />
+              )}
+            </button>
+
+            {/* Always-Visible Primary CTA Button (Next to Menu on mobile!) */}
+            <Link
+              href={`/${locale}/contact#get-in-touch`}
+              className="order-2 xl:order-2 inline-flex items-center justify-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-primary text-primary-foreground font-bold text-[11px] sm:text-xs md:text-sm shadow-md shadow-primary/25 hover:bg-primary/90 transition-all shrink-0 whitespace-nowrap"
+            >
+              <span>{t('requestManpower')}</span>
+              <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+            </Link>
+
+            {/* Language Dropdown + Theme Toggle (Next to CTA on mobile, First on desktop) */}
             <div className={cn(
+              "order-3 xl:order-1",
               // Mobile (all locales): always stacked col-reverse
               "flex flex-col-reverse gap-2 items-center justify-center",
               // sm+ : restore per-locale logic
@@ -90,28 +116,6 @@ export function Navbar() {
               <LanguageSwitcher />
               <ThemeToggle />
             </div>
-            {/* Always-Visible Primary CTA Button (Mobile, Tablet & Desktop) */}
-            <Link
-              href={`/${locale}/contact#get-in-touch`}
-              className="inline-flex items-center justify-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-primary text-primary-foreground font-bold text-[11px] sm:text-xs md:text-sm shadow-md shadow-primary/25 hover:bg-primary/90 transition-all shrink-0 whitespace-nowrap"
-            >
-              <span>{t('requestManpower')}</span>
-              <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
-            </Link>
-
-            {/* Mobile / Tablet Menu Toggle Button */}
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="xl:hidden p-2 sm:p-2.5 rounded-xl border border-border text-foreground hover:bg-muted transition-colors cursor-pointer shrink-0"
-              aria-label={t('toggleMenu')}
-            >
-              {mobileMenuOpen ? (
-                <X className="h-4 w-4 sm:h-5 sm:w-5" />
-              ) : (
-                <Menu className="h-4 w-4 sm:h-5 sm:w-5" />
-              )}
-            </button>
           </div>
 
         </div>
