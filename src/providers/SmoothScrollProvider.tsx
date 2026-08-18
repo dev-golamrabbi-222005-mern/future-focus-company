@@ -177,7 +177,7 @@ export function SmoothScrollProvider({ children }: SmoothScrollProviderProps) {
         }
       }
 
-      lenisInstance.scrollTo(target as any, {
+      lenisInstance.scrollTo(target as number | HTMLElement | string, {
         duration: 1.2,
         ...options,
       });

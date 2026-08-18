@@ -132,7 +132,7 @@ export default function WhatIsManpower() {
                   </span>
                 </div>
                 <blockquote className="text-base md:text-lg font-medium italic leading-8 text-foreground/90">
-                  "{t("quote")}"
+                  &ldquo;{t("quote")}&rdquo;
                 </blockquote>
               </div>
             </motion.div>

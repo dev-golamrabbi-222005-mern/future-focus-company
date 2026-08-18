@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { locales } from '@/i18n';
+import { locales, type Locale } from '@/i18n';
 import { ThemeProvider } from '@/providers/ThemeProvider';
 import { SmoothScrollProvider } from '@/providers/SmoothScrollProvider';
 import { Navbar } from '@/components/layout/Navbar';
@@ -24,7 +24,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
 
-  if (!locales.includes(locale as any)) {
+  if (!locales.includes(locale as Locale)) {
     return {};
   }
 
@@ -100,7 +100,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
   const { locale } = await params;
 
   // Validate locale
-  if (!locales.includes(locale as any)) {
+  if (!locales.includes(locale as Locale)) {
     notFound();
   }
 
