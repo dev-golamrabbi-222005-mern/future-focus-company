@@ -85,7 +85,7 @@ export function StatsSection() {
   return (
     <section
       ref={containerRef}
-      className="py-16 md:py-20 lg:py-24 bg-muted/15 border-y border-border/60 relative overflow-hidden"
+      className="py-12 md:py-16 lg:py-20 bg-muted/15 border-y border-border/60 relative overflow-hidden"
     >
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[250px] bg-primary/10 rounded-full blur-[140px] pointer-events-none -z-10" />
 

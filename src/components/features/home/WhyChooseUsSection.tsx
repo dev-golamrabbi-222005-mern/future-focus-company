@@ -74,7 +74,7 @@ export function WhyChooseUs() {
   const locale = useLocale();
 
   return (
-    <section className="relative py-16 md:py-20 lg:py-24 bg-muted/15 border-y border-border/60 overflow-hidden">
+    <section className="relative py-12 md:py-16 lg:py-20 bg-muted/15 border-y border-border/60 overflow-hidden">
       {/* ── Background decorations ── */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         {/* large radial blob */}
